@@ -1,0 +1,17 @@
+{
+	"name": "Iconotienda2",
+	"plugin-id": "SVGPicture",
+	"sid": 781826719294089,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnContent",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 952149623998165
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

@@ -1,0 +1,16 @@
+{
+	"name": "InputAbrirMesa",
+	"plugin-id": "TextBox",
+	"sid": 167443111254280,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "VariableModalAbrirMesa",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 967847618364156
+		}
+	],
+	"behaviorTypes": []
+}

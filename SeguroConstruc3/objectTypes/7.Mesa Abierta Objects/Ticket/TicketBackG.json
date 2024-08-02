@@ -1,0 +1,50 @@
+{
+	"name": "TicketBackG",
+	"plugin-id": "Sprite",
+	"sid": 769396842552231,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 502,
+						"height": 719,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7697901,
+						"collisionPoly": {
+							"points": [
+								0.025896414342629483,
+								0.0013908205841446453,
+								0.99800796812749,
+								0.01947148817802503,
+								0.9760956175298805,
+								0.9986091794158554,
+								0.00199203187250996,
+								0.980528511821975
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 163126263906291,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

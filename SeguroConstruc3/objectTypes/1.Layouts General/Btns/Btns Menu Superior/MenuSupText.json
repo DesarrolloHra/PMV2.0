@@ -1,0 +1,17 @@
+{
+	"name": "MenuSupText",
+	"plugin-id": "Text",
+	"sid": 348728087250786,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnMenuText",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 858086541828955
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

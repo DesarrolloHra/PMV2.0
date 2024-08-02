@@ -1,0 +1,75 @@
+#ajustes-ticket {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+	font-size:1rem;
+}
+
+#ajustes-ticket h2 {
+    text-align: left;
+}
+
+#ajustes-ticket label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#ajustes-ticket select,
+#ajustes-ticket input[type="text"],
+#ajustes-ticket input[type="checkbox"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid gray;
+    background: none;
+    box-shadow: none;
+}
+
+#ajustes-ticket button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid gray;
+    background-color: #FF0000;
+    color: white;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+#ajustes-ticket button:hover {
+    background-color: #CC0000;
+}
+section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h2, h3, h4 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+select,
+input[type="text"],
+input[type="checkbox"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid gray;
+    background: none;
+    box-shadow: none;
+}
+
+
+
+.hidden {
+    display: none;
+}

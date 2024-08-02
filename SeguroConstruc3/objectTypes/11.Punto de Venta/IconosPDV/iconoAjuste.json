@@ -1,0 +1,14 @@
+{
+	"name": "iconoAjuste",
+	"plugin-id": "SVGPicture",
+	"sid": 415622065744989,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

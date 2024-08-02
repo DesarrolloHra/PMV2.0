@@ -1,0 +1,22 @@
+{
+	"name": "Iconotienda",
+	"plugin-id": "SVGPicture",
+	"sid": 818275649258671,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnContent",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 510504016708135
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjustmask",
+			"name": "AdjustHSL"
+		}
+	]
+}

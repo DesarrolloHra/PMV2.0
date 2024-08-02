@@ -1,0 +1,762 @@
+{
+	"name": "AjustesEventSheet",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enlaces Menu PV5",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 815275934580815,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 351636876621152,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 667925642494442,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"Ajustes\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 562622907892489,
+									"parameters": {
+										"layout": "AjustesLayout"
+									}
+								}
+							],
+							"sid": 326961292111913
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 560509302075283,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 444162840920163,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 344825745108712,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"PuntVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 712337291826925,
+									"parameters": {
+										"layout": "PuntoVentaLayout"
+									}
+								}
+							],
+							"sid": 695013894913588
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 221710572971330,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 322193340282518,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 339814292569617,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"MenuDash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 688181126722150,
+									"parameters": {
+										"layout": "MenuDashBoardLayout"
+									}
+								}
+							],
+							"sid": 355301518534793
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 174965124390199
+				}
+			],
+			"sid": 229026042278782
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Efectos Menu Superior PV5",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 589457427162287
+						}
+					],
+					"actions": [],
+					"sid": 828555253553441,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 619804776576726,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 632433453018770,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 741611185502015
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 801901176010906,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 304878343980672,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 568547219510324,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 412162601005000,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 255135754563816
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 446221468548839,
+							"parameters": {
+								"object": "MenuSupBtn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 430173060257762,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 606047461973531,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 926133567049662,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 826633145624767
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 149530481040084,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MenuSupBtn",
+							"sid": 332958570588367,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 575892622561974
+				}
+			],
+			"sid": 720020647688361
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 596979195658045
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 464085014819457,
+					"parameters": {
+						"layer": "\"Comandas\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 311205885001991,
+					"parameters": {
+						"layer": "\"PuntoVenta\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 531239421706954,
+					"parameters": {
+						"layer": "\"Compras\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 170200277240794,
+					"parameters": {
+						"layer": "\"Promociones\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"type": "script",
+					"script": "let token= runtime.globalVars.Token;\nlet apiURL = runtime.globalVars.apiUrl;\n mainFuntionAjustes(token, apiURL);"
+				}
+			],
+			"sid": 866675223167165
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "AjustesFlujo",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 962706677900450,
+							"parameters": {
+								"object": "BtnSelectAjustes"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BtnSelectAjustes",
+							"sid": 763034061892119,
+							"parameters": {
+								"instance-variable": "BtnControlAjuste",
+								"comparison": 0,
+								"value": "\"Comandas\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 792112201967229,
+							"parameters": {
+								"layer": "\"Comandas\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 428849982655703,
+							"parameters": {
+								"layer": "\"General\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 187586688716250,
+							"parameters": {
+								"layer": "\"PuntoVenta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 665650667282762,
+							"parameters": {
+								"layer": "\"Compras\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 970698715841094,
+							"parameters": {
+								"layer": "\"Compras\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "AjustesComanda",
+							"sid": 187710661460444,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						}
+					],
+					"sid": 550360170931739
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 787734406633800,
+							"parameters": {
+								"object": "BtnSelectAjustes"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BtnSelectAjustes",
+							"sid": 786317404180881,
+							"parameters": {
+								"instance-variable": "BtnControlAjuste",
+								"comparison": 0,
+								"value": "\"PuntoVenta\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 540028588765769,
+							"parameters": {
+								"layer": "\"PuntoVenta\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 938318754455887,
+							"parameters": {
+								"layer": "\"General\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 578061296513906,
+							"parameters": {
+								"layer": "\"Comandas\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 510053536168578,
+							"parameters": {
+								"layer": "\"Compras\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 786855871363464,
+							"parameters": {
+								"layer": "\"Promociones\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "AjustesIcon",
+							"sid": 751365268703984,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						}
+					],
+					"sid": 130541229312693
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 130564847902466,
+							"parameters": {
+								"object": "BtnSelectAjustes"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BtnSelectAjustes",
+							"sid": 986217663626927,
+							"parameters": {
+								"instance-variable": "BtnControlAjuste",
+								"comparison": 0,
+								"value": "\"Compras\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 957943949079936,
+							"parameters": {
+								"layer": "\"General\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 707539554167958,
+							"parameters": {
+								"layer": "\"Compras\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 416707044370201,
+							"parameters": {
+								"layer": "\"Comandas\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 702446126870001,
+							"parameters": {
+								"layer": "\"Promociones\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 571938252572716,
+							"parameters": {
+								"layer": "\"PuntoVenta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "AjustesCompra",
+							"sid": 546017030565740,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						}
+					],
+					"sid": 255868131872903
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 727830507493377,
+							"parameters": {
+								"object": "BtnSelectAjustes"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BtnSelectAjustes",
+							"sid": 447465928152641,
+							"parameters": {
+								"instance-variable": "BtnControlAjuste",
+								"comparison": 0,
+								"value": "\"Promociones\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 137019371394188,
+							"parameters": {
+								"layer": "\"Promociones\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 250013067345897,
+							"parameters": {
+								"layer": "\"General\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 291395401665811,
+							"parameters": {
+								"layer": "\"PuntoVenta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 999457944714116,
+							"parameters": {
+								"layer": "\"Comandas\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 307162443236876,
+							"parameters": {
+								"layer": "\"Compras\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 776366757691708
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 997866315153620,
+							"parameters": {
+								"object": "BtnSelectAjustes"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BtnSelectAjustes",
+							"sid": 854823979076978,
+							"parameters": {
+								"instance-variable": "BtnControlAjuste",
+								"comparison": 0,
+								"value": "\"General\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 318241591568987,
+							"parameters": {
+								"layer": "\"General\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 347147613684259,
+							"parameters": {
+								"layer": "\"Compras\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 601224690804811,
+							"parameters": {
+								"layer": "\"Comandas\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 260696163119421,
+							"parameters": {
+								"layer": "\"PuntoVenta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 217875398267613,
+							"parameters": {
+								"layer": "\"Promociones\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "AjustesIcon",
+							"sid": 847131133189810,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						}
+					],
+					"sid": 863114546787079
+				}
+			],
+			"sid": 791760358523633
+		}
+	],
+	"sid": 641586043830818
+}

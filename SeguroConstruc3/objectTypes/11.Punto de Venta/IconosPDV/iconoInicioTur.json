@@ -1,0 +1,14 @@
+{
+	"name": "iconoInicioTur",
+	"plugin-id": "SVGPicture",
+	"sid": 193763275600825,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

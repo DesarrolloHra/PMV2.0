@@ -1,0 +1,59 @@
+.contPrincipalProduccion{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.tablaProduccion{
+    width: 100%;
+    height: 100%;
+}
+
+.thTableHeadProduccion{
+    font-size: 1rem;
+    color: #D82135;
+    font-weight: bold;
+    border-bottom: 3px solid #FCC329;
+    vertical-align: middle;
+    height: 4rem;
+    padding: 0.5rem;
+}
+
+.itemsPaginacionProduccion{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 .5rem;
+}
+
+.buscarInputProduccion{
+    border-radius: 20px;
+    border: none;
+    padding: 1rem;
+}
+
+.btnEditarProduccion{
+    border: none;
+    background: none;
+}
+
+.tdProduccion{
+    max-height: 3rem;
+}
+
+#modalProduccionPendiente{
+	width: 100%;
+  	height: 100%; 
+  	overflow-y: auto; /
+}
+
+#modalProduccionPendiente th{
+	font-size: 1rem;
+	margin: 1rem;
+}
+
+#modalProduccionPendiente td{
+	font-size: 0.9rem;
+	margin 0 1rem;
+}

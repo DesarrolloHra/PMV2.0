@@ -1,0 +1,14 @@
+{
+	"name": "iconoReimprimirTpdv",
+	"plugin-id": "SVGPicture",
+	"sid": 231203209497787,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

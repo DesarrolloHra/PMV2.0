@@ -1,0 +1,50 @@
+{
+	"name": "PanelBlancoToolbar",
+	"plugin-id": "Sprite",
+	"sid": 505999986028519,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1076,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4676539,
+						"collisionPoly": {
+							"points": [
+								0.013940520446096654,
+								0.004761904761904762,
+								0.9907063197026023,
+								0.014285714285714285,
+								0.9851301115241635,
+								1,
+								0.0055762081784386614,
+								0.9761904761904762
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 183354450400088,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

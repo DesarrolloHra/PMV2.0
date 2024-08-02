@@ -1,0 +1,353 @@
+{
+	"name": "PropinasPorMeseroEventSheets",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 299674007634247
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "const startDate = document.getElementById('start-date');\nconst endDate = document.getElementById('end-date');\n\nconst inputs = [startDate, endDate];\n\ninputs.forEach(input => {\n    input.addEventListener('change', () => {\n        if (startDate.value && endDate.value) {\n            obtenerReportePropinas();\n        } else {\n            ocultarReporte();\n        }\n    });\n});\n\nfunction obtenerReportePropinas() {\n    const idEmpresaDefault = 145; // ID de empresa predeterminado\n\n    // Obtener el token de localStorage\n    let token = runtime.globalVars.Token;\n\n    // Verificar si el token existe\n    if (!token) {\n        console.error('No hay token disponible, por favor inicia sesión primero.');\n        return;\n    }\n\n    // Log para verificar el token\n    console.log('Token recuperado:', token);\n    \n    // Obtener el ID de la empresa del localStorage o usar el predeterminado\n    let idEmpresa = localStorage.getItem('idEmpresa') || idEmpresaDefault;\n    console.log('ID Empresa obtenido del localStorage o predeterminado:', idEmpresa);\n\n    // Obtener y validar los valores del formulario\n    let fechaInicio = startDate.value;\n    let fechaFin = endDate.value;\n\n    // Log para verificar los datos del formulario\n    console.log('ID Empresa:', idEmpresa);\n    console.log('Fecha de Inicio:', fechaInicio);\n    console.log('Fecha de Fin:', fechaFin);\n\n    // Verificar que las fechas no estén vacías\n    if (!fechaInicio || !fechaFin) {\n        console.error('Por favor, completa los campos de fecha.');\n        return;\n    }\n\n    // Preparar los datos para la solicitud\n    const requestData = {\n        token: runtime.globalVars.Token,\n        fecha_inicio: fechaInicio,\n        fecha_fin: fechaFin\n    };\n\n    // Log para verificar los datos que se enviarán en la solicitud\n    console.log('Datos para la solicitud POST:', requestData);\n\n    // Realizar la solicitud POST\n    fetch(runtime.globalVars.apiUrl + '/web/ventas/reportePropinas', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/json',\n            'Authorization': `Bearer ${token}`\n        },\n        body: JSON.stringify(requestData)\n    })\n    .then(response => {\n        // Log para verificar el objeto Response\n        console.log('Respuesta de la solicitud:', response);\n\n        if (!response.ok) {\n            console.error(`Error en la solicitud: Estado ${response.status} - ${response.statusText}`);\n            throw new Error(`La solicitud falló con el estado ${response.status}`);\n        }\n\n        // Convertir la respuesta a JSON\n        return response.json();\n    })\n    .then(data => {\n        // Log para verificar los datos recibidos\n        console.log('Datos recibidos de la API:', data);\n\n        if (data.response) {\n            // Log para verificar los datos del reporte\n            console.log('Datos del reporte de propinas:', data.data);\n\n            // Mostrar el reporte de propinas\n            mostrarReporte(data.data);\n        } else {\n            // Log de error si la API devuelve una respuesta negativa\n            console.error('Error en el reporte:', data.message);\n            ocultarReporte();\n        }\n    })\n    .catch(error => {\n        // Log de error si ocurre un problema durante la solicitud\n        console.error('Fetch error:', error);\n        ocultarReporte();\n    });\n}\n\nfunction mostrarReporte(data) {\n    const infoSection = document.getElementById('info-section');\n    const ppmInfoContainer = document.getElementById('ppm-info-container');\n\n    // Limpiar contenido previo\n    infoSection.innerHTML = '';\n\n    // Generar contenido del reporte\n    data.ventas.forEach(venta => {\n        const desgloses = [\n            { nombre: 'Gerente', porcentaje: 1 },\n            { nombre: 'Barra', porcentaje: 1 },\n            { nombre: 'Cocina', porcentaje: 2 }\n        ];\n        let desglosesHtml = desgloses.map(desglose => {\n            const cantidad = (venta.ventas * desglose.porcentaje / 100).toFixed(2);\n            return `<div><p>${desglose.nombre} (${desglose.porcentaje}%):</p><p>$${cantidad}</p></div>`;\n        }).join('');\n\n        const totalPropinasRepartir = (venta.ventas * 4 / 100).toFixed(2);\n\n        const contentHtml = `\n            <div class=\"ppm-info-content\">\n                <div><p><strong>MESERO:</strong></p><p>${venta.mesero}</p></div>\n                <div><p><strong>VENTA:</strong></p><p>$${venta.ventas}</p></div>\n                <div><p><strong>PROPINAS:</strong></p><p>$${venta.propina}</p></div>\n                <div><p><strong>DESGLOSE:</strong></p></div>\n                ${desglosesHtml}\n                <div><p><strong>PROPINAS POR REPARTIR (4%):</strong></p><p>$${totalPropinasRepartir}</p></div>\n            </div>\n            <div class=\"ppm-divider\"></div>\n        `;\n\n        infoSection.insertAdjacentHTML('beforeend', contentHtml);\n    });\n\n    // Mostrar totales si están presentes\n    if (data.totales.length > 0) {\n        let totalesHtml = '<div class=\"ppm-info-totales\"><p><strong>TOTALES:</strong></p>';\n        data.totales.forEach(total => {\n            totalesHtml += `<div><p>${total.area}:</p><p>$${total.total}</p></div>`;\n        });\n        totalesHtml += `<div><p><strong>TOTAL COMISIÓN:</strong></p><p>$${data.total_comision}</p></div></div>`;\n        \n        infoSection.insertAdjacentHTML('beforeend', totalesHtml);\n    }\n\n    // Hacer visible el contenedor de información\n    ppmInfoContainer.style.display = 'block';\n}\n\nfunction ocultarReporte() {\n    const infoSection = document.getElementById('info-section');\n    const ppmInfoContainer = document.getElementById('ppm-info-container');\n\n    // Limpiar contenido previo\n    infoSection.innerHTML = '';\n\n    // Ocultar el contenedor de información\n    ppmInfoContainer.style.display = 'none';\n}\n"
+				}
+			],
+			"sid": 879606181172279
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Efectos Menu Superior PV4",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 882355569002724
+						}
+					],
+					"actions": [],
+					"sid": 459748607195420,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 623056465523391,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 244426700425647,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 501383198724730
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 274772101589012,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 613939618434441,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 172256843594995,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 281187538405046,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 933893663890607
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 392948152119127,
+							"parameters": {
+								"object": "MenuSupBtn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 436373700939215,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 428092301053126,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 607932995979459,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 493525429908654
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 514593038512862,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MenuSupBtn",
+							"sid": 213519995079794,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 484800904903670
+				}
+			],
+			"sid": 615921765948247
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enlaces Menu PV4",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 984273523054434,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 491998300914313,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 217798221875426,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"Ajustes\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 823963364231887,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 885612242936947,
+									"parameters": {
+										"layout": "PuntoVentaLayout"
+									}
+								}
+							],
+							"sid": 826345282483085
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 119980200583513,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 538374976710531,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 873049285233461,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"PuntVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 571734795051143,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 507070288228641,
+									"parameters": {
+										"layout": "PuntoVentaLayout"
+									}
+								}
+							],
+							"sid": 399120991012396
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 268210471545230,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 121826719106766,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 908218319860089,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"MenuDash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 989472736416652,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 576970839629897,
+									"parameters": {
+										"layout": "MenuDashBoardLayout"
+									}
+								}
+							],
+							"sid": 968717868077150
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 768159398081023
+				}
+			],
+			"sid": 848698686422137
+		}
+	],
+	"sid": 595375358040401
+}

@@ -1,0 +1,17 @@
+{
+	"name": "REGRESAR",
+	"plugin-id": "Text",
+	"sid": 697544159846542,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "textRegresar",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 655263830090932
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

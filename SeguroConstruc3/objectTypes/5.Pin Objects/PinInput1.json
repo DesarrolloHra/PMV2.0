@@ -1,0 +1,16 @@
+{
+	"name": "PinInput1",
+	"plugin-id": "TextBox",
+	"sid": 886624791011076,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Variable1",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 139555296514810
+		}
+	],
+	"behaviorTypes": []
+}

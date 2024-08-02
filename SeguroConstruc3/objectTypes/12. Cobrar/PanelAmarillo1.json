@@ -1,0 +1,58 @@
+{
+	"name": "PanelAmarillo1",
+	"plugin-id": "Sprite",
+	"sid": 237911367353940,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1250,
+						"height": 344,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 202369,
+						"collisionPoly": {
+							"points": [
+								0.2648,
+								0.0029069767441860465,
+								0.7592,
+								0.055232558139534885,
+								0.7664,
+								0.11627906976744186,
+								0.7664,
+								0.8837209302325582,
+								0.7352,
+								0.997093023255814,
+								0.2408,
+								0.9447674418604651,
+								0.23359999999999995,
+								0.8837209302325582,
+								0.23359999999999995,
+								0.11627906976744186
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 297260410706739,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

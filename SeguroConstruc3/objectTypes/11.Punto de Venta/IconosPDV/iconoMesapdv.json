@@ -1,0 +1,14 @@
+{
+	"name": "iconoMesapdv",
+	"plugin-id": "SVGPicture",
+	"sid": 943708024789760,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

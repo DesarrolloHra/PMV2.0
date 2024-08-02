@@ -1,0 +1,17 @@
+{
+	"name": "TextBtn",
+	"plugin-id": "Text",
+	"sid": 367098788633487,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "TextBtn",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 839163973912170
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

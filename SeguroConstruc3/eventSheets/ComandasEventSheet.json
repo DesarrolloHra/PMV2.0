@@ -1,0 +1,245 @@
+{
+	"name": "ComandasEventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "id_cancelada",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 345173463173899
+		},
+		{
+			"eventType": "variable",
+			"name": "idPartida",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 440881122137493
+		},
+		{
+			"eventType": "variable",
+			"name": "tipoComandas",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 285998727561743
+		},
+		{
+			"eventType": "variable",
+			"name": "idPreparacion",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 315737143826696
+		},
+		{
+			"eventType": "variable",
+			"name": "ListOrMesas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 969161082990542
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "JS Tablas Comandas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 581579143092977
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "let token= runtime.globalVars.Token;\nlet apiURL = runtime.globalVars.apiUrl;\n\nmainFuntionComandas(token,apiURL);"
+						}
+					],
+					"sid": 260739301170672
+				}
+			],
+			"sid": 429518698908647
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mostrar Tablas Comandas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 818695062730491,
+							"parameters": {
+								"object": "BtnListaComandas"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 400849090583327,
+							"parameters": {
+								"variable": "ListOrMesas",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 333595491835005
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 842877934565255,
+							"parameters": {
+								"object": "BtnMesasComandas"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 957900059078648,
+							"parameters": {
+								"variable": "ListOrMesas",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 296637668169580
+				}
+			],
+			"sid": 859342108969466
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Logica Mostrar Tablas Comandas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 259027959506483,
+							"parameters": {
+								"first-value": "ListOrMesas",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BtnListaComandas",
+							"sid": 305213685516623,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BtnMesasComandas",
+							"sid": 301581568091007,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 557029687173606
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 605081659874562,
+							"parameters": {
+								"first-value": "ListOrMesas",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BtnListaComandas",
+							"sid": 960323234546946,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BtnMesasComandas",
+							"sid": 690257185967828,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 326010194755821
+				}
+			],
+			"sid": 200806866876231
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 144695382849688,
+					"parameters": {
+						"object": "PanelRojo1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 279069521751759,
+					"parameters": {
+						"layout": "PuntoVentaLayout"
+					}
+				}
+			],
+			"sid": 955876965063147
+		}
+	],
+	"sid": 162313210877321
+}

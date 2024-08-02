@@ -1,0 +1,22 @@
+{
+	"name": "BtnsPIN",
+	"plugin-id": "Sprite",
+	"sid": 155497575401774,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"BtnDel",
+		"Btn0",
+		"BtnAC",
+		"Btn1",
+		"Btn2",
+		"Btn3",
+		"Btn4",
+		"Btn9",
+		"Btn8",
+		"Btn7",
+		"Btn6",
+		"Btn5"
+	]
+}

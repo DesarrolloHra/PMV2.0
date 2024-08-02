@@ -1,0 +1,3229 @@
+{
+	"name": "PinEventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "PinString",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 886416910365350
+		},
+		{
+			"eventType": "variable",
+			"name": "nextInputIndex",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 177188994819696
+		},
+		{
+			"eventType": "variable",
+			"name": "LastKeyTyped",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 110882760054287
+		},
+		{
+			"eventType": "variable",
+			"name": "pinAccess",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 127500603486808
+		},
+		{
+			"eventType": "variable",
+			"name": "IdMesero",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 571763138281581
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 651571343910714
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "const inputElements = document.querySelectorAll(\".inputNumber\");\n\ninputElements.forEach(element => {\n    element.maxLength = 1;\n});"
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 592264174827264,
+					"parameters": {
+						"variable": "PinString",
+						"value": "\"\""
+					}
+				}
+			],
+			"sid": 466882377027621
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Modal",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 397768293287471
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BackGModales2",
+							"sid": 315608016210608,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CloseModal",
+							"sid": 380060827908742,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BoxModal",
+							"sid": 369639882696539,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TextPinIncorrecto",
+							"sid": 453523783567035,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 183405619056300
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "BtnRed",
+							"sid": 119966073042389
+						}
+					],
+					"actions": [],
+					"sid": 195683015080974,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"type": "script",
+									"script": "validarPIN();\n\nfunction validarPIN() {\n    fetch(runtime.globalVars.apiUrl + '/web/usuarios/validaMesero', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/json'\n        },\n        body: JSON.stringify({\n            token: runtime.globalVars.Token,\n\t\t\tpin: runtime.globalVars.PinString\n        })\n    })\n    .then(response => response.json())\n    .then(data => {\n\t\n\t\tconsole.log(runtime.globalVars.Token);\n\t\tconsole.log(runtime.globalVars.PinString);\n        \n        if (data.response) {\n\t\t\truntime.goToLayout(\"MesasLayout\");\n            console.log(data.data);\n        } else {\n            console.error('No se pudo ingresar', data.message);\n        }\n    })\n    .catch(error => {\n        console.error('Error:', error);\n    });\n}",
+									"disabled": true
+								},
+								{
+									"type": "script",
+									"script": "validarPIN();\n\nfunction validarPIN() {\n    fetch(runtime.globalVars.apiUrl + '/web/usuarios/validaMesero', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/json'\n        },\n        body: JSON.stringify({\n            token: runtime.globalVars.Token,\n            pin: runtime.globalVars.PinString\n        })\n    })\n    .then(response => response.json())\n    .then(data => {\n        console.log(runtime.globalVars.Token);\n        console.log(runtime.globalVars.PinString);\n        \n        if (data.response) {\n            // Guardar el id_mesero en la variable global IdMesero\n            runtime.globalVars.IdMesero = data.data.id_mesero;\n            console.log(\"ID Mesero:\", runtime.globalVars.IdMesero);\n\n            // Navegar a MesasLayout\n            runtime.goToLayout(\"MesasLayout\");\n            console.log(data.data);\n        } else {\n            console.error('No se pudo ingresar', data.message);\n        }\n    })\n    .catch(error => {\n        console.error('Error:', error);\n    });\n}\n"
+								}
+							],
+							"sid": 795305669524885
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "BoxModal",
+									"sid": 672725048451495,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "CloseModal",
+									"sid": 897448314034084,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "BackGModales2",
+									"sid": 247893660939400,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "TextPinIncorrecto",
+									"sid": 414793922787873,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 627423640410560,
+									"parameters": {
+										"variable": "PinString",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 939134961991772,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 948123020104099,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 910264220921121,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 756246589726269,
+									"parameters": {
+										"text": "\"\""
+									}
+								}
+							],
+							"sid": 643342296648256,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 886389806081914,
+							"parameters": {
+								"object": "CloseModal",
+								"type": "start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BackGModales2",
+							"sid": 177262040295998,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CloseModal",
+							"sid": 927966075862778,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BoxModal",
+							"sid": 252501121775910,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TextPinIncorrecto",
+							"sid": 235769958090501,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 302301483398968
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 976906192454845,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Btn1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const inputElements = document.querySelectorAll(\".inputNumber\");\n\ninputElements.forEach(element => {\n    element.maxLength = 1;\n});"
+						}
+					],
+					"sid": 510073823439038
+				}
+			],
+			"sid": 802108774405390
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BtnsPin",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 103654542830665,
+							"parameters": {
+								"object": "Btn1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 755477153826169,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 710255913894160,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 584508891993897,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"1\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 700507248623822,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 249233237090007
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 721311968706293,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 874190083460081,
+									"parameters": {
+										"text": "\"1\""
+									}
+								}
+							],
+							"sid": 409476801149524
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 455573686612367,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 845185799585855,
+									"parameters": {
+										"text": "\"1\""
+									}
+								}
+							],
+							"sid": 244495066787043
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 261178184419659,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 274587231099150,
+									"parameters": {
+										"text": "\"1\""
+									}
+								}
+							],
+							"sid": 424115701247537
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 954403535098719,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 462568842296990,
+									"parameters": {
+										"text": "\"1\""
+									}
+								}
+							],
+							"sid": 281089775659557
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 581106635265046,
+							"parameters": {
+								"object": "Btn2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 686184576095677,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 592505682230199,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 575348423144702,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"2\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 495079595343583,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 384098162570929
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 707798355159925,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 643643152642465,
+									"parameters": {
+										"text": "\"2\""
+									}
+								}
+							],
+							"sid": 112713896792166
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 305402472911954,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 483856330579226,
+									"parameters": {
+										"text": "\"2\""
+									}
+								}
+							],
+							"sid": 238021195006354
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 885071590615796,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 911494574331517,
+									"parameters": {
+										"text": "\"2\""
+									}
+								}
+							],
+							"sid": 618545151532301
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 228152891670098,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 549241181190762,
+									"parameters": {
+										"text": "\"2\""
+									}
+								}
+							],
+							"sid": 403850858771846
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 671379146013671,
+							"parameters": {
+								"object": "Btn3"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 777293363441746,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 167855249669661,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 820794255558658,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"3\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 246880721779937,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 895713645431488
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 722520155905754,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 360925845564515,
+									"parameters": {
+										"text": "\"3\""
+									}
+								}
+							],
+							"sid": 597754851834166
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 397960491357959,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 842568315965014,
+									"parameters": {
+										"text": "\"3\""
+									}
+								}
+							],
+							"sid": 704148993522487
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 234022644872300,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 954120615421110,
+									"parameters": {
+										"text": "\"3\""
+									}
+								}
+							],
+							"sid": 539233504062816
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 164271590220302,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 828128910093119,
+									"parameters": {
+										"text": "\"3\""
+									}
+								}
+							],
+							"sid": 908494872487623
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 638216243150124,
+							"parameters": {
+								"object": "Btn4"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 148738057820711,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 674347392400031,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 247281199643051,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"4\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 870991808484737,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 276090914463177
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 214043401848568,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 650396766219264,
+									"parameters": {
+										"text": "\"4\""
+									}
+								}
+							],
+							"sid": 392618136403799
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 359339938931938,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 625151067990588,
+									"parameters": {
+										"text": "\"4\""
+									}
+								}
+							],
+							"sid": 631422013908357
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 760790588594576,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 226302923581562,
+									"parameters": {
+										"text": "\"4\""
+									}
+								}
+							],
+							"sid": 139126648625880
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 252225751398734,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 784497609027429,
+									"parameters": {
+										"text": "\"4\""
+									}
+								}
+							],
+							"sid": 596925338915341
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 488910093145965,
+							"parameters": {
+								"object": "Btn5"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 118524541878221,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 908314648249345,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 752472673315335,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"5\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 685002895734181,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 343252469202995
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 879345081020698,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 668552361269694,
+									"parameters": {
+										"text": "\"5\""
+									}
+								}
+							],
+							"sid": 544763249523350
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 841556008809235,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 691206703784950,
+									"parameters": {
+										"text": "\"5\""
+									}
+								}
+							],
+							"sid": 254581239762022
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 290239752583154,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 428513184520324,
+									"parameters": {
+										"text": "\"5\""
+									}
+								}
+							],
+							"sid": 216540017995209
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 194353522177984,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 692663052576117,
+									"parameters": {
+										"text": "\"5\""
+									}
+								}
+							],
+							"sid": 927056572768564
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 470475808219859,
+							"parameters": {
+								"object": "Btn6"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 951666550099804,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 112006650320639,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 210139580034362,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"6\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 575029908006730,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 395158617917537
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 871722752783550,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 976788800714791,
+									"parameters": {
+										"text": "\"6\""
+									}
+								}
+							],
+							"sid": 424694955696451
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 542246398574106,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 980990205775990,
+									"parameters": {
+										"text": "\"6\""
+									}
+								}
+							],
+							"sid": 668326854861808
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 617463299948397,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 236596508772520,
+									"parameters": {
+										"text": "\"6\""
+									}
+								}
+							],
+							"sid": 909118703979071
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 788386861097689,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 225527719631643,
+									"parameters": {
+										"text": "\"6\""
+									}
+								}
+							],
+							"sid": 732723940223621
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 222235618107840,
+							"parameters": {
+								"object": "Btn7"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 581220754691400,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 338904930681279,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 461662133231412,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"7\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 780539191238711,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 986916264079308
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 704620601243460,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 679668275969767,
+									"parameters": {
+										"text": "\"7\""
+									}
+								}
+							],
+							"sid": 915467512532797
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 451149493534318,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 817518723743611,
+									"parameters": {
+										"text": "\"7\""
+									}
+								}
+							],
+							"sid": 575595242119219
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 323227104143852,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 356142128102748,
+									"parameters": {
+										"text": "\"7\""
+									}
+								}
+							],
+							"sid": 571539515801416
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 732506266155800,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 782953507984140,
+									"parameters": {
+										"text": "\"7\""
+									}
+								}
+							],
+							"sid": 674525570058164
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 198941185973548,
+							"parameters": {
+								"object": "Btn8"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 312778782583187,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 780988739562235,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 377805311354509,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"8\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 514261563936614,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 409252963022302
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 564801571772637,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 814377607376729,
+									"parameters": {
+										"text": "\"8\""
+									}
+								}
+							],
+							"sid": 888110313242666
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 374448203490105,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 168370804896182,
+									"parameters": {
+										"text": "\"8\""
+									}
+								}
+							],
+							"sid": 584335299188804
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 891523533506241,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 281010873092896,
+									"parameters": {
+										"text": "\"8\""
+									}
+								}
+							],
+							"sid": 727731133828406
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 174708315561924,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 508140559506123,
+									"parameters": {
+										"text": "\"8\""
+									}
+								}
+							],
+							"sid": 376593560180548
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 693560440723307,
+							"parameters": {
+								"object": "Btn9"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 753557724920109,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 771346597610513,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 375685872848338,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"9\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 504539991307246,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 445853172502689
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 719564577259730,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 997469074839505,
+									"parameters": {
+										"text": "\"9\""
+									}
+								}
+							],
+							"sid": 872059107114081
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 865745413831275,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 911514099756868,
+									"parameters": {
+										"text": "\"9\""
+									}
+								}
+							],
+							"sid": 355943308226976
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 792332556371678,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 753085793836280,
+									"parameters": {
+										"text": "\"9\""
+									}
+								}
+							],
+							"sid": 727679705437165
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 551320148297729,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 853746917881623,
+									"parameters": {
+										"text": "\"9\""
+									}
+								}
+							],
+							"sid": 281318576495307
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 924649672889168,
+							"parameters": {
+								"object": "Btn0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 669112640409785,
+							"parameters": {
+								"variable": "PinString",
+								"value": "PinString&\"0\""
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 136873739960091,
+							"parameters": {
+								"variable": "nextInputIndex",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 890322687451599,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 206981334819182,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 194057698778680,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&\"0\""
+									}
+								}
+							],
+							"sid": 401183830397611
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 160617864468569,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 311403471016649,
+									"parameters": {
+										"text": "\"0\""
+									}
+								}
+							],
+							"sid": 540256752483715
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 329012049168858,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 313214082361535,
+									"parameters": {
+										"text": "\"0\""
+									}
+								}
+							],
+							"sid": 741182131566663
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 215564171279335,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 330985191953610,
+									"parameters": {
+										"text": "\"0\""
+									}
+								}
+							],
+							"sid": 230904247235978
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 156232809640884,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 651791284068040,
+									"parameters": {
+										"text": "\"0\""
+									}
+								}
+							],
+							"sid": 972157499579923
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 240783329444741,
+							"parameters": {
+								"object": "BtnAC"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 488699454582552,
+							"parameters": {
+								"reset-static": false
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PinInput1",
+							"sid": 722311937358764,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PinInput2",
+							"sid": 949472758946034,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PinInput3",
+							"sid": 900771446529418,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PinInput4",
+							"sid": 583003131090241,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 257158017971144
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 600452594449452,
+							"parameters": {
+								"object": "BtnDel"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 680670386088824,
+							"parameters": {
+								"variable": "PinString",
+								"value": "left(PinString, len(PinString)-1)"
+							}
+						}
+					],
+					"sid": 972859250376920,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 318314397003555,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 968722520279636,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 758548507815436,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 510392326696981
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 389564717421551,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 375159653996776,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 202907729706997,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 335527953597128
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 101036538129563,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 171094888209502,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 533015723007537,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 619240934336119
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 126012452304568,
+									"parameters": {
+										"first-value": "nextInputIndex",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 713640165658839,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 691753754458571,
+									"parameters": {
+										"variable": "nextInputIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 672938383631679
+						}
+					]
+				}
+			],
+			"sid": 562404852389101
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Ingresar Pin Keyboard",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 715793968435007
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 958905039644764,
+							"parameters": {
+								"variable": "LastKeyTyped",
+								"value": "Keyboard.TypedKey"
+							}
+						}
+					],
+					"sid": 208772957742153,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 361833562863973,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 2,
+										"second-value": "4"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 760473990855705,
+									"disabled": true,
+									"parameters": {
+										"first-value": "LastKeyTyped",
+										"comparison": 1,
+										"second-value": "\"Backspac\""
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 308428955000112
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 164696415880198,
+									"parameters": {
+										"variable": "PinString",
+										"value": "PinString&Keyboard.TypedKey"
+									}
+								}
+							],
+							"sid": 946500020164723,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 456616040578818,
+											"parameters": {
+												"first-value": "len(PinString)",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-focused",
+											"objectClass": "PinInput1",
+											"sid": 215691550092216
+										},
+										{
+											"id": "set-max-length",
+											"objectClass": "PinInput1",
+											"sid": 192104629818452,
+											"parameters": {
+												"max-length": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "PinInput1",
+											"sid": 872476161017987,
+											"parameters": {
+												"text": "PinString"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 613864926351483,
+											"parameters": {
+												"variable": "nextInputIndex",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 188252648400630,
+											"parameters": {
+												"variable": "LastKeyTyped",
+												"value": "Keyboard.TypedKey"
+											}
+										}
+									],
+									"sid": 858694583870731
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 998505307952100,
+											"parameters": {
+												"first-value": "len(PinString)",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-focused",
+											"objectClass": "PinInput2",
+											"sid": 569434609995950
+										},
+										{
+											"id": "set-max-length",
+											"objectClass": "PinInput2",
+											"sid": 605857126623674,
+											"parameters": {
+												"max-length": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "PinInput2",
+											"sid": 620282888835086,
+											"parameters": {
+												"text": "right(PinString, 1)"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 455389767746424,
+											"parameters": {
+												"variable": "nextInputIndex",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 326668205926027,
+											"parameters": {
+												"variable": "LastKeyTyped",
+												"value": "Keyboard.TypedKey"
+											}
+										}
+									],
+									"sid": 480335970802043
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 741081540077161,
+											"parameters": {
+												"first-value": "len(PinString)",
+												"comparison": 0,
+												"second-value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-focused",
+											"objectClass": "PinInput3",
+											"sid": 298562326447570
+										},
+										{
+											"id": "set-max-length",
+											"objectClass": "PinInput3",
+											"sid": 732519109985836,
+											"parameters": {
+												"max-length": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "PinInput3",
+											"sid": 365902371982307,
+											"parameters": {
+												"text": "right(PinString, 1)"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 512301944596151,
+											"parameters": {
+												"variable": "nextInputIndex",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 760173144700962,
+											"parameters": {
+												"variable": "LastKeyTyped",
+												"value": "Keyboard.TypedKey"
+											}
+										}
+									],
+									"sid": 530514813260111
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 346285106202645,
+											"parameters": {
+												"first-value": "len(PinString)",
+												"comparison": 0,
+												"second-value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-focused",
+											"objectClass": "PinInput4",
+											"sid": 821841174792366
+										},
+										{
+											"id": "set-max-length",
+											"objectClass": "PinInput4",
+											"sid": 547595255979404,
+											"parameters": {
+												"max-length": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "PinInput4",
+											"sid": 589731851886676,
+											"parameters": {
+												"text": "right(PinString, 1)"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 323371776700796,
+											"parameters": {
+												"variable": "nextInputIndex",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 459963109720937,
+											"parameters": {
+												"variable": "LastKeyTyped",
+												"value": "Keyboard.TypedKey"
+											}
+										}
+									],
+									"sid": 159013615996738
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 571523157703739,
+							"parameters": {
+								"key": 8
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 640214383493098,
+							"parameters": {
+								"key": 8
+							}
+						}
+					],
+					"actions": [],
+					"sid": 169407181025886,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 190515016191876,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 4,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 734151934745869,
+									"parameters": {
+										"variable": "PinString",
+										"value": "left(PinString, len(PinString) - 1)"
+									}
+								}
+							],
+							"sid": 925633890386348,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 911373549078192,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 859842049138863,
+									"parameters": {
+										"text": "\"\""
+									}
+								}
+							],
+							"sid": 741659940251077,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 122362301930131,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput1",
+									"sid": 803900507719406,
+									"parameters": {
+										"text": "PinString"
+									}
+								}
+							],
+							"sid": 395816416011615,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 164167862170775,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 0,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput2",
+									"sid": 579880882196267,
+									"parameters": {
+										"text": " right(PinString, 1)"
+									}
+								}
+							],
+							"sid": 674412557199890,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 661382324755415,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 0,
+										"second-value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput3",
+									"sid": 454451548162893,
+									"parameters": {
+										"text": " right(PinString, 1)"
+									}
+								}
+							],
+							"sid": 955758478374440,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 198964213682842,
+									"parameters": {
+										"first-value": "len(PinString)",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "PinInput4",
+									"sid": 778766384456069,
+									"parameters": {
+										"text": " right(PinString, 1)"
+									}
+								}
+							],
+							"sid": 242456617165203,
+							"disabled": true
+						}
+					]
+				}
+			],
+			"sid": 178918881881791
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "CursorStyle",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 623955334205889,
+							"parameters": {
+								"object": "Btn1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 348243720938400,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 247626378424951,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 634016389437723,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 642692036089386,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 354667144700487,
+							"parameters": {
+								"object": "Btn2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 344776924419292,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 527419504251376,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 609594227165620,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 949595676501846,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 190838074798437,
+							"parameters": {
+								"object": "Btn3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 228146064562332,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 518552834180784,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 806136965798569,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 904644899734896,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 303517296905940,
+							"parameters": {
+								"object": "Btn4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 949211883027860,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 864644709849736,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 601295233314645,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 609947539292188,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 474395237222859,
+							"parameters": {
+								"object": "Btn5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 788776489919166,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 746961427737834,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 423876715767755,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 939061471023166,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 841553827970771,
+							"parameters": {
+								"object": "Btn6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 487110585141501,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 551258251231785,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 450013866764299,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 548678633125546,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 911341491325073,
+							"parameters": {
+								"object": "Btn7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 871843675418730,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 185517429897370,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 784475690516693,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 552795071560814,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 646921171094834,
+							"parameters": {
+								"object": "Btn8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 196930027559909,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 103785339523878,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 437024515788689,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 185467509496555,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 499101720437045,
+							"parameters": {
+								"object": "Btn9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 312149790909016,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 612953075237392,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 448651984171538,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 920648831800801,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 432541905144046,
+							"parameters": {
+								"object": "Btn0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 629806309407948,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 782009403207112,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 620884801301950,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 808854941782512,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 502098190725043,
+							"parameters": {
+								"object": "BtnAC"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 870306468991229,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 524031817484179,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 251287735966764,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 350953729301170,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 633142184938975,
+							"parameters": {
+								"object": "BtnDel"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 264029265687556,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 319138040183937,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 767388858576662,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 911350481311748,
+					"disabled": true
+				}
+			],
+			"sid": 600325396284403
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Efectos Btns",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 192157678051218,
+							"parameters": {
+								"object": "BtnsPIN"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BtnsPIN",
+							"sid": 524921253332842,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 330136679416764
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 745598003846618,
+							"parameters": {
+								"object": "BtnsPIN"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BtnsPIN",
+							"sid": 786550968502742,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 158393716724289
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 612098460502648,
+							"parameters": {
+								"object": "BtnsPIN"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BtnsPIN",
+							"sid": 496538195252992,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 535468031701648,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BtnsPIN",
+							"sid": 499941243329700,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 980237693906691
+				}
+			],
+			"sid": 763470469842201
+		}
+	],
+	"sid": 207386162934092
+}

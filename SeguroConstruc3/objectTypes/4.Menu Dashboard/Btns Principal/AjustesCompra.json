@@ -1,0 +1,17 @@
+{
+	"name": "AjustesCompra",
+	"plugin-id": "SVGPicture",
+	"sid": 735918716640198,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnContent",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 695442383714463
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

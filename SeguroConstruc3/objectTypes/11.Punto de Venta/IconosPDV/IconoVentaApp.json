@@ -1,0 +1,14 @@
+{
+	"name": "IconoVentaApp",
+	"plugin-id": "SVGPicture",
+	"sid": 227511086654924,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

@@ -1,0 +1,58 @@
+{
+	"name": "PanelGris",
+	"plugin-id": "Sprite",
+	"sid": 602342737254243,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 666,
+						"height": 342,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9333561,
+						"collisionPoly": {
+							"points": [
+								0.05855855855855856,
+								0,
+								0.9864864864864865,
+								0.05263157894736842,
+								1,
+								0.11403508771929824,
+								1,
+								0.8859649122807017,
+								0.9414414414414415,
+								1,
+								0.013513513513513514,
+								0.9473684210526315,
+								0,
+								0.8859649122807017,
+								0,
+								0.11403508771929824
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 870875705201714,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

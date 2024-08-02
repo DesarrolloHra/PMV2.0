@@ -1,0 +1,19 @@
+{
+	"name": "IconosAjustes",
+	"plugin-id": "SVGPicture",
+	"sid": 875446800246742,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"AjustesComanda",
+		"AjustesPV",
+		"AjustesIcon",
+		"ajustesAlmacenes",
+		"AjustesCompra",
+		"AjustesInventario",
+		"AjustesIcon2",
+		"AjustesPV2",
+		"AjustesComanda2"
+	]
+}

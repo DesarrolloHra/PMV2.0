@@ -1,0 +1,50 @@
+{
+	"name": "BoxModal",
+	"plugin-id": "Sprite",
+	"sid": 276706803431039,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 564,
+						"height": 354,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8636448,
+						"collisionPoly": {
+							"points": [
+								0.02127659574468085,
+								0,
+								1,
+								0.03389830508474576,
+								0.9787234042553191,
+								1,
+								0,
+								0.9661016949152542
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 507734373430448,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

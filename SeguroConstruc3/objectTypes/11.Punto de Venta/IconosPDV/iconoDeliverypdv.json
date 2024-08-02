@@ -1,0 +1,14 @@
+{
+	"name": "iconoDeliverypdv",
+	"plugin-id": "SVGPicture",
+	"sid": 630031008802423,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

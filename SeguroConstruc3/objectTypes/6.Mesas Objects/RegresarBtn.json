@@ -1,0 +1,50 @@
+{
+	"name": "RegresarBtn",
+	"plugin-id": "Sprite",
+	"sid": 160299274565102,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 580,
+						"height": 141,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7094001,
+						"collisionPoly": {
+							"points": [
+								0.032758620689655175,
+								0,
+								0.9827586206896551,
+								0.028368794326241134,
+								0.9620689655172414,
+								1,
+								0.013793103448275862,
+								0.9574468085106383
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 563834922128535,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

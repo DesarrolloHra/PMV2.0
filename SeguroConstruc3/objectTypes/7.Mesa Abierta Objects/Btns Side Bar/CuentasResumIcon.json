@@ -1,0 +1,50 @@
+{
+	"name": "CuentasResumIcon",
+	"plugin-id": "Sprite",
+	"sid": 626583425317510,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 99,
+						"height": 152,
+						"originX": 0.494949494949495,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 94642,
+						"collisionPoly": {
+							"points": [
+								0.030303030303030304,
+								0.006578947368421052,
+								0.9797979797979797,
+								0.013157894736842105,
+								0.9696969696969697,
+								0.993421052631579,
+								0.010101010101010102,
+								0.9868421052631579
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 219789915270033,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

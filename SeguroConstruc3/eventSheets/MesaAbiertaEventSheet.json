@@ -1,0 +1,505 @@
+{
+	"name": "MesaAbiertaEventSheet",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Modales Mesa Abierta",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked-class",
+							"objectClass": "TICKETPRINCIPAL",
+							"sid": 203570390194938,
+							"parameters": {
+								"class": "\"openModal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 315939455371329,
+							"parameters": {
+								"layer": "2",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 274995058188701,
+							"parameters": {
+								"layer": "1",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 133482534472384,
+							"parameters": {
+								"layer": "2",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 318952217604294,
+							"parameters": {
+								"layer": "0",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 174197280902977,
+							"parameters": {
+								"layer": "0",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 897173642269638
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked-class",
+							"objectClass": "menuLateralMa",
+							"sid": 741409820127315,
+							"parameters": {
+								"class": "\"openModal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 846303449789559,
+							"parameters": {
+								"layer": "2",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 656516079545958,
+							"parameters": {
+								"layer": "1",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 368983257849120,
+							"parameters": {
+								"layer": "2",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 244813790142308,
+							"parameters": {
+								"layer": "0",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 873041682518297,
+							"parameters": {
+								"layer": "0",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 408673463274098
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked-class",
+							"objectClass": "Menu",
+							"sid": 207179947567425,
+							"parameters": {
+								"class": "\"openModal\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 804726513850541,
+							"parameters": {
+								"layer": "2",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 903741095478284,
+							"parameters": {
+								"layer": "1",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 303906150318326,
+							"parameters": {
+								"layer": "2",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 208457022387561,
+							"parameters": {
+								"layer": "0",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 211612411812917,
+							"parameters": {
+								"layer": "0",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 302260429788799
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 525418989680520,
+							"parameters": {
+								"object": "ClsoeModalMaestroMA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 974155525963645,
+							"parameters": {
+								"layer": "2",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 701001116045280,
+							"parameters": {
+								"layer": "1",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 852035585439332,
+							"parameters": {
+								"layer": "2",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 644437665698309,
+							"parameters": {
+								"layer": "0",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 867277154655458,
+							"parameters": {
+								"layer": "0",
+								"interactive": true
+							}
+						}
+					],
+					"sid": 341929775873156
+				}
+			],
+			"sid": 367704020988959
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Generar Info Dinamicamente Mesa Abierta",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 587376616517410
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "let token = runtime.globalVars.Token;\nlet apiUrl = runtime.globalVars.apiUrl;\nlet idVenta = runtime.globalVars.IdVenta;\nlet dataEmpresa = runtime.globalVars.dataEmpresaMitzi;\n\nmainFunctionMesaAbierta(token, apiUrl, idVenta, dataEmpresa);"
+						}
+					],
+					"sid": 183515478437290
+				}
+			],
+			"sid": 777304177030517
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Cerrar Sesión Mesa Abierta",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 595036691949564,
+							"parameters": {
+								"object": "TextoCerrarSesion"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 931422335495126,
+							"parameters": {
+								"variable": "Token",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 942710467416355,
+							"parameters": {
+								"variable": "softbarNivel",
+								"value": "9999"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 184505178348094,
+							"parameters": {
+								"variable": "CorreoIngresado",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 595518571714695,
+							"parameters": {
+								"variable": "ContrasenaIngresada",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 959437189698317,
+							"parameters": {
+								"variable": "PinString",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 266913669783381,
+							"parameters": {
+								"variable": "nextInputIndex",
+								"value": "5"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 214090441998509,
+							"parameters": {
+								"layout": "InicioSesionLayout"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 972613067010935,
+							"parameters": {
+								"variable": "accesoUsuario",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 335092907634836
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 693239303912695,
+							"parameters": {
+								"object": "IconoCerrarSesion"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 970886519503736,
+							"parameters": {
+								"variable": "Token",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 655216299430351,
+							"parameters": {
+								"variable": "softbarNivel",
+								"value": "9999"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 837114093831004,
+							"parameters": {
+								"variable": "CorreoIngresado",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 649284963495946,
+							"parameters": {
+								"variable": "ContrasenaIngresada",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 612305031908751,
+							"parameters": {
+								"variable": "PinString",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 814900235148461,
+							"parameters": {
+								"variable": "nextInputIndex",
+								"value": "5"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 987895113190782,
+							"parameters": {
+								"variable": "accesoUsuario",
+								"value": "false"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 102503416392241,
+							"parameters": {
+								"layout": "InicioSesionLayout"
+							}
+						}
+					],
+					"sid": 329227536496058
+				}
+			],
+			"sid": 362832788520122
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Navegacion",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 516022618832650,
+							"parameters": {
+								"object": "PanelRojo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 276867073160123,
+							"parameters": {
+								"layout": "MesasLayout"
+							}
+						}
+					],
+					"sid": 694861574947110
+				}
+			],
+			"sid": 324655030099357
+		}
+	],
+	"sid": 335624327157101
+}

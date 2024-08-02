@@ -1,0 +1,50 @@
+{
+	"name": "PanelRojoH",
+	"plugin-id": "Sprite",
+	"sid": 407841796450622,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 998,
+						"height": 502,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8420686,
+						"collisionPoly": {
+							"points": [
+								0.01603206412825651,
+								0.00199203187250996,
+								0.998997995991984,
+								0.03187250996015936,
+								0.9839679358717435,
+								0.99800796812749,
+								0.001002004008016032,
+								0.9681274900398407
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 382110085349694,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

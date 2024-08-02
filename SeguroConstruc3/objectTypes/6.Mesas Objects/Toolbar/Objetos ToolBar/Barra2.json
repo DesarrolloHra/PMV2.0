@@ -1,0 +1,50 @@
+{
+	"name": "Barra2",
+	"plugin-id": "Sprite",
+	"sid": 401624004351594,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 278,
+						"height": 63,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7518820,
+						"collisionPoly": {
+							"points": [
+								0.007194244604316547,
+								0.015873015873015872,
+								0.9964028776978417,
+								0.031746031746031744,
+								0.9928057553956835,
+								0.9841269841269841,
+								0.0035971223021582736,
+								0.9682539682539683
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 401610011457828,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

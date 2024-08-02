@@ -1,0 +1,75 @@
+/*--------------------Pin layout--------------------*/
+
+.inputNumber{
+	border: solid .5px #818A91;
+	border-radius: 10px;
+	font-size: 2em;
+    text-align: center;
+}
+
+.btnRed{
+	background: linear-gradient(180deg, #D9606D 0%, #B70114 100%);
+    border: none;
+    border-radius: 35px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+	cursor: pointer;
+}
+
+/*--------------------Mesas layout--------------------*/
+
+.selectAreas{
+	background: none;
+    border-radius: 35px;
+    border: 1px solid #303232;
+    font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.btnWhite{
+	height: 6.5vh;
+    padding: 0 1rem 0;
+    background: transparent linear-gradient(180deg, #EFEFEF 0%, #D3D2D2 100%) 0% 0% no-repeat padding-box;
+    border-radius: 35px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+	cursor: pointer;
+}
+
+.inputTexto{
+	border: 1px solid #818A91;
+    border-radius: 35px;
+    text-align: center;
+	font-weight: bold;
+    font-size: 1em;
+}
+.inputTextoCB{
+	border: none;
+    border-radius: 35px;
+    text-align: left;
+	font-weight: bold;
+	
+	background:transparent;
+    font-size: 1.5em;
+}
+
+.selectModal{
+    border: 1px solid #818A91;
+    border-radius: 35px;
+	font-size: 1rem;
+	cursor: pointer;
+	text-align: center;
+	
+}
+
+
+/*--------------------Mesa Abierta layout--------------------*/
+
+.optionBtn{
+    border: 1px solid;
+    background: none;
+    border-radius: 35px;
+    cursor: pointer;
+}

@@ -1,0 +1,1163 @@
+{
+	"name": "VentaMostradorLayout",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 187596,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1979,
+						"y": 1074,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 144972,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 617,
+						"y": 118,
+						"width": 497.42811644470737,
+						"height": 99.41530908049259,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelVerde",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 625402,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3572,
+						"y": 420,
+						"width": 293,
+						"height": 318,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojoHorizontal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 334225,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2961,
+						"y": 418,
+						"width": 819.764312654489,
+						"height": 318,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TicketBackG",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 126363,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3139,
+						"y": 1377,
+						"width": 1166.3969913327683,
+						"height": 1416.0984796180483,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojo1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 260648,
+					"instanceVariables": {
+						"btnRegresar": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 244,
+						"y": 431,
+						"width": 306,
+						"height": 306,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "REGRESAR",
+					"properties": {
+						"text": "REGRESAR",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 1,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 634068,
+					"instanceVariables": {
+						"textRegresar": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 88,
+						"y": 480,
+						"width": 304.29824624945525,
+						"height": 92.32349704170365,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FolioTicket",
+					"properties": {
+						"text": "Folio Ticket:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 38,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 970566,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2623,
+						"y": 326,
+						"width": 506.7957687466542,
+						"height": 72.65254027487,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mesero",
+					"properties": {
+						"text": "Mesero:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 38,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 421359,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2621,
+						"y": 463,
+						"width": 506.7957687466542,
+						"height": 72.65254027487,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UltimaActualizacion",
+					"properties": {
+						"text": "Ultima actualizacion: ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 38,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 484415,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2620,
+						"y": 392,
+						"width": 506.7957687466542,
+						"height": 72.65254027487,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "VistaTicket",
+					"properties": {
+						"tag": "div",
+						"content": "<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Tabla Responsiva</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n    <table class=\"cobrar-table\">\n        <thead class=\"cobrar-table-header\">\n            <tr class=\"cobrar-header-row\">\n                <th class=\"cobrar-header-cell\">Cantidad</th>\n                <th class=\"cobrar-header-cell\">Precio</th>\n                <th class=\"cobrar-header-cell\">Total</th>\n                <th class=\"cobrar-header-cell\"></th>\n            </tr>\n        </thead>\n        <tbody class=\"cobrar-table-body\">\n            <tr class=\"cobrar-body-row\">\n                <td class=\"cobrar-body-cell\">10</td>\n                <td class=\"cobrar-body-cell\">$5.00</td>\n                <td class=\"cobrar-body-cell\">$50.00</td>\n                <td class=\"cobrar-body-cell\"></td>\n            </tr>\n            <tr class=\"cobrar-body-row\">\n                <td class=\"cobrar-body-cell\">20</td>\n                <td class=\"cobrar-body-cell\">$10.00</td>\n                <td class=\"cobrar-body-cell\">$200.00</td>\n                <td class=\"cobrar-body-cell\"></td>\n            </tr>\n            <tr class=\"cobrar-body-row\">\n                <td class=\"cobrar-body-cell\">30</td>\n                <td class=\"cobrar-body-cell\">$15.00</td>\n                <td class=\"cobrar-body-cell\">$450.00</td>\n                <td class=\"cobrar-body-cell\"></td>\n            </tr>\n        </tbody>\n    </table>\n</body>\n</html>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 726765,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2566,
+						"y": 765,
+						"width": 1144,
+						"height": 1210,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "MenuLatCobro",
+					"properties": {
+						"tag": "div",
+						"content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Barra Lateral</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n    <div class=\"sidebar\">\n        <div class=\"section\">\n            <a href=\"#\">\n                    <svg class=\"Icono-menu-lateral\" id=\"a\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 200 200\">\n                        <defs>\n                        <style>\n                            .i33 {\n                            fill: none;\n                            }\n                    \n                            .i33, .j33 {\n                            stroke-width: 0px;\n                            }\n                    \n                            .k33 {\n                            clip-path: url(#c);\n                            }\n                    \n                            .j33 {\n                            fill: #303232;\n                            }\n                        </style>\n                        <clipPath id=\"c\">\n                            <rect class=\"i33\" x=\"9.56\" y=\"5.17\" width=\"180.88\" height=\"188.63\"/>\n                        </clipPath>\n                        </defs>\n                        <g id=\"b\" data-name=\"Group 78\">\n                        <g class=\"k33\">\n                            <g id=\"d\" data-name=\"Group 77\">\n                            <path id=\"e\" data-name=\"Path 85\" class=\"j33\" d=\"M98.16,193.8c-4.73-.95-9-3.44-12.15-7.1-2.69-2.78-5.59-5.35-8.31-8.09-1.63-1.73-4.04-2.48-6.36-1.99-4.66.75-9.33,1.42-14.03,1.99-8.98,1.7-17.63-4.21-19.33-13.19-.11-.56-.18-1.12-.23-1.68-.73-4.48-1.56-8.94-2.3-13.42-.31-2.29-1.77-4.26-3.87-5.23-4.26-2.17-8.48-4.43-12.69-6.7-8.21-3.92-11.69-13.74-7.77-21.95.12-.25.24-.49.37-.74,2.06-4.32,4.14-8.6,6.31-12.89,1.15-2.07,1.15-4.59,0-6.67-2.14-4.22-4.2-8.47-6.26-12.73-4.4-8.01-1.47-18.07,6.54-22.47.32-.18.65-.34.99-.5,4.1-2.2,8.19-4.45,12.36-6.53,2.27-1.05,3.82-3.21,4.08-5.7.75-4.73,1.53-9.44,2.48-14.13,1.33-9.02,9.72-15.24,18.73-13.91.39.06.77.13,1.16.21,4.63.73,9.35,1.36,14.02,2.04,2.04.34,4.11-.36,5.53-1.86,3.51-3.44,7.04-6.85,10.59-10.25,6.24-6.6,16.64-6.89,23.24-.65.22.21.44.43.65.65,3.47,3.31,6.94,6.62,10.32,9.99,1.67,1.77,4.15,2.54,6.53,2.02,4.63-.76,9.33-1.47,14.03-1.99,8.95-1.64,17.54,4.28,19.18,13.23.08.42.14.83.18,1.25.81,4.47,1.61,8.94,2.3,13.42.25,2.49,1.8,4.65,4.06,5.71,4.11,2.06,8.13,4.28,12.19,6.45,8.34,3.75,12.05,13.54,8.31,21.88-.22.5-.47.98-.74,1.45-1.99,4.02-3.85,8.08-5.96,12.05-1.31,2.27-1.31,5.07,0,7.33,2.15,4.13,4.15,8.35,6.15,12.58,4.35,7.98,1.4,17.97-6.57,22.32-.26.14-.53.28-.8.41-4.15,2.26-8.3,4.51-12.52,6.62-2.32,1.08-3.9,3.31-4.14,5.86-.71,4.63-1.52,9.33-2.45,13.95-1.29,9.02-9.65,15.28-18.67,13.98-.4-.06-.79-.13-1.19-.21-4.67-.72-9.35-1.32-14.03-2.03-2.04-.36-4.12.32-5.55,1.81-2.85,2.8-5.81,5.48-8.6,8.34-3.14,3.63-7.4,6.12-12.11,7.06h-3.68ZM145.15,167.99c2.92.33,5.58-1.69,6.06-4.59.79-4.16,1.71-8.31,2.18-12.5.44-7.23,4.96-13.58,11.65-16.35,3.73-1.69,7.28-3.79,10.91-5.73,2.93-1.09,4.43-4.35,3.34-7.28-.15-.41-.35-.8-.59-1.16-2.11-4.36-4.24-8.71-6.39-13.05-2.61-4.92-2.61-10.81,0-15.73,2.13-4.28,4.22-8.6,6.3-12.89,1.8-2.59,1.16-6.16-1.43-7.96-.44-.3-.92-.55-1.42-.72-4.28-2.28-8.56-4.53-12.84-6.8-4.71-2.32-8.02-6.77-8.89-11.95-.93-5.13-1.8-10.27-2.77-15.39-.31-3.05-3.03-5.27-6.08-4.97-.23.02-.47.06-.69.11-4.68.66-9.36,1.32-14.02,2.05-5.84,1.15-11.87-.78-15.95-5.12-3.31-3.31-6.68-6.51-10.05-9.74-1.93-2.45-5.48-2.88-7.94-.95-.34.27-.64.57-.91.9-3.49,3.36-6.98,6.74-10.46,10.12-3.62,3.81-8.85,5.64-14.06,4.92-5.11-.66-10.21-1.4-15.3-2.14-3-.8-6.08.98-6.88,3.98-.08.31-.14.64-.17.96-.89,4.7-1.75,9.41-2.5,14.12-.69,5.72-4.23,10.7-9.4,13.24-4.24,2.2-8.46,4.46-12.68,6.71-2.96,1.05-4.52,4.3-3.47,7.26.16.46.38.89.65,1.3,2.08,4.3,4.16,8.6,6.31,12.89,2.66,4.96,2.66,10.92,0,15.88-2.12,4.22-4.16,8.48-6.22,12.72-1.85,2.58-1.25,6.18,1.34,8.02.48.34,1,.6,1.55.79,4.11,2.19,8.21,4.42,12.35,6.55,5.25,2.53,8.85,7.56,9.54,13.34.73,4.63,1.59,9.31,2.46,13.95.2,3.12,2.9,5.49,6.02,5.29.43-.03.85-.1,1.26-.23,4.67-.71,9.35-1.32,14.02-2.03,5.74-.97,11.58,1,15.57,5.24,3.31,3.31,6.68,6.51,10.05,9.74,1.94,2.42,5.48,2.81,7.9.87.31-.25.59-.53.84-.84,3.31-3.19,6.7-6.33,9.93-9.62,4.26-4.6,10.64-6.6,16.77-5.26,4.77.85,9.59,1.38,14.1,1.99\"/>\n                            <path id=\"f\" data-name=\"Path 86\" class=\"j33\" d=\"M63.98,140.78c-2.98-.07-5.34-2.54-5.28-5.52.02-1.09.38-2.14,1.01-3.03.45-.58.95-1.13,1.49-1.63,23.3-23.31,46.6-46.61,69.91-69.92,1.14-1.47,2.86-2.38,4.72-2.5,2.09-.08,4.02,1.1,4.9,2.99,1,1.84.78,4.1-.56,5.71-.42.52-.88,1.02-1.37,1.48-23.3,23.31-46.6,46.61-69.91,69.92-1.17,1.53-2.98,2.45-4.91,2.5\"/>\n                            <path id=\"g\" data-name=\"Path 87\" class=\"j33\" d=\"M78.15,90.38c-11.01-.05-19.89-9.01-19.84-20.02.05-11.01,9.01-19.89,20.02-19.84,11.01.05,19.89,9.01,19.84,20.02,0,.02,0,.04,0,.07-.04,10.97-8.97,19.82-19.93,19.78-.03,0-.05,0-.08,0M78.32,61.47c-4.97-.06-9.06,3.91-9.14,8.88-.05,5,3.96,9.09,8.96,9.13,5,.05,9.09-3.96,9.13-8.96.02-4.97-3.99-9.02-8.96-9.05\"/>\n                            <path id=\"h\" data-name=\"Path 88\" class=\"j33\" d=\"M121.67,108.6c11.01-.04,19.96,8.85,20,19.86.04,11.01-8.85,19.96-19.86,20-10.96.04-19.89-8.77-20-19.73-.15-10.97,8.62-19.98,19.58-20.13.09,0,.18,0,.27,0M121.84,137.5c4.97-.03,8.99-4.07,8.98-9.04-.04-5-4.13-9.01-9.13-8.97-5,.04-9.01,4.13-8.97,9.13h0c.06,4.96,4.13,8.94,9.09,8.88,0,0,.01,0,.02,0\"/>\n                            </g>\n                        </g>\n                        </g>\n                    </svg>\n                Descuento\n            </a>\n        </div>\n        <div class=\"section\">\n            <a href=\"#\">\n                    <svg class=\"Icono-menu-lateral\" id=\"a\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 200 200\">\n                        <defs>\n                        <style>\n                            .f55 {\n                            fill: none;\n                            }\n                    \n                            .f55, .g55 {\n                            stroke-width: 0px;\n                            }\n                    \n                            .h55 {\n                            clip-path: url(#b);\n                            }\n                    \n                            .g55 {\n                            fill: #303232;\n                            }\n                        </style>\n                        <clipPath id=\"b\">\n                            <rect class=\"f55\" x=\"2.98\" y=\"1.98\" width=\"194.07\" height=\"196.29\"/>\n                        </clipPath>\n                        </defs>\n                        <g class=\"h55\">\n                        <g id=\"c\" data-name=\"Group 162\">\n                            <path id=\"d\" data-name=\"Path 204\" class=\"g55\" d=\"M196.31,66.41l-.91-.75c-.69-.58-1.4-1.17-2.17-1.72l-1.17-.84c-7.47-5.33-15.2-10.84-22.86-16.19l-2.56-2.03c0-5.48,0-10.95,0-16.43,0-2.99-.77-4.39-2.83-5.14-2.02-.67-4.24.12-5.38,1.92-2.83,3.15-5.71,6.23-8.66,9.43l-8.61-9.37c-.85-1.4-2.38-2.25-4.01-2.24l-22.66-16.6c-8.03-5.89-18.93-5.96-27.04-.17l-24.11,17.23c-2.03-1.1-3.8-.36-6.16,2.21-2.68,2.95-5.42,5.88-8.2,8.9l-9.08-9.81c-1.13-1.55-3.16-2.16-4.96-1.49-1.88.67-3.07,2.53-2.88,4.52v18.21l-1.01.71c-4.6,3.23-9.25,6.53-13.75,9.72-3.88,2.76-7.79,5.52-11.7,8.27-1.69,1.1-2.69,3.01-2.62,5.03v116.56c-.19,5.59,3.59,10.53,9.04,11.81l.36.15h175.17l.26-.08c4.54-1.12,8.08-4.67,9.18-9.21l.08-.26v-120.79c0-.6-.27-1.17-.74-1.54M183.47,69.64l-16.81,13.98v-25.93l16.81,11.94ZM90.15,17.75c6.5-4.64,15.24-4.59,21.68.13l16.84,12.35-4.08,4.42c-2.91-3.16-5.7-6.22-8.52-9.28-2.91-3.16-5.27-3.16-8.1-.08l-8.56,9.32c-2.96-3.18-5.66-6.18-8.58-9.29-2.92-3.11-5.21-3.08-8.1.04l-8.45,9.15c-.17-.1-.34-.22-.49-.34l-2.62-2.85,19-13.56ZM45.17,43.44c1.28,2.11,4.03,2.78,6.14,1.49.61-.37,1.12-.88,1.49-1.49,2.88-3.1,5.72-6.23,8.74-9.54l6.88,7.42c.7.75,1.37,1.53,2.08,2.27,1.42,2.01,4.2,2.49,6.21,1.07.42-.29.78-.66,1.07-1.07,2.49-2.69,4.99-5.42,7.48-8.16.45-.5.83-1.07,1.35-1.75l8.88,9.68c1.36,2.13,4.18,2.75,6.31,1.39.56-.36,1.03-.83,1.39-1.39,2.91-3.1,5.75-6.22,8.77-9.51,2.85,3.1,5.62,6.11,8.4,9.1,3.12,3.36,5.41,3.32,8.52-.11,2.67-2.91,5.36-5.83,8.24-8.97,1.21,1.29,2.33,2.49,3.5,3.74,1.75,1.92,3.5,3.88,5.27,5.75,1.29,2.12,4.05,2.79,6.16,1.5.6-.36,1.1-.86,1.47-1.45,1.31-1.4,2.58-2.83,4.11-4.52v52.32c-10.83,8.98-21.82,18.14-32.45,26.99l-8.74,7.3-1.51,1.27c-1.27,1.07-2.58,2.16-3.88,3.2-3.1,2.56-6.98,3.99-11,4.04h0c-4.07-.04-7.99-1.52-11.07-4.17-9.12-7.54-18.36-15.25-27.3-22.72l-11.65-9.72-2.16-1.78c-1.86-1.54-3.79-3.13-5.63-4.74l-1.11-.91v-51.03c1.51,1.66,2.79,3.09,4.08,4.5M32.07,58.67v23.85l-15.46-12.88,15.46-10.97ZM13.42,80.4l61.04,50.82-61.06,50.79.02-101.61ZM22.52,187.87l59.92-49.89c5.02,3.94,11.17,6.17,17.55,6.36,6.41-.19,12.58-2.42,17.64-6.36l59.93,49.89H22.52ZM186.62,182.01l-60.99-50.79,60.99-50.79v101.57Z\"/>\n                            <path id=\"e\" data-name=\"Path 205\" class=\"g55\" d=\"M99.13,107.97c-2.91-.17-4.7-2.02-5.24-5.52v-.38c-.29-2.45-2.5-4.21-4.96-3.93l-.25.04c-2.47.5-4.06,2.9-3.57,5.37,0,0,0,0,0,0,.34,5.1,3.45,9.61,8.1,11.74,1.17.37,1.92,1.51,1.78,2.73-.03,3.32,1.71,5.24,4.47,5.19,2.66-.04,4.35-1.96,4.32-5.15-.18-1.22.56-2.39,1.75-2.75,7.11-3.36,10.15-11.85,6.79-18.96-2.24-4.73-6.88-7.85-12.11-8.13-.82-.03-1.63-.14-2.42-.35-2.7-.76-4.35-3.48-3.79-6.23.46-2.6,2.71-4.49,5.34-4.49,3.16-.03,4.91,1.8,5.61,5.83v.13c.24,2.4,2.38,4.15,4.77,3.91,0,0,0,0,0,0,2.46-.32,4.22-2.52,3.99-4.99h0c-.21-5.23-3.31-9.9-8.05-12.11-1.24-.37-2.04-1.55-1.92-2.84.06-3.22-1.68-5.09-4.36-5.09-2.43,0-4.41,1.95-4.41,4.38,0,.23.02.45.05.68.16,1.28-.63,2.49-1.87,2.85-5.9,2.81-9.09,9.3-7.73,15.68,1.29,6.31,6.66,10.96,13.09,11.36.89.03,1.77.15,2.63.38,2.66.85,4.24,3.58,3.65,6.31-.49,2.67-2.9,4.54-5.61,4.36\"/>\n                        </g>\n                        </g>\n                    </svg>\n                Enviar Ticket por Correo\n            </a>\n        </div>\n        <div class=\"section\" style=\"color: red;\">\n            <a href=\"#\">\n                    <svg class=\"Icono-menu-lateral\" id=\"a\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 200 200\">\n                        <defs>\n                        <style>\n                            .r77 {\n                            fill: none;\n                            }\n                    \n                            .r77, .s77 {\n                            stroke-width: 0px;\n                            }\n                    \n                            .t77 {\n                            clip-path: url(#k);\n                            }\n                    \n                            .u77 {\n                            clip-path: url(#h);\n                            }\n                    \n                            .v77 {\n                            clip-path: url(#d);\n                            }\n                    \n                            .s77 {\n                            fill: #d82135;\n                            }\n                        </style>\n                        <clipPath id=\"d\">\n                            <rect class=\"r77\" x=\"16.77\" y=\"3\" width=\"169.48\" height=\"138\"/>\n                        </clipPath>\n                        <clipPath id=\"h\">\n                            <rect class=\"r77\" y=\"116.86\" width=\"192.06\" height=\"142.67\"/>\n                        </clipPath>\n                        <clipPath id=\"k\">\n                            <rect class=\"r77\" x=\"46.4\" y=\"16.98\" width=\"114.97\" height=\"179.48\"/>\n                        </clipPath>\n                        </defs>\n                        <g id=\"b\" data-name=\"Group 107\">\n                        <g id=\"c\" data-name=\"Group 105\">\n                            <g class=\"v77\">\n                            <g id=\"e\" data-name=\"Group 104\">\n                                <path id=\"f\" data-name=\"Path 191\" class=\"s77\" d=\"M52.18,129.21v11.67c-.63.04-1.16.1-1.7.1h-19.41c-7.57.31-13.96-5.58-14.26-13.15-.01-.34-.02-.69,0-1.03-.04-23.36-.05-46.72-.03-70.08-.32-7.57,5.55-13.97,13.12-14.29.36-.02.71-.02,1.07,0,5.05-.08,10.11,0,15.16,0h2.19v-24.94c-.41-7.58,5.4-14.06,12.98-14.47.46-.03.92-.03,1.38,0h77.65c7.57-.38,14.01,5.44,14.4,13.01.02.47.02.95,0,1.43v24.94h4.39c4.25,0,8.51-.04,12.76,0,7.6-.34,14.03,5.55,14.37,13.15.02.44.02.89,0,1.33.03,13.25.03,26.51,0,39.76,0,9.88,0,19.74,0,29.59.53,7.62-5.23,14.23-12.85,14.76-.65.05-1.31.04-1.96,0h-10.35c-3.24.28-6.1-2.13-6.37-5.37-.28-3.24,2.13-6.1,5.37-6.37.34-.03.68-.03,1.02,0h10.72c2.06,0,2.68-.59,2.68-2.62,0-23.24,0-46.47,0-69.69,0-2.13-.67-2.74-3.01-2.72-8.2,0-16.39.1-24.58.1H56.13c-8.13,0-16.26-.08-24.4-.1-2.63,0-3.18.55-3.19,3.09v68.98c0,2.5.51,2.99,3.07,2.99h20.58v-.03ZM142.98,42.22v-24.63c0-2.28-.55-2.83-2.84-2.83H62.91c-2.27,0-2.8.55-2.8,2.87v23.1c0,.47.06.95.09,1.49h82.79Z\"/>\n                                <path id=\"g\" data-name=\"Path 192\" class=\"s77\" d=\"M141.04,72c.01-4.31,3.52-7.79,7.83-7.78,4.31.01,7.79,3.52,7.78,7.83-.01,4.27-3.46,7.74-7.73,7.78-4.31.04-7.84-3.42-7.88-7.74,0-.03,0-.06,0-.09\"/>\n                            </g>\n                            </g>\n                        </g>\n                        <g class=\"u77\">\n                            <g id=\"i\" data-name=\"Mask Group 1\">\n                            <g id=\"j\" data-name=\"Group 106\">\n                                <g class=\"t77\">\n                                <g id=\"l\" data-name=\"Group 3-2\">\n                                    <path id=\"m\" data-name=\"Path 4-2\" class=\"s77\" d=\"M49.09,196.46c-1.84-.87-2.92-2.81-2.69-4.83.03-56.6.03-113.21,0-169.81v-.7c-.16-1.69.84-3.27,2.44-3.84,1.54-.59,3.28-.08,4.26,1.25l7.76,8.39c2.38-2.57,4.7-5.08,7.01-7.6,2.83-3.09,4.68-3.09,7.52,0l6.65,7.22c.13.11.27.21.42.29l7.22-7.81c2.48-2.68,4.43-2.7,6.91-.04,2.47,2.66,4.82,5.22,7.32,7.93,2.51-2.74,4.94-5.35,7.33-7.95s4.43-2.62,6.91.07c2.48,2.69,4.81,5.23,7.28,7.93l7.35-8c1.14-1.88,3.6-2.47,5.47-1.33.54.33,1,.79,1.33,1.33l7.35,7.99c2.51-2.74,4.98-5.37,7.4-8.06.97-1.54,2.87-2.22,4.59-1.65,1.75.64,2.41,1.84,2.41,4.39,0,56.66.01,113.32.03,169.99.17,2.01-.9,3.93-2.7,4.83h-1.76c-1-.67-1.95-1.42-2.84-2.23-2.41-2.49-4.72-5.08-7.13-7.68-1.03,1.1-1.91,2.11-2.85,3.06-2.27,2.3-4.57,4.57-6.85,6.85h-2.11c-1-.87-2.07-1.68-2.98-2.63-2.25-2.36-4.43-4.79-6.73-7.29-2.34,2.54-4.56,5.02-6.88,7.41-.98.9-2.01,1.74-3.08,2.52h-1.76c-1.01-.76-1.99-1.58-2.91-2.45-2.33-2.43-4.57-4.94-6.9-7.47-1.94,2.1-3.67,4.08-5.49,5.95-1.38,1.4-2.9,2.66-4.35,3.98h-1.76c-.95-.65-1.86-1.37-2.71-2.15-2.43-2.51-4.78-5.11-7.21-7.76-1.26,1.37-2.36,2.64-3.54,3.84-2.04,2.06-4.14,4.06-6.21,6.09h-2.09l-9.81-9.8c-1.17,1.28-2.35,2.64-3.61,3.93-1.94,1.98-3.95,3.91-5.93,5.86h-2.11ZM153.65,182.78V30.56c-1.31,1.45-2.4,2.67-3.51,3.84-1.13,1.79-3.5,2.33-5.3,1.2-.5-.31-.92-.74-1.23-1.24-1.51-1.65-3-3.29-4.51-4.91-.97-1.05-1.95-2.09-2.98-3.2-2.45,2.67-4.75,5.16-7.03,7.68-2.68,2.93-4.62,2.96-7.28.1-2.38-2.56-4.74-5.13-7.18-7.78-2.58,2.8-5.03,5.49-7.5,8.13-1.17,1.81-3.59,2.33-5.4,1.16-.48-.31-.88-.72-1.18-1.2l-7.58-8.23c-.44.55-.76,1.06-1.15,1.48-2.13,2.33-4.25,4.66-6.42,6.96-1.24,1.7-3.62,2.07-5.32.84-.33-.24-.61-.52-.85-.85-.6-.64-1.19-1.3-1.78-1.94l-5.87-6.34c-2.6,2.83-5.02,5.49-7.48,8.15-1.12,1.8-3.49,2.35-5.29,1.23-.5-.31-.92-.73-1.23-1.23-1.1-1.21-2.19-2.43-3.5-3.84v152.33c1.5-1.65,2.74-3.09,4.08-4.47,1.14-1.37,3.15-1.63,4.61-.6.57.41,1.08.89,1.54,1.42,2.41,2.6,4.81,5.22,7.29,7.92,2.43-2.62,4.72-5.1,7.01-7.59,2.84-3.09,4.69-3.09,7.51-.03,2.32,2.52,4.64,5.03,7.03,7.61,2.51-2.74,4.89-5.3,7.27-7.88,2.49-2.71,4.52-2.69,7.03.05,2.37,2.57,4.74,5.14,7.23,7.86.43-.49.77-.88,1.1-1.26,2.1-2.28,4.2-4.56,6.3-6.83,1.15-1.84,3.58-2.39,5.42-1.24.51.32.94.76,1.26,1.28.92.98,1.81,1.99,2.74,2.97,1.53,1.65,3.07,3.29,4.69,5.05,2.66-2.89,5.16-5.67,7.68-8.39,1.15-1.67,3.44-2.08,5.11-.93.36.25.68.57.93.93,1.19,1.26,2.34,2.55,3.7,4.03\"/>\n                                    <path id=\"n\" data-name=\"Path 5-2\" class=\"s77\" d=\"M116.12,67.39c.21,2.11-1.3,4-3.4,4.27-2.05.21-3.88-1.29-4.08-3.34,0-.03,0-.07,0-.1-.6-3.44-2.1-5.01-4.77-4.98-2.25,0-4.18,1.62-4.57,3.84-.48,2.35.93,4.66,3.23,5.32.68.18,1.37.28,2.07.3,6.71.36,11.85,6.1,11.49,12.8-.24,4.46-2.91,8.43-6.95,10.34-1,.32-1.63,1.31-1.48,2.35.03,2.74-1.41,4.36-3.69,4.39s-3.84-1.61-3.84-4.43c.11-1.04-.53-2.01-1.53-2.33-3.98-1.81-6.65-5.66-6.95-10.03-.43-2.11.94-4.16,3.05-4.59.07-.01.14-.03.21-.04,2.11-.22,4,1.31,4.22,3.42,0,.09.01.17.02.26.48,2.99,1.99,4.57,4.5,4.71,2.31.17,4.39-1.43,4.82-3.71.51-2.33-.85-4.67-3.12-5.39-.74-.19-1.49-.3-2.25-.32-5.5-.32-10.11-4.3-11.22-9.7-1.16-5.45,1.56-10.99,6.58-13.4,1.06-.31,1.74-1.34,1.61-2.44-.32-2.05,1.09-3.97,3.14-4.28.2-.03.41-.05.61-.04,2.29,0,3.79,1.65,3.73,4.35-.1,1.1.59,2.12,1.65,2.43,4.05,1.89,6.7,5.88,6.88,10.35\"/>\n                                    <path id=\"o\" data-name=\"Path 6-2\" class=\"s77\" d=\"M104.08,138.59h30.52c.58-.02,1.17,0,1.75.03,2.04.18,3.55,1.97,3.37,4.01-.15,1.79-1.58,3.22-3.37,3.37-.58.05-1.17.03-1.75.03h-61.41c-3.39,0-5.09-1.21-5.14-3.64s1.73-3.81,5.15-3.81h30.87\"/>\n                                    <path id=\"p\" data-name=\"Path 7-2\" class=\"s77\" d=\"M104.06,154.35h31.08c.98-.03,1.96.18,2.85.6,1.41.74,2.1,2.37,1.65,3.9-.29,1.56-1.58,2.73-3.16,2.87-.58.06-1.17.07-1.76.05h-62.86c-2.07.04-3.77-1.61-3.81-3.68,0-.02,0-.05,0-.07,0-2.04,1.66-3.68,3.7-3.68.05,0,.1,0,.15,0,6.44-.04,12.88,0,19.32,0h12.85\"/>\n                                    <path id=\"q\" data-name=\"Path 8-2\" class=\"s77\" d=\"M103.83,130.68c-5.38,0-10.76.04-16.13,0-2.03.17-3.81-1.34-3.97-3.36-.06-.7.09-1.41.42-2.04.64-1.3,1.98-2.1,3.42-2.04h32.61c2.05-.1,3.79,1.49,3.89,3.54.1,2.05-1.49,3.79-3.54,3.89-.13,0-.27,0-.4,0-5.43.04-10.87,0-16.3,0\"/>\n                                </g>\n                                </g>\n                            </g>\n                            </g>\n                        </g>\n                        </g>\n                    </svg>\n                Imprimir Ticket\n            </a>\n        </div>\n    </div>\n</body>\n</html>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 416935,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 88,
+						"y": 660,
+						"width": 306,
+						"height": 1427,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "MenuSupContainer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 470267,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2579,
+						"y": 133,
+						"width": 2304,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 479653,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "Ajustes",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3389,
+						"y": 132,
+						"width": 688,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSVG",
+					"properties": {
+						"svg-file": 769270452405849,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 924363,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1596,
+						"y": 80,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "MENÚ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 721527,
+					"instanceVariables": {
+						"BtnMenuText": "menu"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1449,
+						"y": 30,
+						"width": 688,
+						"height": 200.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.011330621958937304,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ajustes",
+					"properties": {
+						"svg-file": 320843016939425,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 457281,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3115,
+						"y": 81,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "AJUSTES",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 360029,
+					"instanceVariables": {
+						"BtnMenuText": "ajustes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3043,
+						"y": 32,
+						"width": 688,
+						"height": 200.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 808497,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "MenuDash",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1776,
+						"y": 134,
+						"width": 688,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.276782383136762,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 305529,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "PuntVenta",
+						"Selection": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2575,
+						"y": 133,
+						"width": 688,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PuntoVentaSVG",
+					"properties": {
+						"svg-file": 859743254120449,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 816501,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2285,
+						"y": 80,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "PUNTO DE VENTA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 991323,
+					"instanceVariables": {
+						"BtnMenuText": "PuntoVenta"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2363,
+						"y": 31,
+						"width": 534,
+						"height": 200,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Cobrar",
+					"properties": {
+						"text": "Cobrar",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 54,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 899748,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3572,
+						"y": 519,
+						"width": 646.1166045433802,
+						"height": 129.91749068150702,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BarraLateral",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 149313,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 243,
+						"y": 1360,
+						"width": 306,
+						"height": 1474.7982912927455,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Menu",
+					"properties": {
+						"tag": "div",
+						"content": "<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Filtro de Bebidas y Alimentos</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body >\n    <div class=\"menuComida-container\">\n        <header class=\"menuComida-filter-container\">\n            <h2>FAMILIAS</h2>\n            <div class=\"menuComida-filter-buttons\">\n<button data-filter=\"all\" class=\"active\" onclick=\"filterButtonClick('all')\">Todos</button>\n<button data-filter=\"food\" onclick=\"filterButtonClick('food')\">Alimentos</button>\n<button data-filter=\"drinks\" onclick=\"filterButtonClick('drinks')\">Bebidas</button>\n\n            </div>\n            <input type=\"text\" id=\"menuComida-buscar-input\" placeholder=\"Buscar...\">\n        </header>\n\n        <div class=\"menuComida-divider\"></div>\n\n        <main class=\"menuComida-sections\">\n            <div class=\"menuComida-section gray\" data-content=\"Entradas\" onclick=\"displayContent('Entradas')\">Entradas</div>\n            <div class=\"menuComida-section gray\" data-content=\"Hamburguesas\" onclick=\"displayContent('Hamburguesas')\">Hamburguesas</div>\n            <div class=\"menuComida-section gray\" data-content=\"Postres\" onclick=\"displayContent('Postres')\">Postres</div>\n            <div class=\"menuComida-section gray\" data-content=\"Bebidas Frías\" onclick=\"displayContent('Bebidas Frías')\">Bebidas Frías</div>\n            <div class=\"menuComida-section gray\" data-content=\"Otros\" onclick=\"displayContent('Otros')\">Otros</div>\n        </main>\n\n        <footer class=\"menuComida-content\">\n            <h2>Contenido:</h2>\n            <p id=\"menuComida-content-display\">Haz clic en una sección para mostrar el contenido.</p>\n        </footer>\n    </div>\n    <script > \ndocument.addEventListener('DOMContentLoaded', function() {\n    const filterButtons = document.querySelectorAll('.menuComida-filter-buttons button');\n    filterButtons.forEach(button => {\n        button.addEventListener('click', function() {\n            filterButtonClick(this.dataset.filter);\n        });\n    });\n\n    const sections = document.querySelectorAll('.menuComida-section');\n    sections.forEach(section => {\n        section.addEventListener('click', function() {\n            displayContent(this.dataset.content);\n        });\n    });\n});\n\nfunction filterButtonClick(filter) {\n    const filterButtons = document.querySelectorAll('.menuComida-filter-buttons button');\n    filterButtons.forEach(btn => btn.classList.remove('active'));\n    const activeButton = document.querySelector(`.menuComida-filter-buttons button[data-filter=\"${filter}\"]`);\n    activeButton.classList.add('active');\n    filterSections(filter);\n}\n\nfunction filterSections(filter) {\n    const sections = document.querySelectorAll('.menuComida-section');\n    sections.forEach(section => {\n        if (filter === 'all') {\n            section.style.display = 'flex';\n        } else if (filter === 'food' && !['Entradas', 'Hamburguesas', 'Postres'].includes(section.dataset.content)) {\n            section.style.display = 'none';\n        } else if (filter === 'drinks' && !['Bebidas Frías'].includes(section.dataset.content)) {\n            section.style.display = 'none';\n        } else {\n            section.style.display = 'flex';\n        }\n    });\n}\n\nfunction displayContent(content) {\n    const contentDisplay = document.getElementById('menuComida-content-display');\n    contentDisplay.textContent = content;\n}\n\n</script>\n</body>\n</html>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 458496,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 472,
+						"y": 612,
+						"width": 2006.2021179087612,
+						"height": 1491.258353090721,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "iconoshra4",
+					"properties": {
+						"svg-file": 585335604925315,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 311713,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3572,
+						"y": 388,
+						"width": 150,
+						"height": 150,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoshra5",
+					"properties": {
+						"svg-file": 961189363615927,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 436713,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 244,
+						"y": 415,
+						"width": 126.31447046182903,
+						"height": 126.31447046182903,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 499997,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1477,
+						"y": 1207,
+						"width": 2014.6669894773624,
+						"height": 1844.9690325644028,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "VentaMostrador",
+					"properties": {
+						"text": "Venta de mostrador",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 214194,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 721,
+						"y": 382,
+						"width": 799.3003948954971,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				}
+			],
+			"sid": 880406993931335,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "1",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "iconosVM",
+					"properties": {
+						"svg-file": 977206411702662,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 784587,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 518,
+						"y": 380,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 940364190183020,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 541549749863919,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 7680,
+	"height": 4320,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "VentaMostradorEventSheet"
+}

@@ -1,0 +1,27 @@
+{
+	"name": "btnsToolbar",
+	"plugin-id": "Sprite",
+	"sid": 691907779786238,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"ITMOV",
+		"ITM2",
+		"ITM8",
+		"ITMOH",
+		"ITP",
+		"ITMR2",
+		"ITMR4",
+		"ITMR6",
+		"ITMR5",
+		"ITMR10",
+		"ITM6",
+		"ITMR8",
+		"ITM4",
+		"ITM62",
+		"ITB",
+		"ITM82",
+		"ITBth"
+	]
+}

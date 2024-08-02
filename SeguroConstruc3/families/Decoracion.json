@@ -1,0 +1,27 @@
+{
+	"name": "Decoracion",
+	"plugin-id": "Sprite",
+	"sid": 434434484982879,
+	"instanceVariables": [
+		{
+			"name": "ActiveAreasDeco",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 558779270601127
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 336787773784534
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"MuroH",
+		"MuroV",
+		"Planta"
+	]
+}

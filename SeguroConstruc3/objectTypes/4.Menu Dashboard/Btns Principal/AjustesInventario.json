@@ -1,0 +1,17 @@
+{
+	"name": "AjustesInventario",
+	"plugin-id": "SVGPicture",
+	"sid": 716603347775676,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnContent",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 920560818086500
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

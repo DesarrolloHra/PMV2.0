@@ -1,0 +1,83 @@
+{
+	"name": "MuroV",
+	"plugin-id": "Sprite",
+	"sid": 831155146760838,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "IsMuro",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 853680625852215
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 67,
+						"height": 352,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8170033,
+						"collisionPoly": {
+							"points": [
+								0.3880597014925373,
+								0.07386363636363637,
+								0.6119402985074627,
+								0.07386363636363637,
+								0.6119402985074627,
+								0.9261363636363636,
+								0.3880597014925373,
+								0.9261363636363636
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 67,
+						"height": 352,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9889561,
+						"collisionPoly": {
+							"points": [
+								0.3880597014925373,
+								0.07386363636363637,
+								0.6119402985074627,
+								0.07386363636363637,
+								0.6119402985074627,
+								0.9261363636363636,
+								0.3880597014925373,
+								0.9261363636363636
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 884978239544152,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

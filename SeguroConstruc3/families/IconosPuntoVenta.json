@@ -1,0 +1,25 @@
+{
+	"name": "IconosPuntoVenta",
+	"plugin-id": "SVGPicture",
+	"sid": 173243560006043,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"iconoMesapdv",
+		"iconoCorteXpdv",
+		"iconoAbrirCajpdv",
+		"iconoComandaspdv",
+		"iconoCorteYpdv",
+		"iconoDeliverypdv",
+		"iconoEnSaDipdv",
+		"iconoPropinapdv",
+		"iconoReimprimirTpdv",
+		"iconoVentaMospdv",
+		"Iconotienda2",
+		"IconoVentaApp",
+		"iconoAjuste",
+		"iconoInicioTur",
+		"iconoPropinapdv2"
+	]
+}

@@ -1,0 +1,414 @@
+{
+	"name": "ProduccionEventSheet",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tabla Produccion con JS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 927771620034940
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "document.querySelector(\"#buscarBtnProduccion\").addEventListener(\"click\", BuscarProducciones); // Llamada a BuscarProducciones\n\n// Llamada inicial a la función VerificarProducciones\nVerificarProducciones();\n\n// Función para verificar las producciones\nfunction VerificarProducciones() {\n  let token = runtime.globalVars.Token;\n  let apiUrl = runtime.globalVars.apiUrl;\n  \n  if (!token) {\n    console.error(\"No se encontró el token\");\n    return;\n  }\n  console.log(\"Token obtenido en VerificarProducciones: \", token);\n\n  fetch(apiUrl + \"/web/producciones/verifica\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\",\n    },\n    body: JSON.stringify({\n      token: token,\n    }),\n  })\n  .then(response => {\n    if (!response.ok) {\n      throw new Error(\"Network response was not ok\");\n    }\n    return response.json();\n  })\n  .then(data => {\n    console.log(\"Respuesta de la API: \", data);\n    if (data.response) {\n      console.log(\"Verificación exitosa: \", data.message);\n      if (Object.keys(data.data).length > 0) {\n        let capaModal = runtime.layout.getLayer(\"ModalProduccion\"); // Usar el método correcto para obtener la capa\n        capaModal.opacity = 1;\n        capaModal.isVisible =  true;\n        capaModal.isInteractive = true;\n\t\t\n\t\tlet capaBusqueda = runtime.layout.getLayer(\"MenuSuperior\");\n\t\t\n\t\tcapaBusqueda.isInteractive = false;\n\t\tcapaBusqueda.isVisible = false;\n\t\t\n        mostrarAlertasDeProduccion(data.data); // Llama a la función para mostrar las alertas en una tabla\n      } else {\n        console.log(\"No hay producciones pendientes\");\n        document.getElementById(\"modalProduccionPendiente\").innerHTML = \"<p>No hay producciones pendientes.</p>\";\n      }\n    } else {\n      console.error(\"Error en la verificación: \", data.message);\n    }\n  })\n  .catch(error => {\n    console.error(\"Error en la obtención de datos: \", error);\n  });\n}\n\n// Función para mostrar alertas de producción pendiente en una tabla\nfunction mostrarAlertasDeProduccion(data) {\n  let modal = document.getElementById(\"modalProduccionPendiente\");\n  let tabla = `<table>\n                  <tr>\n                    <th>Código</th>\n                    <th>Receta</th>\n                    <th>Mínimo</th>\n                    <th>Existencias</th>\n                  </tr>`;\n\n  Object.values(data).forEach((item) => {\n    tabla += `<tr>\n                <td>${item.codigo}</td>\n                <td>${item.nombre}</td>\n                <td>${item.minimo}</td>\n                <td>${item.existencias}</td>\n              </tr>`;\n  });\n\n  tabla += `</table>`;\n  modal.innerHTML = tabla; // Insert the table into the div\n}\n\n\n// Obtener producciones al cargar la página\nObtenerProducciones(); // Llamada a ObtenerProducciones\n\nlet limite = 10;\nlet desde = 0;\nlet paginas = 0;\nlet paginaActiva = 1;\nlet info = [];\n\nfunction ObtenerProducciones() {\n  const token = runtime.globalVars.Token;\n\n  fetch(runtime.globalVars.apiUrl + \"/web/producciones/producciones\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\",\n    },\n    body: JSON.stringify({\n      token: token,\n    }),\n  })\n    .then((response) => {\n      if (!response.ok) {\n        throw new Error(\"Network response was not ok\");\n      }\n      return response.json();\n    })\n    .then((data) => {\n      if (data.response) {\n        info = data.data;\n        paginas = Math.ceil(info.length / limite);\n        cargarProductos(); // Llama a cargarProductos\n      } else {\n        console.error(\"Error al obtener datos de producciones:\", data.message);\n      }\n    })\n    .catch((error) => {\n      console.error(\"Error en la obtención de datos:\", error);\n    });\n}\n\nfunction cargarProductos() {\n  const cuerpoTabla = document.querySelector(\"#cuerpoTablaProduccion\");\n  cuerpoTabla.innerHTML = \"\"; // Limpiar la tabla antes de renderizar nuevos datos\n\nconst arreglo = info.slice(desde, limite * paginaActiva);\narreglo.forEach((item) => {\n  let fila = document.createElement(\"tr\");\n  fila.classList.add(\"tdProduccion\");\n  fila.innerHTML = `\n    <td class=\"tdProduccion\">${item.codigo}</td>\n    <td class=\"tdProduccion\">${item.nombre}</td>\n    <td class=\"tdProduccion\">${item.unidad}</td>\n    <td class=\"tdProduccion\">${item.minimo !== null ? item.minimo : \"-\"}</td>\n    <td class=\"tdProduccion\">${item.existencia}</td>\n  `;\n  cuerpoTabla.appendChild(fila);\n});\n\n  cargarItemPaginacion(); // Llama a cargarItemPaginacion\n}\n\nfunction cargarItemPaginacion() {\n  const itemsContainer = document.querySelector(\"#items\");\n  itemsContainer.innerHTML = \"\";\n  for (let index = 0; index < paginas; index++) {\n    const item = document.createElement(\"li\");\n    item.classList = `paginationItem ${paginaActiva == index + 1 ? \"active\" : \"\"}`;\n    const enlace = `<button class=\"pageLink\" onclick=\"pasarPagina(${index})\">${index + 1}</button>`;\n    item.innerHTML = enlace;\n    itemsContainer.append(item);\n  }\n}\n\nfunction modificarArregloProducciones() {\n  cargarProductos(); // Llama a cargarProductos\n}\n\nwindow.pasarPagina = (pagina) => {\n  paginaActiva = pagina + 1;\n  desde = limite * pagina;\n  if (desde <= info.length) {\n    modificarArregloProducciones(); // Llama a modificarArregloProducciones\n  }\n};\n\nfunction BuscarProducciones() {\n  const input = document.querySelector(\"#buscarInputProduccion\").value.toLowerCase();\n  const rows = document.querySelectorAll(\"#cuerpoTablaProduccion tr\");\n\n  rows.forEach((row) => {\n    const codigo = row\n      .querySelector(\"td:nth-child(1)\")\n      .textContent.toLowerCase();\n    const nombre = row\n      .querySelector(\"td:nth-child(2)\")\n      .textContent.toLowerCase();\n    if (codigo.includes(input) || nombre.includes(input)) {\n      row.style.display = \"\";\n    } else {\n      row.style.display = \"none\";\n    }\n  });\n}\n\nfunction guardarCambios() {\n  const token = runtime.globalVars.Token;\n  const codigo = document.querySelector(\"#editar-id\").value;\n  const nombre = document.querySelector(\"#editar-nombre\").value;\n  const unidad = document.querySelector(\"#editar-unidad\").value;\n  const minimo = document.querySelector(\"#editar-minimo\").value;\n  const existencia = document.querySelector(\"#editar-existencia\").value;\n\n  fetch(runtime.globalVars.apiUrl + \"/web/producciones/edita\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\",\n    },\n    body: JSON.stringify({\n      token: token,\n      codigo: codigo,\n      nombre: nombre,\n      unidad: unidad,\n      minimo: minimo,\n      existencia: existencia,\n    }),\n  })\n    .then((response) => {\n      if (!response.ok) {\n        throw new Error(\"Network response was not ok\");\n      }\n      return response.json();\n    })\n    .then((data) => {\n      if (data.response) {\n        ObtenerProducciones(); // Recargar la tabla después de guardar cambios\n        document.querySelector(\"#editarModalProduccion\").style.display = \"none\"; // Cerrar el modal de edición\n      } else {\n        console.error(\"Error al guardar cambios:\", data.message);\n      }\n    })\n    .catch((error) => {\n      console.error(\"Error al guardar cambios:\", error);\n    });\n}\n\n\n"
+						}
+					],
+					"sid": 788993871514437
+				}
+			],
+			"sid": 496930164050713
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 253209876505136,
+					"parameters": {
+						"object": "PanelRojo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 898698562151778,
+					"parameters": {
+						"layout": "MenuDashBoardLayout"
+					}
+				}
+			],
+			"sid": 915712838659509
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Menu Superior Produccion",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 451596270870978,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 748653332972529,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						}
+					],
+					"sid": 166532312024334,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 960500260571651,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 1,
+										"value": "\"PuntoVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 413861748034678,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 974746944551611
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 414704770906897,
+							"parameters": {
+								"object": "MenuSupBtn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 698266658711450,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 549922559095043,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 202924046409358,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 1,
+										"value": "\"PuntoVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 119385669180064,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 280950079661956
+						}
+					]
+				}
+			],
+			"sid": 209105818112860
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enlaces MenuSup2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 542538445991337,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 244487197701313,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 958032628699948,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"Ajustes\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 568865985051797,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 879391869152678,
+									"parameters": {
+										"layout": "AjustesLayout"
+									}
+								}
+							],
+							"sid": 173178135721893
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 662335765737425,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 160932159810094,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 188486612958442,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"PuntVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 594143844454144,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 848811008645880,
+									"parameters": {
+										"layout": "PuntoVentaLayout"
+									}
+								}
+							],
+							"sid": 908498566117793
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 478570322756976,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 984623663040859,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 186130111415955,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"MenuDash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 724064738537132,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 738493761706302,
+									"parameters": {
+										"layout": "MenuDashBoardLayout"
+									}
+								}
+							],
+							"sid": 689602607458457
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 493067143135338
+				}
+			],
+			"sid": 183445658474500
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 351873658065599,
+					"parameters": {
+						"object": "CloseModalProduccion"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 571957023494498,
+					"parameters": {
+						"layer": "4",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 480909049045262,
+					"parameters": {
+						"layer": "4",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 816788761898633,
+					"parameters": {
+						"layer": "3",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 590340561231512,
+					"parameters": {
+						"layer": "3",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 744662185264055
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "MovimientosProduccion",
+					"sid": 468872801907132
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 869578110161128,
+					"parameters": {
+						"layout": "ProduccionMovimientosLayout"
+					}
+				}
+			],
+			"sid": 411566744905150
+		}
+	],
+	"sid": 113995300420465
+}

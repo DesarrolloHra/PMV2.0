@@ -1,0 +1,14 @@
+{
+	"name": "iconoVentaMospdv",
+	"plugin-id": "SVGPicture",
+	"sid": 701407434655103,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

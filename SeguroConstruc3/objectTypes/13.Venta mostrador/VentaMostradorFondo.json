@@ -1,0 +1,50 @@
+{
+	"name": "VentaMostradorFondo",
+	"plugin-id": "Sprite",
+	"sid": 152689311982337,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1800,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7225763,
+						"collisionPoly": {
+							"points": [
+								0.4305555555555556,
+								0.08333333333333333,
+								0.5694444444444444,
+								0.08333333333333333,
+								0.5694444444444444,
+								0.9166666666666666,
+								0.4305555555555556,
+								0.9166666666666666
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 649084331684662,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

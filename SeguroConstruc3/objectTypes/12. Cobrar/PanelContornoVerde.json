@@ -1,0 +1,50 @@
+{
+	"name": "PanelContornoVerde",
+	"plugin-id": "Sprite",
+	"sid": 629996845671138,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1160,
+						"height": 344,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6555150,
+						"collisionPoly": {
+							"points": [
+								0.3922413793103448,
+								0.13662790697674418,
+								0.6077586206896551,
+								0.13662790697674418,
+								0.6077586206896551,
+								0.8633720930232558,
+								0.3922413793103448,
+								0.8633720930232558
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 337092389936571,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

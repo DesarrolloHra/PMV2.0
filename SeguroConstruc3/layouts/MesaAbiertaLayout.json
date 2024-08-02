@@ -1,0 +1,1618 @@
+{
+	"name": "MesaAbiertaLayout",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 59,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1920,
+						"y": 1080,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 60,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 260,
+						"y": 102,
+						"width": 334.69203949295667,
+						"height": 82.62272104637843,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FolioAnterior",
+					"properties": {
+						"text": "Folio anterior: 00729",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.8,
+							0.8,
+							0.8,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 52,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 832,
+						"y": 64,
+						"width": 450,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "VentasDias",
+					"properties": {
+						"text": "Ventas al día: 5",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.8,
+							0.8,
+							0.8,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 61,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1488,
+						"y": 64,
+						"width": 368,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text2",
+					"properties": {
+						"text": "FOLIO TICKET: 007230",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 62,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2144,
+						"y": 64,
+						"width": 654,
+						"height": 93,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TextoCerrarSesion",
+					"properties": {
+						"text": "Cerrar Sesión",
+						"enable-bbcode": false,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 63,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3360,
+						"y": 64,
+						"width": 351,
+						"height": 67,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "IconoCerrarSesion",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 64,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3744,
+						"y": 96,
+						"width": 82.3636363636364,
+						"height": 82.3636363636364,
+						"originX": 0.4965986394557823,
+						"originY": 0.5034013605442177,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 65,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 224,
+						"y": 368,
+						"width": 256,
+						"height": 320,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite14",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 66,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 224,
+						"y": 320,
+						"width": 148,
+						"height": 148,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnviarComdaBtn",
+					"properties": {
+						"text": "MESAS",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 67,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 142,
+						"y": 421,
+						"width": 160,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PaneBlancoV",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 68,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 224,
+						"y": 1340,
+						"width": 257,
+						"height": 1530,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelBlancoH",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 69,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1532.5,
+						"y": 1345,
+						"width": 2220,
+						"height": 1530,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelAmarillo2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 70,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1533.558624801272,
+						"y": 365,
+						"width": 2221,
+						"height": 320,
+						"originX": 0.4998012718600954,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TicketBackG",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 71,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3239.698495666384,
+						"y": 1344.0492398090241,
+						"width": 1073.3969913327683,
+						"height": 1533.0984796180483,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojoH",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 72,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3088.589610331668,
+						"y": 365.70519483416587,
+						"width": 784.970256620372,
+						"height": 318.6800289974218,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelVerde",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 73,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3649.749714496044,
+						"y": 365.8342850131861,
+						"width": 256,
+						"height": 320,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ComandaTitulo",
+					"properties": {
+						"text": "COMANDA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 76,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 480.9194789550429,
+						"y": 290.58961033166827,
+						"width": 248,
+						"height": 51,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MesaNumeroHead",
+					"properties": {
+						"text": "MESA 2",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 77,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 481.9889938729252,
+						"y": 366.54755999144163,
+						"width": 231.33506568831262,
+						"height": 68.56623469330793,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DividirCuentaIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 79,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -667,
+						"y": 609,
+						"width": 106.39999999999999,
+						"height": 104.3,
+						"originX": 0.5,
+						"originY": 0.5033557046979866,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ActualizarCIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 80,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -670,
+						"y": 858,
+						"width": 105,
+						"height": 95.19999999999999,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DescuentoIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 81,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -668,
+						"y": 1117,
+						"width": 96.6,
+						"height": 101.5,
+						"originX": 0.5,
+						"originY": 0.503448275862069,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CuentasResumIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 82,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -667,
+						"y": 1318,
+						"width": 69.3,
+						"height": 106.39999999999999,
+						"originX": 0.494949494949495,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ImprimirIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 83,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -669,
+						"y": 1840,
+						"width": 91,
+						"height": 103.6,
+						"originX": 0.49230769230769234,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnviarTicketIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 84,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -668,
+						"y": 1573,
+						"width": 103.6,
+						"height": 105,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ImprimirText",
+					"properties": {
+						"text": "Dividir cuenta",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 85,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -760,
+						"y": 670,
+						"width": 185.03337658051316,
+						"height": 69,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ImprimirText",
+					"properties": {
+						"text": "Actualizar comensales",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 86,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -773,
+						"y": 916,
+						"width": 200,
+						"height": 73.98758579444029,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ImprimirText",
+					"properties": {
+						"text": "Descuento",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 87,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -771,
+						"y": 1167,
+						"width": 200,
+						"height": 36.13849182889999,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ImprimirText",
+					"properties": {
+						"text": "Cuenta resumida",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 88,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -771,
+						"y": 1377,
+						"width": 200,
+						"height": 69.06506335177096,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ImprimirText",
+					"properties": {
+						"text": "Enviar ticket por corrreo",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 89,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -776,
+						"y": 1631,
+						"width": 208.97997405169207,
+						"height": 69.06506335177096,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ImprimirText",
+					"properties": {
+						"text": "Imprimir ticket",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.8470588235294118,
+							0.12941176470588237,
+							0.20784313725490197,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 90,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -769,
+						"y": 1894,
+						"width": 197.00667531610264,
+						"height": 69.06506335177096,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FamiliasTitulo",
+					"properties": {
+						"text": "FAMILIAS",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 91,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 482,
+						"y": 629,
+						"width": 312,
+						"height": 74,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InfoMesaAbierta",
+					"properties": {
+						"tag": "div",
+						"content": "<ul id=\"infoContainerMesaAbierta\"></ul>",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 647077,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2711,
+						"y": 218,
+						"width": 758,
+						"height": 292,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "Menu",
+					"properties": {
+						"tag": "div",
+						"content": "\n        <div class=\"menuSuperiorFamilias\">  \n            <h2 class=\"tituloMenuFamilias\">FAMILIAS</h2>\n            <div id=\"navegacion\">\n                <input class=\"boton_tipo boton_tipo-0\" type=\"button\" value=\"Todos\">\n                <input class=\"boton_tipo boton_tipo-1\" type=\"button\" value=\"Bebidas\">\n                <input class=\"boton_tipo boton_tipo-2\" type=\"button\" value=\"Alimentos\">\n                <input class=\"boton_tipo boton_tipo-3\" type=\"button\" value=\"Artículos\">\n                <input id=\"b\" type=\"text\" placeholder=\"Buscar en el catálogo\">\n            </div>\n        </div>\n        \n        <div id=\"menu\"></div>",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "simulador",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 792662,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 478,
+						"y": 722,
+						"width": 2101,
+						"height": 1313,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "enviarComandaContenedor",
+					"properties": {
+						"tag": "div",
+						"content": "<input id=\"boton_enviar_comanda\" type=\"button\" value=\"Enviar comanda\" >",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 899088,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3546,
+						"y": 238,
+						"width": 200,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "menuLateralMa",
+					"properties": {
+						"tag": "div",
+						"content": "      <div class=\"contenedorMenulateral\">\n          <div class=\"opciones\">\n\n              <button class=\"openModal\" id=\"boton_dividir_cuenta\">\n                  <div class=\"iconoSVG\">\n                      <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n  <svg id=\"a\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 200 200\">\n    <defs>\n      <style>\n        .n {\n          fill: none;\n        }\n\n        .n, .o {\n          stroke-width: 0px;\n        }\n\n        .p {\n          clip-path: url(#c);\n        }\n\n        .o {\n          fill: #303232;\n        }\n      </style>\n      <clipPath id=\"c\">\n        <rect class=\"n\" y=\"2.46\" width=\"200\" height=\"194.05\"/>\n      </clipPath>\n    </defs>\n    <g id=\"b\" data-name=\"Group 74\">\n      <g class=\"p\">\n        <g id=\"d\" data-name=\"Group 73\">\n          <path id=\"e\" data-name=\"Path 70\" class=\"o\" d=\"M0,100.05V35.35c0-4.66,1.14-5.84,5.76-5.84h58.38c4.31,0,5.6,1.27,5.6,5.57v130.1c0,4.21-1.39,5.54-5.67,5.54H5.68C1.28,170.72,0,169.43,0,164.98v-64.94M11.53,159.24h46.68V40.95H11.53v118.29Z\"/>\n          <path id=\"f\" data-name=\"Path 71\" class=\"o\" d=\"M199.99,100.12v64.7c0,4.73-1.2,5.91-5.98,5.91h-57.91c-4.57,0-5.84-1.26-5.84-5.84V35.27c0-4.51,1.23-5.74,5.66-5.74h58.62c4.18,0,5.43,1.27,5.43,5.43,0,21.73,0,43.47,0,65.2M188.54,41.01h-46.77v118.28h46.77V41.01Z\"/>\n          <path id=\"g\" data-name=\"Path 72\" class=\"o\" d=\"M105.93,10.44c-.03,1-.11,2-.24,3-.43,2.55-2.6,4.45-5.19,4.53-2.68.27-5.13-1.55-5.66-4.19-.34-2.15-.38-4.34-.13-6.5.32-2.85,2.81-4.96,5.67-4.81,2.86.06,5.21,2.29,5.43,5.15.1.85.09,1.71.15,2.83\"/>\n          <path id=\"h\" data-name=\"Path 73\" class=\"o\" d=\"M105.93,188.85c-.06.89-.05,1.92-.21,2.91-.37,2.65-2.6,4.66-5.28,4.75-2.78.19-5.24-1.77-5.67-4.52-.29-2.16-.29-4.34,0-6.5.41-2.76,2.9-4.72,5.67-4.48,2.77.04,5.07,2.17,5.32,4.93.12.92.12,1.86.17,2.92\"/>\n          <path id=\"i\" data-name=\"Path 74\" class=\"o\" d=\"M105.92,69.89c-.05.82-.05,1.85-.2,2.84-.34,2.66-2.58,4.67-5.25,4.73-2.78.23-5.26-1.71-5.7-4.46-.29-2-.33-4.03-.11-6.04.32-3.07,3.08-5.29,6.15-4.97,2.69.28,4.78,2.45,4.99,5.14.1.85.09,1.71.14,2.76\"/>\n          <path id=\"j\" data-name=\"Path 75\" class=\"o\" d=\"M105.92,129.38c-.05.82-.05,1.85-.2,2.84-.35,2.66-2.57,4.67-5.25,4.77-2.77.21-5.25-1.73-5.71-4.47-.29-2-.33-4.03-.12-6.04.24-2.94,2.79-5.15,5.74-4.98,2.85.05,5.19,2.28,5.39,5.13.1.85.09,1.71.14,2.76\"/>\n          <path id=\"k\" data-name=\"Path 76\" class=\"o\" d=\"M105.86,40.04c0,.7.05,1.4,0,2.1-.07,3.12-2.65,5.59-5.76,5.52-2.96-.06-5.37-2.41-5.51-5.37-.14-1.55-.14-3.11,0-4.66.13-3.11,2.76-5.52,5.87-5.39,2.95.13,5.3,2.51,5.39,5.46.07.78,0,1.55,0,2.33h.02Z\"/>\n          <path id=\"l\" data-name=\"Path 77\" class=\"o\" d=\"M105.93,159.21c-.03,1.01-.12,2.02-.26,3.02-.46,2.55-2.66,4.42-5.25,4.46-2.6.24-4.98-1.49-5.55-4.04-.36-2.3-.4-4.64-.1-6.95.43-2.75,2.89-4.72,5.67-4.53,2.76.13,5.02,2.25,5.31,5,.12.92.12,1.86.18,3.03\"/>\n          <path id=\"m\" data-name=\"Path 78\" class=\"o\" d=\"M105.93,99.71c-.03.99-.11,1.98-.24,2.97-.47,2.64-2.75,4.57-5.43,4.59-2.61.11-4.91-1.7-5.43-4.25-.34-2.15-.38-4.33-.14-6.5.33-2.85,2.81-4.95,5.67-4.8,2.86.07,5.2,2.29,5.43,5.15.1.85.09,1.71.15,2.86\"/>\n        </g>\n      </g>\n    </g>\n  </svg>\n                  </div>\n                  Dividir cuenta\n              </button>\n              <button class=\"openModal\" id=\"boton_actualizar_comensales\">\n                  <div class=\"iconoSVG\">\n                      <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n  <svg id=\"a\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 200 200\">\n    <defs>\n      <style>\n        .k {\n          fill: none;\n        }\n\n        .k, .l {\n          stroke-width: 0px;\n        }\n\n        .m {\n          clip-path: url(#c);\n        }\n\n        .l {\n          fill: #303232;\n        }\n      </style>\n      <clipPath id=\"c\">\n        <rect class=\"k\" x=\"1.84\" y=\"11\" width=\"196.32\" height=\"177.63\"/>\n      </clipPath>\n    </defs>\n    <g id=\"b\" data-name=\"Group 76\">\n      <g class=\"m\">\n        <g id=\"d\" data-name=\"Group 75\">\n          <path id=\"e\" data-name=\"Path 79\" class=\"l\" d=\"M190.97,100.56c-.34,15.47-4.87,30.56-13.12,43.66-1.73,3.25-5.77,4.48-9.01,2.74s-4.48-5.77-2.74-9.01c.12-.23.26-.45.4-.66,8.65-13.67,12.44-29.85,10.77-45.94-1.65-23.79-15.22-45.13-36.07-56.71-24.79-15.28-56.35-14.08-79.9,3.04-2.22,1.9-5.35,2.29-7.96.99-3.22-1.75-4.41-5.77-2.67-8.99.53-.98,1.3-1.8,2.23-2.41,7.57-5.51,16.02-9.72,24.99-12.43,45.73-14.15,94.32,11.18,108.9,56.78,2.96,9.35,4.36,19.13,4.16,28.94\"/>\n          <path id=\"f\" data-name=\"Path 80\" class=\"l\" d=\"M103.8,125.5c6.52,0,13.04-.12,19.57,0,15-.07,27.84,10.74,30.33,25.53,1.02,7.14,1.09,14.38.2,21.53-1.49,8.99-9.12,15.67-18.23,15.97-4.36.16-8.71.1-13.11.06-3.67.03-6.66-2.92-6.69-6.58-.03-3.67,2.92-6.66,6.58-6.69,3.53-.1,7.08,0,10.61,0,5.76,0,8.12-2.33,8.04-8.04.14-4.5,0-9.01-.42-13.49-1.2-8.4-8.34-14.67-16.82-14.78-13.41-.17-26.79-.17-40.17,0-9.5.15-17.18,7.76-17.43,17.25-.17,4.16-.11,8.33,0,12.49-.1,3.53,2.68,6.47,6.21,6.58.13,0,.26,0,.39,0,4.02.09,52.03,0,56.05.06,3.27-.08,6.11,2.23,6.7,5.45.59,3.13-1.15,6.24-4.13,7.37-.91.31-1.88.47-2.84.46-3.81.05-51.61.05-55.43,0-10.21.38-18.94-7.26-19.92-17.43-.72-6.89-.54-13.85.54-20.7,2.69-14.18,14.93-24.55,29.36-24.88,6.86-.21,13.73-.03,20.61-.03h0\"/>\n          <path id=\"g\" data-name=\"Path 81\" class=\"l\" d=\"M103.62,50.96c17.77-.13,32.28,14.17,32.41,31.94.13,17.77-14.17,32.28-31.94,32.41-17.77.13-32.28-14.17-32.41-31.94,0-.08,0-.16,0-.23,0-17.68,14.26-32.05,31.94-32.18M103.62,64.3c-10.39-.06-18.86,8.32-18.92,18.71-.06,10.39,8.32,18.86,18.71,18.92,10.39.06,18.86-8.32,18.92-18.71,0-.04,0-.07,0-.11.09-10.3-8.2-18.72-18.5-18.81-.07,0-.14,0-.22,0\"/>\n          <path id=\"h\" data-name=\"Path 82\" class=\"l\" d=\"M15.97,98.19c.36-10.45,2.38-20.77,5.99-30.59,1.03-3.01,4.05-4.87,7.2-4.42,3.01.37,5.36,2.78,5.66,5.8.03,1.52-.24,3.02-.79,4.44-7.31,20.36-5.29,42.9,5.52,61.63.44.79.92,1.55,1.34,2.33,2.08,3.06,1.29,7.23-1.78,9.31-.08.05-.16.1-.24.15-3.12,1.93-7.21.97-9.14-2.15-.07-.12-.14-.24-.21-.36-5.49-8.62-9.3-18.2-11.23-28.23-1.09-5.91-1.6-11.93-2.37-17.9\"/>\n          <path id=\"i\" data-name=\"Path 83\" class=\"l\" d=\"M46.6,83.54c-1.58,0-3.08-.74-4.02-2.01l-12.78-17.39-21.11,8.35c-2.57,1.01-5.47-.24-6.48-2.81-1.01-2.57.24-5.47,2.81-6.48h0l24.69-9.76c2.11-.83,4.52-.14,5.86,1.69l15.06,20.46c1.64,2.22,1.16,5.35-1.06,6.98-.86.63-1.9.97-2.96.97\"/>\n          <path id=\"j\" data-name=\"Path 84\" class=\"l\" d=\"M166.65,153.76c-2.15,0-4.05-1.37-4.73-3.41l-8.1-24.08c-.88-2.62.53-5.45,3.14-6.33s5.45.53,6.33,3.14l6.87,20.43,22.66-1.51c2.75-.19,5.13,1.9,5.32,4.65.19,2.75-1.9,5.13-4.65,5.32l-26.5,1.77h-.34\"/>\n        </g>\n      </g>\n    </g>\n  </svg>\n                  </div>\n                  Actualizar comensales\n              </button>\n              <button class=\"openModal\" id=\"boton_descuento\">\n                  <div class=\"iconoSVG\">\n                      <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n                      <svg id=\"a\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 200 200\">\n                        <defs>\n                          <style>\n                            .i {\n                              fill: none;\n                            }\n                      \n                            .i, .j {\n                              stroke-width: 0px;\n                            }\n                      \n                            .k {\n                              clip-path: url(#c);\n                            }\n                      \n                            .j {\n                              fill: #303232;\n                            }\n                          </style>\n                          <clipPath id=\"c\">\n                            <rect class=\"i\" x=\"9.56\" y=\"5.17\" width=\"180.88\" height=\"188.63\"/>\n                          </clipPath>\n                        </defs>\n                        <g id=\"b\" data-name=\"Group 78\">\n                          <g class=\"k\">\n                            <g id=\"d\" data-name=\"Group 77\">\n                              <path id=\"e\" data-name=\"Path 85\" class=\"j\" d=\"M98.16,193.8c-4.73-.95-9-3.44-12.15-7.1-2.69-2.78-5.59-5.35-8.31-8.09-1.63-1.73-4.04-2.48-6.36-1.99-4.66.75-9.33,1.42-14.03,1.99-8.98,1.7-17.63-4.21-19.33-13.19-.11-.56-.18-1.12-.23-1.68-.73-4.48-1.56-8.94-2.3-13.42-.31-2.29-1.77-4.26-3.87-5.23-4.26-2.17-8.48-4.43-12.69-6.7-8.21-3.92-11.69-13.74-7.77-21.95.12-.25.24-.49.37-.74,2.06-4.32,4.14-8.6,6.31-12.89,1.15-2.07,1.15-4.59,0-6.67-2.14-4.22-4.2-8.47-6.26-12.73-4.4-8.01-1.47-18.07,6.54-22.47.32-.18.65-.34.99-.5,4.1-2.2,8.19-4.45,12.36-6.53,2.27-1.05,3.82-3.21,4.08-5.7.75-4.73,1.53-9.44,2.48-14.13,1.33-9.02,9.72-15.24,18.73-13.91.39.06.77.13,1.16.21,4.63.73,9.35,1.36,14.02,2.04,2.04.34,4.11-.36,5.53-1.86,3.51-3.44,7.04-6.85,10.59-10.25,6.24-6.6,16.64-6.89,23.24-.65.22.21.44.43.65.65,3.47,3.31,6.94,6.62,10.32,9.99,1.67,1.77,4.15,2.54,6.53,2.02,4.63-.76,9.33-1.47,14.03-1.99,8.95-1.64,17.54,4.28,19.18,13.23.08.42.14.83.18,1.25.81,4.47,1.61,8.94,2.3,13.42.25,2.49,1.8,4.65,4.06,5.71,4.11,2.06,8.13,4.28,12.19,6.45,8.34,3.75,12.05,13.54,8.31,21.88-.22.5-.47.98-.74,1.45-1.99,4.02-3.85,8.08-5.96,12.05-1.31,2.27-1.31,5.07,0,7.33,2.15,4.13,4.15,8.35,6.15,12.58,4.35,7.98,1.4,17.97-6.57,22.32-.26.14-.53.28-.8.41-4.15,2.26-8.3,4.51-12.52,6.62-2.32,1.08-3.9,3.31-4.14,5.86-.71,4.63-1.52,9.33-2.45,13.95-1.29,9.02-9.65,15.28-18.67,13.98-.4-.06-.79-.13-1.19-.21-4.67-.72-9.35-1.32-14.03-2.03-2.04-.36-4.12.32-5.55,1.81-2.85,2.8-5.81,5.48-8.6,8.34-3.14,3.63-7.4,6.12-12.11,7.06h-3.68ZM145.15,167.99c2.92.33,5.58-1.69,6.06-4.59.79-4.16,1.71-8.31,2.18-12.5.44-7.23,4.96-13.58,11.65-16.35,3.73-1.69,7.28-3.79,10.91-5.73,2.93-1.09,4.43-4.35,3.34-7.28-.15-.41-.35-.8-.59-1.16-2.11-4.36-4.24-8.71-6.39-13.05-2.61-4.92-2.61-10.81,0-15.73,2.13-4.28,4.22-8.6,6.3-12.89,1.8-2.59,1.16-6.16-1.43-7.96-.44-.3-.92-.55-1.42-.72-4.28-2.28-8.56-4.53-12.84-6.8-4.71-2.32-8.02-6.77-8.89-11.95-.93-5.13-1.8-10.27-2.77-15.39-.31-3.05-3.03-5.27-6.08-4.97-.23.02-.47.06-.69.11-4.68.66-9.36,1.32-14.02,2.05-5.84,1.15-11.87-.78-15.95-5.12-3.31-3.31-6.68-6.51-10.05-9.74-1.93-2.45-5.48-2.88-7.94-.95-.34.27-.64.57-.91.9-3.49,3.36-6.98,6.74-10.46,10.12-3.62,3.81-8.85,5.64-14.06,4.92-5.11-.66-10.21-1.4-15.3-2.14-3-.8-6.08.98-6.88,3.98-.08.31-.14.64-.17.96-.89,4.7-1.75,9.41-2.5,14.12-.69,5.72-4.23,10.7-9.4,13.24-4.24,2.2-8.46,4.46-12.68,6.71-2.96,1.05-4.52,4.3-3.47,7.26.16.46.38.89.65,1.3,2.08,4.3,4.16,8.6,6.31,12.89,2.66,4.96,2.66,10.92,0,15.88-2.12,4.22-4.16,8.48-6.22,12.72-1.85,2.58-1.25,6.18,1.34,8.02.48.34,1,.6,1.55.79,4.11,2.19,8.21,4.42,12.35,6.55,5.25,2.53,8.85,7.56,9.54,13.34.73,4.63,1.59,9.31,2.46,13.95.2,3.12,2.9,5.49,6.02,5.29.43-.03.85-.1,1.26-.23,4.67-.71,9.35-1.32,14.02-2.03,5.74-.97,11.58,1,15.57,5.24,3.31,3.31,6.68,6.51,10.05,9.74,1.94,2.42,5.48,2.81,7.9.87.31-.25.59-.53.84-.84,3.31-3.19,6.7-6.33,9.93-9.62,4.26-4.6,10.64-6.6,16.77-5.26,4.77.85,9.59,1.38,14.1,1.99\"/>\n                              <path id=\"f\" data-name=\"Path 86\" class=\"j\" d=\"M63.98,140.78c-2.98-.07-5.34-2.54-5.28-5.52.02-1.09.38-2.14,1.01-3.03.45-.58.95-1.13,1.49-1.63,23.3-23.31,46.6-46.61,69.91-69.92,1.14-1.47,2.86-2.38,4.72-2.5,2.09-.08,4.02,1.1,4.9,2.99,1,1.84.78,4.1-.56,5.71-.42.52-.88,1.02-1.37,1.48-23.3,23.31-46.6,46.61-69.91,69.92-1.17,1.53-2.98,2.45-4.91,2.5\"/>\n                              <path id=\"g\" data-name=\"Path 87\" class=\"j\" d=\"M78.15,90.38c-11.01-.05-19.89-9.01-19.84-20.02.05-11.01,9.01-19.89,20.02-19.84,11.01.05,19.89,9.01,19.84,20.02,0,.02,0,.04,0,.07-.04,10.97-8.97,19.82-19.93,19.78-.03,0-.05,0-.08,0M78.32,61.47c-4.97-.06-9.06,3.91-9.14,8.88-.05,5,3.96,9.09,8.96,9.13,5,.05,9.09-3.96,9.13-8.96.02-4.97-3.99-9.02-8.96-9.05\"/>\n                              <path id=\"h\" data-name=\"Path 88\" class=\"j\" d=\"M121.67,108.6c11.01-.04,19.96,8.85,20,19.86.04,11.01-8.85,19.96-19.86,20-10.96.04-19.89-8.77-20-19.73-.15-10.97,8.62-19.98,19.58-20.13.09,0,.18,0,.27,0M121.84,137.5c4.97-.03,8.99-4.07,8.98-9.04-.04-5-4.13-9.01-9.13-8.97-5,.04-9.01,4.13-8.97,9.13h0c.06,4.96,4.13,8.94,9.09,8.88,0,0,.01,0,.02,0\"/>\n                            </g>\n                          </g>\n                        </g>\n                      </svg>\n                  </div>\n                  Descuento\n              </button>\n              <button class=\"openModal\" id=\"boton_cuenta_resumida\">\n                  <div class=\"iconoSVG\">\n                      <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n  <svg id=\"a\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 200 200\">\n    <defs>\n      <style>\n        .j {\n          fill: none;\n        }\n\n        .j, .k {\n          stroke-width: 0px;\n        }\n\n        .l {\n          clip-path: url(#c);\n        }\n\n        .k {\n          fill: #303232;\n        }\n      </style>\n      <clipPath id=\"c\">\n        <rect class=\"j\" x=\"35.94\" width=\"128.12\" height=\"200\"/>\n      </clipPath>\n    </defs>\n    <g id=\"b\" data-name=\"Group 4\">\n      <g class=\"l\">\n        <g id=\"d\" data-name=\"Group 3\">\n          <path id=\"e\" data-name=\"Path 4\" class=\"k\" d=\"M38.95,200.01c-2.04-.98-3.24-3.13-3-5.38.04-63.08.04-126.16,0-189.23v-.78c-.18-1.89.95-3.67,2.74-4.3,1.71-.64,3.64-.06,4.72,1.41l8.65,9.34c2.65-2.87,5.26-5.66,7.81-8.47,3.15-3.44,5.21-3.45,8.38,0l7.41,8.05c.15.12.3.23.46.33l8.05-8.71c2.76-2.97,4.94-3,7.72-.04,2.78,2.96,5.34,5.82,8.16,8.85,2.8-3.05,5.47-5.94,8.17-8.86s4.94-2.93,7.72.08c2.68,2.91,5.34,5.83,8.11,8.83l8.19-8.9c1.27-2.09,4.01-2.76,6.1-1.49.61.37,1.12.88,1.49,1.49l8.19,8.9c2.8-3.05,5.55-5.98,8.24-8.98,1.09-1.71,3.2-2.47,5.12-1.82,1.95.71,2.69,2.05,2.69,4.89,0,63.14.01,126.28.04,189.43.2,2.24-.99,4.38-3,5.39h-1.96c-1.11-.75-2.17-1.58-3.16-2.48-2.68-2.78-5.27-5.66-7.95-8.56-1.15,1.23-2.13,2.37-3.17,3.41-2.53,2.56-5.09,5.09-7.63,7.64h-2.37c-1.11-.97-2.3-1.87-3.32-2.93-2.51-2.63-4.94-5.34-7.5-8.13-2.61,2.83-5.08,5.59-7.66,8.25-1.09,1-2.23,1.94-3.43,2.81h-1.96c-1.13-.85-2.21-1.76-3.24-2.73-2.59-2.71-5.09-5.5-7.72-8.31-2.15,2.34-4.08,4.55-6.14,6.63-1.53,1.56-3.22,2.97-4.85,4.43h-1.96c-1.06-.72-2.07-1.51-3.02-2.37-2.7-2.81-5.3-5.7-8.03-8.66-1.4,1.52-2.63,2.97-3.95,4.28-2.27,2.29-4.61,4.52-6.92,6.79h-2.37l-10.85-10.98c-1.31,1.42-2.62,2.97-4.02,4.38-2.17,2.21-4.4,4.36-6.6,6.53h-2.35ZM155.46,184.76V15.14c-1.46,1.61-2.67,2.97-3.91,4.3-1.25,2-3.88,2.6-5.88,1.35-.56-.35-1.04-.83-1.38-1.4-1.69-1.78-3.34-3.65-5.02-5.47-1.08-1.19-2.17-2.33-3.32-3.56-2.74,2.97-5.3,5.75-7.84,8.54-2.97,3.26-5.15,3.31-8.11.11-2.65-2.85-5.28-5.71-8-8.66-2.88,3.13-5.6,6.1-8.35,9.05-1.32,2.01-4.01,2.57-6.02,1.26-.51-.34-.95-.78-1.28-1.3l-8.45-9.15c-.49.64-.85,1.19-1.28,1.66-2.37,2.6-4.75,5.2-7.12,7.76-1.36,1.91-4.01,2.36-5.92,1-.39-.28-.74-.63-1.01-1.02-.67-.71-1.32-1.44-1.98-2.16l-6.53-7.06c-2.89,3.15-5.6,6.14-8.34,9.09-1.22,2.01-3.84,2.64-5.85,1.42-.58-.35-1.06-.84-1.42-1.42-1.23-1.35-2.46-2.71-3.89-4.29v169.78c1.67-1.84,3.06-3.45,4.55-4.97,1.28-1.53,3.51-1.82,5.13-.67.63.46,1.21.99,1.72,1.58,2.69,2.9,5.34,5.82,8.12,8.83,2.7-2.92,5.26-5.69,7.81-8.46,3.17-3.44,5.22-3.45,8.37-.03,2.58,2.8,5.18,5.6,7.84,8.48,2.8-3.04,5.46-5.91,8.1-8.78,2.77-3.02,5.03-2.97,7.84.06,2.64,2.87,5.28,5.73,8.06,8.76.49-.55.86-.99,1.25-1.41,2.34-2.54,4.68-5.08,7.02-7.62,1.29-2.05,4-2.66,6.04-1.37.57.36,1.04.84,1.4,1.41,1.02,1.09,2.02,2.21,3.04,3.31,1.71,1.85,3.43,3.69,5.22,5.63,2.97-3.22,5.75-6.32,8.59-9.35,1.29-1.86,3.83-2.32,5.69-1.03.4.28.75.63,1.03,1.03,1.33,1.4,2.61,2.84,4.12,4.49\"/>\n          <path id=\"f\" data-name=\"Path 5\" class=\"k\" d=\"M113.64,56.18c.22,2.35-1.45,4.45-3.79,4.75-2.28.23-4.32-1.44-4.55-3.72,0-.04,0-.08-.01-.12-.66-3.83-2.34-5.58-5.34-5.55-2.51,0-4.65,1.8-5.09,4.27-.54,2.62,1.03,5.21,3.6,5.94.75.2,1.53.31,2.31.33,7.48.41,13.21,6.8,12.8,14.28-.27,4.97-3.24,9.39-7.74,11.52-1.12.35-1.82,1.46-1.65,2.62.04,3.04-1.57,4.86-4.11,4.9-2.62.04-4.29-1.78-4.26-4.94.13-1.16-.58-2.25-1.7-2.59-4.43-2.03-7.39-6.32-7.72-11.18-.47-2.35,1.05-4.64,3.4-5.11.08-.02.16-.03.24-.04,2.34-.27,4.45,1.41,4.72,3.75.01.12.02.24.03.36.53,3.33,2.21,5.09,5.01,5.25,2.58.17,4.87-1.62,5.34-4.16.56-2.6-.94-5.2-3.48-6.01-.82-.22-1.66-.34-2.51-.36-6.12-.37-11.23-4.8-12.47-10.81-1.3-6.08,1.74-12.26,7.36-14.93,1.18-.35,1.93-1.5,1.78-2.72-.35-2.28,1.22-4.42,3.5-4.77.22-.03.44-.05.65-.05,2.55,0,4.21,1.78,4.16,4.84-.12,1.22.65,2.35,1.82,2.7,4.51,2.11,7.47,6.56,7.66,11.53\"/>\n          <path id=\"g\" data-name=\"Path 6\" class=\"k\" d=\"M100.22,135.52h33.99c.65-.02,1.3,0,1.95.04,2.27.34,3.84,2.45,3.5,4.72-.27,1.81-1.69,3.24-3.5,3.5-.65.06-1.3.04-1.95.04h-68.41c-3.78,0-5.67-1.34-5.72-4.05s1.94-4.24,5.74-4.24h34.4\"/>\n          <path id=\"h\" data-name=\"Path 7\" class=\"k\" d=\"M100.2,153.08h34.63c1.09-.03,2.18.2,3.17.67,1.58.82,2.35,2.64,1.85,4.35-.33,1.73-1.76,3.04-3.52,3.19-.65.06-1.3.08-1.95.05h-70.05c-2.29.05-4.19-1.77-4.24-4.07,0-.03,0-.06,0-.09,0-2.27,1.85-4.1,4.11-4.1.07,0,.13,0,.19,0,7.18-.04,14.35,0,21.53,0h14.28\"/>\n          <path id=\"i\" data-name=\"Path 8\" class=\"k\" d=\"M99.95,126.69c-5.99,0-11.99.05-17.98,0-2.26.19-4.24-1.49-4.43-3.75-.07-.79.1-1.58.47-2.27.71-1.45,2.21-2.34,3.82-2.27h36.34c2.29-.18,4.29,1.53,4.47,3.82.18,2.29-1.53,4.29-3.82,4.47-.23.02-.47.02-.7,0-6.06.05-12.12,0-18.17,0\"/>\n        </g>\n      </g>\n    </g>\n  </svg>\n                  </div>\n                  Cuenta resumida\n              </button>\n              <button class=\"openModal\" id=\"boton_enviar_ticket\" >\n                  <div class=\"iconoSVG\">\n                      <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n  <svg id=\"a\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 200 200\">\n    <defs>\n      <style>\n        .f {\n          fill: none;\n        }\n\n        .f, .g {\n          stroke-width: 0px;\n        }\n\n        .h {\n          clip-path: url(#b);\n        }\n\n        .g {\n          fill: #303232;\n        }\n      </style>\n      <clipPath id=\"b\">\n        <rect class=\"f\" x=\"2.98\" y=\"1.98\" width=\"194.07\" height=\"196.29\"/>\n      </clipPath>\n    </defs>\n    <g class=\"h\">\n      <g id=\"c\" data-name=\"Group 162\">\n        <path id=\"d\" data-name=\"Path 204\" class=\"g\" d=\"M196.31,66.41l-.91-.75c-.69-.58-1.4-1.17-2.17-1.72l-1.17-.84c-7.47-5.33-15.2-10.84-22.86-16.19l-2.56-2.03c0-5.48,0-10.95,0-16.43,0-2.99-.77-4.39-2.83-5.14-2.02-.67-4.24.12-5.38,1.92-2.83,3.15-5.71,6.23-8.66,9.43l-8.61-9.37c-.85-1.4-2.38-2.25-4.01-2.24l-22.66-16.6c-8.03-5.89-18.93-5.96-27.04-.17l-24.11,17.23c-2.03-1.1-3.8-.36-6.16,2.21-2.68,2.95-5.42,5.88-8.2,8.9l-9.08-9.81c-1.13-1.55-3.16-2.16-4.96-1.49-1.88.67-3.07,2.53-2.88,4.52v18.21l-1.01.71c-4.6,3.23-9.25,6.53-13.75,9.72-3.88,2.76-7.79,5.52-11.7,8.27-1.69,1.1-2.69,3.01-2.62,5.03v116.56c-.19,5.59,3.59,10.53,9.04,11.81l.36.15h175.17l.26-.08c4.54-1.12,8.08-4.67,9.18-9.21l.08-.26v-120.79c0-.6-.27-1.17-.74-1.54M183.47,69.64l-16.81,13.98v-25.93l16.81,11.94ZM90.15,17.75c6.5-4.64,15.24-4.59,21.68.13l16.84,12.35-4.08,4.42c-2.91-3.16-5.7-6.22-8.52-9.28-2.91-3.16-5.27-3.16-8.1-.08l-8.56,9.32c-2.96-3.18-5.66-6.18-8.58-9.29-2.92-3.11-5.21-3.08-8.1.04l-8.45,9.15c-.17-.1-.34-.22-.49-.34l-2.62-2.85,19-13.56ZM45.17,43.44c1.28,2.11,4.03,2.78,6.14,1.49.61-.37,1.12-.88,1.49-1.49,2.88-3.1,5.72-6.23,8.74-9.54l6.88,7.42c.7.75,1.37,1.53,2.08,2.27,1.42,2.01,4.2,2.49,6.21,1.07.42-.29.78-.66,1.07-1.07,2.49-2.69,4.99-5.42,7.48-8.16.45-.5.83-1.07,1.35-1.75l8.88,9.68c1.36,2.13,4.18,2.75,6.31,1.39.56-.36,1.03-.83,1.39-1.39,2.91-3.1,5.75-6.22,8.77-9.51,2.85,3.1,5.62,6.11,8.4,9.1,3.12,3.36,5.41,3.32,8.52-.11,2.67-2.91,5.36-5.83,8.24-8.97,1.21,1.29,2.33,2.49,3.5,3.74,1.75,1.92,3.5,3.88,5.27,5.75,1.29,2.12,4.05,2.79,6.16,1.5.6-.36,1.1-.86,1.47-1.45,1.31-1.4,2.58-2.83,4.11-4.52v52.32c-10.83,8.98-21.82,18.14-32.45,26.99l-8.74,7.3-1.51,1.27c-1.27,1.07-2.58,2.16-3.88,3.2-3.1,2.56-6.98,3.99-11,4.04h0c-4.07-.04-7.99-1.52-11.07-4.17-9.12-7.54-18.36-15.25-27.3-22.72l-11.65-9.72-2.16-1.78c-1.86-1.54-3.79-3.13-5.63-4.74l-1.11-.91v-51.03c1.51,1.66,2.79,3.09,4.08,4.5M32.07,58.67v23.85l-15.46-12.88,15.46-10.97ZM13.42,80.4l61.04,50.82-61.06,50.79.02-101.61ZM22.52,187.87l59.92-49.89c5.02,3.94,11.17,6.17,17.55,6.36,6.41-.19,12.58-2.42,17.64-6.36l59.93,49.89H22.52ZM186.62,182.01l-60.99-50.79,60.99-50.79v101.57Z\"/>\n        <path id=\"e\" data-name=\"Path 205\" class=\"g\" d=\"M99.13,107.97c-2.91-.17-4.7-2.02-5.24-5.52v-.38c-.29-2.45-2.5-4.21-4.96-3.93l-.25.04c-2.47.5-4.06,2.9-3.57,5.37,0,0,0,0,0,0,.34,5.1,3.45,9.61,8.1,11.74,1.17.37,1.92,1.51,1.78,2.73-.03,3.32,1.71,5.24,4.47,5.19,2.66-.04,4.35-1.96,4.32-5.15-.18-1.22.56-2.39,1.75-2.75,7.11-3.36,10.15-11.85,6.79-18.96-2.24-4.73-6.88-7.85-12.11-8.13-.82-.03-1.63-.14-2.42-.35-2.7-.76-4.35-3.48-3.79-6.23.46-2.6,2.71-4.49,5.34-4.49,3.16-.03,4.91,1.8,5.61,5.83v.13c.24,2.4,2.38,4.15,4.77,3.91,0,0,0,0,0,0,2.46-.32,4.22-2.52,3.99-4.99h0c-.21-5.23-3.31-9.9-8.05-12.11-1.24-.37-2.04-1.55-1.92-2.84.06-3.22-1.68-5.09-4.36-5.09-2.43,0-4.41,1.95-4.41,4.38,0,.23.02.45.05.68.16,1.28-.63,2.49-1.87,2.85-5.9,2.81-9.09,9.3-7.73,15.68,1.29,6.31,6.66,10.96,13.09,11.36.89.03,1.77.15,2.63.38,2.66.85,4.24,3.58,3.65,6.31-.49,2.67-2.9,4.54-5.61,4.36\"/>\n      </g>\n    </g>\n  </svg>\n                  </div>\n                  Enviar ticket por correo\n              </button>\n          </div>\n      </div>",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 322427,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 120,
+						"y": 609,
+						"width": 200,
+						"height": 1459,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "TICKETPRINCIPAL",
+					"properties": {
+						"tag": "div",
+						"content": "<div id=\"venta\">\n        <p>Folio anterior: <span id=\"folio_anterior\"></span></p>\n        <p>Ventas del día: <span id=\"ventas_dia\"></span></p>\n        <h3>FOLIO TICKET: <span id=\"folio\"></span></h3>\n        <p><b>Hora de apertura:</b> <span id=\"apertura\"></span></p>\n        <p><b>Mesero:</b> <span id=\"mesero\"></span></p>\n        <p><b>Área:</b> <span id=\"area\"></span></p>\n        <p><b>Mesa:</b> <span id=\"mesa\"></span></p>\n        <p><b>Comensales:</b> <span id=\"comensales\"></span></p>\n        <table id=\"partidas\" border=\"1\">\n        </table>\n    </div",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 144041,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2793,
+						"y": 718,
+						"width": 858,
+						"height": 1240,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				}
+			],
+			"sid": 593329544719292,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "BackGModales",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGModales2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 146,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1919.5,
+						"y": 1080.5,
+						"width": 3840.0000000000005,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				}
+			],
+			"sid": 460629680925271,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": false,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "ModalMaestro",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BoxModalVertical",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 281125,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1913,
+						"y": 965,
+						"width": 1142.9556193729163,
+						"height": 1358.2107213827385,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "modalMaestroContenedor",
+					"properties": {
+						"tag": "div",
+						"content": " <h2>Modal</h2>\n    <div id=\"modal\"></div>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": false,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 971302,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1426,
+						"y": 414,
+						"width": 949,
+						"height": 1137,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "ClsoeModalMaestroMA",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 469318,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2410,
+						"y": 352,
+						"width": 104,
+						"height": 104,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 732369654526957,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": false,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 992950796566185,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 7680,
+	"height": 4320,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "MesaAbiertaEventSheet"
+}

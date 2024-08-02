@@ -1,0 +1,4818 @@
+{
+	"name": "PuntoVentaLayout",
+	"layers": [
+		{
+			"name": "Punto de Venta",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 375799,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1962,
+						"y": 1073,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 889332,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 239,
+						"y": 119,
+						"width": 334.692039,
+						"height": 82.622721,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupContainer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 431643,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2562.558089353684,
+						"y": 134.6283063675073,
+						"width": 2203.116178707368,
+						"height": 183.25661273501458,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 783271,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "Ajustes",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3402.717036931948,
+						"y": 136.10378980579875,
+						"width": 647.4340738638954,
+						"height": 188.2075796115975,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSVG",
+					"properties": {
+						"svg-file": 769270452405849,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 278292,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1630,
+						"y": 90,
+						"width": 99.59919678390986,
+						"height": 99.59919678390986,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "MENÚ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 596711,
+					"instanceVariables": {
+						"BtnMenuText": "menu"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1542,
+						"y": 43,
+						"width": 647.6657281773707,
+						"height": 188.8908131867589,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.011330621958937304,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ajustes",
+					"properties": {
+						"svg-file": 320843016939425,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 302483,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3149,
+						"y": 91,
+						"width": 99.59919678390986,
+						"height": 99.59919678390986,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "AJUSTES",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 962578,
+					"instanceVariables": {
+						"BtnMenuText": "ajustes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3105,
+						"y": 42,
+						"width": 647.6657281773707,
+						"height": 188.8908131867589,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 793312,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "MenuDash",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1790,
+						"y": 138,
+						"width": 647.4340738638954,
+						"height": 188.2075796115975,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.2831225966514666,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 423592,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "PuntVenta",
+						"Selection": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2630,
+						"y": 129,
+						"width": 771.4340738638954,
+						"height": 188.2075796115975,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PuntoVentaSVG",
+					"properties": {
+						"svg-file": 859743254120449,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 639238,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2319,
+						"y": 90,
+						"width": 99.59919678390986,
+						"height": 99.59919678390986,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "PUNTO DE VENTA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 686411,
+					"instanceVariables": {
+						"BtnMenuText": "PuntoVenta"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2420,
+						"y": 39,
+						"width": 518.849702175752,
+						"height": 190.20588096470112,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModalVertical",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 714425,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 679,
+						"y": 1193.5,
+						"width": 1184,
+						"height": 1776.210721,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModalVertical",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 482791,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1933,
+						"y": 874.5,
+						"width": 1184,
+						"height": 1138.2107210000004,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoMesapdv",
+					"properties": {
+						"svg-file": 540489269739125,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 897842,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 210,
+						"y": 685,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoComandaspdv",
+					"properties": {
+						"svg-file": 737986312770375,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 120155,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 210,
+						"y": 920,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoReimprimirTpdv",
+					"properties": {
+						"svg-file": 828196418234881,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 878653,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 218,
+						"y": 448,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoVentaMospdv",
+					"properties": {
+						"svg-file": 404317136219472,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 152589,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 212,
+						"y": 1148,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoEnSaDipdv",
+					"properties": {
+						"svg-file": 542742703720276,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 200148,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1439,
+						"y": 460,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoCorteXpdv",
+					"properties": {
+						"svg-file": 509558385586348,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 612251,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1439,
+						"y": 713,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoPropinapdv",
+					"properties": {
+						"svg-file": 617035446664588,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 412182,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1439,
+						"y": 1210,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoDeliverypdv",
+					"properties": {
+						"svg-file": 366758118201404,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 244279,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 218,
+						"y": 1876,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "IconoVentaApp",
+					"properties": {
+						"svg-file": 383239592358468,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 305121,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 223,
+						"y": 1628,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Iconotienda",
+					"properties": {
+						"svg-file": 351335851395871,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 847308,
+					"instanceVariables": {
+						"BtnContent": "VentaTienda"
+					},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 227,
+						"y": 1385,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 870392,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3170,
+						"y": 814,
+						"width": 1184,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 726013,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3170,
+						"y": 459,
+						"width": 1184,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 824038,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1944,
+						"y": 1621,
+						"width": 1184,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoInicioTur",
+					"properties": {
+						"svg-file": 614457682575914,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 592018,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 2697,
+						"y": 377,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoAjuste",
+					"properties": {
+						"svg-file": 452051704123278,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 768077,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 2699,
+						"y": 741,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoAbrirCajpdv",
+					"properties": {
+						"svg-file": 565674395713621,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 255516,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1451,
+						"y": 1543,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoCorteYpdv",
+					"properties": {
+						"svg-file": 458950874601184,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 512703,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1443,
+						"y": 961,
+						"width": 152,
+						"height": 149,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 604849,
+					"instanceVariables": {
+						"BtnContent": "CorteZ"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1918,
+						"y": 1035,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 587130,
+					"instanceVariables": {
+						"BtnContent": "AbrirCaj"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1918,
+						"y": 1620,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Abrir cajón de dinero",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 673505,
+					"instanceVariables": {
+						"TextBtn": "AbrirCaj"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1621,
+						"y": 1525,
+						"width": 664.8034192508215,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 784542,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2349,
+						"y": 1614,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 433545,
+					"instanceVariables": {
+						"BtnContent": "Mesas"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 680,
+						"y": 759,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 941877,
+					"instanceVariables": {
+						"BtnContent": "Comandas"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 680,
+						"y": 994,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 462696,
+					"instanceVariables": {
+						"BtnContent": "ReimprimirT"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 680,
+						"y": 523,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 476494,
+					"instanceVariables": {
+						"BtnContent": "VentasMos"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 682,
+						"y": 1223,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 788311,
+					"instanceVariables": {
+						"BtnContent": "VentaTienda"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 683,
+						"y": 1454,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "MenuSubtitle",
+					"properties": {
+						"text": "RESTAURANTE",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.8470588235294118,
+							0.12941176470588237,
+							0.20784313725490197,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 867305,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 230,
+						"y": 359,
+						"width": 361.426841015691,
+						"height": 49.54404013779107,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "MenuSubtitle",
+					"properties": {
+						"text": "Contabilidad",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.8470588235294118,
+							0.12941176470588237,
+							0.20784313725490197,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 885604,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1440,
+						"y": 368,
+						"width": 361.426841015691,
+						"height": 49.54404013779107,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Mesas",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 535380,
+					"instanceVariables": {
+						"TextBtn": "Mesas"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 400,
+						"y": 662,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.280171074763118,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Comandas",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 492358,
+					"instanceVariables": {
+						"TextBtn": "Comandas"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 400,
+						"y": 898,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Reimprimir ticket",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 209570,
+					"instanceVariables": {
+						"TextBtn": "ReimprimirT"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 400,
+						"y": 432,
+						"width": 616.5056634961506,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Ventas Mostrador",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 690223,
+					"instanceVariables": {
+						"TextBtn": "VentasMos"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 402,
+						"y": 1128,
+						"width": 730.8148904128115,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Venta de tienda",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 127043,
+					"instanceVariables": {
+						"TextBtn": "VentaTienda"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 417,
+						"y": 1358,
+						"width": 581.9531496588354,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 235266,
+					"instanceVariables": {
+						"BtnContent": "InicioTurno"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3154,
+						"y": 464,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Inicio de turno",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 927413,
+					"instanceVariables": {
+						"TextBtn": "InicioTurno"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2874,
+						"y": 366,
+						"width": 658.1142366044849,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 232325,
+					"instanceVariables": {
+						"BtnContent": "EnSaDinero"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1918,
+						"y": 536,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 854151,
+					"instanceVariables": {
+						"BtnContent": "CorteX"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1918,
+						"y": 788,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 264147,
+					"instanceVariables": {
+						"BtnContent": "Propina"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1918,
+						"y": 1285,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Entrada/Salida de dinero",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 48,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 353568,
+					"instanceVariables": {
+						"TextBtn": "EnSaDinero"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1608,
+						"y": 442,
+						"width": 670.7312643096782,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Corte X",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 608427,
+					"instanceVariables": {
+						"TextBtn": "CorteX"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1609,
+						"y": 687,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Corte Z",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 643869,
+					"instanceVariables": {
+						"TextBtn": "CorteZ"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1609,
+						"y": 936,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Propinas por mesero",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 890893,
+					"instanceVariables": {
+						"TextBtn": "Propina"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1609,
+						"y": 1187,
+						"width": 707.4813471364487,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 137307,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1095,
+						"y": 758,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 199998,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1095,
+						"y": 992,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 123474,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1095,
+						"y": 529,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 226523,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1097,
+						"y": 1217,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 814087,
+					"instanceVariables": {
+						"BtnArrow": "VentaTienda"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1098,
+						"y": 1458,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 124125,
+					"instanceVariables": {
+						"BtnArrow": "InicioTurno"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3569,
+						"y": 462,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 223340,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2337,
+						"y": 534,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 798549,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2337,
+						"y": 781.2383059990989,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 750850,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2337,
+						"y": 1030,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 568330,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2337,
+						"y": 1280,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 543889,
+					"instanceVariables": {
+						"BtnContent": "Impresión"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3154,
+						"y": 815,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Ajustes de impresión",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 819627,
+					"instanceVariables": {
+						"TextBtn": "Impresión"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2874,
+						"y": 717,
+						"width": 658.1142366044849,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 120964,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3569,
+						"y": 813,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 355644,
+					"instanceVariables": {
+						"BtnContent": "VentaAplicacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 685,
+						"y": 1702,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Venta de aplicación",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 226326,
+					"instanceVariables": {
+						"TextBtn": "VentaAplicacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 419,
+						"y": 1606,
+						"width": 606.83403537688,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 429014,
+					"instanceVariables": {
+						"BtnArrow": "VentaAplicacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1100,
+						"y": 1706,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 231448,
+					"instanceVariables": {
+						"BtnContent": "Delivery"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 688,
+						"y": 1949,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Delivery",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 171237,
+					"instanceVariables": {
+						"TextBtn": "Delivery"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 422,
+						"y": 1853,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 157398,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1103,
+						"y": 1953,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				}
+			],
+			"sid": 173744098678693,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "CorteX",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 915386,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1979,
+						"y": 1087,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 787434,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2136,
+						"y": 1183,
+						"width": 3232,
+						"height": 1794.8022598870061,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 517674,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 313,
+						"y": 95,
+						"width": 426.170346,
+						"height": 105.205232,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupContainer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 556087,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2729,
+						"y": 142,
+						"width": 2052,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 534511,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "Ajustes",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3539,
+						"y": 141,
+						"width": 436,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSVG",
+					"properties": {
+						"svg-file": 769270452405849,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 216850,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1872,
+						"y": 99,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "MENÚ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 137948,
+					"instanceVariables": {
+						"BtnMenuText": "menu"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1782,
+						"y": 48,
+						"width": 436,
+						"height": 180.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.011330621958937304,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ajustes",
+					"properties": {
+						"svg-file": 320843016939425,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 613385,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3391,
+						"y": 100,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "AJUSTES",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 892784,
+					"instanceVariables": {
+						"BtnMenuText": "ajustes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3308,
+						"y": 54,
+						"width": 436,
+						"height": 180.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 944028,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "MenuDash",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2000,
+						"y": 143,
+						"width": 436,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 759967,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "PuntVenta",
+						"Selection": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2778,
+						"y": 142,
+						"width": 661,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PuntoVentaSVG",
+					"properties": {
+						"svg-file": 859743254120449,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 922332,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2561,
+						"y": 99,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "PUNTO DE VENTA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 611554,
+					"instanceVariables": {
+						"BtnMenuText": "PuntoVenta"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2561,
+						"y": 50,
+						"width": 566,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CorteXTitle",
+					"properties": {
+						"text": "CorteX",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 508802,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 807,
+						"y": 359,
+						"width": 675,
+						"height": 86,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconosVM3",
+					"properties": {
+						"svg-file": 208413108220113,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 510725,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 628,
+						"y": 329,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojo1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 525769,
+					"instanceVariables": {
+						"btnRegresar": "RegresarPV"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 270,
+						"y": 453,
+						"width": 335,
+						"height": 335,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "REGRESAR",
+					"properties": {
+						"text": "REGRESAR",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 1,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 238703,
+					"instanceVariables": {
+						"textRegresar": "RegresarPV"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 127,
+						"y": 532,
+						"width": 294.29824624945525,
+						"height": 78.32349704170365,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoshra5",
+					"properties": {
+						"svg-file": 961189363615927,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 556009,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 270,
+						"y": 431,
+						"width": 150,
+						"height": 150,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CorteXHtml",
+					"properties": {
+						"tag": "div",
+						"content": "<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Detalles de corte</title>\n  <style>\n    body {\n      font-family: Arial, sans-serif;\n      margin: 0;\n      padding: 1rem;\n      box-sizing: border-box;\n    }\n\n    .titulo {\n      font-size: 1rem;\n      font-weight: bold;\n      text-align: left;\n      margin-bottom: 1rem;\n    }\n\n    .fecha {\n      font-size: 0.8rem;\n      font-weight: normal;\n      text-align: left;\n      margin-bottom: 1rem;\n    }\n\n    .btn {\n      padding: 0.5rem 3rem;\n      cursor: pointer;\n      display: block;\n      margin: 0.5rem auto;\n      background: linear-gradient(180deg, #D9606D 0%, #B70114 100%);\n      border: none;\n      border-radius: 35px;\n      color: white;\n      font-weight: bold;\n      font-size: 1rem;\n    }\n\n    .corte-detalles {\n      display: flex;\n      flex-direction: column;\n      gap: 1rem;\n    }\n\n    .corte-item {\n      display: flex;\n      justify-content: space-between;\n      width: 100%;\n      font-size: 0.8rem;\n    }\n\n    .corte-item div, .corte-item span {\n      flex: 1;\n      text-align: left;\n      max-width: 45%;\n      word-wrap: break-word;\n    }\n\n    .corte-item span {\n      text-align: right;\n    }\n\n    .total-caja {\n      font-size: 1.1rem;\n      font-weight: bold;\n    }\n\n    @media (max-width: 600px) {\n      .corte-item {\n        font-size: 0.8rem;\n      }\n    }\n\n    @media print {\n      body {\n        width: 58mm; /* Tamaño típico de ticket */\n        margin: 0;\n        padding: 0;\n      }\n      .btn {\n        display: none;\n      }\n      .titulo, .fecha, .corte-item, .total-caja {\n        font-size: 10pt; /* Tamaño de fuente adecuado para impresión de tickets */\n      }\n      .corte-detalles {\n        margin: 0;\n        padding: 0;\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"titulo\">Detalles de corte</div>\n  <p class=\"fecha\">Fecha: [Fecha aquí]</p>\n  <div class=\"corte-detalles\">\n    <!-- Datos se llenarán dinámicamente -->\n  </div>\n  <button class=\"btn\" id=\"btnImprimir\">Imprimir </button>\n\n  \n\n</body>\n</html>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 247878,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 498,
+						"y": 540,
+						"width": 3199,
+						"height": 1508,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				}
+			],
+			"sid": 120402120562697,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Entrada y salida de dinero",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 541560,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1956,
+						"y": 1070,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 467523,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2113,
+						"y": 1166,
+						"width": 3232,
+						"height": 1794.8022598870061,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 453662,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 290,
+						"y": 78,
+						"width": 426.170346,
+						"height": 105.205232,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupContainer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 769820,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2706,
+						"y": 125,
+						"width": 2052,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 559342,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "Ajustes",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3516,
+						"y": 124,
+						"width": 436,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSVG",
+					"properties": {
+						"svg-file": 769270452405849,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 500894,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1849,
+						"y": 82,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "MENÚ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 182251,
+					"instanceVariables": {
+						"BtnMenuText": "menu"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1759,
+						"y": 31,
+						"width": 436,
+						"height": 180.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.011330621958937304,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ajustes",
+					"properties": {
+						"svg-file": 320843016939425,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 232942,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3368,
+						"y": 83,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "AJUSTES",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 241106,
+					"instanceVariables": {
+						"BtnMenuText": "ajustes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3285,
+						"y": 37,
+						"width": 436,
+						"height": 180.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 751873,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "MenuDash",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1977,
+						"y": 126,
+						"width": 436,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 647575,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "PuntVenta",
+						"Selection": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2754,
+						"y": 125,
+						"width": 661,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PuntoVentaSVG",
+					"properties": {
+						"svg-file": 859743254120449,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 366203,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2538,
+						"y": 82,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "PUNTO DE VENTA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 474502,
+					"instanceVariables": {
+						"BtnMenuText": "PuntoVenta"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2538,
+						"y": 33,
+						"width": 566,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnSaDiHTML",
+					"properties": {
+						"tag": "div",
+						"content": "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Crear Flujo</title>\n    <style>\n      .EnSaDi-menu {\n        width: 300px;\n        margin: auto;\n        font-family: Arial, sans-serif;\n      }\n      .EnSaDi-section {\n        margin-bottom: 15px;\n      }\n      .EnSaDi-label {\n        display: block;\n        margin-bottom: 5px;\n      }\n      .EnSaDi-radio-group label {\n        display: block;\n        margin-bottom: 5px;\n      }\n      .EnSaDi-input {\n        width: 100%;\n        padding: 8px;\n        margin-bottom: 5px;\n        box-sizing: border-box;\n      }\n      .EnSaDi-input-container {\n        display: flex;\n      }\n      .EnSaDi-input-container button {\n        width: 30px;\n        height: 30px;\n        padding: 0;\n        font-size: 18px;\n      }\n      .EnSaDi-warning {\n        color: red;\n        font-size: 12px;\n      }\n      .EnSaDi-submit-button-container {\n        text-align: center;\n      }\n      .EnSaDi-submit-button {\n        padding: 10px 20px;\n        font-size: 16px;\n      }\n    .EnSaDi-modal {\n      display: none;\n      position: fixed;\n      z-index: 1;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: auto;\n      background-color: rgba(0, 0, 0, 0.4);\n    }\n\n    .EnSaDi-modal-content {\n      background-color: white;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 500px;\n      border-radius: 10px;\n    }\n\n    .EnSaDi-close {\n      color: #aaa;\n      float: right;\n      font-size: 28px;\n      font-weight: bold;\n    }\n\n    .EnSaDi-close:hover,\n    .EnSaDi-close:focus {\n      color: black;\n      text-decoration: none;\n      cursor: pointer;\n    }\n\n    @media screen and (max-width: 600px) {\n      .EnSaDi-modal-content {\n        width: 90%;\n      }\n    }\n  </style>\n  </head>\n  <body>\n    <div class=\"EnSaDi-menu\">\n      <div class=\"EnSaDi-section\">\n        <label class=\"EnSaDi-label\">Tipo</label>\n        <div class=\"EnSaDi-radio-group\">\n          <label>\n            <input\n              type=\"radio\"\n              name=\"tipo\"\n              value=\"1\"\n              class=\"EnSaDi-input-radio\"\n              required\n            />\n            Entrada\n          </label>\n          <label>\n            <input\n              type=\"radio\"\n              name=\"tipo\"\n              value=\"2\"\n              class=\"EnSaDi-input-radio\"\n              required\n            />\n            Salida\n          </label>\n          <label>\n            <input\n              type=\"radio\"\n              name=\"tipo\"\n              value=\"4\"\n              class=\"EnSaDi-input-radio\"\n              required\n            />\n            Anticipo\n          </label>\n        </div>\n      </div>\n      <div class=\"EnSaDi-section\">\n        <label for=\"concepto\" class=\"EnSaDi-label\">Concepto</label>\n        <input\n          type=\"text\"\n          id=\"concepto\"\n          class=\"EnSaDi-input\"\n          placeholder=\"Escribe aquí\"\n          required\n        />\n      </div>\n      <div class=\"EnSaDi-section\">\n        <label for=\"cantidad\" class=\"EnSaDi-label\">Cantidad</label>\n        <div class=\"EnSaDi-input-container\">\n          <button id=\"minus\" type=\"button\">-</button>\n          <input\n            type=\"text\"\n            id=\"cantidad\"\n            value=\"0\"\n            class=\"EnSaDi-input\"\n            required\n          />\n          <button id=\"plus\" type=\"button\">+</button>\n        </div>\n        <p id=\"warning\" class=\"EnSaDi-warning\" style=\"display: none\">\n          Por favor, introduce un valor numérico.\n        </p>\n      </div>\n      <div class=\"EnSaDi-section\">\n        <label for=\"pago\" class=\"EnSaDi-label\">Pago</label>\n        <select id=\"pago\" class=\"EnSaDi-input\" required>\n          <option value=\"efectivo\">Efectivo</option>\n          <option value=\"tarjeta\">Tarjeta</option>\n          <option value=\"transferencia\">Transferencia</option>\n        </select>\n      </div>\n      <div class=\"EnSaDi-section\">\n        <label for=\"pin\" class=\"EnSaDi-label\">Pin</label>\n        <input\n          type=\"password\"\n          id=\"pin\"\n          class=\"EnSaDi-input\"\n          placeholder=\"Introduce tu PIN\"\n          required\n        />\n      </div>\n      <div class=\"EnSaDi-submit-button-container\">\n        <button\n          id=\"submit-button\"\n          type=\"button\"\n          class=\"EnSaDi-submit-button\"\n        > Enviar\n        </button>\n      </div>\n    </div>\n    <div id=\"flujoCreado\"></div>\n \n  <div id=\"errorModal\" class=\"EnSaDi-modal\">\n    <div class=\"EnSaDi-modal-content\">\n      <span class=\"EnSaDi-close\">&times;</span>\n      <p>Acceso Denegado</p>\n    </div>\n  </div>\n  </body>\n</html>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 355431,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 581,
+						"y": 463,
+						"width": 1770,
+						"height": 1479,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "EnSaDiTitle",
+					"properties": {
+						"text": "Entrada/Salida dinero",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 808998,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 750,
+						"y": 355,
+						"width": 771,
+						"height": 82,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconosVM2",
+					"properties": {
+						"svg-file": 733258659624035,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 732196,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 574,
+						"y": 320,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojo1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 274689,
+					"instanceVariables": {
+						"btnRegresar": "RegresarPV"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 250,
+						"y": 422,
+						"width": 335,
+						"height": 335,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "REGRESAR",
+					"properties": {
+						"text": "REGRESAR",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 1,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 843350,
+					"instanceVariables": {
+						"textRegresar": "RegresarPV"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 107,
+						"y": 496,
+						"width": 294.29824624945525,
+						"height": 78.32349704170365,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoshra5",
+					"properties": {
+						"svg-file": 961189363615927,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 274353,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 175,
+						"y": 321,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 630983322840355,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "CorteZ",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 759824,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1980,
+						"y": 1074,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 404991,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2137,
+						"y": 1169,
+						"width": 3232,
+						"height": 1794.8022598870061,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 431946,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 314,
+						"y": 82,
+						"width": 426.170346,
+						"height": 105.205232,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupContainer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 540536,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2730,
+						"y": 129,
+						"width": 2052,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 813584,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "Ajustes",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3540,
+						"y": 128,
+						"width": 436,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSVG",
+					"properties": {
+						"svg-file": 769270452405849,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 761419,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1873,
+						"y": 86,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "MENÚ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 857724,
+					"instanceVariables": {
+						"BtnMenuText": "menu"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1783,
+						"y": 35,
+						"width": 436,
+						"height": 180.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.011330621958937304,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ajustes",
+					"properties": {
+						"svg-file": 320843016939425,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 930465,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3392,
+						"y": 87,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "AJUSTES",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 379452,
+					"instanceVariables": {
+						"BtnMenuText": "ajustes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3309,
+						"y": 41,
+						"width": 436,
+						"height": 180.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 102299,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "MenuDash",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2001,
+						"y": 130,
+						"width": 436,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 848137,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "PuntVenta",
+						"Selection": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2778,
+						"y": 129,
+						"width": 661,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PuntoVentaSVG",
+					"properties": {
+						"svg-file": 859743254120449,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 465971,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2562,
+						"y": 86,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "PUNTO DE VENTA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 922430,
+					"instanceVariables": {
+						"BtnMenuText": "PuntoVenta"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2562,
+						"y": 37,
+						"width": 566,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CorteZHTML",
+					"properties": {
+						"tag": "div",
+						"content": "    <style>\n            #cortez {\n                display: flex;\n                flex-direction: column;\n                align-items: center;\n                justify-content: center;\n                height: 100%;\n                width: 100%;\n                padding: 20px;\n            }\n    \n            .container-cortez {\n                display: flex;\n                justify-content: center;\n                align-items: stretch; /* Ensure columns are the same height */\n                width: 100%;\n                height: 100%;\n            }\n    \n            .column-cortez {\n                flex: 1;\n                padding: 20px;\n                box-sizing: border-box;\n                min-width: 300px;\n            }\n    \n            h2.titulo-cortez {\n                text-align: center;\n                margin-bottom: 1rem;\n                font-size: 1.5rem;\n            }\n    \n            .denomination-cortez {\n                display: flex;\n                align-items: center;\n                margin-bottom: 1rem;\n                padding: 0.5rem;\n                border-radius: 1.5rem;\n                max-width: 100%;\n            }\n    \n            .circle-cortez {\n                flex: 0 0 25%;\n                height: 40px;\n                background-color: #818A91;\n                border-radius: 50px;\n                display: flex;\n                justify-content: center;\n                align-items: center;\n                font-size: 1rem;\n                font-weight: bold;\n                color: white;\n                margin-right: -2rem;\n            }\n    \n            .controls-cortez {\n                position: relative;\n                width: 70%;\n                height: 40px;\n                border-radius: 1.5rem;\n                border: 1px solid #818A91; \n            }\n    \n            .controls-cortez button {\n                background: none;\n                border: none;\n                color: red;\n                font-size: 1.5rem;\n                cursor: pointer;\n                outline: none;\n                position: absolute;\n                top: 0;\n                height: 100%;\n            }\n    \n            .controls-cortez button.minus-cortez {\n                left: 3rem;\n            }\n    \n            .controls-cortez button.plus-cortez {\n                right: 1rem;\n            }\n    \n            .controls-cortez input {\n                width: calc(100% - 6rem);\n                text-align: center;\n                border: none;\n                font-size: 1rem;\n                height: 100%;\n                background-color: transparent;\n                position: absolute;\n                left: 4rem;\n                right: 2rem;\n            }\n    \n            .print-cortez {\n                width: 100%;\n                max-width: 200px;\n                padding: 0.5rem;\n                margin-top: 1rem;\n                background: linear-gradient(180deg, #D9606D 0%, #B70114 100%);\n                border: none;\n                border-radius: 35px;\n                color: white;\n                font-weight: bold;\n                font-size: 1.5rem;\n                cursor: pointer;\n            }\n    \n            .print-cortez:active {\n                background-color: #c9302c;\n            }\n    \n            @media (max-width: 768px) {\n                .circle-cortez {\n                    flex: 0 0 30%;\n                    height: 50px;\n                    font-size: 0.875rem;\n                }\n    \n                .controls-cortez {\n                    height: 50px;\n                }\n    \n                .controls-cortez button {\n                    font-size: 1.25rem;\n                }\n    \n                .controls-cortez input {\n                    font-size: 0.875rem;\n                }\n            }\n            .modal {\n                display: none;\n                position: fixed;\n                z-index: 1;\n                padding-top: 60px;\n                left: 0;\n                top: 0;\n                width: 100%;\n                height: 100%;\n                overflow: auto;\n                background-color: rgb(0,0,0);\n                background-color: rgba(0,0,0,0.4);\n            }\n            .modal-content {\n                background-color: #fefefe;\n                margin: 5% auto;\n                padding: 20px;\n                border: 1px solid #888;\n                width: 50%;\n                border-radius:25px;\n                box-shadow: 0 3px 9px rgba(0,0,0,.5);\n            }\n            .close {\n                color: #aaa;\n                float: right;\n                font-size: 28px;\n                font-weight: bold;\n            }\n            .close:hover,\n            .close:focus {\n                color: black;\n                text-decoration: none;\n                cursor: pointer;\n            }\n            .separator {\n                border: 0;\n                border-top: 1px solid #ccc;\n                margin: 10px 0;\n            }\n            p#modalMessage{\n                font-size: 1.5rem;\n            }\n            h2#modalTitle{\n                font-size: 2rem;\n            }\n    </style>\n</head>\n<body>\n    <div id=\"cortez\">\n        <div class=\"container-cortez\">\n            <div class=\"column-cortez\">\n                <h2 class=\"titulo-cortez\">Billetes</h2>\n                <div class=\"denomination-cortez\" id=\"billete-1000\">\n                    <div class=\"circle-cortez\">$1,000</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-billete-1000\">-</button>\n                        <input id=\"1000\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-billete-1000\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-500\">\n                    <div class=\"circle-cortez\">$500</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-billete-500\">-</button>\n                        <input id=\"500\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-billete-500\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-200\">\n                    <div class=\"circle-cortez\">$200</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-billete-200\">-</button>\n                        <input id=\"200\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-billete-200\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-100\">\n                    <div class=\"circle-cortez\">$100</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-billete-100\">-</button>\n                        <input id=\"100\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-billete-100\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-50\">\n                    <div class=\"circle-cortez\">$50</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-billete-50\">-</button>\n                        <input id=\"50\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-billete-50\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-20\">\n                    <div class=\"circle-cortez\">$20</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-billete-20\">-</button>\n                        <input id=\"20\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-billete-20\">+</button>\n                    </div>\n                </div>\n            </div>\n            <div class=\"column-cortez\">\n                <h2 class=\"titulo-cortez\">Monedas</h2>\n                <div class=\"denomination-cortez\" id=\"moneda-10\">\n                    <div class=\"circle-cortez\">$10</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-moneda-10\">-</button>\n                        <input id=\"10\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-moneda-10\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"moneda-5\">\n                    <div class=\"circle-cortez\">$5</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-moneda-5\">-</button>\n                        <input id=\"5\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-moneda-5\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"moneda-2\">\n                    <div class=\"circle-cortez\">$2</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-moneda-2\">-</button>\n                        <input id=\"2\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-moneda-2\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"moneda-1\">\n                    <div class=\"circle-cortez\">$1</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-moneda-1\">-</button>\n                        <input id=\"1\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-moneda-1\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"moneda-05\">\n                    <div class=\"circle-cortez\">¢50</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" id=\"minus-moneda-05\">-</button>\n                        <input id=\"05\" type=\"text\" value=\"0\">\n                        <button class=\"plus-cortez\" id=\"plus-moneda-05\">+</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <button class=\"print-cortez\" id=\"submitCorteZ\">Enviar Corte Z</button>\n    </div>\n\n    <div id=\"modalCorteZ\" class=\"modal\">\n        <div class=\"modal-content\">\n            <span class=\"close\" id=\"closeModal\">&times;</span>\n            <h2 id=\"modalTitle\">Solicitud completada</h2>\n            <hr class=\"separator\">\n            <p id=\"modalMessage\">Corte creado correctamente</p>\n            <p id=\"modalCierre\">Cierre: $0.00</p>\n            <button id=\"modalPrintButton\" style=\"display: none;\">Imprimir</button>\n        </div>\n    </div>\n</body>",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 313559,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 549,
+						"y": 511,
+						"width": 3199,
+						"height": 1508,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "CorteXTitle",
+					"properties": {
+						"text": "CorteZ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 475920,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 808,
+						"y": 346,
+						"width": 675,
+						"height": 86,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconospdv",
+					"properties": {
+						"svg-file": 218467994703885,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 718484,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 612,
+						"y": 305,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojo1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 601422,
+					"instanceVariables": {
+						"btnRegresar": "RegresarPV"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 278,
+						"y": 429,
+						"width": 335,
+						"height": 335,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "REGRESAR",
+					"properties": {
+						"text": "REGRESAR",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 1,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 683417,
+					"instanceVariables": {
+						"textRegresar": "RegresarPV"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 133,
+						"y": 516,
+						"width": 294.29824624945525,
+						"height": 78.32349704170365,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconoshra5",
+					"properties": {
+						"svg-file": 961189363615927,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 824783,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 202,
+						"y": 331,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 267740502767260,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 813738974056206,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 7680,
+	"height": 4320,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "PuntoVentaEventSheet"
+}

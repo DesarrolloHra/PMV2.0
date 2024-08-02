@@ -1,0 +1,46 @@
+{
+	"name": "BtnSelectAjustes",
+	"plugin-id": "Sprite",
+	"sid": 976300423018150,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnControlAjuste",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 686651351368734
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2899790,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 661443216508617,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

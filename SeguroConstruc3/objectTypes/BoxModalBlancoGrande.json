@@ -1,0 +1,50 @@
+{
+	"name": "BoxModalBlancoGrande",
+	"plugin-id": "Sprite",
+	"sid": 748968894602966,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 3645,
+						"height": 1462,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2695361,
+						"collisionPoly": {
+							"points": [
+								0.4657064471879287,
+								0.41450068399452805,
+								0.5342935528120714,
+								0.41450068399452805,
+								0.5342935528120714,
+								0.585499316005472,
+								0.4657064471879287,
+								0.585499316005472
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 450665885231397,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

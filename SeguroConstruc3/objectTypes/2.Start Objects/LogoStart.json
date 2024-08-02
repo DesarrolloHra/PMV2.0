@@ -1,0 +1,63 @@
+{
+	"name": "LogoStart",
+	"plugin-id": "Sprite",
+	"sid": 167380942224441,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 462014994859537
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 989736390814523
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1180,
+						"height": 324,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8842395,
+						"collisionPoly": {
+							"points": [
+								0.12372881355932204,
+								0.04938271604938271,
+								0.9084745762711864,
+								0.10802469135802469,
+								0.7974576271186441,
+								0.9382716049382716,
+								0.19661016949152543,
+								0.9382716049382716,
+								0.09067796610169492,
+								0.6882716049382716
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 181559220079490,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

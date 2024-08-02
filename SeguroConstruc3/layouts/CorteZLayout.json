@@ -1,0 +1,635 @@
+{
+	"name": "CorteZLayout",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 967390,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1920,
+						"y": 1080,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 866425,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2077,
+						"y": 1175,
+						"width": 3232,
+						"height": 1794.8022598870061,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 512511,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 215,
+						"y": 448,
+						"width": 286.49956369949325,
+						"height": 306.49956369949325,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 828838,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 254,
+						"y": 88,
+						"width": 426.170346,
+						"height": 105.205232,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "REGRESAR",
+					"properties": {
+						"text": "REGRESAR",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 1,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 585748,
+					"instanceVariables": {
+						"textRegresar": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 68,
+						"y": 525,
+						"width": 294.29824624945525,
+						"height": 78.32349704170365,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupContainer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 446169,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2670,
+						"y": 135,
+						"width": 2052,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 174492,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "Ajustes",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3480,
+						"y": 134,
+						"width": 436,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSVG",
+					"properties": {
+						"svg-file": 769270452405849,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 799212,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1813,
+						"y": 92,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "MENÚ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 605814,
+					"instanceVariables": {
+						"BtnMenuText": "menu"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1723,
+						"y": 41,
+						"width": 436,
+						"height": 180.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.011330621958937304,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ajustes",
+					"properties": {
+						"svg-file": 320843016939425,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 629801,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3332,
+						"y": 93,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "AJUSTES",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 436512,
+					"instanceVariables": {
+						"BtnMenuText": "ajustes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3249,
+						"y": 47,
+						"width": 436,
+						"height": 180.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 484718,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "MenuDash",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1941,
+						"y": 136,
+						"width": 436,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 354340,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "PuntVenta",
+						"Selection": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2718,
+						"y": 135,
+						"width": 661,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PuntoVentaSVG",
+					"properties": {
+						"svg-file": 859743254120449,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 765189,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2502,
+						"y": 92,
+						"width": -152,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "PUNTO DE VENTA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 799355,
+					"instanceVariables": {
+						"BtnMenuText": "PuntoVenta"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2502,
+						"y": 43,
+						"width": 566,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "iconospdv",
+					"properties": {
+						"svg-file": 414786474180224,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 422048,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 598,
+						"y": 311,
+						"width": 150,
+						"height": 150,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CorteZHTML",
+					"properties": {
+						"tag": "div",
+						"content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Money Counter</title>\n<style>\n    * {\n        box-sizing: border-box;\n        margin: 0;\n        padding: 0;\n    }\n\n    html, body {\n        height: 100%;\n        width: 100%;\n        font-family: Arial, sans-serif;\n        overflow: hidden; /* Evitar scroll */\n    }\n\n    #cortez {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: center;\n        height: 100%;\n        width: 100%;\n        padding: 20px;\n        background-color: transparent;\n    }\n\n    .container-cortez {\n        display: flex;\n        flex-wrap: wrap;\n        justify-content: center;\n        width: 100%;\n        height: 100%;\n        max-width: 3199px;\n        max-height: 1508px;\n    }\n\n    .column-cortez {\n        flex: 1 1 45%;\n        padding: 20px;\n        box-sizing: border-box;\n        min-width: 300px;\n    }\n\n    h2.titulo-cortez {\n        text-align: left;\n        margin-bottom: 1rem;\n        font-size: 1.5rem;\n    }\n\n    .denomination-cortez {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        margin-bottom: 1rem;\n        padding: 0.5rem;\n        background-color: none;\n        border-radius: 1.5rem;\n    }\n\n    .circle-cortez {\n        width: 25%;\n        height: 40px;\n        background-color: #818A91;\n        border-radius: 50px;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        font-size: 1rem;\n        font-weight: bold;\n        color: white;\n        margin-right: -10rem;\n    }\n\n    .controls-cortez {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        background-color: transparent;\n        border-radius: 1.5rem;\n        padding: 0.5rem 1rem;\n        padding-left: 2rem;\n        height: 40px;\n        width: 80%;\n        border: 1px solid #818A91;\n    }\n\n    .controls-cortez button {\n        background: none;\n        border: none;\n        color: red;\n        font-size: 1.5rem;\n        cursor: pointer;\n        outline: none;\n        margin: 0 0.5rem;\n    }\n\n    .controls-cortez input {\n        flex: 1;\n        text-align: center;\n        border: none;\n        font-size: 1rem;\n        margin: 0 0.5rem;\n        height: 100%;\n        background-color:transparent;\n    }\n\n    .print-cortez {\n        width: 100%;\n        max-width: 200px;\n \n\n        padding: 0.5rem;\n        \n        margin-top: 1rem;\n\n     background: linear-gradient(180deg, #D9606D 0%, #B70114 100%);\n    border: none;\n    border-radius: 35px;\n    color: white;\n    font-weight: bold;\n    font-size: 1.5rem;\n\tcursor: pointer;\n    }\n\n    .print-cortez:active {\n        background-color: #c9302c;\n    }\n\n    @media (max-width: 768px) {\n        .circle-cortez {\n            width: 30%;\n            height: 50px;\n            font-size: 0.875rem;\n        }\n\n        .controls-cortez {\n            height: 50px;\n            padding-left: 3rem;\n        }\n\n        .controls-cortez button {\n            font-size: 1.25rem;\n        }\n\n        .controls-cortez input {\n            font-size: 0.875rem;\n        }\n    }\n</style>\n</head>\n<body>\n    <div id=\"cortez\">\n        <div class=\"container-cortez\">\n            <div class=\"column-cortez\">\n                <h2 class=\"titulo-cortez\">Billetes</h2>\n                <div class=\"denomination-cortez\" id=\"billete-1000\">\n                    <div class=\"circle-cortez\">$1,000</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('billete-1000', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('billete-1000', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-500\">\n                    <div class=\"circle-cortez\">$500</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('billete-500', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('billete-500', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-200\">\n                    <div class=\"circle-cortez\">$200</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('billete-200', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('billete-200', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-100\">\n                    <div class=\"circle-cortez\">$100</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('billete-100', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('billete-100', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-50\">\n                    <div class=\"circle-cortez\">$50</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('billete-50', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('billete-50', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"billete-20\">\n                    <div class=\"circle-cortez\">$20</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('billete-20', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('billete-20', 1)\">+</button>\n                    </div>\n                </div>\n            </div>\n            <div class=\"column-cortez\">\n                <h2 class=\"titulo-cortez\">Monedas</h2>\n                <div class=\"denomination-cortez\" id=\"moneda-10\">\n                    <div class=\"circle-cortez\">$10</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('moneda-10', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('moneda-10', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"moneda-5\">\n                    <div class=\"circle-cortez\">$5</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('moneda-5', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('moneda-5', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"moneda-2\">\n                    <div class=\"circle-cortez\">$2</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('moneda-2', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('moneda-2', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"moneda-1\">\n                    <div class=\"circle-cortez\">$1</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('moneda-1', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('moneda-1', 1)\">+</button>\n                    </div>\n                </div>\n                <div class=\"denomination-cortez\" id=\"moneda-0.5\">\n                    <div class=\"circle-cortez\">$0.5</div>\n                    <div class=\"controls-cortez\">\n                        <button class=\"minus-cortez\" onclick=\"updateCount('moneda-0.5', -1)\">-</button>\n                        <input type=\"text\" value=\"0\" readonly>\n                        <button class=\"plus-cortez\" onclick=\"updateCount('moneda-0.5', 1)\">+</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <button class=\"print-cortez\">Imprimir</button>\n    </div>\n    <script>\n        function updateCount(id, increment) {\n            const denominationElement = document.getElementById(id);\n            const input = denominationElement.querySelector('input');\n            let currentValue = parseInt(input.value);\n            currentValue += increment;\n            if (currentValue < 0) currentValue = 0;\n            input.value = currentValue;\n        }\n    </script>\n</body>\n</html>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 919271,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 493,
+						"y": 593,
+						"width": 3199,
+						"height": 1508,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				}
+			],
+			"sid": 910104303489367,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 241467790835825,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 7680,
+	"height": 4320,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "CorteXEventSheet"
+}

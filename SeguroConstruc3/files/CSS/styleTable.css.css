@@ -1,0 +1,293 @@
+  .Familia-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .familia-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            width: calc(25% - 10px); /* Ajusta el ancho según el número de columnas deseadas */
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+			font-size:1rem;
+        }
+
+        .form-group select {
+            display: block;
+            background: none;
+            border: 1px solid black;
+            padding: 5px;
+            width: 100%;
+			border-radius:50px;
+        }
+
+        @media (max-width: 768px) {
+            .form-group {
+                width: 100%;
+            }
+        }
+
+/* Contenedor general de la tabla */
+.table-wrapper {
+    width: 100%;
+    height: 100%; /* Ajusta la altura según sea necesario */
+    overflow-y: auto; /* Permite scroll vertical */
+    overflow-x: hidden; /* Oculta scroll horizontal */
+    -ms-overflow-style: none;  /* Oculta scrollbar en IE y Edge */
+    scrollbar-width: none;  /* Oculta scrollbar en Firefox */
+}
+
+.table-wrapper::-webkit-scrollbar {
+    display: none;  /* Oculta scrollbar en Chrome, Safari y Opera */
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: auto; /* Distribución automática */
+    border-spacing: 0;
+    overflow-y: auto; /* Permite scroll vertical */
+}
+
+.thTableHead {
+    font-size: 1rem;
+    color: #D82135;
+    font-weight: bold;
+    border-bottom: 3px solid #FCC329;
+    vertical-align: middle;
+    height: 4rem;
+    padding: 0.5rem;
+}
+
+td, .thBody {
+    font-size: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #BFBFBF;
+    padding: 0.5rem;
+    word-wrap: break-word; /* Ajusta el texto a la celda */
+    word-break: break-word; /* Rompe el texto para evitar desbordamiento */
+    overflow-y: auto; /* Oculta el desbordamiento */
+    white-space: normal; /* Ajusta el espacio en blanco dentro de las celdas */
+}
+
+.paginationList, .itemsPagination {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.paginationItem {
+    margin-right: 1rem;
+    list-style: none;
+}
+
+.pageLink {
+    border: none;
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: 7px;
+    background: #fcc42983;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .thTableHead, td, .thBody {
+        font-size: 0.9rem;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .pageLink {
+        width: 1.5rem;
+        height: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .paginationItem {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .thTableHead, td, .thBody {
+        font-size: 0.8rem;
+        height: auto;
+        padding: 0.3rem;
+    }
+
+    .pageLink {
+        width: 1.2rem;
+        height: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .paginationItem {
+        margin-right: 0.3rem;
+    }
+}
+
+/* Estilos del menú desplegable */
+.dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown-content a.delete {
+            color: red;
+        }
+
+        .dropbtn {
+            height: 10px;
+            width: auto;
+        }
+ #editModal, #editPriceModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 300px;
+        }
+        .modal-header {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .modal-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .modal-form input, .modal-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .modal-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .modal-form button.close-btn {
+            background-color: #f44336;
+            margin-top: 10px;
+        }
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+#formActualizarReceta {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#formActualizarReceta label {
+    margin-bottom: 5px;
+    font-weight: bold;
+	font-size: 1rem;
+}
+
+#formActualizarReceta input, 
+#formActualizarReceta select, 
+#formActualizarReceta button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#formActualizarReceta input:focus, 
+#formActualizarReceta select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#formActualizarReceta button {
+  background: linear-gradient(180deg, #D9606D 0%, #B70114 100%);
+    border: none;
+    border-radius: 35px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+	cursor: pointer;
+	}
+
+#formActualizarReceta button:hover {
+    background-color: #cc3224;
+}
+
+#tipoInput, 
+#porcionesInput, 
+#unidadInput, 
+#calculoInput,
+#porcentajeInput, 
+#factorInput, 
+#comisionTipoInput, 
+#comisionInput,
+#maximoExtrasInput, 
+#precioFijoReceta {
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    #formActualizarReceta {
+        padding: 15px;
+    }
+}

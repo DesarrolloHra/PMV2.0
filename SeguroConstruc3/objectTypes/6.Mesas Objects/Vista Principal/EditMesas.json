@@ -1,0 +1,52 @@
+{
+	"name": "EditMesas",
+	"plugin-id": "Sprite",
+	"sid": 599186498221382,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 589,
+						"height": 587,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3165423,
+						"collisionPoly": {
+							"points": [
+								0.9966044142614601,
+								0.1260647359454855,
+								0.7198641765704585,
+								0.9982964224872232,
+								0.003395585738539898,
+								0.8943781942078365,
+								0.003395585738539898,
+								0.27427597955706984,
+								0.04584040747028863,
+								0.19761499148211242
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 494556145331231,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

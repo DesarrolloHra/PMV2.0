@@ -1,0 +1,52 @@
+{
+	"name": "EnviarComandaIcon",
+	"plugin-id": "Sprite",
+	"sid": 137555327327036,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 148,
+						"height": 148,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8201219,
+						"collisionPoly": {
+							"points": [
+								0.9932432432432432,
+								0.08783783783783784,
+								0.7162162162162162,
+								0.918918918918919,
+								0.5945945945945946,
+								0.9797297297297297,
+								0.013513513513513514,
+								0.3310810810810811,
+								0.060810810810810814,
+								0.2905405405405405
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 429768649184296,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"name": "ObjetosMesas",
+	"plugin-id": "Sprite",
+	"sid": 602310560900721,
+	"instanceVariables": [
+		{
+			"name": "selectedObject",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 286211936338663
+		},
+		{
+			"name": "AreaVarObject",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 418010246479062
+		},
+		{
+			"name": "VentaID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 797070510112320
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 662288774672543
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Mesa10R",
+		"Mesa2R",
+		"Mesa4C",
+		"Mesa4R",
+		"Mesa5R",
+		"Mesa8C",
+		"Mesa6C",
+		"Mesa2C",
+		"Mesa8R",
+		"Mesa6R",
+		"Barra",
+		"Booth",
+		"Mesa6C2",
+		"Mesa8C2",
+		"Barra2"
+	]
+}

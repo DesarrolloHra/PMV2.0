@@ -1,0 +1,50 @@
+{
+	"name": "BarraLateral",
+	"plugin-id": "Sprite",
+	"sid": 289781198650222,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 306,
+						"height": 1427,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1811412,
+						"collisionPoly": {
+							"points": [
+								0.0915032679738562,
+								0.41240364400840923,
+								0.9084967320261438,
+								0.41240364400840923,
+								0.9084967320261438,
+								0.5875963559915908,
+								0.0915032679738562,
+								0.5875963559915908
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 187824310347753,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

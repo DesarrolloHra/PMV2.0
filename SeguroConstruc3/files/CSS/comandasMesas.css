@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.mesas2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.mesa2 {
+    border: 1px solid #41D320;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.mesa-table2 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+}
+
+.mesa-header2, .mesa-cell2 {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.mesa-header2 {
+    color: #BFBFBF;
+	font-size: 1.1rem;
+}
+
+.mesa-name2 {
+    color: #229306;
+	font-size: 1.5rem;
+}
+
+.mesa-cell2:last-child {
+    border-right: none;
+}
+
+.mesa-table2 tr:last-child .mesa-cell2 {
+    border-bottom: none;
+}
+
+.pedido-enviado2 input[type="checkbox"] {
+    display: none;
+}
+
+.pedido-enviado2 input[type="checkbox"] + label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.pedido-enviado2 input[type="checkbox"] + label::after {
+    content: "";
+    display: none;
+    width: 24px;
+    height: 24px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #41D320;
+    border-radius: 50%;
+}
+
+.pedido-enviado2 input[type="checkbox"]:checked + label::after {
+    display: block;
+}
+
+.plato2 {
+    position: relative;
+}
+
+.tiempo-transcurrido2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: .8rem;
+    color: red;
+	margin: .5rem 0;
+}
+.tr-mesas {
+    height: 7rem;
+}

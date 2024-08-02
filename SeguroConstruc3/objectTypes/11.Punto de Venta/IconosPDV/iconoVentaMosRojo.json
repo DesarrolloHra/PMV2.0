@@ -1,0 +1,14 @@
+{
+	"name": "iconoVentaMosRojo",
+	"plugin-id": "SVGPicture",
+	"sid": 540168538428410,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

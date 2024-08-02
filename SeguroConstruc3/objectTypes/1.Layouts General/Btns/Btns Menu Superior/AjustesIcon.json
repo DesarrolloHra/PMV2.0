@@ -1,0 +1,17 @@
+{
+	"name": "AjustesIcon",
+	"plugin-id": "SVGPicture",
+	"sid": 388080535086881,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnContent",
+			"type": "string",
+			"desc": "General",
+			"show": true,
+			"sid": 924298787105610
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

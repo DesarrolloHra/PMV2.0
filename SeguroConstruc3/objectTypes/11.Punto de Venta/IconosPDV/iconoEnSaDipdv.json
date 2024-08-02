@@ -1,0 +1,14 @@
+{
+	"name": "iconoEnSaDipdv",
+	"plugin-id": "SVGPicture",
+	"sid": 423076411108819,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

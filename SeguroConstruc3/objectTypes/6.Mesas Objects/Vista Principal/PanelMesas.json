@@ -1,0 +1,50 @@
+{
+	"name": "PanelMesas",
+	"plugin-id": "Sprite",
+	"sid": 190944552835265,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 2515,
+						"height": 2080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7318218,
+						"collisionPoly": {
+							"points": [
+								0.005964214711729622,
+								0,
+								1,
+								0.007211538461538462,
+								0.9940357852882704,
+								1,
+								0,
+								0.9927884615384616
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 771158389577203,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

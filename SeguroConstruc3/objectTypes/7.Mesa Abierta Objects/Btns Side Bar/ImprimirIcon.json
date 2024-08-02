@@ -1,0 +1,58 @@
+{
+	"name": "ImprimirIcon",
+	"plugin-id": "Sprite",
+	"sid": 224482437985114,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 130,
+						"height": 148,
+						"originX": 0.49230769230769234,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2378205,
+						"collisionPoly": {
+							"points": [
+								0.25384615384615383,
+								0.006756756756756757,
+								0.8000000000000002,
+								0.04054054054054054,
+								0.9923076923076923,
+								0.2635135135135135,
+								0.9923076923076923,
+								0.6554054054054054,
+								0.8384615384615385,
+								0.9864864864864865,
+								0.18461538461538463,
+								0.9797297297297297,
+								0.015384615384615385,
+								0.668918918918919,
+								0.023076923076923078,
+								0.23648648648648649
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 296286277254193,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

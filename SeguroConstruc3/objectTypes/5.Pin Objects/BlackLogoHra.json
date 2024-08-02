@@ -1,0 +1,52 @@
+{
+	"name": "BlackLogoHra",
+	"plugin-id": "Sprite",
+	"sid": 247523137141519,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1180,
+						"height": 324,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4118084,
+						"collisionPoly": {
+							"points": [
+								0.12372881355932204,
+								0.04938271604938271,
+								0.9084745762711864,
+								0.10802469135802469,
+								0.7974576271186441,
+								0.9382716049382716,
+								0.19661016949152543,
+								0.9382716049382716,
+								0.09067796610169492,
+								0.6882716049382716
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 872015397224283,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

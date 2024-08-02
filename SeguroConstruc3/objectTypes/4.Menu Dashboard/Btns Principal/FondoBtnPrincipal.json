@@ -1,0 +1,66 @@
+{
+	"name": "FondoBtnPrincipal",
+	"plugin-id": "Sprite",
+	"sid": 264927751480077,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnContent",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 290391078666845
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 690,
+						"height": 138,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9170441,
+						"collisionPoly": {
+							"points": [
+								0.0927536231884058,
+								0.007246376811594203,
+								0.9347826086956522,
+								0.036231884057971016,
+								0.9608695652173913,
+								0.10869565217391304,
+								0.9521739130434783,
+								0.9202898550724637,
+								0.9072463768115943,
+								0.9927536231884058,
+								0.06521739130434782,
+								0.9637681159420289,
+								0.0391304347826087,
+								0.8913043478260869,
+								0.04782608695652174,
+								0.07971014492753623
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 181033499832940,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

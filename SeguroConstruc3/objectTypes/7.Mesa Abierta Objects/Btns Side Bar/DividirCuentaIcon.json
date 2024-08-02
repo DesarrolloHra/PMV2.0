@@ -1,0 +1,56 @@
+{
+	"name": "DividirCuentaIcon",
+	"plugin-id": "Sprite",
+	"sid": 924291848057611,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 152,
+						"height": 149,
+						"originX": 0.5,
+						"originY": 0.5033557046979866,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8679171,
+						"collisionPoly": {
+							"points": [
+								0.5197368421052632,
+								0.013422818791946308,
+								0.993421052631579,
+								0.15436241610738255,
+								0.9868421052631579,
+								0.8590604026845637,
+								0.5197368421052632,
+								0.9865771812080537,
+								0.48026315789473684,
+								0.9865771812080537,
+								0.006578947368421052,
+								0.8523489932885906,
+								0.013157894736842105,
+								0.1476510067114094
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 396221827451610,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "ajustesAlmacenes",
+	"plugin-id": "SVGPicture",
+	"sid": 249444947651155,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnContent",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 710353310201943
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

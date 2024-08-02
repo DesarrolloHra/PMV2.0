@@ -1,0 +1,26 @@
+{
+	"name": "IconosMenuPrincipal",
+	"plugin-id": "SVGPicture",
+	"sid": 857745425032537,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	],
+	"members": [
+		"AlmacenesIcon",
+		"ComprasIcon",
+		"FacturaIcon",
+		"InventarioFisicoIcon",
+		"InventarioIcon",
+		"OrdenCompraIcon",
+		"ProduccionIcon",
+		"ProveedoresIcon",
+		"RecetasIcon",
+		"ReportesIcon",
+		"RequisicionesIcon"
+	]
+}

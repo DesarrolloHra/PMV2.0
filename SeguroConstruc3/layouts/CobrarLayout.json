@@ -1,0 +1,601 @@
+{
+	"name": "CobrarLayout",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 383530,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1920,
+						"y": 1077.5,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BarraLateral",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 178806,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 241,
+						"y": 1391.5,
+						"width": 307.014817,
+						"height": 1459.904629,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 595862,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 623,
+						"y": 121.5,
+						"width": 497.42811644470737,
+						"height": 99.41530908049259,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelVerde",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 974107,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3578,
+						"y": 423.5,
+						"width": 293,
+						"height": 318,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojoHorizontal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 664940,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2966,
+						"y": 432.5,
+						"width": 819.764312654489,
+						"height": 342,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TicketBackG",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 396502,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3145,
+						"y": 1379.5,
+						"width": 1166.3969913327683,
+						"height": 1416.0984796180483,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnviarComandaIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 144179,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3577,
+						"y": 374.5,
+						"width": 148,
+						"height": 148,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Menu",
+					"properties": {
+						"tag": "div",
+						"content": "<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Filtro de Bebidas y Alimentos</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body >\n    <div class=\"menuComida-container\">\n        <header class=\"menuComida-filter-container\">\n            <h2>FAMILIAS</h2>\n            <div class=\"menuComida-filter-buttons\">\n<button data-filter=\"all\" class=\"active\" onclick=\"filterButtonClick('all')\">Todos</button>\n<button data-filter=\"food\" onclick=\"filterButtonClick('food')\">Alimentos</button>\n<button data-filter=\"drinks\" onclick=\"filterButtonClick('drinks')\">Bebidas</button>\n\n            </div>\n            <input type=\"text\" id=\"menuComida-buscar-input\" placeholder=\"Buscar...\">\n        </header>\n\n        <div class=\"menuComida-divider\"></div>\n\n        <main class=\"menuComida-sections\">\n            <div class=\"menuComida-section gray\" data-content=\"Entradas\" onclick=\"displayContent('Entradas')\">Entradas</div>\n            <div class=\"menuComida-section gray\" data-content=\"Hamburguesas\" onclick=\"displayContent('Hamburguesas')\">Hamburguesas</div>\n            <div class=\"menuComida-section gray\" data-content=\"Postres\" onclick=\"displayContent('Postres')\">Postres</div>\n            <div class=\"menuComida-section gray\" data-content=\"Bebidas Frías\" onclick=\"displayContent('Bebidas Frías')\">Bebidas Frías</div>\n            <div class=\"menuComida-section gray\" data-content=\"Otros\" onclick=\"displayContent('Otros')\">Otros</div>\n        </main>\n\n        <footer class=\"menuComida-content\">\n            <h2>Contenido:</h2>\n            <p id=\"menuComida-content-display\">Haz clic en una sección para mostrar el contenido.</p>\n        </footer>\n    </div>\n    <script > \ndocument.addEventListener('DOMContentLoaded', function() {\n    const filterButtons = document.querySelectorAll('.menuComida-filter-buttons button');\n    filterButtons.forEach(button => {\n        button.addEventListener('click', function() {\n            filterButtonClick(this.dataset.filter);\n        });\n    });\n\n    const sections = document.querySelectorAll('.menuComida-section');\n    sections.forEach(section => {\n        section.addEventListener('click', function() {\n            displayContent(this.dataset.content);\n        });\n    });\n});\n\nfunction filterButtonClick(filter) {\n    const filterButtons = document.querySelectorAll('.menuComida-filter-buttons button');\n    filterButtons.forEach(btn => btn.classList.remove('active'));\n    const activeButton = document.querySelector(`.menuComida-filter-buttons button[data-filter=\"${filter}\"]`);\n    activeButton.classList.add('active');\n    filterSections(filter);\n}\n\nfunction filterSections(filter) {\n    const sections = document.querySelectorAll('.menuComida-section');\n    sections.forEach(section => {\n        if (filter === 'all') {\n            section.style.display = 'flex';\n        } else if (filter === 'food' && !['Entradas', 'Hamburguesas', 'Postres'].includes(section.dataset.content)) {\n            section.style.display = 'none';\n        } else if (filter === 'drinks' && !['Bebidas Frías'].includes(section.dataset.content)) {\n            section.style.display = 'none';\n        } else {\n            section.style.display = 'flex';\n        }\n    });\n}\n\nfunction displayContent(content) {\n    const contentDisplay = document.getElementById('menuComida-content-display');\n    contentDisplay.textContent = content;\n}\n\n</script>\n</body>\n</html>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 792898,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 481,
+						"y": 772.5,
+						"width": 1983,
+						"height": 1333,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "FolioAnterior",
+					"properties": {
+						"text": "Folio anterior: 00729",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.41568627450980394,
+							0.4196078431372549,
+							0.4196078431372549,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 164706,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1000,
+						"y": 88.5,
+						"width": 450,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "VentasDias",
+					"properties": {
+						"text": "Ventas al día: 5",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.41568627450980394,
+							0.4196078431372549,
+							0.4196078431372549,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 657578,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1656,
+						"y": 88.5,
+						"width": 368,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "IconoCerrarSesion",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 465449,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3595,
+						"y": 122.5,
+						"width": 82.3636363636364,
+						"height": 82.3636363636364,
+						"originX": 0.4965986394557823,
+						"originY": 0.5034013605442177,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TextoCerrarSesion",
+					"properties": {
+						"text": "Cerrar Sesión",
+						"enable-bbcode": false,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 652880,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3346,
+						"y": 122.5,
+						"width": 351,
+						"height": 67,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojo1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 852154,
+					"instanceVariables": {
+						"btnRegresar": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 241,
+						"y": 426.5,
+						"width": 335,
+						"height": 335,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "REGRESAR",
+					"properties": {
+						"text": "REGRESAR",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 1,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 998279,
+					"instanceVariables": {
+						"textRegresar": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 241,
+						"y": 539.5,
+						"width": 304.29824624945525,
+						"height": 92.32349704170365,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite14",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 737481,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 241,
+						"y": 412.5,
+						"width": 148,
+						"height": 148,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 394313,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1483,
+						"y": 1398.5,
+						"width": 2014.6669894773624,
+						"height": 1462.069646893674,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				}
+			],
+			"sid": 548666221529526,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 623766856505438,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 7680,
+	"height": 4320,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "CobrarEventSheet"
+}

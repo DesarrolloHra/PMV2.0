@@ -1,0 +1,220 @@
+  .btnComandas {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #000;
+        }
+ .container {
+    padding: 20px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+}
+
+.filter-item label {
+    margin-right: 10px;
+}
+
+.filter-item select, .filter-item button {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Styles for Mesas view */
+.mesas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el cálculo del ancho */
+}
+
+.mesa-card {
+    border: 2px solid #00b500;
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    flex: 1 1 calc(50% - 20px); /* Ajusta el ancho de las tarjetas en un diseño de dos columnas */
+    max-width: 100%; /* Asegura que el ancho no se exceda del contenedor */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el cálculo del ancho */
+}
+
+.mesa-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #00b500;
+}
+
+.mesa-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mesa-table th, .mesa-table td {
+    text-align: left;
+    padding: 10px;
+}
+
+.mesa-table th {
+    background: #f0f0f0;
+}
+
+.mesa-table td {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.ingredientes {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.separator {
+    height: 10px;
+    border-top: 1px solid #dcdcdc;
+}
+
+.actualizarComanda {
+    background: #00b500;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actualizarComanda:hover {
+    background: #008f00;
+}
+
+/* Additional styles for the rest of the page */
+.comandas {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.comandas th {
+    border-top: 1px solid #FCC329;
+}
+
+.comandas th {
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #BFBFBF;
+}
+
+.mesa-cell {
+    font-size: 1.3rem;
+}
+
+.mesa-number {
+    font-weight: bolder;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(227, 218, 218);
+    cursor: pointer;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat center;
+    margin: 0 auto;
+}
+
+input[type="checkbox"]:checked + label {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat center;
+    position: relative;
+    background-color: #41D320;
+    border-radius: 50%;
+}
+
+.comandas td, .comandas th {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.comandas th {
+    border-bottom: none;
+}
+
+.info-btn {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke="yellow"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg>') no-repeat center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    color: #FCC329;
+}
+
+.detalles-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #303232;
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    width: 80%;
+    text-align: center;
+    z-index: 999;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px; /* Tamaño de letra más pequeño */
+}
+
+.detalles-container p {
+    margin: 10px 0;
+}
+
+.detalles-container button {
+    background-color: #BFBFBF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.detalles-container button:hover {
+    background-color: #A9A9A9;
+}

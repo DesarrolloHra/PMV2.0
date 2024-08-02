@@ -1,0 +1,14 @@
+{
+	"name": "iconoAbrirCajpdv",
+	"plugin-id": "SVGPicture",
+	"sid": 206378436239131,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

@@ -1,0 +1,2493 @@
+{
+	"name": "MenuDashBoardLayout",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 209,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1920,
+						"y": 1080,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 210,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 239,
+						"y": 119,
+						"width": 334.69203949295667,
+						"height": 82.62272104637843,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModalVertical",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 213,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1932.5221903135418,
+						"y": 1221,
+						"width": 1184,
+						"height": 1647.2107213827387,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModalVertical",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 214,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3179.5221903135416,
+						"y": 1221,
+						"width": 1184,
+						"height": 1647.2107213827387,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ProveedoresIcon",
+					"properties": {
+						"svg-file": 774175290470034,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 235,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1523,
+						"y": 656.7296782375913,
+						"width": 100,
+						"height": 203.45935647518274,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "RequisicionesIcon",
+					"properties": {
+						"svg-file": 402997244375667,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 236,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1523,
+						"y": 993.8397132843775,
+						"width": 100,
+						"height": 205.80387383156983,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "OrdenCompraIcon",
+					"properties": {
+						"svg-file": 237530788032847,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 237,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1523,
+						"y": 1335.9357877036127,
+						"width": 100,
+						"height": 205.66951970606965,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ComprasIcon",
+					"properties": {
+						"svg-file": 489949153004656,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 238,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 1523,
+						"y": 1671.4354707515017,
+						"width": 100,
+						"height": 199.2480642777782,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InventarioIcon",
+					"properties": {
+						"svg-file": 854202728303781,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 239,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 2771,
+						"y": 655.9873906274045,
+						"width": 100,
+						"height": 201.9747812548087,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InventarioFisicoIcon",
+					"properties": {
+						"svg-file": 145832035315552,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 240,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 2770.7085418134475,
+						"y": 994.9160508556846,
+						"width": 100,
+						"height": 200.76559412530526,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "AlmacenesIcon",
+					"properties": {
+						"svg-file": 434840618526457,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 241,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 2770,
+						"y": 1331.2469093641141,
+						"width": 100,
+						"height": 199.24806427777798,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "AjustesAlmacenIcon",
+					"properties": {
+						"svg-file": 181349631504512,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 242,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2771,
+						"y": 1665.0848018745578,
+						"width": 100,
+						"height": 196.90455332861825,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupContainer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 298,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2630,
+						"y": 163,
+						"width": 2304,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 299,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "MenuDash",
+						"Selection": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1822,
+						"y": 163,
+						"width": 688,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 300,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "PuntVenta",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2630,
+						"y": 163,
+						"width": 688,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 301,
+					"instanceVariables": {
+						"MenuPirncipalBtn": "Ajustes",
+						"Selection": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3438,
+						"y": 163,
+						"width": 688,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "MENÚ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 302,
+					"instanceVariables": {
+						"BtnMenuText": "menu"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1478,
+						"y": 62,
+						"width": 688,
+						"height": 200.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "PUNTO DE VENTA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 303,
+					"instanceVariables": {
+						"BtnMenuText": "PuntoVenta"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2422.7815361706407,
+						"y": 62.595888597687406,
+						"width": 534,
+						"height": 200,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSupText",
+					"properties": {
+						"text": "AJUSTES",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 40,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 304,
+					"instanceVariables": {
+						"BtnMenuText": "ajustes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3094,
+						"y": 62,
+						"width": 688,
+						"height": 200.65424773703623,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MenuSVG",
+					"properties": {
+						"svg-file": 769270452405849,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 305,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1566,
+						"y": 110,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PuntoVentaSVG",
+					"properties": {
+						"svg-file": 859743254120449,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 306,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2336,
+						"y": 110,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ajustes",
+					"properties": {
+						"svg-file": 320843016939425,
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 307,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3165.6947384512614,
+						"y": 110.59472316428031,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 211,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 676,
+						"y": 792.5,
+						"width": 1184,
+						"height": 775,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "BoxModal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 212,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 679,
+						"y": 1650,
+						"width": 1184,
+						"height": 775,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Facturación",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 255,
+					"instanceVariables": {
+						"TextBtn": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 362,
+						"y": 553,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "ProduccionIcon",
+					"properties": {
+						"svg-file": 795676839279079,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 234,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 283,
+						"y": 1777.2433674426118,
+						"width": 100,
+						"height": 199.28463120378132,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "ReportesIcon",
+					"properties": {
+						"svg-file": 588538936622845,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 233,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 281.96793388429694,
+						"y": 912.0485123966938,
+						"width": 100,
+						"height": 200.80578512396914,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FacturaIcon",
+					"properties": {
+						"svg-file": 112736444291380,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 232,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 281.15690458302066,
+						"y": 650.7333433508651,
+						"width": 100,
+						"height": 198.68909090909267,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RecetasIcon",
+					"properties": {
+						"svg-file": 105374680459458,
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 231,
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1.4
+							}
+						}
+					},
+					"world": {
+						"x": 281,
+						"y": 1505,
+						"width": 100,
+						"height": 193.42975206611573,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 219,
+					"instanceVariables": {
+						"BtnContent": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 687,
+						"y": 650,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "MenuSubtitle",
+					"properties": {
+						"text": "NEGOCIO",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.8470588235294118,
+							0.12941176470588237,
+							0.20784313725490197,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 215,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 142,
+						"y": 452,
+						"width": 275.8894482990327,
+						"height": 49.54404013779107,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "MenuSubtitle",
+					"properties": {
+						"text": "COCINA",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.8470588235294118,
+							0.12941176470588237,
+							0.20784313725490197,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 216,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 142,
+						"y": 1308.3339534681559,
+						"width": 284.83209475184486,
+						"height": 49.54404013779107,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "MenuSubtitle",
+					"properties": {
+						"text": "COMPRAS",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.8470588235294118,
+							0.12941176470588237,
+							0.20784313725490197,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 217,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1391,
+						"y": 453,
+						"width": 273.4770622659471,
+						"height": 49.54404013779107,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "MenuSubtitle",
+					"properties": {
+						"text": "INVENTARIO/ALMACÉN",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.8470588235294118,
+							0.12941176470588237,
+							0.20784313725490197,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 218,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2635.989040366095,
+						"y": 431.96712109828565,
+						"width": 633.2626909370747,
+						"height": 78.94404013779106,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 220,
+					"instanceVariables": {
+						"BtnContent": "Reportes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 687,
+						"y": 913,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 221,
+					"instanceVariables": {
+						"BtnContent": "Recetas"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 687,
+						"y": 1506,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 222,
+					"instanceVariables": {
+						"BtnContent": "Produccion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 687,
+						"y": 1775,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 223,
+					"instanceVariables": {
+						"BtnContent": "Proveedores"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1925,
+						"y": 657,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 224,
+					"instanceVariables": {
+						"BtnContent": "Requisiciones"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1925,
+						"y": 995,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 225,
+					"instanceVariables": {
+						"BtnContent": "OrdenCompra"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1925,
+						"y": 1332,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 226,
+					"instanceVariables": {
+						"BtnContent": "Compras"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1925,
+						"y": 1670,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 227,
+					"instanceVariables": {
+						"BtnContent": "Inventario"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3170,
+						"y": 657,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 228,
+					"instanceVariables": {
+						"BtnContent": "InventarioFisico"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3170,
+						"y": 995,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 229,
+					"instanceVariables": {
+						"BtnContent": "Almacenes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3170,
+						"y": 1332,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "FondoBtnPrincipal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 230,
+					"instanceVariables": {
+						"BtnContent": "AjustesAlmacen"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3170,
+						"y": 1670,
+						"width": 1044.7593852111474,
+						"height": 208.9518770422295,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 244,
+					"instanceVariables": {
+						"BtnArrow": "Facturacion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1100,
+						"y": 647,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 243,
+					"instanceVariables": {
+						"BtnArrow": "Reportes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1101.6055470103356,
+						"y": 915.1689803479294,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 245,
+					"instanceVariables": {
+						"BtnArrow": "Recetas"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1102.370633526026,
+						"y": 1508.1468323698696,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 246,
+					"instanceVariables": {
+						"BtnArrow": "Produccion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1103.7340594699647,
+						"y": 1776.417574337456,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 247,
+					"instanceVariables": {
+						"BtnArrow": "Proveedores"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2347,
+						"y": 659,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 248,
+					"instanceVariables": {
+						"BtnArrow": "Requisiciones"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2350,
+						"y": 993,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 249,
+					"instanceVariables": {
+						"BtnArrow": "OrdenesCompra"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2350,
+						"y": 1334,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 250,
+					"instanceVariables": {
+						"BtnArrow": "Compras"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2347,
+						"y": 1671,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 251,
+					"instanceVariables": {
+						"BtnArrow": "Inventario"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3591,
+						"y": 655,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 252,
+					"instanceVariables": {
+						"BtnArrow": "InventarioFisico"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3593,
+						"y": 994,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 253,
+					"instanceVariables": {
+						"BtnArrow": "Almacenes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3594,
+						"y": 1332,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "RedArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 254,
+					"instanceVariables": {
+						"BtnArrow": "Ajustes de Almacen"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 3591,
+						"y": 1667,
+						"width": 43,
+						"height": 71,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Reportes",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 256,
+					"instanceVariables": {
+						"TextBtn": "Reportes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 362,
+						"y": 814,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Recetas",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 257,
+					"instanceVariables": {
+						"TextBtn": "Recetas"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 360,
+						"y": 1409,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Producción",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 258,
+					"instanceVariables": {
+						"TextBtn": "Produccion"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 360.51410951132965,
+						"y": 1677.7735936950637,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Proveedores",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 259,
+					"instanceVariables": {
+						"TextBtn": "Proveedores"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1607,
+						"y": 559,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Requisiciones",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 260,
+					"instanceVariables": {
+						"TextBtn": "Requisiciones"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1609,
+						"y": 899,
+						"width": 540.7659605507517,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Órdenes de compra",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 261,
+					"instanceVariables": {
+						"TextBtn": "OrdenCompra"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1607,
+						"y": 1234,
+						"width": 665.0159605507517,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Compras",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 262,
+					"instanceVariables": {
+						"TextBtn": "Compras"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1609,
+						"y": 1575,
+						"width": 391.8631827729738,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Inventario",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 263,
+					"instanceVariables": {
+						"TextBtn": "Inventario"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2859,
+						"y": 559,
+						"width": 665.0159605507517,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Inventario Físico",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 264,
+					"instanceVariables": {
+						"TextBtn": "InventarioFisico"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2860,
+						"y": 899,
+						"width": 665.0159605507517,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Almacenes",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 265,
+					"instanceVariables": {
+						"TextBtn": "Almacenes"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2860,
+						"y": 1236,
+						"width": 665.0159605507517,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "TextBtn",
+					"properties": {
+						"text": "Ajustes de Almacén",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.18823529411764706,
+							0.19607843137254902,
+							0.19607843137254902,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 266,
+					"instanceVariables": {
+						"TextBtn": "AjustesAlmacen"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2859,
+						"y": 1575,
+						"width": 665.0159605507517,
+						"height": 192.9700568459977,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				}
+			],
+			"sid": 914030704281830,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 523592878275251,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 7680,
+	"height": 4320,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "MenuDashEventSheet"
+}

@@ -1,0 +1,83 @@
+{
+	"name": "ArrowUpMesas",
+	"plugin-id": "Sprite",
+	"sid": 545029259601588,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "IsUp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 526712019801747
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 300,
+						"height": 300,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3132281,
+						"collisionPoly": {
+							"points": [
+								0.5266666666666666,
+								0.10666666666666667,
+								0.7733333333333333,
+								0.39,
+								0.46,
+								0.8933333333333333,
+								0.23666666666666666,
+								0.3433333333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 300,
+						"height": 300,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8271163,
+						"collisionPoly": {
+							"points": [
+								0.4733333333333334,
+								0.8933333333333333,
+								0.22666666666666668,
+								0.61,
+								0.54,
+								0.10666666666666669,
+								0.7633333333333333,
+								0.6566666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 989700699888966,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

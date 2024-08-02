@@ -1,0 +1,99 @@
+{
+	"name": "Mesa8C",
+	"plugin-id": "Sprite",
+	"sid": 163439934220962,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 292,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2485224,
+						"collisionPoly": {
+							"points": [
+								0.17123287671232873,
+								0.06875,
+								0.8287671232876712,
+								0.06875,
+								0.8801369863013698,
+								0.175,
+								0.9417808219178082,
+								0.34375,
+								0.9383561643835616,
+								0.6687500000000001,
+								0.8801369863013698,
+								0.825,
+								0.8253424657534246,
+								0.93125,
+								0.17123287671232873,
+								0.93125,
+								0.05821917808219178,
+								0.6625,
+								0.05821917808219178,
+								0.3375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 292,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6275934,
+						"collisionPoly": {
+							"points": [
+								0.17123287671232873,
+								0.06875,
+								0.8287671232876712,
+								0.06875,
+								0.8801369863013698,
+								0.175,
+								0.9417808219178082,
+								0.34375,
+								0.9383561643835616,
+								0.6687500000000001,
+								0.8801369863013698,
+								0.825,
+								0.8253424657534246,
+								0.93125,
+								0.17123287671232873,
+								0.93125,
+								0.05821917808219178,
+								0.6625,
+								0.05821917808219178,
+								0.3375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 506753957744650,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

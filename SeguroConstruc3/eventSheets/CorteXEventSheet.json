@@ -1,0 +1,336 @@
+{
+	"name": "CorteXEventSheet",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Efectos Menu Superior PV2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 133763844930415
+						}
+					],
+					"actions": [],
+					"sid": 354565897955249,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 344513182858325,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 315805305067332,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 539835359331110
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 288484620851701,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 222707506373964,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 909741463426953,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 667457637570137,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 908671814708582
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 615320104671603,
+							"parameters": {
+								"object": "MenuSupBtn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 716643287123075,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 881898614394650,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 317179622961054,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 573790995511706
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 911274486700269,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MenuSupBtn",
+							"sid": 115830739544132,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 913885068745530
+				}
+			],
+			"sid": 689668606173910
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enlaces Menu PV2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 288603074017227,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 858612947682248,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 795558902258669,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"Ajustes\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 970004839408660,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 512384310799712,
+									"parameters": {
+										"layout": "MesasLayout"
+									}
+								}
+							],
+							"sid": 598463911036003
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 138066643666613,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 535452601607466,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 380514015400421,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"PuntVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 184623809149959,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 101026168277331,
+									"parameters": {
+										"layout": "PuntoVentaLayout"
+									}
+								}
+							],
+							"sid": 111604866848832
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 500616440257567,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 988095916521577,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 922896100624730,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"MenuDash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 667291088230941,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 228558726904679,
+									"parameters": {
+										"layout": "MenuDashBoardLayout"
+									}
+								}
+							],
+							"sid": 110003411022013
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 759370037552434
+				}
+			],
+			"sid": 743876412004098
+		}
+	],
+	"sid": 702871211689525
+}

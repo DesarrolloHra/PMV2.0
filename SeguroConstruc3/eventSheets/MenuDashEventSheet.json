@@ -1,0 +1,1299 @@
+{
+	"name": "MenuDashEventSheet",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Efectos Menu Superior",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 356880066060238
+						}
+					],
+					"actions": [],
+					"sid": 243835221612002,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 404656021012822,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 188585435702250,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 825083335334432
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 811912159130477,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 601601332665718,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 161634561127660,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 935757861653644,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 972657230783038
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 481595026410403,
+							"parameters": {
+								"object": "MenuSupBtn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 220175161136547,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 883954613459958,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 301579072641117,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 103305626668681
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 895130938629449,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MenuSupBtn",
+							"sid": 746146321598742,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 655567128132402
+				}
+			],
+			"sid": 835240078006284
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Efecto Btns Hover",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 142516981669497,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 721989834258351,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Facturacion\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 649710215638712,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Facturacion\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 974207146729785,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "FacturaIcon",
+							"sid": 979352679023799,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "FacturaIcon",
+							"sid": 718229403160503,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 582680180601304
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 493246966066497,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 628229246143937,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Recetas\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 580366083382602,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Recetas\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 399124667011644,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "RecetasIcon",
+							"sid": 923007965637592,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "RecetasIcon",
+							"sid": 556625745701827,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 157471644003580
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 286635819942821,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 318548055691868,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Reportes\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 312505583382686,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Reportes\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 633568758151959,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "ReportesIcon",
+							"sid": 118327525592136,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "ReportesIcon",
+							"sid": 476158959483430,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 667437940600236
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 284387128113759,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 766891888579039,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Produccion\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 584038530178102,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Produccion\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 960108182660114,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "ProduccionIcon",
+							"sid": 203871579269256,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "ProduccionIcon",
+							"sid": 525506282770911,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 559922675646254
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 929301297192917,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 305685125241027,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Proveedores\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 400918326363670,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Proveedores\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 309904074821732,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "ProveedoresIcon",
+							"sid": 613879855626281,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "ProveedoresIcon",
+							"sid": 649445191740967,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 798922094360151
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 576392608869465,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 302009463863213,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Requisiciones\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 665449097160643,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Requisiciones\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 165176667558838,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "RequisicionesIcon",
+							"sid": 246581842559491,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "RequisicionesIcon",
+							"sid": 654583950508014,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 318618510202837
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 631580737079435,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 388928900645304,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"OrdenCompra\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 858436779188834,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"OrdenCompra\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 955206822806746,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "OrdenCompraIcon",
+							"sid": 237315182244648,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "OrdenCompraIcon",
+							"sid": 837232368354671,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 659156733019756
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 748474443506613,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 332907264493761,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Compras\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 336970588976586,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Compras\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 689140190513340,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "ComprasIcon",
+							"sid": 295967207163414,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "ComprasIcon",
+							"sid": 434191831780105,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 915772864399054
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 575583430275984,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 998025181461421,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Inventario\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 413019175813709,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Inventario\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 640420463822628,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "InventarioIcon",
+							"sid": 650313617422249,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "InventarioIcon",
+							"sid": 650293303460950,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 662347008097166
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 636412677684648,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 363057455656977,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"InventarioFisico\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 694211241202084,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"InventarioFisico\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 834558451814584,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "InventarioFisicoIcon",
+							"sid": 980951102079313,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "InventarioFisicoIcon",
+							"sid": 597441445183974,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 202400420370380
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 513086417559555,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 234165784128060,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"Almacenes\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 585732256432646,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"Almacenes\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 795540574242662,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "AlmacenesIcon",
+							"sid": 268205602030695,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "AlmacenesIcon",
+							"sid": 567659882367063,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 311844236080428
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 399662381413158,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FondoBtnPrincipal",
+							"sid": 629018520491908,
+							"parameters": {
+								"instance-variable": "BtnContent",
+								"comparison": 0,
+								"value": "\"AjustesAlmacen\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextBtn",
+							"sid": 425640046134960,
+							"parameters": {
+								"instance-variable": "TextBtn",
+								"comparison": 0,
+								"value": "\"AjustesAlmacen\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 390783202774405,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "AjustesAlmacenIcon",
+							"sid": 213521868372435,
+							"parameters": {
+								"color": "rgbEx255(216, 33, 53)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "AjustesAlmacenIcon",
+							"sid": 276160936017362,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 945942752310487
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 271778841614136,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 285203854108570,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						}
+					],
+					"sid": 464544843716242
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 586572643624842,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBtn",
+							"sid": 623727787899155,
+							"parameters": {
+								"color": "rgba(0, 0, 0, 0)"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 172208975111885,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "IconosMenuPrincipal",
+							"sid": 862114669297661,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "IconosMenuPrincipal",
+							"sid": 300852737974307,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"AdjustHSL\""
+							}
+						}
+					],
+					"sid": 418245321222688
+				}
+			],
+			"sid": 747618935532737
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enlaces Menu",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 867150684605777,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 847698773154700,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "FondoBtnPrincipal",
+									"sid": 690386826860957,
+									"parameters": {
+										"instance-variable": "BtnContent",
+										"comparison": 0,
+										"value": "\"Recetas\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 359189179113950,
+									"parameters": {
+										"layout": "RecetasLayout"
+									}
+								}
+							],
+							"sid": 384008264242501
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 405291643190562,
+							"parameters": {
+								"object": "FondoBtnPrincipal"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 143687008225024,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "FondoBtnPrincipal",
+									"sid": 820879868039159,
+									"parameters": {
+										"instance-variable": "BtnContent",
+										"comparison": 0,
+										"value": "\"Produccion\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 488513792847278,
+									"parameters": {
+										"layout": "ProduccionLayout"
+									}
+								}
+							],
+							"sid": 477334111574548
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 900420996186026,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 265070613023077,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 455136911780131,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"PuntVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 562866712020670,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 223455473081702,
+									"parameters": {
+										"layout": "PuntoVentaLayout"
+									}
+								}
+							],
+							"sid": 811863295266200
+						}
+					]
+				}
+			],
+			"sid": 933640378020758
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enlaces MenuSup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 710962398000020,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 378839368431657,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 921484985773771,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"Ajustes\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 911314372174426,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 251192009983602,
+									"parameters": {
+										"layout": "AjustesLayout"
+									}
+								}
+							],
+							"sid": 789662094512924
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 801171696514917,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 900533167775847,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 259087481059179,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"PuntVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 872625824025295,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 287924092170274,
+									"parameters": {
+										"layout": "PuntoVentaLayout"
+									}
+								}
+							],
+							"sid": 164270094013773
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 771511128331005,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 490848377382223,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 894147954046303,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"MenuDash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 785296198529041,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 395998220568193,
+									"parameters": {
+										"layout": "MenuDashBoardLayout"
+									}
+								}
+							],
+							"sid": 283806150709698
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 574936699352798
+				}
+			],
+			"sid": 254477094386195
+		}
+	],
+	"sid": 388181876271411
+}

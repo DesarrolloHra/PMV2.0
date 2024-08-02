@@ -1,0 +1,58 @@
+{
+	"name": "ITBth",
+	"plugin-id": "Sprite",
+	"sid": 455262780647912,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 504,
+						"height": 504,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4508202,
+						"collisionPoly": {
+							"points": [
+								0.14087301587301587,
+								0,
+								1,
+								0.1388888888888889,
+								0.996031746031746,
+								0.8829365079365079,
+								0.8690476190476191,
+								0.998015873015873,
+								0.13293650793650794,
+								0.998015873015873,
+								0.031746031746031744,
+								0.9384920634920635,
+								0.001984126984126984,
+								0.8670634920634921,
+								0.057539682539682536,
+								0.03373015873015873
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 347945415518423,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

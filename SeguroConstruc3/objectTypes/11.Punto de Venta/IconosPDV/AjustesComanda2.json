@@ -1,0 +1,14 @@
+{
+	"name": "AjustesComanda2",
+	"plugin-id": "SVGPicture",
+	"sid": 458616637975095,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

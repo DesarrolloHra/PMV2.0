@@ -1,0 +1,600 @@
+{
+	"name": "InicioSesionEventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CorreoIngresado",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 617115845742206
+		},
+		{
+			"eventType": "variable",
+			"name": "ContrasenaIngresada",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 486093043279821
+		},
+		{
+			"eventType": "variable",
+			"name": "Token",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 578886509491767
+		},
+		{
+			"eventType": "variable",
+			"name": "apiUrl",
+			"type": "string",
+			"initialValue": "https://api-dev.taskplanning.com.mx/api",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 907536756506590
+		},
+		{
+			"eventType": "variable",
+			"name": "serialEmpresa",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 419590154335944
+		},
+		{
+			"eventType": "variable",
+			"name": "softbarNivel",
+			"type": "number",
+			"initialValue": "999",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 234612871007085
+		},
+		{
+			"eventType": "variable",
+			"name": "idEmpresa",
+			"type": "number",
+			"initialValue": "9999",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 949632579873766
+		},
+		{
+			"eventType": "variable",
+			"name": "mensajeAcceso",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 656793907556093
+		},
+		{
+			"eventType": "variable",
+			"name": "accesoUsuario",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 299743301051572
+		},
+		{
+			"eventType": "variable",
+			"name": "dataEmpresaMitzi",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 720172931585095
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Funciones Inicio Sesion",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 652867075065761
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ContraIncorrecta",
+							"sid": 261336773825405,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 712128136020905
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "IngresarInicioSesion",
+							"sid": 536479295280109
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 404215789461098,
+							"parameters": {
+								"variable": "CorreoIngresado",
+								"value": "MailInputInicio.Text"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 119752922467842,
+							"parameters": {
+								"variable": "ContrasenaIngresada",
+								"value": "PasswordInicio.Text"
+							}
+						},
+						{
+							"type": "script",
+							"script": "//Ejemplos de como acceder a variables globales de interes\n//runtime.globalVars.Token\n//runtime.globalVars.idEmpresa\n\n//Para cambiar la data de la empresa a Json de nuevo\n// let dataEmpresaString = runtime.globalVars.dataEmpresaMitzi; //receurden usar su var\n// let dataEmpresaJson = JSON.parse(dataEmpresaString);\n\n\nlet dataEmpresa; // Variable local de la empresa (Solo disponible en este bloque de codigo)\n\nlogin(); // Lllamar a la funcion inical en este caso login\n\nfunction login() { //Funciopn en donde validamos el login\n\t//Datos que enviamos a la api importante: url y metodo\n    fetch(runtime.globalVars.apiUrl + '/web/usuarios/login', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/json'\n        },\n        body: JSON.stringify({ \n\t\t\t//las variables las optenemos de los inputs almacenados como var globales\n            correo: runtime.globalVars.CorreoIngresado,\n            contrasena: runtime.globalVars.ContrasenaIngresada\n        })\n    })\n    .then(response => response.json())\n    .then(data => {\n\t\t//Si obtenemos respuesta de la data del usuario\n        if (data.response) {\n            console.log(\"ESTA ES LA DATA DEL USUARIO:\", data);\n\n            runtime.globalVars.Token = data.data.token; //Asignamos el token a la var global\n            runtime.globalVars.accesoUsuario = 1; // Aseguramos que sea 1 para esta demostración\n\n            // Verificar que se están asignando valores\n            console.log(\"ESTE ES EL TOKEN ASIGNADO:\", runtime.globalVars.Token);\n            console.log(\"SE LE DIO ACCESO AL USUARIO:\", runtime.globalVars.accesoUsuario);\n\n\t\t\t//Esto solo es para ver las empresas que tiene el usuario asignadas\n            if (data.data.empresas.length > 0) {\n                const primeraEmpresa = data.data.empresas[0];\n                console.log('ESTA ES LA DATA DE LA PRIMERA EMPRESA DEL ARRAY', primeraEmpresa);\n\n                // Asignar valores temporales para probar PIN y evitar afectar produccion\n                runtime.globalVars.idEmpresa = 145;\n                runtime.globalVars.softbarNivel = 2;\n\t\t\t\t\n\t\t\t\t//Verificamos que se asignaron las variables correctamente\n                console.log(\"SE VERIFICA SI SE ASIGNARON ID CORRECTAMENTE:\", runtime.globalVars.idEmpresa);\n                console.log(\"SE VERIFICA SI SE ASIGNARON SOFTBAR CORRECTAMENTE:\", runtime.globalVars.softbarNivel);\n\t\t\t\t\n\t\t\t\t//Llamammos a la seleccion de empresa\n                seleccionaEmpresa();\n\t\t\t\t\n\t\t\t//Manejo de errores\n            } else {\n                console.error('No hay empresas disponibles en los datos.');\n                runtime.globalVars.Token = \"\";\n                runtime.globalVars.accesoUsuario = false;\n            }\n        } else {\n            console.log(data.message);\n            runtime.globalVars.mensajeAcceso = data.message;\n        }\n    })\n    .catch(error => {\n        let errorMessage = 'An error occurred during login.';\n        if (error.response && error.response.status === 404) {\n            errorMessage = 'The login endpoint was not found.';\n        } else if (error.response && error.response.status === 401) {\n            errorMessage = 'Invalid username or password.';\n        } else if (error.response && error.response.status === 500) {\n            errorMessage = 'Internal server error. Please try again later.';\n        }\n        console.log(error.message + \" \" + errorMessage);\n        runtime.globalVars.mensajeAcceso = error.message;\n    });\n}\n\n//seleccionamos la empresa\nfunction seleccionaEmpresa() {\n    fetch(runtime.globalVars.apiUrl + '/web/usuarios/seleccionaEmpresa', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/json'\n        },\n\t\t//los datos los obtenemos de las variables globales\n        body: JSON.stringify({\n            token: runtime.globalVars.Token,\n            id_empresa: runtime.globalVars.idEmpresa\n        })\n    })\n    .then(response => response.json())\n    .then(data => {\n        if (data.response) {\n            console.log(data.message);\n            // Llamar a obtenerDatosEmpresa después de la selección exitosa de empresa\n            obtenerDatosEmpresa();\n        } else {\n            console.error('Error en la selección de empresa:', data.message);\n        }\n    })\n    .catch(error => {\n        console.error('Error en la selección de empresa:', error);\n    });\n}\n\nfunction obtenerDatosEmpresa() {\n    fetch(runtime.globalVars.apiUrl + '/web/empresas/empresa', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/json'\n        },\n        body: JSON.stringify({\n            token: runtime.globalVars.Token\n        })\n    })\n    .then(response => response.json())\n    .then(data => {\n        if (data.response) {\n            dataEmpresa = data.data;\n            console.log(\"Datos de la empresa:\", dataEmpresa);\n\t\t\t\n\t\t\t//Para asignar la data de la empresa a una var global primero hay que pasarla a string\n\t\t\t//Recuerden hacer su propia var global temporal para evitar conflictos\n\t\t\t\n\t\t\truntime.globalVars.dataEmpresaMitzi = JSON.stringify(dataEmpresa);\n\t\t\t\n\t\t\tconsole.log(\"DATA STRING\", runtime.globalVars.dataEmpresaMitzi);\n\t\t\t\n\n            // Confirmar que los valores de las variables globales son correctos\n            console.log(\"Antes de ir al layout:\");\n            console.log(\"softbarNivel:\", runtime.globalVars.softbarNivel);\n            console.log(\"accesoUsuario:\", runtime.globalVars.accesoUsuario);\n            console.log(\"Token:\", runtime.globalVars.Token);\n\n            goToLayout();\n        } else {\n            console.error('Error en la obtención de datos de empresa:', data.message);\n        }\n    })\n    .catch(error => {\n        console.error('Error en la obtención de datos de empresa:', error);\n    });\n}\n\nfunction goToLayout() {\n    console.log(\"Evaluando condiciones para cambiar de layout...\");\n\n    // Depuración para primera condición\n    console.log(\"softbarNivel:\", runtime.globalVars.softbarNivel);\n    console.log(\"accesoUsuario:\", runtime.globalVars.accesoUsuario);\n    console.log(\"Token:\", runtime.globalVars.Token);\n\n    // Ajustar la condición para aceptar true o 1\n    const accesoPermitido = (runtime.globalVars.accesoUsuario === true || runtime.globalVars.accesoUsuario === 1) && runtime.globalVars.Token !== \"\";\n\t\n\t//Dependiendo de su tipo de usuario var a ir a algun layout\n\t//Pueden cambiarlo temporalmente para pruebas\n\t//Recuerden que esta delcarado arriba para pruebas\n\n    if (runtime.globalVars.softbarNivel === 1 && accesoPermitido) {\n        console.log(\"Condición cumplida: softbarNivel es 1 y acceso permitido.\");\n\t\t\n\t\t//Si el tipo de uausrio es 1 (admin) entonces...\n        runtime.goToLayout(\"MenuDashBoardLayout\"); // Cambiar aqui\n\t\t\n        runtime.objects.ContraIncorrecta.visible = false;\n    } else if (runtime.globalVars.softbarNivel !== 1 && accesoPermitido) {\n        console.log(\"Condición cumplida: softbarNivel no es 1 y acceso permitido.\");\n\t\t\n\t\t//Si el tipo de uausrio es 2 (usuario) entonces...\n        runtime.goToLayout(\"MenuDashBoardLayout\");// Cambiar aqui\n\t\t\n        runtime.objects.ContraIncorrecta.visible = false;\n    } else {\n        console.error('No se pudo cambiar de layout');\n        runtime.objects.ContraIncorrecta.text = runtime.globalVars.mensajeAcceso;\n        runtime.objects.ContraIncorrecta.visible = true;\n\n        // Depuración para fallo en la condición\n        if (runtime.globalVars.softbarNivel === 1) {\n            console.log(\"Fallo en primera condición: acceso no permitido.\");\n        } else {\n            console.log(\"Fallo en segunda condición: acceso no permitido.\");\n        }\n    }\n}"
+						}
+					],
+					"sid": 724173243116970,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 942381604890827,
+									"parameters": {
+										"variable": "softbarNivel",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 871658204009923,
+									"parameters": {
+										"variable": "accesoUsuario"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 129645401860340,
+									"parameters": {
+										"first-value": "Token",
+										"comparison": 1,
+										"second-value": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 274505576440474,
+									"parameters": {
+										"layout": "MenuDashBoardLayout"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ContraIncorrecta",
+									"sid": 954091626394054,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 698133023617051,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 526856240731699
+								}
+							],
+							"actions": [],
+							"sid": 904670250091389,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "ContraIncorrecta",
+											"sid": 110418627591095,
+											"parameters": {
+												"text": "mensajeAcceso"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "ContraIncorrecta",
+											"sid": 712552009890836,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 984427123226588,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 485442848493297,
+									"parameters": {
+										"variable": "softbarNivel",
+										"comparison": 1,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 355118966343740,
+									"parameters": {
+										"variable": "accesoUsuario"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 298150647133667,
+									"parameters": {
+										"first-value": "Token",
+										"comparison": 1,
+										"second-value": "\"\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 678360957060166,
+									"parameters": {
+										"layout": "PinLayout"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ContraIncorrecta",
+									"sid": 698441212916808,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 640464371301544,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 317947573534618
+								}
+							],
+							"actions": [],
+							"sid": 230518251871616,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "ContraIncorrecta",
+											"sid": 295111608788298,
+											"parameters": {
+												"text": "mensajeAcceso"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "ContraIncorrecta",
+											"sid": 946348008786573,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 279962478782925,
+									"disabled": true
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 698853702285559
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "IngresarInicioSesion",
+					"sid": 905181298438406
+				}
+			],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "TEMPORAL para pruebas se modifica el nivel de usuario"
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 963097731288193,
+					"disabled": true,
+					"parameters": {
+						"variable": "softbarNivel",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 137794921739178,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 111896123429457,
+					"parameters": {
+						"object": "RecuperarContrasena"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "open-url-in-new-window",
+					"objectClass": "Browser",
+					"sid": 254058864270221,
+					"parameters": {
+						"url": "\"https://desarrollo.taskplanning.com.mx/web/recuperar-contrasena.php\"",
+						"tag": "\"NewWindowRecuperar\""
+					}
+				}
+			],
+			"sid": 350000870527991
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Estilo Cursor Recuperar Contraseña",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 740222331209791,
+							"parameters": {
+								"object": "RecuperarContrasena"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 323112823166871,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						}
+					],
+					"sid": 256432844062006
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 966342552375671,
+							"parameters": {
+								"object": "RecuperarContrasena"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 588495882597643,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 710732133305448
+				}
+			],
+			"sid": 712114679196706
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "Eventos Descartados Login",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 299748488902258,
+							"parameters": {
+								"key": 13
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 115570040418089,
+							"parameters": {
+								"variable": "CorreoIngresado",
+								"value": "MailInputInicio.Text"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 866501228836397,
+							"parameters": {
+								"variable": "ContrasenaIngresada",
+								"value": "PasswordInicio.Text"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "TEMPORAL para pruebas se modifica el nivel de usuario"
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 661824930604925,
+							"parameters": {
+								"variable": "softbarNivel",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 347186697381923,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 403626253164939,
+									"parameters": {
+										"variable": "softbarNivel",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 309274662446307,
+									"parameters": {
+										"layout": "MenuDashBoardLayout"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ContraIncorrecta",
+									"sid": 392275107134620,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 617369473163903
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 255453089950142
+								}
+							],
+							"actions": [],
+							"sid": 611476211480520,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "ContraIncorrecta",
+											"sid": 196636480892737,
+											"parameters": {
+												"text": "\"CORREO INCORRECTO\""
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "ContraIncorrecta",
+											"sid": 946526801034062,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 454059800209663
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 668158780188650
+		}
+	],
+	"sid": 796779088889811
+}

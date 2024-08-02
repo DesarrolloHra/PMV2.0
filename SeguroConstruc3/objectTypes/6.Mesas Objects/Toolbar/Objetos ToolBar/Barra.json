@@ -1,0 +1,83 @@
+{
+	"name": "Barra",
+	"plugin-id": "Sprite",
+	"sid": 911839877559146,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 489,
+						"height": 150,
+						"originX": 0.5,
+						"originY": 0.49333333333333335,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4391391,
+						"collisionPoly": {
+							"points": [
+								0.28118609406952966,
+								0.23333333333333334,
+								0.7188139059304703,
+								0.23333333333333334,
+								0.778118609406953,
+								0.37333333333333335,
+								0.7760736196319018,
+								0.7733333333333333,
+								0.22188139059304704,
+								0.7733333333333333,
+								0.22392638036809817,
+								0.36666666666666664
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 489,
+						"height": 150,
+						"originX": 0.5,
+						"originY": 0.49333333333333335,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7821319,
+						"collisionPoly": {
+							"points": [
+								0.28118609406952966,
+								0.23333333333333334,
+								0.7188139059304703,
+								0.23333333333333334,
+								0.778118609406953,
+								0.37333333333333335,
+								0.7760736196319018,
+								0.7733333333333333,
+								0.22188139059304704,
+								0.7733333333333333,
+								0.22392638036809817,
+								0.36666666666666664
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 919567044907497,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

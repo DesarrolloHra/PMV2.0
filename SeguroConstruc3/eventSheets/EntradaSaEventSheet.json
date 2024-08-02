@@ -1,0 +1,353 @@
+{
+	"name": "EntradaSaEventSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 863401701163711
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": " document.addEventListener('DOMContentLoaded', () => {\n            const minusButton = document.getElementById('EnSaDi-minus');\n            const plusButton = document.getElementById('EnSaDi-plus');\n            const cantidadInput = document.getElementById('EnSaDi-cantidad');\n            const warningMessage = document.getElementById('EnSaDi-warning');\n\n            const updateCantidad = (delta) => {\n                let currentValue = parseInt(cantidadInput.value, 10);\n                if (!isNaN(currentValue)) {\n                    let newValue = currentValue + delta;\n                    cantidadInput.value = newValue >= 0 ? newValue : 0;\n                    warningMessage.style.display = 'none';\n                } else {\n                    warningMessage.style.display = 'block';\n                }\n            };\n\n            minusButton.addEventListener('click', () => {\n                updateCantidad(-1);\n            });\n\n            plusButton.addEventListener('click', () => {\n                updateCantidad(1);\n            });\n\n            cantidadInput.addEventListener('input', () => {\n                let currentValue = parseInt(cantidadInput.value, 10);\n                if (isNaN(currentValue)) {\n                    warningMessage.style.display = 'block';\n                } else {\n                    warningMessage.style.display = 'none';\n                }\n            });\n        });"
+				}
+			],
+			"sid": 787853105030198
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Efectos Menu Superior PV3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 128707902253349
+						}
+					],
+					"actions": [],
+					"sid": 595778038909941,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 402207351185732,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 519392842965091,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 381296599372411
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 437197299807855,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 426473552944338,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 943114149117304,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 119300509947663,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 809240326065176
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 307160356132049,
+							"parameters": {
+								"object": "MenuSupBtn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 878829968757819,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 853803254458838,
+									"parameters": {
+										"instance-variable": "Selection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 181751300934425,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 500088998783367
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 324452764749276,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "MenuSupBtn",
+							"sid": 184850979236461,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 516481633883860
+				}
+			],
+			"sid": 535043517725939
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enlaces Menu PV3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 664122520575918,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 424995727788664,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 692812507286901,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"Ajustes\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 770220053310975,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 395884001422448,
+									"parameters": {
+										"layout": "MesasLayout"
+									}
+								}
+							],
+							"sid": 778982278670522
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 843016405375130,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 925556792940809,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 637100243735896,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"PuntVenta\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 564518289996364,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 222878728438101,
+									"parameters": {
+										"layout": "PuntoVentaLayout"
+									}
+								}
+							],
+							"sid": 720218262889502
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 566654663416299,
+							"parameters": {
+								"object": "MenuSupBtn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 153467511172343,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MenuSupBtn",
+									"sid": 527378530104122,
+									"parameters": {
+										"instance-variable": "MenuPirncipalBtn",
+										"comparison": 0,
+										"value": "\"MenuDash\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "MenuSupBtn",
+									"sid": 233432897690709,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 931789967179744,
+									"parameters": {
+										"layout": "MenuDashBoardLayout"
+									}
+								}
+							],
+							"sid": 257484595937730
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 300500208228647
+				}
+			],
+			"sid": 451680353193298
+		}
+	],
+	"sid": 106011745524089
+}

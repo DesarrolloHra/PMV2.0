@@ -1,0 +1,50 @@
+{
+	"name": "PaneBlancoV",
+	"plugin-id": "Sprite",
+	"sid": 344218790205081,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 2080,
+						"height": 2515,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2864332,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.9940357852882704,
+								0.007211538461538462,
+								0,
+								1,
+								0.005964214711729587,
+								0.9927884615384616,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 858819624358227,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

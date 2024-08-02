@@ -1,0 +1,95 @@
+{
+	"name": "StartEventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "FadeTime",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 320979525402414
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 741472092123968
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "Fade",
+					"sid": 734751249742386,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"FadeOut\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "FadeTime",
+						"ease": "noease",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Se utiliza para que el logo ingrese desde abajo, pero se desactivo por cambios visuales"
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "LogoStart",
+					"sid": 174457387243958,
+					"disabled": true,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Logo\"",
+						"property": "offsetY",
+						"end-value": "1050",
+						"time": "3",
+						"ease": "easeinback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 543127592425799
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "LogoStart",
+					"sid": 991882149990687,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 701929401706567,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 130623752530011,
+					"parameters": {
+						"layout": "InicioSesionLayout"
+					}
+				}
+			],
+			"sid": 322256399289274
+		}
+	],
+	"sid": 558481597111820
+}

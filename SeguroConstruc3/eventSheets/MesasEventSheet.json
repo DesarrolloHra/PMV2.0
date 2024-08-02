@@ -1,0 +1,5109 @@
+{
+	"name": "MesasEventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "lastPositionObjectX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 573993529858410
+		},
+		{
+			"eventType": "variable",
+			"name": "lastPositionObjectY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 978718362473771
+		},
+		{
+			"eventType": "variable",
+			"name": "IsToolBarOn",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 896609498896946
+		},
+		{
+			"eventType": "variable",
+			"name": "btnZonaX",
+			"type": "number",
+			"initialValue": "300",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 429092597783729
+		},
+		{
+			"eventType": "variable",
+			"name": "btnZonaY",
+			"type": "number",
+			"initialValue": "592",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 851214704193113
+		},
+		{
+			"eventType": "variable",
+			"name": "ActiveAreaMesas",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 791258373268654
+		},
+		{
+			"eventType": "variable",
+			"name": "NumeroComensales",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 612065762588880
+		},
+		{
+			"eventType": "variable",
+			"name": "IdArea",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 993689239846922
+		},
+		{
+			"eventType": "variable",
+			"name": "NumeroMesa",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 124118666559799
+		},
+		{
+			"eventType": "variable",
+			"name": "IdVenta",
+			"type": "number",
+			"initialValue": "133128",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 572723368017926
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Crear mesas JS",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 850415360631225
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Decoracion",
+							"sid": 291514179550242,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "ObjetosMesas",
+							"sid": 433584464451516,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"type": "script",
+							"script": "let token = runtime.globalVars.Token;\nlet apiURL = runtime.globalVars.apiUrl;\nlet dataEmpresa = runtime.globalVars.dataEmpresaMitzi;\n\nmainFunctionMesa(apiURL, token, dataEmpresa);",
+							"disabled": true
+						},
+						{
+							"type": "script",
+							"script": "const WIDTH = 280; // Ancho de los objetos\n\tconst HEIGHT = 280; // Alto de los objetos\n\tconst COLUMN_SPACING = 150; // Espaciado entre columnas\n\tconst ROW_SPACING = 120; // Espaciado entre filas\n\tconst INITIAL_X = 300; // Posición inicial en el eje x\n\tconst INITIAL_Y = 800; // Posición inicial en el eje y\n\tconst MAX_OBJECTS_PER_ROW = 8; // Máximo de objetos por fila\n\n\tlet dataEmpresaMitzi = JSON.parse(runtime.globalVars.dataEmpresaMitzi);\n\tlet tipo = 1; // Tipo de consulta a la API para ventas\n\n\tconst mesas = {\n\t\tnormales: {\n\t\t\tCuadrada2: 0,\n\t\t\tCuadrada4: 3,\n\t\t\tCuadrada6: 6,\n\t\t\tCadrada62: 9,\n\t\t\tCuadrada8: 12,\n\t\t\tCuadrada82: 15,\n\t\t\tRedonda2: 18,\n\t\t\tRedonda4: 21,\n\t\t\tRedonda5: 24,\n\t\t\tRedonda6: 27,\n\t\t\tRedonda8: 30,\n\t\t\tRedonda10: 33,\n\t\t\tBooth1: 36,\n\t\t\tBooth2: 39,\n\t\t\tBoothClasico: 42,\n\t\t\tBoothEsquina: 45\n\t\t},\n\t\tactivas: {\n\t\t\tCuadrada2: 2,\n\t\t\tCuadrada4: 5,\n\t\t\tCuadrada6: 8,\n\t\t\tCadrada62: 11,\n\t\t\tCuadrada8: 14,\n\t\t\tCuadrada82: 17,\n\t\t\tRedonda2: 20,\n\t\t\tRedonda4: 23,\n\t\t\tRedonda5: 26,\n\t\t\tRedonda6: 29,\n\t\t\tRedonda8: 32,\n\t\t\tRedonda10: 35,\n\t\t\tBooth1: 38,\n\t\t\tBooth2: 41,\n\t\t\tBoothClasico: 44,\n\t\t\tBoothEsquina: 47\n\t\t}\n\t};\n\n\nmainFunctionToolbar();\n\nfunction mainFunctionToolbar(){\n\n\tverificarPosicionesGuardadas();\n\tverificarVentasActivas();\n\t\n\t\n\tfunction verificarVentasActivas() {\n\t\tfetch(runtime.globalVars.apiUrl + '/web/ventas/ventas', {\n\t\t\tmethod: 'POST',\n\t\t\theaders: {\n\t\t\t\t'Content-Type': 'application/json'\n\t\t\t},\n\t\t\tbody: JSON.stringify({\n\t\t\t\ttoken: runtime.globalVars.Token,\n\t\t\t\ttipo: tipo\n\t\t\t})\n\t\t})\n\t\t.then(response => response.json())\n\t\t.then(data => {\n\t\t\tconsole.log(\"Data de ventas recibida:\", data);\n\t\t\tif (data.response) {\n\t\t\t\tactualizarMesasActivas(data.data);\n\t\t\t} else {\n\t\t\t\tconsole.error(\"Error al obtener ventas activas:\", data.message);\n\t\t\t}\n\t\t})\n\t\t.catch(error => {\n\t\t\tconsole.error(\"Error en la solicitud de ventas activas:\", error);\n\t\t});\n\t}\n\t\n\tconst areaToLayerMap = {}; // Mapa para almacenar id_area_mesa a nombres de capas\n\tlet layerCounter = 1;\n\n\tfunction getLayerNameByAreaId(id_area_mesa) {\n\t\tif (!areaToLayerMap[id_area_mesa]) {\n\t\t\tareaToLayerMap[id_area_mesa] = `areaMesa${layerCounter++}`;\n\t\t}\n\t\treturn areaToLayerMap[id_area_mesa];\n\t}\n\nfunction actualizarMesasActivas(ventas) {\n    if (!ventas || ventas.length === 0) {\n        console.warn('No hay ventas para procesar.');\n        return;\n    }\n\n    ventas.forEach(venta => {\n        const { mesa, id_area_mesa } = venta;\n\n        if (mesa) {\n            let mesaNumero = parseInt(mesa);\n            let nombreCapa;\n\n            if (id_area_mesa === null || id_area_mesa === undefined) {\n                nombreCapa = 'areaMesa1'; // Asegurarse de que 'Principal' se refiere a 'areaMesa1'\n            } else {\n                nombreCapa = getLayerNameByAreaId(id_area_mesa);\n            }\n\n            if (!nombreCapa) {\n                console.error(`No se pudo determinar el nombre de la capa para el área ${id_area_mesa}`);\n                return;\n            }\n\n            let capaMesa = runtime.layout.getLayer(nombreCapa);\n\n            if (capaMesa && capaMesa.instances) {\n                let instanciaMesa = capaMesa.instances.find(inst => inst.properties && inst.properties.numeroMesa === mesaNumero);\n\n                if (instanciaMesa) {\n                    let tipoMesa = instanciaMesa.properties.tipoMesa || 'Cuadrada2';\n                    if (mesas.activas && mesas.activas[tipoMesa] !== undefined) {\n                        console.log(`Actualizando mesa ${mesaNumero} de tipo ${tipoMesa} con frame ${mesas.activas[tipoMesa]}`);\n                        instanciaMesa.setAnimationFrame(mesas.activas[tipoMesa]);\n                    } else {\n                        console.error(`No se encontró frame activo para el tipo de mesa ${tipoMesa}`);\n                    }\n                } else {\n                    console.error(`No se encontró instancia para mesa ${mesaNumero} en capa ${nombreCapa}`);\n                }\n            } else {\n                console.error(`Capa ${nombreCapa} no accesible o sin instancias`);\n            }\n        } else {\n            console.warn(`Datos incompletos para la venta: mesa=${mesa}, id_area_mesa=${id_area_mesa}`);\n        }\n    });\n}\n\n\n\n\tfunction crearObjetoDeFamilia(nombreObjeto, id_area_mesa, x, y, ancho, alto, tipoMesa = 'AllMesas') {\n\t\tlet nombreCapa = getLayerNameByAreaId(id_area_mesa);\n\t\tvar objeto = runtime.objects.AllMesas;\n\t\tif (objeto) {\n\t\t\tconsole.log(`Objeto ${nombreObjeto} encontrado.`);\n\t\t\tvar capa = runtime.layout.getLayer(nombreCapa);\n\t\t\tif (capa) {\n\t\t\t\tconsole.log(`Capa ${nombreCapa} encontrada.`);\n\t\t\t\tvar instancia = objeto.createInstance(capa.index, x, y);\n\t\t\t\tif (instancia) {\n\t\t\t\t\tinstancia.x = x;\n\t\t\t\t\tinstancia.y = y;\n\t\t\t\t\tinstancia.width = ancho;\n\t\t\t\t\tinstancia.height = alto;\n\t\t\t\t\tinstancia.tipoMesa = tipoMesa; // Añadir propiedad tipoMesa\n\t\t\t\t\tconsole.log(`Instancia de ${nombreObjeto} creada en la capa ${nombreCapa} en (${x}, ${y}) con tamaño (${ancho}, ${alto}) y tipo de mesa ${tipoMesa}.`);\n\t\t\t\t\tinstancia.behaviors.DragDrop.isEnabled = false;\n\t\t\t\t} else {\n\t\t\t\t\tconsole.error(\"No se pudo crear la instancia del objeto:\", nombreObjeto);\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tconsole.error(\"La capa '\", nombreCapa, \"' no existe.\");\n\t\t\t}\n\t\t} else {\n\t\t\tconsole.error(\"El objeto '\", nombreObjeto, \"' no existe.\");\n\t\t}\n\t}\n\n\n\tfunction verificarPosicionesGuardadas() {\n\t\tfetch(runtime.globalVars.apiUrl + '/web/empresas/actualizaToolbar', {\n\t\t\tmethod: 'POST',\n\t\t\theaders: {\n\t\t\t\t'Content-Type': 'application/json'\n\t\t\t},\n\t\t\tbody: JSON.stringify({\n\t\t\t\ttoken: runtime.globalVars.Token,\n\t\t\t\ttoolbar: \"check\"\n\t\t\t})\n\t\t})\n\t\t.then(response => response.json())\n\t\t.then(data => {\n\t\t\tif (data.response && data.data && data.data.toolbar) {\n\t\t\t\tlet toolbarData = JSON.parse(data.data.toolbar);\n\t\t\t\t// Lógica para cargar las posiciones guardadas\n\t\t\t\tcargarPosicionesGuardadas(toolbarData);\n\t\t\t} else {\n\t\t\t\tconsole.log('No se encontraron posiciones guardadas. Generando posiciones por defecto.');\n\t\t\t\tlet posicionesMesas = crearMesasPorArea(dataEmpresaMitzi);\n\t\t\t\tguardarPosicionesIniciales(posicionesMesas);\n\t\t\t}\n\t\t\tinicializarSelectAreas(dataEmpresaMitzi);\n\t\t})\n\t\t.catch(error => {\n\t\t\tconsole.error('Error al verificar posiciones guardadas:', error);\n\t\t});\n\t}\n\n\tfunction crearMesasPorArea(dataEmpresa) {\n\t\tlet empresa = dataEmpresa[0];\n\t\tlet areasMesas = empresa.areas_mesas;\n\n\t\tlet cantidadMesasPrincipal = empresa.mesas;\n\t\tlet capaNombrePrincipal = \"areaMesa1\";\n\t\tlet nombreObjetoPrincipal = \"Mesa2C\";\n\t\tlet tipoMesa = nombreObjetoPrincipal; // Tipo de mesa por defecto\n\n\t\tlet x = INITIAL_X;\n\t\tlet y = INITIAL_Y;\n\t\tlet posicionesMesas = [];\n\n\t\tfor (let i = 0; i < cantidadMesasPrincipal; i++) {\n\t\t\tcrearObjetoDeFamilia(nombreObjetoPrincipal, capaNombrePrincipal, x, y, WIDTH, HEIGHT, tipoMesa);\n\t\t\tposicionesMesas.push({\n\t\t\t\tnumeroMesa: i + 1,\n\t\t\t\tx: x,\n\t\t\t\ty: y,\n\t\t\t\twidth: WIDTH,\n\t\t\t\theight: HEIGHT,\n\t\t\t\tarea: 'principal',\n\t\t\t\ttipoMesa: tipoMesa // Añadir tipoMesa\n\t\t\t});\n\n\t\t\tx += WIDTH + COLUMN_SPACING;\n\t\t\tif ((i + 1) % MAX_OBJECTS_PER_ROW === 0) {\n\t\t\t\tx = INITIAL_X;\n\t\t\t\ty += HEIGHT + ROW_SPACING;\n\t\t\t}\n\t\t}\n\n\t\tareasMesas.forEach((area, index) => {\n\t\t\tlet cantidadMesas = area.mesas;\n\t\t\tlet capaNombre = `areaMesa${index + 2}`;\n\n\t\t\tx = INITIAL_X;\n\t\t\ty = INITIAL_Y;\n\n\t\t\tfor (let i = 0; i < cantidadMesas; i++) {\n\t\t\t\tcrearObjetoDeFamilia(nombreObjetoPrincipal, capaNombre, x, y, WIDTH, HEIGHT, tipoMesa);\n\t\t\t\tposicionesMesas.push({\n\t\t\t\t\tnumeroMesa: i + 1,\n\t\t\t\t\tx: x,\n\t\t\t\t\ty: y,\n\t\t\t\t\twidth: WIDTH,\n\t\t\t\t\theight: HEIGHT,\n\t\t\t\t\tid_area_mesa: area.id_area_mesa,\n\t\t\t\t\ttipoMesa: tipoMesa // Añadir tipoMesa\n\t\t\t\t});\n\n\t\t\t\tx += WIDTH + COLUMN_SPACING;\n\t\t\t\tif ((i + 1) % MAX_OBJECTS_PER_ROW === 0) {\n\t\t\t\t\tx = INITIAL_X;\n\t\t\t\t\ty += HEIGHT + ROW_SPACING;\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\n\t\tocultarYDesactivarCapas(areasMesas.length + 1);\n\t\treturn posicionesMesas;\n\t}\n\n\n\tfunction guardarPosicionesIniciales(posicionesMesas) {\n\t\tlet toolbarDataPrincipal = {\n\t\t\tmesas: posicionesMesas.filter(mesa => mesa.area === 'principal')\n\t\t};\n\n\t\tfetch(runtime.globalVars.apiUrl + '/web/empresas/actualizaToolbar', {\n\t\t\tmethod: 'POST',\n\t\t\theaders: {\n\t\t\t\t'Content-Type': 'application/json'\n\t\t\t},\n\t\t\tbody: JSON.stringify({\n\t\t\t\ttoken: runtime.globalVars.Token,\n\t\t\t\ttoolbar: JSON.stringify(toolbarDataPrincipal)\n\t\t\t})\n\t\t})\n\t\t.then(response => response.json())\n\t\t.then(data => {\n\t\t\tif (data.response) {\n\t\t\t\tconsole.log('Posiciones iniciales del área principal guardadas exitosamente.');\n\t\t\t} else {\n\t\t\t\tconsole.error('Error al guardar posiciones iniciales del área principal:', data.message);\n\t\t\t}\n\t\t})\n\t\t.catch(error => {\n\t\t\tconsole.error('Error al guardar posiciones iniciales del área principal:', error);\n\t\t});\n\n\t\tlet areasMesas = dataEmpresaMitzi[0].areas_mesas;\n\n\t\tareasMesas.forEach((area, index) => {\n\t\t\tlet toolbarDataArea = {\n\t\t\t\tmesas: posicionesMesas.filter(mesa => mesa.id_area_mesa === area.id_area_mesa)\n\t\t\t};\n\n\t\t\tfetch(runtime.globalVars.apiUrl + '/web/areas_mesas/actualizaToolbar', {\n\t\t\t\tmethod: 'POST',\n\t\t\t\theaders: {\n\t\t\t\t\t'Content-Type': 'application/json'\n\t\t\t\t},\n\t\t\t\tbody: JSON.stringify({\n\t\t\t\t\ttoken: runtime.globalVars.Token,\n\t\t\t\t\tid_area_mesa: area.id_area_mesa,\n\t\t\t\t\ttoolbar: JSON.stringify(toolbarDataArea)\n\t\t\t\t})\n\t\t\t})\n\t\t\t.then(response => response.json())\n\t\t\t.then(data => {\n\t\t\t\tif (data.response) {\n\t\t\t\t\tconsole.log(`Posiciones iniciales del área ${area.nombre} guardadas exitosamente.`);\n\t\t\t\t} else {\n\t\t\t\t\tconsole.error(`Error al guardar posiciones iniciales del área ${area.nombre}:`, data.message);\n\t\t\t\t}\n\t\t\t})\n\t\t\t.catch(error => {\n\t\t\t\tconsole.error(`Error al guardar posiciones iniciales del área ${area.nombre}:`, error);\n\t\t\t});\n\t\t});\n\t}\n\n\tfunction cargarPosicionesGuardadas(toolbarData) {\n\t\ttoolbarData.mesas.forEach(mesa => {\n\t\t\tlet capaNombre = mesa.id_area_mesa ? `areaMesa${mesa.id_area_mesa + 1}` : \"areaMesa1\";\n\t\t\tcrearObjetoDeFamilia(mesa.tipoMesa, capaNombre, mesa.x, mesa.y, mesa.width, mesa.height, mesa.tipoMesa);\n\t\t});\n\t}\n\n\n\tfunction ocultarYDesactivarCapas(numCapas) {\n\t\tfor (let i = 2; i <= numCapas; i++) {\n\t\t\tlet capaNombre = `areaMesa${i}`;\n\t\t\tlet capa = runtime.layout.getLayer(capaNombre);\n\t\t\tif (capa) {\n\t\t\t\tcapa.visible = false;\n\t\t\t\tcapa.opacity = 0;\n\t\t\t\tcapa.isInteractive = false; // Desactivar interactividad\n\t\t\t}\n\t\t}\n\t}\n\n\tfunction inicializarSelectAreas(dataEmpresa) {\n\t\tlet select = document.getElementById('selectAreas');\n\t\tif (!select) return;\n\n\t\tlet optionPrincipal = document.createElement('option');\n\t\toptionPrincipal.value = \"areaMesa1\";\n\t\toptionPrincipal.text = \"Principal\";\n\t\tselect.appendChild(optionPrincipal);\n\n\t\tlet empresa = dataEmpresa[0];\n\t\tlet areasMesas = empresa.areas_mesas;\n\n\t\tareasMesas.forEach((area, index) => {\n\t\t\tlet option = document.createElement('option');\n\t\t\toption.value = `areaMesa${index + 2}`; // Usar el nombre de la capa como valor\n\t\t\toption.text = area.nombre;\n\t\t\tselect.appendChild(option);\n\t\t});\n\n\t\tselect.addEventListener('change', (event) => {\n\t\t\tlet selectedArea = event.target.value;\n\t\t\tactualizarVisibilidadCapas(selectedArea, areasMesas.length + 1);\n\t\t});\n\t}\n\n\tfunction actualizarVisibilidadCapas(areaSeleccionada, numCapas) {\n\t\tfor (let i = 1; i <= numCapas; i++) {\n\t\t\tlet capaNombre = `areaMesa${i}`;\n\t\t\tlet capa = runtime.layout.getLayer(capaNombre);\n\t\t\tif (capa) {\n\t\t\t\tif (capaNombre === areaSeleccionada) {\n\t\t\t\t\tcapa.visible = true;\n\t\t\t\t\tcapa.opacity = 1;\n\t\t\t\t\tcapa.isInteractive = true; // Activar interactividad\n\t\t\t\t} else {\n\t\t\t\t\tcapa.visible = false;\n\t\t\t\t\tcapa.opacity = 0;\n\t\t\t\t\tcapa.isInteractive = false; // Desactivar interactividad\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+						}
+					],
+					"sid": 769088923816797
+				}
+			],
+			"sid": 496392422474891
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Botones Superiores Mesas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 782980417878476,
+							"parameters": {
+								"object": "RegresarBtn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 139023897565514,
+							"parameters": {
+								"layout": "PuntoVentaLayout"
+							}
+						}
+					],
+					"sid": 904740494399626
+				}
+			],
+			"sid": 691063666309860
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Funcionalidad Toolbar",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "Show Toolbar",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 545214947616658
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "btnsToolbar",
+									"sid": 630346127612885,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 284624609009100,
+									"parameters": {
+										"variable": "IsToolBarOn",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 238618524408780,
+									"parameters": {
+										"layer": "3",
+										"interactive": false
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 874116526199281,
+									"parameters": {
+										"layer": "3",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 456590175263076,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 982763909972275
+								}
+							],
+							"actions": [],
+							"sid": 497152679436297,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 919060264266649,
+											"parameters": {
+												"variable": "softbarNivel",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "EditMesas",
+											"sid": 890822999169743,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 147949543195943,
+											"parameters": {
+												"layer": "12",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 677583423897025,
+											"parameters": {
+												"layer": "12",
+												"interactive": true
+											}
+										}
+									],
+									"sid": 669555462786023,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 214803398714786,
+									"parameters": {
+										"object": "EditMesas"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 987758622457074,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 122309106991417
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 379064178386480,
+											"parameters": {
+												"layer": "2",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 926919695623398,
+											"parameters": {
+												"layer": "2",
+												"interactive": false
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 174918322320003,
+											"parameters": {
+												"layer": "12",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 905161783266744,
+											"parameters": {
+												"layer": "12",
+												"interactive": false
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 671694443521105,
+											"parameters": {
+												"layer": "3",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "wait-for-previous-actions",
+											"objectClass": "System",
+											"sid": 836682746761830
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 226418210731397,
+											"parameters": {
+												"layer": "3",
+												"interactive": true
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "EditMesas",
+											"sid": 789030060954607,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "btnsToolbar",
+											"sid": 917227238946512,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 648269264464818,
+											"parameters": {
+												"variable": "IsToolBarOn",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 420225242070922,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 830102117140804,
+									"parameters": {
+										"object": "CerrarToolbar"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 375703867243914,
+									"parameters": {
+										"layer": "2",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 794390892062984,
+									"parameters": {
+										"layer": "2",
+										"interactive": true
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 349381770068360,
+									"parameters": {
+										"layer": "3",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 250407524799196,
+									"parameters": {
+										"layer": "3",
+										"interactive": false
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ObjetosMesas",
+									"sid": 108794847880385,
+									"parameters": {
+										"instance-variable": "selectedObject",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MuroH",
+									"sid": 978094559069822,
+									"parameters": {
+										"instance-variable": "IsMuro",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MuroV",
+									"sid": 381597587100967,
+									"parameters": {
+										"instance-variable": "IsMuro",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "EditMesas",
+									"sid": 950659151508678,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "btnsToolbar",
+									"sid": 850400513037200,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 149989042301777,
+									"parameters": {
+										"variable": "IsToolBarOn",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 207458795062772,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 510282105392620,
+											"parameters": {
+												"variable": "softbarNivel",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "EditMesas",
+											"sid": 661284325152088,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 460907616080713,
+											"parameters": {
+												"layer": "12",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 470892251214273,
+											"parameters": {
+												"layer": "12",
+												"interactive": true
+											}
+										}
+									],
+									"sid": 721693250432747,
+									"disabled": true
+								}
+							]
+						}
+					],
+					"sid": 949728680967194
+				}
+			],
+			"sid": 834327886981820
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Modales Mesas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Abrir Mesa",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Visibilidad y activación Abrir Mesa",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Hacer visible y activar interactividad dependiendo de la capa"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-double-tap-object",
+											"objectClass": "Touch",
+											"sid": 833972115524306,
+											"parameters": {
+												"object": "AllMesas"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 642065637882672,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 939315505041139,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 370260250205116,
+													"parameters": {
+														"layer": "0",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 185204983618341,
+													"parameters": {
+														"layer": "0",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 675671194967697,
+													"parameters": {
+														"layer": "1",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 321059748517798,
+													"parameters": {
+														"layer": "1",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 953364808253146,
+													"parameters": {
+														"layer": "2",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 650191871193639,
+													"parameters": {
+														"layer": "2",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 473734000949646,
+													"parameters": {
+														"layer": "3",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 758818898973503,
+													"parameters": {
+														"layer": "3",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 167708341525325,
+													"parameters": {
+														"layer": "10",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 340960611993135,
+													"parameters": {
+														"layer": "10",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 111190735396586,
+													"parameters": {
+														"layer": "9",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 823584018376501,
+													"parameters": {
+														"layer": "9",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 252424336758508,
+													"parameters": {
+														"layer": "8",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 509888515687807,
+													"parameters": {
+														"layer": "8",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 604654839789902,
+													"parameters": {
+														"layer": "12",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 923246261745068,
+													"parameters": {
+														"layer": "12",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 417488210543475,
+													"parameters": {
+														"layer": "22",
+														"interactive": false
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 358713855567775,
+													"parameters": {
+														"layer": "22",
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 312345869148381,
+													"parameters": {
+														"layer": "11",
+														"interactive": true
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 474029933694131,
+													"parameters": {
+														"layer": "11",
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 747718198322126,
+													"parameters": {
+														"layer": "5",
+														"interactive": true
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 856314565767327,
+													"parameters": {
+														"layer": "5",
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 325902642674638
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Cerrar Modal"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tap-object",
+											"objectClass": "Touch",
+											"sid": 286953933430080,
+											"parameters": {
+												"object": "CloseAbrirMesa"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 239919871373890,
+											"parameters": {
+												"layer": "0",
+												"interactive": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 666401783161431,
+											"parameters": {
+												"layer": "0",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 324843587309150,
+											"parameters": {
+												"layer": "22",
+												"interactive": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 820768573440650,
+											"parameters": {
+												"layer": "22",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 916090797082500,
+											"parameters": {
+												"layer": "1",
+												"interactive": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 357123243185334,
+											"parameters": {
+												"layer": "1",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 602157487126041,
+											"parameters": {
+												"layer": "2",
+												"interactive": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 337813479519579,
+											"parameters": {
+												"layer": "2",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 645971789822103,
+											"parameters": {
+												"layer": "11",
+												"interactive": false
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 639604618479112,
+											"parameters": {
+												"layer": "11",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 782701751113954,
+											"parameters": {
+												"layer": "5",
+												"interactive": false
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 828790991122546,
+											"parameters": {
+												"layer": "5",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "InputAbrirMesa",
+											"sid": 760596410352931,
+											"parameters": {
+												"text": "\"\""
+											}
+										}
+									],
+									"sid": 936119349226703,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 710434927328911,
+													"parameters": {
+														"variable": "softbarNivel",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "EditMesas",
+													"sid": 741570208590137,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 242118529016851,
+													"parameters": {
+														"layer": "12",
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-layer-interactive",
+													"objectClass": "System",
+													"sid": 127307454796720,
+													"parameters": {
+														"layer": "12",
+														"interactive": true
+													}
+												}
+											],
+											"sid": 628759049891327
+										}
+									]
+								}
+							],
+							"sid": 805513349240606
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Crear Venta",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-clicked",
+											"objectClass": "ConfirmarAbrirMesa",
+											"sid": 395672142273822
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 926655102541648,
+											"parameters": {
+												"variable": "NumeroComensales",
+												"value": "InputAbrirMesa.Text"
+											}
+										},
+										{
+											"type": "script",
+											"script": "crearVenta();\nfunction crearVenta() {\n    // Obtener las variables globales de Construct 3\n    let idMesero = runtime.globalVars.IdMesero;\n    let idArea = runtime.globalVars.IdArea;\n    let numeroMesa = runtime.globalVars.NumeroMesa;\n    let numeroComensales = runtime.globalVars.NumeroComensales;\n    let apiUrl = runtime.globalVars.apiUrl;\n    let token = runtime.globalVars.Token;\n\n    // Crear el cuerpo de la solicitud\n\t//HACER LOGICA PARA MANDAR DATOS OPCIONALES O NO\n    let body = JSON.stringify({\n        token: token,\n        //id_mesero: idMesero,\n        //id_area_mesa: idArea,\n        mesa: numeroMesa,\n        comensales: numeroComensales\n    });\n\n    // Realizar la solicitud POST para crear una venta\n    fetch(apiUrl + '/web/ventas/crea', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/json'\n        },\n        body: body\n    })\n    .then(response => response.json())\n    .then(data => {\n        if (data.response) {\n            console.log(\"Venta creada exitosamente:\", data.message);\n            runtime.globalVars.IdVenta = data.data.id_venta; // Guardar el id de la venta en una variable global\n            runtime.goToLayout(\"MesaAbiertaLayout\"); // Navegar al layout MesaAbiertaLayout\n        } else {\n            console.error('Error al crear la venta:', data.message);\n        }\n    })\n    .catch(error => {\n        console.error('Error:', error);\n    });\n}\n\n"
+										}
+									],
+									"sid": 763118488497473
+								}
+							],
+							"sid": 734917440947106
+						}
+					],
+					"sid": 542844892863864
+				}
+			],
+			"sid": 898949824043906
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Cerrar Sesión Mesas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 264089773044103,
+							"parameters": {
+								"object": "TextoCerrarSesion"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 996307742828957,
+							"parameters": {
+								"variable": "Token",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 408629877000721,
+							"parameters": {
+								"variable": "softbarNivel",
+								"value": "9999"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 989515959013554,
+							"parameters": {
+								"variable": "CorreoIngresado",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 732483994497067,
+							"parameters": {
+								"variable": "ContrasenaIngresada",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 225460603307474,
+							"parameters": {
+								"variable": "PinString",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 443071894421985,
+							"parameters": {
+								"variable": "nextInputIndex",
+								"value": "5"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 597193162148576,
+							"parameters": {
+								"layout": "InicioSesionLayout"
+							}
+						}
+					],
+					"sid": 333589083025680
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 788509902612883,
+							"parameters": {
+								"object": "IconoCerrarSesion"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 159993952188167,
+							"parameters": {
+								"variable": "Token",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 116290626127952,
+							"parameters": {
+								"variable": "softbarNivel",
+								"value": "9999"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 952576735260424,
+							"parameters": {
+								"variable": "CorreoIngresado",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 532567955908949,
+							"parameters": {
+								"variable": "ContrasenaIngresada",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 778045061917737,
+							"parameters": {
+								"variable": "PinString",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 972901384609274,
+							"parameters": {
+								"variable": "nextInputIndex",
+								"value": "5"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 837779959788748,
+							"parameters": {
+								"layout": "InicioSesionLayout"
+							}
+						}
+					],
+					"sid": 354659296426049
+				}
+			],
+			"sid": 267443513620464
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Scroll",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-mouse-wheel",
+							"objectClass": "Mouse",
+							"sid": 388439632391376,
+							"parameters": {
+								"direction": "down"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "scroll-to-y",
+							"objectClass": "System",
+							"sid": 233725072475451,
+							"parameters": {
+								"y": "4230"
+							}
+						}
+					],
+					"sid": 470359131827893
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-mouse-wheel",
+							"objectClass": "Mouse",
+							"sid": 303650869714838,
+							"parameters": {
+								"direction": "up"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "scroll-to-y",
+							"objectClass": "System",
+							"sid": 695346346115893,
+							"parameters": {
+								"y": "0"
+							}
+						}
+					],
+					"sid": 507313122269334
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 350678468545648,
+							"parameters": {
+								"object": "ArrowUpMesas"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 490202184900296,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ArrowUpMesas",
+									"sid": 790832802655941,
+									"parameters": {
+										"instance-variable": "IsUp",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "scroll-to-y",
+									"objectClass": "System",
+									"sid": 812763682853887,
+									"parameters": {
+										"y": "4230"
+									}
+								}
+							],
+							"sid": 570128145070286
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 789649297444233,
+							"parameters": {
+								"object": "ArrowUpMesas"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 398927073333497,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ArrowUpMesas",
+									"sid": 354295404513576,
+									"parameters": {
+										"instance-variable": "IsUp",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "scroll-to-y",
+									"objectClass": "System",
+									"sid": 952363065439718,
+									"parameters": {
+										"y": "0"
+									}
+								}
+							],
+							"sid": 435902487292210
+						}
+					]
+				}
+			],
+			"sid": 922421325450495
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Descartado Mesas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "Juntar Mesa",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": true,
+							"title": "Visibilidad y activación Juntar Mesas",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-clicked",
+											"objectClass": "JuntarMesasBtn",
+											"sid": 321612731205238
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 513964678360192,
+											"parameters": {
+												"layer": "10",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 100641368714275,
+											"parameters": {
+												"layer": "11",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 156125276308317,
+											"parameters": {
+												"layer": "10",
+												"interactive": true
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 527109368070171,
+											"parameters": {
+												"layer": "11",
+												"interactive": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 111867799439198,
+											"parameters": {
+												"layer": "0",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 204986265346157,
+											"parameters": {
+												"layer": "1",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 269035091891613,
+											"parameters": {
+												"layer": "3",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 853125763528708,
+											"parameters": {
+												"layer": "12",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 862684218476026,
+											"parameters": {
+												"layer": "43",
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 121297528910590,
+									"disabled": true
+								}
+							],
+							"sid": 891804290978325
+						}
+					],
+					"sid": 248078731097494
+				},
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "Select Objects",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": true,
+							"title": "Selección Múltiple2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 482561444601892,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "ObjetosMesas"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 790183590374249,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 603832454082305,
+													"parameters": {
+														"key": 16
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 135347813901771,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "ObjetosMesas",
+													"sid": 966567948102673,
+													"parameters": {
+														"instance-variable": "selectedObject",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "ObjetosMesas",
+													"sid": 840833390498634,
+													"behaviorType": "DragDrop",
+													"parameters": {
+														"state": "enabled"
+													}
+												}
+											],
+											"sid": 675635360716430,
+											"disabled": true
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-hold-over-object",
+											"objectClass": "Touch",
+											"sid": 138179183775097,
+											"parameters": {
+												"object": "ObjetosMesas"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "ObjetosMesas",
+											"sid": 797025877642883,
+											"parameters": {
+												"instance-variable": "selectedObject",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "ObjetosMesas",
+											"sid": 234110381268172,
+											"behaviorType": "DragDrop",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 896987344805339,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 960531124451459,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "MuroH"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 474625737575849,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 300482467515921,
+													"parameters": {
+														"key": 16
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "MuroH",
+													"sid": 223439350779313,
+													"parameters": {
+														"instance-variable": "IsMuro",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 375897153513226,
+											"disabled": true
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-hold-over-object",
+											"objectClass": "Touch",
+											"sid": 737433077526152,
+											"parameters": {
+												"object": "MuroH"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "MuroH",
+											"sid": 472563279894242,
+											"parameters": {
+												"instance-variable": "IsMuro",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 661688719797650,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 169243401194455,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "MuroV"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 389147280885503,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "key-is-down",
+													"objectClass": "Keyboard",
+													"sid": 254990095878543,
+													"parameters": {
+														"key": 16
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "MuroV",
+													"sid": 499220397152170,
+													"parameters": {
+														"instance-variable": "IsMuro",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 663179991088310,
+											"disabled": true
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-hold-over-object",
+											"objectClass": "Touch",
+											"sid": 256884057058390,
+											"parameters": {
+												"object": "MuroV"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "MuroV",
+											"sid": 970316520243092,
+											"parameters": {
+												"instance-variable": "IsMuro",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 565445581315773,
+									"disabled": true
+								}
+							],
+							"sid": 697974162723818
+						},
+						{
+							"eventType": "group",
+							"disabled": true,
+							"title": "Condiciones Efecto Selected2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "ObjetosMesas",
+											"sid": 967809026268378,
+											"parameters": {
+												"instance-variable": "selectedObject",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ObjetosMesas",
+											"sid": 582811086440223,
+											"parameters": {
+												"frame-number": "0"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "ObjetosMesas",
+											"sid": 190882937483722,
+											"behaviorType": "DragDrop",
+											"parameters": {
+												"state": "disabled"
+											}
+										}
+									],
+									"sid": 354992322072704,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "ObjetosMesas",
+											"sid": 474869488595086,
+											"parameters": {
+												"instance-variable": "selectedObject",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ObjetosMesas",
+											"sid": 397106452466553,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 240365588466731,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MuroH",
+											"sid": 498818201691174,
+											"parameters": {
+												"instance-variable": "IsMuro",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "MuroH",
+											"sid": 595259195609133,
+											"parameters": {
+												"frame-number": "0"
+											}
+										}
+									],
+									"sid": 500592670156596,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MuroH",
+											"sid": 900114442428675,
+											"parameters": {
+												"instance-variable": "IsMuro",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "MuroH",
+											"sid": 451712368976613,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 305921905581765,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MuroV",
+											"sid": 104297076141462,
+											"parameters": {
+												"instance-variable": "IsMuro",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "MuroV",
+											"sid": 244729720111705,
+											"parameters": {
+												"frame-number": "0"
+											}
+										}
+									],
+									"sid": 367040947622511,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MuroV",
+											"sid": 327797705510173,
+											"parameters": {
+												"instance-variable": "IsMuro",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "MuroV",
+											"sid": 658200411737896,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 868225656296317,
+									"disabled": true
+								}
+							],
+							"sid": 990584181279395
+						},
+						{
+							"eventType": "group",
+							"disabled": true,
+							"title": "Menu Lateral manejadores",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "group",
+									"disabled": true,
+									"title": "Mesas Manejadores",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 732555528648788,
+													"parameters": {
+														"object": "AumentarTamanao"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 334970306610172,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ObjetosMesas",
+															"sid": 897634574882876,
+															"parameters": {
+																"instance-variable": "selectedObject",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-size",
+															"objectClass": "ObjetosMesas",
+															"sid": 626559966839948,
+															"parameters": {
+																"width": "ObjetosMesas.Width+15",
+																"height": "ObjetosMesas.Height+15"
+															}
+														}
+													],
+													"sid": 940834643011707,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 423754320818487,
+													"parameters": {
+														"object": "DisminuirTamano"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 481538486809113,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ObjetosMesas",
+															"sid": 446213854247835,
+															"parameters": {
+																"instance-variable": "selectedObject",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-size",
+															"objectClass": "ObjetosMesas",
+															"sid": 528799875768143,
+															"parameters": {
+																"width": "ObjetosMesas.Width-15",
+																"height": "ObjetosMesas.Height-15"
+															}
+														}
+													],
+													"sid": 983670107100765,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 736837674334532,
+													"parameters": {
+														"object": "BorrarToolbar"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 869838318506464,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "ObjetosMesas",
+															"sid": 473624562850668,
+															"parameters": {
+																"instance-variable": "selectedObject",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "destroy",
+															"objectClass": "ObjetosMesas",
+															"sid": 707278314575153
+														}
+													],
+													"sid": 816580464928214
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "ObjetosMesas",
+													"sid": 886104775036808,
+													"parameters": {
+														"instance-variable": "selectedObject",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 974881336349917,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "AL SPAWNEAR PODRIA HACER QUE GUARDE AUTOMATICAMENTE LAS COORDENADAS EN EL JSON Y DESPUES ACTIVAMOS QUE SE REGRESEN AL LAS COORDENADAS DESIGNADAS SI NO COLICIONAN"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "on-double-tap-object",
+															"objectClass": "Touch",
+															"sid": 476258941062422,
+															"parameters": {
+																"object": "PanelMesas"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "ObjetosMesas",
+															"sid": 574031289303432,
+															"parameters": {
+																"instance-variable": "selectedObject",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 632474804294060,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 429369698565607,
+													"parameters": {
+														"object": "GirarDerecha"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "ObjetosMesas",
+													"sid": 101085018291015,
+													"parameters": {
+														"instance-variable": "selectedObject",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-clockwise",
+													"objectClass": "ObjetosMesas",
+													"sid": 767995476637178,
+													"parameters": {
+														"degrees": "45"
+													}
+												}
+											],
+											"sid": 917441223664198,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 678435516799756,
+													"parameters": {
+														"object": "GirarIzquierda"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "ObjetosMesas",
+													"sid": 242548170090864,
+													"parameters": {
+														"instance-variable": "selectedObject",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-counter-clockwise",
+													"objectClass": "ObjetosMesas",
+													"sid": 184386051148462,
+													"parameters": {
+														"degrees": "45"
+													}
+												}
+											],
+											"sid": 207226988153241,
+											"disabled": true
+										}
+									],
+									"sid": 421623093927869
+								},
+								{
+									"eventType": "group",
+									"disabled": true,
+									"title": "Muros Manejadores",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 218961528734483,
+													"parameters": {
+														"object": "AumentarTamanao"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 310075855861497,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "MuroH",
+															"sid": 735022160079065,
+															"parameters": {
+																"instance-variable": "IsMuro",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-size",
+															"objectClass": "MuroH",
+															"sid": 451203542232390,
+															"parameters": {
+																"width": "MuroH.Width+50",
+																"height": "MuroH.Height"
+															}
+														}
+													],
+													"sid": 335519124236739,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 634748971105434,
+													"parameters": {
+														"object": "DisminuirTamano"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 738614886125505,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "MuroH",
+															"sid": 466428606659854,
+															"parameters": {
+																"instance-variable": "IsMuro",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-size",
+															"objectClass": "MuroH",
+															"sid": 419203439890927,
+															"parameters": {
+																"width": "MuroH.Width-50",
+																"height": "MuroH.Height"
+															}
+														}
+													],
+													"sid": 573864226474628,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 255945312235683,
+													"parameters": {
+														"object": "BorrarToolbar"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 215920987724538,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "MuroH",
+															"sid": 225873851452149,
+															"parameters": {
+																"instance-variable": "IsMuro",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "destroy",
+															"objectClass": "MuroH",
+															"sid": 704673740627179
+														}
+													],
+													"sid": 648582289261802
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "MuroH",
+													"sid": 505693964114301,
+													"parameters": {
+														"instance-variable": "IsMuro",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 473842693560447,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "on-double-tap-object",
+															"objectClass": "Touch",
+															"sid": 302181748256313,
+															"parameters": {
+																"object": "PanelMesas"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "MuroH",
+															"sid": 421463153811367,
+															"parameters": {
+																"instance-variable": "IsMuro",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 418865202834406,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 647561672685886,
+													"parameters": {
+														"object": "GirarDerecha"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "MuroH",
+													"sid": 585571859494544,
+													"parameters": {
+														"instance-variable": "IsMuro",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-clockwise",
+													"objectClass": "MuroH",
+													"sid": 763630495065188,
+													"parameters": {
+														"degrees": "45"
+													}
+												}
+											],
+											"sid": 865233907208008,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 857430897881904,
+													"parameters": {
+														"object": "GirarIzquierda"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "MuroH",
+													"sid": 359148323922046,
+													"parameters": {
+														"instance-variable": "IsMuro",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-counter-clockwise",
+													"objectClass": "MuroH",
+													"sid": 966114712198068,
+													"parameters": {
+														"degrees": "45"
+													}
+												}
+											],
+											"sid": 232581774364442,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 507244762269152,
+													"parameters": {
+														"object": "AumentarTamanao"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 901129302374170,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "MuroV",
+															"sid": 349322964511852,
+															"parameters": {
+																"instance-variable": "IsMuro",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-size",
+															"objectClass": "MuroV",
+															"sid": 941848269169309,
+															"parameters": {
+																"width": "MuroV.Width",
+																"height": "MuroV.Height+50"
+															}
+														}
+													],
+													"sid": 356979207205081,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 247382268119741,
+													"parameters": {
+														"object": "DisminuirTamano"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 992120179652182,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "MuroV",
+															"sid": 715267893333751,
+															"parameters": {
+																"instance-variable": "IsMuro",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-size",
+															"objectClass": "MuroV",
+															"sid": 403962108516837,
+															"parameters": {
+																"width": "MuroV.Width",
+																"height": "MuroV.Height-50"
+															}
+														}
+													],
+													"sid": 882920606225363,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 501037341509351,
+													"parameters": {
+														"object": "BorrarToolbar"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 561348357325608,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "MuroV",
+															"sid": 323529537981837,
+															"parameters": {
+																"instance-variable": "IsMuro",
+																"comparison": 0,
+																"value": "1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "destroy",
+															"objectClass": "MuroV",
+															"sid": 420859128695594
+														}
+													],
+													"sid": 428962611759536
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "MuroV",
+													"sid": 703606536352103,
+													"parameters": {
+														"instance-variable": "IsMuro",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 773583268015901,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "on-double-tap-object",
+															"objectClass": "Touch",
+															"sid": 578599942909790,
+															"parameters": {
+																"object": "PanelMesas"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "MuroV",
+															"sid": 310605052327598,
+															"parameters": {
+																"instance-variable": "IsMuro",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 283870249038562,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 640847960194233,
+													"parameters": {
+														"object": "GirarDerecha"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "MuroV",
+													"sid": 354761171032308,
+													"parameters": {
+														"instance-variable": "IsMuro",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-clockwise",
+													"objectClass": "MuroV",
+													"sid": 754969854774377,
+													"parameters": {
+														"degrees": "45"
+													}
+												}
+											],
+											"sid": 977777689873542,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 688266069917979,
+													"parameters": {
+														"object": "GirarIzquierda"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "MuroV",
+													"sid": 760589918008257,
+													"parameters": {
+														"instance-variable": "IsMuro",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "rotate-counter-clockwise",
+													"objectClass": "MuroV",
+													"sid": 812305100583212,
+													"parameters": {
+														"degrees": "45"
+													}
+												}
+											],
+											"sid": 592862045236711,
+											"disabled": true
+										}
+									],
+									"sid": 685151612500803
+								}
+							],
+							"sid": 397742988474410
+						}
+					],
+					"sid": 304577615227262
+				},
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "Cambiar Las Mesas del Toolbar",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 749437289926748,
+									"parameters": {
+										"object": "ITM2"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 956995248135932,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "ObjetosMesas",
+											"sid": 747371283651758,
+											"parameters": {
+												"instance-variable": "selectedObject",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "ObjetosMesas",
+											"sid": 696256332206318,
+											"parameters": {
+												"object": "Mesa2C",
+												"layer": "ObjetosMesas.LayerNumber",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										}
+									],
+									"sid": 731355803973833,
+									"disabled": true
+								}
+							]
+						}
+					],
+					"sid": 287778741601748
+				},
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "Efectos Modal Abrir Mesa",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 944064091853159,
+									"parameters": {
+										"object": "CloseAbrirMesa"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 905491094869807,
+									"parameters": {
+										"cursor-style": "hand"
+									}
+								}
+							],
+							"sid": 354709308287067,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 902661636594538,
+									"parameters": {
+										"object": "CloseAbrirMesa"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 955558567435372,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								}
+							],
+							"sid": 934503367850709,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 511550342545157,
+									"parameters": {
+										"object": "BtnsPIN"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 677452807300453,
+									"parameters": {
+										"cursor-style": "hand"
+									}
+								}
+							],
+							"sid": 776954925033518,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 269995962806078,
+									"parameters": {
+										"object": "BtnsPIN"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 490850751768644,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								}
+							],
+							"sid": 431060860029593,
+							"disabled": true
+						}
+					],
+					"sid": 345651105286321
+				},
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "Funcionalidad Iconos Mesas",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": true,
+							"title": "Restringir Mesas",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-hold-over-object",
+											"objectClass": "Touch",
+											"sid": 938387535604357,
+											"parameters": {
+												"object": "ObjetosMesas"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 862100593175959,
+											"parameters": {
+												"variable": "lastPositionObjectX",
+												"value": "ObjetosMesas.X"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 271635690904783,
+											"parameters": {
+												"variable": "lastPositionObjectY",
+												"value": "ObjetosMesas.Y"
+											}
+										}
+									],
+									"sid": 345388908340267,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-any-touch-start",
+											"objectClass": "Touch",
+											"sid": 967375591183356
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 719196024119185,
+											"parameters": {
+												"variable": "lastPositionObjectX",
+												"value": "ObjetosMesas.X"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 906264550537096,
+											"parameters": {
+												"variable": "lastPositionObjectY",
+												"value": "ObjetosMesas.Y"
+											}
+										}
+									],
+									"sid": 599746741716113,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "ObjetosMesas",
+											"sid": 152678181312849,
+											"parameters": {
+												"object": "PanelMesas"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "ObjetosMesas",
+											"sid": 793666831158758,
+											"parameters": {
+												"x": "lastPositionObjectX",
+												"y": "lastPositionObjectY"
+											}
+										}
+									],
+									"sid": 135513688872719,
+									"disabled": true
+								}
+							],
+							"sid": 831181862594701
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Interacción con menú dinámico ",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "group",
+									"disabled": true,
+									"title": "Generar Areas Interactivas JSON",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-start-of-layout",
+													"objectClass": "System",
+													"sid": 206222558956319
+												}
+											],
+											"actions": [
+												{
+													"id": "request-project-file",
+													"objectClass": "AJAX",
+													"sid": 971767557142002,
+													"parameters": {
+														"tag": "\"areasMesasFile\"",
+														"file": "AreasyMesas.json"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 121864794912573,
+													"parameters": {
+														"variable": "ActiveAreaMesas",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 175621673258324,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-completed",
+													"objectClass": "AJAX",
+													"sid": 862627919923840,
+													"parameters": {
+														"tag": "\"areasMesasFile\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "parse",
+													"objectClass": "JSON",
+													"sid": 959234832908784,
+													"parameters": {
+														"data": "AJAX.LastData"
+													}
+												},
+												{
+													"callFunction": "LoandMenuZOnas",
+													"sid": 519973118881069
+												},
+												{
+													"callFunction": "CrearMesas",
+													"sid": 948543268182413
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "ObjetosMesas",
+													"sid": 949304448630921,
+													"behaviorType": "DragDrop",
+													"parameters": {
+														"state": "disabled"
+													}
+												}
+											],
+											"sid": 411756866222529,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "ObjetosMesas",
+													"sid": 727520373122588,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"comparison": 1,
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "ObjetosMesas",
+													"sid": 240435865851236,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 897515501926620,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Decoracion",
+													"sid": 778501519153525,
+													"parameters": {
+														"instance-variable": "ActiveAreasDeco",
+														"comparison": 1,
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Decoracion",
+													"sid": 157272853624295,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 663106817136489,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 294460030159720,
+													"parameters": {
+														"object": "btnMesasZonas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 757131771888792,
+													"parameters": {
+														"variable": "ActiveAreaMesas",
+														"value": "btnMesasZonas.areaZonas"
+													}
+												},
+												{
+													"callFunction": "ShowActiveObjects",
+													"sid": 464670366804657
+												}
+											],
+											"sid": 858346600360126,
+											"disabled": true
+										},
+										{
+											"functionName": "LoandMenuZOnas",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [],
+											"eventType": "function-block",
+											"conditions": [],
+											"actions": [],
+											"sid": 305091097673846,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "JSON",
+															"sid": 774154695110413,
+															"parameters": {
+																"path": "\".areas\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 258479393380186,
+															"parameters": {
+																"object-to-create": "btnMesasZonas",
+																"layer": "1",
+																"x": "btnZonaX",
+																"y": "btnZonaY",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "btnMesasZonas",
+															"sid": 506285929129548,
+															"parameters": {
+																"width": "250",
+																"height": "80"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "btnMesasZonas",
+															"sid": 870473095484439,
+															"parameters": {
+																"instance-variable": "areaZonas",
+																"value": "JSON.Get(\".id\")"
+															}
+														},
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 973796483573349,
+															"parameters": {
+																"object-to-create": "TextoMesasZona",
+																"layer": "1",
+																"x": "btnZonaX",
+																"y": "btnZonaY",
+																"create-hierarchy": false,
+																"template-name": "\"textZonas\""
+															}
+														},
+														{
+															"id": "set-text",
+															"objectClass": "TextoMesasZona",
+															"sid": 820078630222991,
+															"parameters": {
+																"text": "JSON.Get(\".nombre\")"
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "TextoMesasZona",
+															"sid": 726120917558012,
+															"parameters": {
+																"width": "250",
+																"height": "80"
+															}
+														},
+														{
+															"id": "set-vertical-alignment",
+															"objectClass": "TextoMesasZona",
+															"sid": 729319511240449,
+															"parameters": {
+																"vertical-alignment": "center"
+															}
+														},
+														{
+															"id": "set-horizontal-alignment",
+															"objectClass": "TextoMesasZona",
+															"sid": 396581009469893,
+															"parameters": {
+																"horizontal-alignment": "center"
+															}
+														},
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 750723730715253,
+															"parameters": {
+																"variable": "btnZonaX",
+																"value": "btnZonaX+300"
+															}
+														}
+													],
+													"sid": 593268673516016,
+													"disabled": true
+												}
+											]
+										},
+										{
+											"functionName": "CrearMesas",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [],
+											"eventType": "function-block",
+											"conditions": [],
+											"actions": [],
+											"sid": 208010113762706,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "JSON",
+															"sid": 369648047829974,
+															"parameters": {
+																"path": "\".areas\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 599987746555513,
+													"disabled": true,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "JSON",
+																	"sid": 917224655558463,
+																	"parameters": {
+																		"path": "\".mesas\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 514216919914337,
+																	"parameters": {
+																		"variable": "btnZonaX",
+																		"value": "btnZonaX+250"
+																	}
+																}
+															],
+															"sid": 216278484945634,
+															"disabled": true,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-value",
+																			"objectClass": "JSON",
+																			"sid": 704377293974538,
+																			"parameters": {
+																				"path": "\".forma\"",
+																				"cmp": 0,
+																				"value": "\"cuadrada\""
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 150277534521970,
+																	"disabled": true,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "compare-value",
+																					"objectClass": "JSON",
+																					"sid": 918429510087772,
+																					"parameters": {
+																						"path": "\".comensales\"",
+																						"cmp": 0,
+																						"value": "2"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "create-object",
+																					"objectClass": "System",
+																					"sid": 200527515138317,
+																					"parameters": {
+																						"object-to-create": "Mesa2C",
+																						"layer": "1",
+																						"x": "JSON.Get(\".coordenadas\"&\".x\")",
+																						"y": "JSON.Get(\".coordenadas\"&\".y\")",
+																						"create-hierarchy": false,
+																						"template-name": "\"\""
+																					}
+																				},
+																				{
+																					"id": "set-size",
+																					"objectClass": "Mesa2C",
+																					"sid": 365262937712736,
+																					"parameters": {
+																						"width": "JSON.Get(\".size\"&\".width\")",
+																						"height": "JSON.Get(\".size\"&\".height\")"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "Mesa2C",
+																					"sid": 421032793438080,
+																					"parameters": {
+																						"instance-variable": "AreaVarObject",
+																						"value": "JSON.Get(\".area\")"
+																					}
+																				}
+																			],
+																			"sid": 929668602731925,
+																			"disabled": true
+																		},
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "compare-value",
+																					"objectClass": "JSON",
+																					"sid": 985241078652578,
+																					"parameters": {
+																						"path": "\".comensales\"",
+																						"cmp": 0,
+																						"value": "4"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "create-object",
+																					"objectClass": "System",
+																					"sid": 901255780147520,
+																					"parameters": {
+																						"object-to-create": "Mesa4C",
+																						"layer": "1",
+																						"x": "JSON.Get(\".coordenadas\"&\".x\")",
+																						"y": "JSON.Get(\".coordenadas\"&\".y\")",
+																						"create-hierarchy": false,
+																						"template-name": "\"\""
+																					}
+																				},
+																				{
+																					"id": "set-size",
+																					"objectClass": "Mesa4C",
+																					"sid": 426321878477971,
+																					"parameters": {
+																						"width": "JSON.Get(\".size\"&\".width\")",
+																						"height": "JSON.Get(\".size\"&\".height\")"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "Mesa4C",
+																					"sid": 259786660498339,
+																					"parameters": {
+																						"instance-variable": "AreaVarObject",
+																						"value": "JSON.Get(\".area\")"
+																					}
+																				}
+																			],
+																			"sid": 376418632613695,
+																			"disabled": true
+																		},
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "compare-value",
+																					"objectClass": "JSON",
+																					"sid": 759412228214442,
+																					"parameters": {
+																						"path": "\".comensales\"",
+																						"cmp": 0,
+																						"value": "6"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "create-object",
+																					"objectClass": "System",
+																					"sid": 313344013282666,
+																					"parameters": {
+																						"object-to-create": "Mesa6C",
+																						"layer": "1",
+																						"x": "JSON.Get(\".coordenadas\"&\".x\")",
+																						"y": "JSON.Get(\".coordenadas\"&\".y\")",
+																						"create-hierarchy": false,
+																						"template-name": "\"\""
+																					}
+																				},
+																				{
+																					"id": "set-size",
+																					"objectClass": "Mesa6C",
+																					"sid": 569919070361084,
+																					"parameters": {
+																						"width": "JSON.Get(\".size\"&\".width\")",
+																						"height": "JSON.Get(\".size\"&\".height\")"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "Mesa6C",
+																					"sid": 809818561944158,
+																					"parameters": {
+																						"instance-variable": "AreaVarObject",
+																						"value": "JSON.Get(\".area\")"
+																					}
+																				}
+																			],
+																			"sid": 204122057405674,
+																			"disabled": true
+																		}
+																	]
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-value",
+																			"objectClass": "JSON",
+																			"sid": 183919159143323,
+																			"parameters": {
+																				"path": "\".forma\"",
+																				"cmp": 0,
+																				"value": "\"redonda\""
+																			}
+																		}
+																	],
+																	"actions": [],
+																	"sid": 125029643722019,
+																	"disabled": true,
+																	"children": [
+																		{
+																			"eventType": "block",
+																			"conditions": [
+																				{
+																					"id": "compare-value",
+																					"objectClass": "JSON",
+																					"sid": 214446059051425,
+																					"parameters": {
+																						"path": "\".comensales\"",
+																						"cmp": 0,
+																						"value": "6"
+																					}
+																				}
+																			],
+																			"actions": [
+																				{
+																					"id": "create-object",
+																					"objectClass": "System",
+																					"sid": 831303519328401,
+																					"parameters": {
+																						"object-to-create": "Mesa6R",
+																						"layer": "1",
+																						"x": "JSON.Get(\".coordenadas\"&\".x\")",
+																						"y": "JSON.Get(\".coordenadas\"&\".y\")",
+																						"create-hierarchy": false,
+																						"template-name": "\"\""
+																					}
+																				},
+																				{
+																					"id": "set-size",
+																					"objectClass": "Mesa6R",
+																					"sid": 860395669507159,
+																					"parameters": {
+																						"width": "JSON.Get(\".size\"&\".width\")",
+																						"height": "JSON.Get(\".size\"&\".height\")"
+																					}
+																				},
+																				{
+																					"id": "set-instvar-value",
+																					"objectClass": "Mesa6R",
+																					"sid": 503309134388067,
+																					"parameters": {
+																						"instance-variable": "AreaVarObject",
+																						"value": "JSON.Get(\".area\")"
+																					}
+																				}
+																			],
+																			"sid": 758001897571953,
+																			"disabled": true
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "for-each",
+																	"objectClass": "JSON",
+																	"sid": 308300960102593,
+																	"parameters": {
+																		"path": "\".decoracion\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-eventvar-value",
+																	"objectClass": "System",
+																	"sid": 129843191341581,
+																	"parameters": {
+																		"variable": "btnZonaX",
+																		"value": "btnZonaX+250"
+																	}
+																}
+															],
+															"sid": 284732353477592,
+															"disabled": true,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-value",
+																			"objectClass": "JSON",
+																			"sid": 201264605010408,
+																			"parameters": {
+																				"path": "\".tipo\"",
+																				"cmp": 0,
+																				"value": "\"planta\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "create-object",
+																			"objectClass": "System",
+																			"sid": 718477091313205,
+																			"parameters": {
+																				"object-to-create": "Planta",
+																				"layer": "1",
+																				"x": "JSON.Get(\".coordenadas\"&\".x\")",
+																				"y": "JSON.Get(\".coordenadas\"&\".y\")",
+																				"create-hierarchy": false,
+																				"template-name": "\"\""
+																			}
+																		},
+																		{
+																			"id": "set-size",
+																			"objectClass": "Planta",
+																			"sid": 636267995416814,
+																			"parameters": {
+																				"width": "JSON.Get(\".size\"&\".width\")",
+																				"height": "JSON.Get(\".size\"&\".height\")"
+																			}
+																		},
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "Planta",
+																			"sid": 256313444818685,
+																			"parameters": {
+																				"instance-variable": "ActiveAreasDeco",
+																				"value": "JSON.Get(\".area\")"
+																			}
+																		}
+																	],
+																	"sid": 805681863122258,
+																	"disabled": true
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-value",
+																			"objectClass": "JSON",
+																			"sid": 165312279279539,
+																			"parameters": {
+																				"path": "\".tipo\"",
+																				"cmp": 0,
+																				"value": "\"muroH\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "create-object",
+																			"objectClass": "System",
+																			"sid": 955369548790263,
+																			"parameters": {
+																				"object-to-create": "MuroH",
+																				"layer": "1",
+																				"x": "JSON.Get(\".coordenadas\"&\".x\")",
+																				"y": "JSON.Get(\".coordenadas\"&\".y\")",
+																				"create-hierarchy": false,
+																				"template-name": "\"\""
+																			}
+																		},
+																		{
+																			"id": "set-size",
+																			"objectClass": "MuroH",
+																			"sid": 904442862604207,
+																			"parameters": {
+																				"width": "JSON.Get(\".size\"&\".width\")",
+																				"height": "JSON.Get(\".size\"&\".height\")"
+																			}
+																		},
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "MuroH",
+																			"sid": 804872822434610,
+																			"parameters": {
+																				"instance-variable": "ActiveAreasDeco",
+																				"value": "JSON.Get(\".area\")"
+																			}
+																		}
+																	],
+																	"sid": 873552417385338,
+																	"disabled": true
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-value",
+																			"objectClass": "JSON",
+																			"sid": 824301999215613,
+																			"parameters": {
+																				"path": "\".tipo\"",
+																				"cmp": 0,
+																				"value": "\"muroV\""
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "create-object",
+																			"objectClass": "System",
+																			"sid": 345502331153182,
+																			"parameters": {
+																				"object-to-create": "MuroV",
+																				"layer": "1",
+																				"x": "JSON.Get(\".coordenadas\"&\".x\")",
+																				"y": "JSON.Get(\".coordenadas\"&\".y\")",
+																				"create-hierarchy": false,
+																				"template-name": "\"\""
+																			}
+																		},
+																		{
+																			"id": "set-size",
+																			"objectClass": "MuroV",
+																			"sid": 457525520332540,
+																			"parameters": {
+																				"width": "JSON.Get(\".size\"&\".width\")",
+																				"height": "JSON.Get(\".size\"&\".height\")"
+																			}
+																		},
+																		{
+																			"id": "set-instvar-value",
+																			"objectClass": "MuroV",
+																			"sid": 616502285467513,
+																			"parameters": {
+																				"instance-variable": "ActiveAreasDeco",
+																				"value": "JSON.Get(\".area\")"
+																			}
+																		}
+																	],
+																	"sid": 347025563914674,
+																	"disabled": true
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									],
+									"sid": 907321248268596
+								},
+								{
+									"eventType": "group",
+									"disabled": true,
+									"title": "Efectos Btn Zonas",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "btnMesasZonas",
+													"sid": 877332733652114,
+													"parameters": {
+														"instance-variable": "areaZonas",
+														"comparison": 0,
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "btnMesasZonas",
+													"sid": 930968548641988,
+													"parameters": {
+														"frame-number": "2"
+													}
+												}
+											],
+											"sid": 914040465759642,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "btnMesasZonas",
+													"sid": 394829006805461,
+													"parameters": {
+														"instance-variable": "areaZonas",
+														"comparison": 1,
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "btnMesasZonas",
+													"sid": 245900672142430,
+													"parameters": {
+														"frame-number": "0"
+													}
+												}
+											],
+											"sid": 265653169169179,
+											"disabled": true
+										}
+									],
+									"sid": 160306397320460
+								},
+								{
+									"eventType": "group",
+									"disabled": true,
+									"title": "Guardar Cambios JSON",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 614308484804610,
+													"parameters": {
+														"object": "PanelGuardarToolbar"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 669049607934903,
+											"disabled": true,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 506218401149892,
+															"parameters": {
+																"object": "ObjetosMesas"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 665787980500827,
+													"disabled": true
+												}
+											]
+										}
+									],
+									"sid": 347463495449893
+								}
+							],
+							"sid": 689577235339301
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Show Active Objects",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "ObjetosMesas",
+											"sid": 251962525049531,
+											"parameters": {
+												"object": "btnMesasZonas"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "ObjetosMesas",
+											"sid": 157173537202303,
+											"parameters": {
+												"instance-variable": "AreaVarObject",
+												"value": "btnMesasZonas.areaZonas"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 968420021121098,
+											"parameters": {
+												"variable": "ActiveAreaMesas",
+												"value": "btnMesasZonas.areaZonas"
+											}
+										},
+										{
+											"callFunction": "ShowActiveObjects",
+											"sid": 450344723458919
+										}
+									],
+									"sid": 863310332608634
+								},
+								{
+									"functionName": "ShowActiveObjects",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [],
+									"sid": 321930921646227,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "ObjetosMesas",
+													"sid": 200044678629102,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"comparison": 1,
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "ObjetosMesas",
+													"sid": 601964194916242,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 479338878979205
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "ObjetosMesas",
+													"sid": 808022616602626,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"comparison": 0,
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "ObjetosMesas",
+													"sid": 302993728613356,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 345403775672097
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Decoracion",
+													"sid": 675219156588814,
+													"parameters": {
+														"instance-variable": "ActiveAreasDeco",
+														"comparison": 0,
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Decoracion",
+													"sid": 730486894041836,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 359403804598655
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Decoracion",
+													"sid": 268010078696828,
+													"parameters": {
+														"instance-variable": "ActiveAreasDeco",
+														"comparison": 1,
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Decoracion",
+													"sid": 840014757777479,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												}
+											],
+											"sid": 651334436026024
+										}
+									]
+								}
+							],
+							"sid": 163990065246117
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Condición de Drag and Drop",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-hold-over-object",
+											"objectClass": "Touch",
+											"sid": 718547288628173,
+											"parameters": {
+												"object": "ObjetosMesas"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "ObjetosMesas",
+											"sid": 203378179477162,
+											"behaviorType": "DragDrop",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 630595503095744,
+									"disabled": true
+								},
+								{
+									"functionName": "DragAndDropActive",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [],
+									"sid": 231143830436953,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-visible",
+													"objectClass": "ObjetosMesas",
+													"sid": 121282523331856,
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-enabled",
+													"objectClass": "ObjetosMesas",
+													"sid": 859583696068221,
+													"behaviorType": "DragDrop",
+													"parameters": {
+														"state": "disabled"
+													}
+												}
+											],
+											"sid": 892292206217608,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-visible",
+													"objectClass": "ObjetosMesas",
+													"sid": 463433680486803
+												}
+											],
+											"actions": [
+												{
+													"id": "set-enabled",
+													"objectClass": "ObjetosMesas",
+													"sid": 897865971268573,
+													"behaviorType": "DragDrop",
+													"parameters": {
+														"state": "disabled"
+													}
+												}
+											],
+											"sid": 239224063443797,
+											"disabled": true
+										}
+									]
+								}
+							],
+							"sid": 343858835465040
+						}
+					],
+					"sid": 316125968620787
+				},
+				{
+					"eventType": "group",
+					"disabled": true,
+					"title": "Toolbar Descartado Temporalmente",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": true,
+							"title": "Spawn Objetos",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tap-object",
+											"objectClass": "Touch",
+											"sid": 701084359473858,
+											"parameters": {
+												"object": "ITBth"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 367953678121554,
+											"parameters": {
+												"variable": "IsToolBarOn",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 379565301904111,
+											"parameters": {
+												"object-to-create": "Booth",
+												"layer": "1",
+												"x": "2000",
+												"y": "1131",
+												"create-hierarchy": false,
+												"template-name": "\"Booth\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Booth",
+											"sid": 214700742815887,
+											"parameters": {
+												"instance-variable": "AreaVarObject",
+												"value": "ActiveAreaMesas"
+											}
+										}
+									],
+									"sid": 395708641665027,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tap-object",
+											"objectClass": "Touch",
+											"sid": 246794606795430,
+											"parameters": {
+												"object": "ITB"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 463633501931805,
+											"parameters": {
+												"variable": "IsToolBarOn",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 629124930468896,
+											"parameters": {
+												"object-to-create": "Barra",
+												"layer": "1",
+												"x": "2000",
+												"y": "1131",
+												"create-hierarchy": false,
+												"template-name": "\"Mesa\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Barra",
+											"sid": 179535893410494,
+											"parameters": {
+												"instance-variable": "AreaVarObject",
+												"value": "ActiveAreaMesas"
+											}
+										}
+									],
+									"sid": 616211332066178,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tap-object",
+											"objectClass": "Touch",
+											"sid": 802035633761556,
+											"parameters": {
+												"object": "ITB2"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 518815318489724,
+											"parameters": {
+												"variable": "IsToolBarOn",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 751164110362496,
+											"parameters": {
+												"object-to-create": "Barra2",
+												"layer": "1",
+												"x": "2000",
+												"y": "1131",
+												"create-hierarchy": false,
+												"template-name": "\"Mesa\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Barra2",
+											"sid": 629855920948620,
+											"parameters": {
+												"instance-variable": "AreaVarObject",
+												"value": "ActiveAreaMesas"
+											}
+										}
+									],
+									"sid": 458508640662041,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tap-object",
+											"objectClass": "Touch",
+											"sid": 930213915286513,
+											"parameters": {
+												"object": "ITMOV"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 855031639237614,
+											"parameters": {
+												"variable": "IsToolBarOn",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 348816975245702,
+											"parameters": {
+												"object-to-create": "MuroV",
+												"layer": "1",
+												"x": "2000",
+												"y": "1131",
+												"create-hierarchy": false,
+												"template-name": "\"Mesa\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "MuroV",
+											"sid": 706138303609374,
+											"parameters": {
+												"instance-variable": "ActiveAreasDeco",
+												"value": "ActiveAreaMesas"
+											}
+										}
+									],
+									"sid": 378317990290294,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tap-object",
+											"objectClass": "Touch",
+											"sid": 665612746922240,
+											"parameters": {
+												"object": "ITMOH"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 960096943126815,
+											"parameters": {
+												"variable": "IsToolBarOn",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 157988974322539,
+											"parameters": {
+												"object-to-create": "MuroH",
+												"layer": "1",
+												"x": "2000",
+												"y": "1131",
+												"create-hierarchy": false,
+												"template-name": "\"Mesa\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "MuroH",
+											"sid": 705693579877579,
+											"parameters": {
+												"instance-variable": "ActiveAreasDeco",
+												"value": "ActiveAreaMesas"
+											}
+										}
+									],
+									"sid": 850826452460402,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-tap-object",
+											"objectClass": "Touch",
+											"sid": 691922813045901,
+											"parameters": {
+												"object": "ITP"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 190621524365354,
+											"parameters": {
+												"variable": "IsToolBarOn",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 897914125648584,
+											"parameters": {
+												"object-to-create": "Planta",
+												"layer": "1",
+												"x": "2000",
+												"y": "1131",
+												"create-hierarchy": false,
+												"template-name": "\"Mesa\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Planta",
+											"sid": 532111919286085,
+											"parameters": {
+												"instance-variable": "ActiveAreasDeco",
+												"value": "ActiveAreaMesas"
+											}
+										}
+									],
+									"sid": 686127840059062,
+									"disabled": true
+								},
+								{
+									"eventType": "group",
+									"disabled": true,
+									"title": "Mesas Cudradas",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 141370754392540,
+													"parameters": {
+														"object": "ITM2"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 885959671659014,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 917104185728037,
+													"parameters": {
+														"object-to-create": "Mesa2C",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa2C",
+													"sid": 592929633621796,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 242822198557431,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 821753347359062,
+													"parameters": {
+														"object": "ITM4"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 320861196764789,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 836523925746585,
+													"parameters": {
+														"object-to-create": "Mesa4C",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa4C",
+													"sid": 604658196276964,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 647676165244418,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 975567548027400,
+													"parameters": {
+														"object": "ITM6"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 689809667545053,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 947635514700617,
+													"parameters": {
+														"object-to-create": "Mesa6C",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa6C",
+													"sid": 951559371672563,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 173201740712979,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 782741081955049,
+													"parameters": {
+														"object": "ITM62"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 164936057886081,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 904050458201701,
+													"parameters": {
+														"object-to-create": "Mesa6C2",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa6C2",
+													"sid": 404470416246800,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 576057220280475,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 314987921192437,
+													"parameters": {
+														"object": "ITM8"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 389795284052796,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 777441976844171,
+													"parameters": {
+														"object-to-create": "Mesa8C",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa8C",
+													"sid": 329150105129345,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 335605916240449,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 492126286254475,
+													"parameters": {
+														"object": "ITM82"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 398720972170195,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 448978377849381,
+													"parameters": {
+														"object-to-create": "Mesa8C2",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa8C2",
+													"sid": 975873144510155,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 491695279665810,
+											"disabled": true
+										}
+									],
+									"sid": 949892384765974
+								},
+								{
+									"eventType": "group",
+									"disabled": true,
+									"title": "Mesas Redonda",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 994475720720682,
+													"parameters": {
+														"object": "ITMR2"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 885732037019613,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 913180884621709,
+													"parameters": {
+														"object-to-create": "Mesa2R",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa2R",
+													"sid": 984747440885785,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 275650389729720,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 265919319095482,
+													"parameters": {
+														"object": "ITMR4"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 903787401376699,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 488391498949771,
+													"parameters": {
+														"object-to-create": "Mesa4R",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa4R",
+													"sid": 932814467865739,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 723410510409381,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 334686102031176,
+													"parameters": {
+														"object": "ITMR6"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 679497398896860,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 417508195510420,
+													"parameters": {
+														"object-to-create": "Mesa6R",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa6R",
+													"sid": 156643102849438,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 710374854048138,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 699730632489137,
+													"parameters": {
+														"object": "ITMR5"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 225054099986258,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 163333582530261,
+													"parameters": {
+														"object-to-create": "Mesa5R",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa5R",
+													"sid": 583659236931070,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 713227273083464,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 752209700978697,
+													"parameters": {
+														"object": "ITMR8"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 887200750864270,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 765735386029939,
+													"parameters": {
+														"object-to-create": "Mesa8R",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa8R",
+													"sid": 690633464968744,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 164986347069596,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-tap-object",
+													"objectClass": "Touch",
+													"sid": 188102309826133,
+													"parameters": {
+														"object": "ITMR10"
+													}
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 739819637493989,
+													"parameters": {
+														"variable": "IsToolBarOn",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 602479212729733,
+													"parameters": {
+														"object-to-create": "Mesa10R",
+														"layer": "1",
+														"x": "2000",
+														"y": "1131",
+														"create-hierarchy": false,
+														"template-name": "\"Mesa\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Mesa10R",
+													"sid": 670493517801247,
+													"parameters": {
+														"instance-variable": "AreaVarObject",
+														"value": "ActiveAreaMesas"
+													}
+												}
+											],
+											"sid": 810126223286473,
+											"disabled": true
+										}
+									],
+									"sid": 275761200452979
+								}
+							],
+							"sid": 136792575495649
+						}
+					],
+					"sid": 760061387991780
+				}
+			],
+			"sid": 759755871935945
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "GoVentaTemporal",
+					"sid": 519173095970091
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 151671237531673,
+					"parameters": {
+						"layout": "MesaAbiertaLayout"
+					}
+				}
+			],
+			"sid": 611309721583624
+		}
+	],
+	"sid": 802235121120991
+}

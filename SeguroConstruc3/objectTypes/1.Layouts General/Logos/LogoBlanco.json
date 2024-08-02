@@ -1,0 +1,52 @@
+{
+	"name": "LogoBlanco",
+	"plugin-id": "Sprite",
+	"sid": 359101174957587,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 956,
+						"height": 236,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7547062,
+						"collisionPoly": {
+							"points": [
+								0.08368200836820083,
+								0.07627118644067797,
+								0.9905857740585774,
+								0.15677966101694915,
+								0.9016736401673641,
+								0.9279661016949152,
+								0.39330543933054396,
+								0.9364406779661016,
+								0.013598326359832637,
+								0.9194915254237288
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 533692279804351,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

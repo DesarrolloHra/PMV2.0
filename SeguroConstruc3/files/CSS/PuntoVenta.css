@@ -1,0 +1,367 @@
+/* Tabla de cobrar */
+.cobrar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cobrar-header-cell {
+    padding: 1rem; /* Ajusta el padding de celdas */
+    text-align: left;
+    color: red; /* Color de la fuente en rojo */
+    font-size: 0.8rem; /* Tamaño de fuente para los títulos */
+}
+
+.cobrar-body-cell {
+    padding: 0.8rem; /* Ajusta el padding de celdas */
+    text-align: left;
+    color: black; /* Color de la fuente en negro */
+}
+
+.cobrar-table thead {
+    border-bottom: 2px solid red; /* Línea que divide thead y tbody en rojo */
+}
+
+@media (max-width: 600px) {
+    .cobrar-header-cell, .cobrar-body-cell {
+        padding: 0.5rem; /* Reduce el padding en pantallas más pequeñas */
+        font-size: 0.7rem; /* Reducir el tamaño de la fuente */
+    }
+}
+
+/* MenuComida */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina el margen predeterminado del body */
+}
+
+.menuComida-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+.menuComida-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0; /* Reduce el margen superior e inferior */
+    flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.menuComida-filter-container h2 {
+    margin-right: 0.25rem; /* Reducir el margen derecho */
+    font-size: 1.5rem; /* Reducir el tamaño de la fuente */
+}
+
+.menuComida-filter-buttons {
+    display: flex;
+    gap: 0.25rem; /* Reduce el espacio entre los botones */
+    flex-wrap: wrap; /* Asegura que los botones se envuelvan en pantallas pequeñas */
+}
+
+.menuComida-filter-buttons button {
+padding: 0.3rem 1rem;
+    border-radius: 1.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #A2A2A2;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.menuComida-filter-buttons button.active {
+    background-color: red;
+    color: white;
+}
+
+#menuComida-buscar-input {
+    font-size:1rem;
+     padding: .6rem 0.4em;
+    border-radius: 1.5rem;
+    border: 1px solid gray;
+    margin-left: 0.5rem; /* Reduce el margen izquierdo */
+}
+
+.menuComida-divider {
+    height: 0.0625rem; /* Reduce la altura del separador */
+    width: 100%;
+    background-color: gray;
+    margin: 0.5rem 0; /* Reduce el margen superior e inferior */
+}
+
+.menuComida-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinear elementos al inicio */
+    gap: 0.75rem; /* Reduce el espacio entre las secciones */
+    width: 100%; /* Asegurar que las secciones ocupen todo el ancho */
+}
+
+.menuComida-section {
+    flex: 1 1 calc(20% - 0.75rem); /* Reduce el tamaño de las secciones */
+    max-width: calc(20% - 0.75rem);
+    aspect-ratio: 1; /* Asegura una proporción cuadrada */
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+    font-size: 01rem; /* Aumentar el tamaño de la fuente */
+    border-radius: 1rem;
+}
+
+.menuComida-section.gray {
+    background-color: gray;
+}
+
+.menuComida-content {
+    margin-top: 0.1rem; /* Reduce el margen superior */
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .menuComida-section {
+        flex: 1 1 calc(25% - 0.75rem);
+        max-width: calc(25% - 0.75rem);
+    }
+}
+
+@media (max-width: 800px) {
+    .menuComida-section {
+        flex: 1 1 calc(33.33% - 0.75rem);
+        max-width: calc(33.33% - 0.75rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .menuComida-section {
+        flex: 1 1 calc(50% - 0.75rem);
+        max-width: calc(50% - 0.75rem);
+    }
+}
+
+/* EntradaSa */
+
+        .EnSaDi-menu {
+            flex-direction: column;
+            align-items: center;
+            min-height: 100%; /* Ajuste para hacerlo responsive */
+            padding: 2rem 1rem;
+            background-color: transparent;
+        }
+
+        .EnSaDi-section {
+            max-width: 100%;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            box-sizing: border-box;
+        }
+
+        .EnSaDi-label {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            width: 100%;
+        }
+
+        .EnSaDi-input {
+            width: 100%;
+            padding: 0.7rem;
+            border: 0.005rem solid #899298;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            box-sizing: border-box;
+            background-color: transparent;
+        }
+
+        .EnSaDi-radio-group {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .EnSaDi-radio-group label {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .EnSaDi-input-radio {
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 0.005rem solid #899298;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            margin-right: 0.5rem;
+        }
+
+        .EnSaDi-input-radio:checked::before {
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .EnSaDi-input-container {
+            display: flex;
+            align-items: center;
+            border: 0.005rem solid #899298;
+            border-radius: 50px;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            background-color: transparent;
+
+        }
+
+        .EnSaDi-input-container input {
+            flex: 1;
+            border: none;
+            text-align: center;
+            font-size: 0.9rem;
+            background-color: transparent;
+
+        }
+
+        .EnSaDi-input-container button {
+            width: 40px;
+            height: 100%;
+            color: red;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        select.EnSaDi-input {
+            border-color: #899298;
+            border-radius: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            appearance: none;
+            background: transparent;
+            padding-right: 2rem;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .EnSaDi-warning {
+            color: red;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+        }
+
+        .EnSaDi-submit-button-container {
+            display: flex;
+            justify-content: center; /* Alinea el botón al centro horizontalmente */
+            width: 100%;
+        }
+
+        .EnSaDi-submit-button {
+            width: 50%;
+            padding: 0.7rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(180deg, #D9606D 0%, #B70114 100%);
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+/*------------------ Propinas por Mesero ------------------------*/
+
+         .ppm-container {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .ppm-date-inputs {
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem; /* 40px */
+            align-items: center;
+            width: 100%;
+        }
+        .ppm-date-inputs label {
+            font-weight: bold;
+            color: red;
+            font-size: 1rem; /* 24px */
+            width: 100%;
+        }
+        .ppm-date-inputs input {
+            border: 1px solid #ccc;
+            border-radius: 1.25rem; /* 20px */
+            padding: 0.625rem; /* 10px */
+            font-size: 1.125rem; /* 18px */
+            width: calc(100% - 2.5rem); /* 100% - gap */
+        }
+        .ppm-info {
+            margin: 1.25rem 0; /* 20px 0 */
+            font-size: 1rem; /* 16px */
+            width: 100%;
+        }
+        .ppm-info-section {
+            border-radius: 0.625rem; /* 10px */
+            width: 100%;
+            max-height: 29rem; /* 464px */
+            overflow-y: auto;
+        }
+        /* Hide scrollbar for Webkit browsers */
+        .ppm-info-section::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .ppm-info-section {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .ppm-divider {
+            border-top: 0.125rem solid yellow; /* 2px */
+            margin: 1.25rem 0; /* 20px */
+        }
+        .ppm-info-content {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.25rem; /* 20px */
+            width: 100%;
+        }
+        .ppm-info-content div {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .ppm-info-content div p {
+            margin: 0.3125rem 0; /* 5px */
+            width: 50%;
+            text-align: right;
+        }
+        .ppm-info-content div p:first-child {
+            text-align: left;
+        }
+        .ppm-info-content p strong {
+            font-weight: bold;
+        }

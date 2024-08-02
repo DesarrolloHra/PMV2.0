@@ -1,0 +1,787 @@
+{
+	"name": "Cobrar2Layout",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 571456941484467,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "1",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BackGBlack",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 540000,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1911,
+						"y": 1080,
+						"width": 4003,
+						"height": 2160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelRojo",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 538737,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 207,
+						"y": 431,
+						"width": 311,
+						"height": 302,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LogoBlanco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 185236,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 595,
+						"y": 114,
+						"width": 497.42811644470737,
+						"height": 99.41530908049259,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "REGRESAR",
+					"properties": {
+						"text": "REGRESAR",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 1,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 986011,
+					"instanceVariables": {
+						"textRegresar": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 55,
+						"y": 476,
+						"width": 304.29824624945525,
+						"height": 92.32349704170365,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelGris",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 499808,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2115,
+						"y": 427,
+						"width": 666,
+						"height": 344,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelAmarillo1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 494168,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1071,
+						"y": 427,
+						"width": 1250,
+						"height": 344,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BoxModalBlancoGrande",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 234217,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1889,
+						"y": 1380,
+						"width": 3645,
+						"height": 1462,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanelContornoVerde",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 871675,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3122,
+						"y": 427,
+						"width": 1160,
+						"height": 344,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CobrarLayout2",
+					"properties": {
+						"tag": "div",
+						"content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Payment Form</title>\n    <style>\n        #paymentForm {\n            background-color: none;\n            padding: 20px;\n            border-radius: 10px;\n            width: 100%;\n            box-sizing: border-box;\n            display: flex;\n            flex-wrap: wrap;\n            gap: 10px;\n            justify-content: center;\n        }\n        .form-group {\n            margin-bottom: 20px;\n            display: flex;\n            flex-direction: column;\n            width: 100%;\n        }\n        label {\n            margin-bottom: 10px;\n            width: 100%;\n            box-sizing: border-box;\n            font-size: 16px;\n            font-weight: bold;\n        }\n        label span {\n            color: red;\n        }\n        input[type=\"number\"],\n        select {\n            padding: 10px;\n            margin: 0;\n            border: 1px solid #ccc;\n            border-radius: 50px;\n            font-size: 14px;\n        }\n        input[type=\"number\"].small-input {\n            width: 60px;\n            font-size: 14px;\n        }\n        input[type=\"number\"]:disabled {\n            background-color: #f2f2f2;\n        }\n        button {\n            width: 100%;\n            padding: 15px;\n            border: none;\n            border-radius: 50px;\n            background-color: #e50914;\n            color: white;\n            font-size: 16px;\n            cursor: pointer;\n        }\n        .number-input {\n            border: 1px solid #ccc;\n            border-radius: 50px;\n            display: inline-block;\n            position: relative;\n            height: 40px;\n            width: 140px; /* Adjust width to accommodate buttons */\n        }\n        .number-input button {\n            background-color: transparent;\n            border: none;\n            width: 30px;\n            height: 40px;\n            line-height: 40px;\n            text-align: center;\n            cursor: pointer;\n            font-size: 20px;\n            color: #e50914;\n            position: absolute;\n            top: 0;\n        }\n        .number-input button#minus {\n            left: 0;\n        }\n        .number-input button#plus {\n            right: 0;\n        }\n        .number-input input {\n            text-align: center;\n            border: none;\n            width: 60px; /* Adjust width for input */\n            height: 40px;\n            font-size: 14px;\n            padding: 0;\n            position: absolute;\n            top: 0;\n            left: 50%;\n            transform: translateX(-50%);\n        }\n        .col-4 {\n            flex: 1;\n            min-width: 220px;\n        }\n        .col-2 {\n            flex: 1;\n            min-width: 140px;\n        }\n        .full-width {\n            width: 100%;\n        }\n\n        @media (max-width: 600px) {\n            #paymentForm {\n                flex-direction: column;\n            }\n            .col-4, .col-2 {\n                width: 100%;\n            }\n        }\n    </style>\n</head>\n<body>\n    <form id=\"paymentForm\">\n        <div class=\"col-4\">\n            <div class=\"form-group\">\n                <label for=\"numComensales\">Confirmar Número de Comensales<span>*</span></label>\n                <div class=\"number-input\">\n                    <button type=\"button\" onclick=\"adjustComensales(-1)\" id=\"minus\">-</button>\n                    <input type=\"number\" id=\"numComensales\" name=\"numComensales\" class=\"small-input\" value=\"1\" min=\"1\" readonly>\n                    <button type=\"button\" onclick=\"adjustComensales(1)\" id=\"plus\">+</button>\n                </div>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"tipMethod\">Forma de Propina<span>*</span></label>\n                <select id=\"tipMethod\" name=\"tipMethod\">\n                    <option value=\"manual\">Manual</option>\n                </select>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"tipAmount\">Propina<span>*</span></label>\n                <input type=\"number\" id=\"tipAmount\" name=\"tipAmount\" value=\"0\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"tipPaymentMethod\">Método de Pago de Propina<span>*</span></label>\n                <select id=\"tipPaymentMethod\" name=\"tipPaymentMethod\">\n                    <option value=\"efectivo\">Efectivo</option>\n                </select>\n            </div>\n        </div>\n\n        <div class=\"col-4\">\n            <div class=\"form-group\">\n                <label for=\"paymentMethod\">Forma de Pago<span>*</span></label>\n                <select id=\"paymentMethod\" name=\"paymentMethod\" onchange=\"updatePaymentFields()\">\n                    <option value=\"mixto\">Mixto</option>\n                    <option value=\"tarjeta\">Tarjeta</option>\n                    <option value=\"efectivo\">Efectivo</option>\n                </select>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"cashAmount\">Efectivo<span>*</span></label>\n                <input type=\"number\" id=\"cashAmount\" name=\"cashAmount\" value=\"0\" disabled>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"cardAmount\">Tarjeta<span>*</span></label>\n                <input type=\"number\" id=\"cardAmount\" name=\"cardAmount\" value=\"0\" disabled>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"tipCardAmount\">Propina Pagada con Tarjeta<span>*</span></label>\n                <input type=\"number\" id=\"tipCardAmount\" name=\"tipCardAmount\" value=\"0\">\n            </div>\n        </div>\n\n        <div class=\"col-2\">\n            <div class=\"form-group\">\n                <label for=\"registeredCard\">Tarjeta Registrada<span>*</span></label>\n                <select id=\"registeredCard\" name=\"registeredCard\">\n                    <option value=\"clip\">CLIP</option>\n                </select>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"changeAmount\">Cambio</label>\n                <input type=\"number\" id=\"changeAmount\" name=\"changeAmount\" value=\"0\" readonly>\n            </div>\n        </div>\n\n        <div class=\"full-width\">\n            <button type=\"button\" onclick=\"showChange()\">Continuar</button>\n        </div>\n    </form>\n\n    <script>\n        function adjustComensales(amount) {\n            const numComensales = document.getElementById('numComensales');\n            let value = parseInt(numComensales.value) + amount;\n            if (value < 1) value = 1;\n            numComensales.value = value;\n        }\n\n        function updatePaymentFields() {\n            const paymentMethod = document.getElementById('paymentMethod').value;\n            const cashAmount = document.getElementById('cashAmount');\n            const cardAmount = document.getElementById('cardAmount');\n            \n            if (paymentMethod === 'mixto') {\n                cashAmount.disabled = false;\n                cardAmount.disabled = false;\n            } else if (paymentMethod === 'tarjeta') {\n                cashAmount.disabled = true;\n                cardAmount.disabled = false;\n                cashAmount.value = 0;\n            } else if (paymentMethod === 'efectivo') {\n                cashAmount.disabled = false;\n                cardAmount.disabled = true;\n                cardAmount.value = 0;\n            }\n        }\n\n        function calculateChange() {\n            const paymentMethod = document.getElementById('paymentMethod').value;\n            const cashAmount = parseFloat(document.getElementById('cashAmount').value) || 0;\n            const cardAmount = parseFloat(document.getElementById('cardAmount').value) || 0;\n            const totalAmount = 100; // Example total amount\n            let change = 0;\n\n            if (paymentMethod === 'efectivo' && cashAmount > totalAmount) {\n                change = cashAmount - totalAmount;\n            } else if (paymentMethod === 'mixto' && (cashAmount + cardAmount) > totalAmount) {\n                change = (cashAmount + cardAmount) - totalAmount;\n            }\n\n            document.getElementById('changeAmount').value = change;\n        }\n\n        function showChange() {\n            calculateChange();\n            const change = document.getElementById('changeAmount').value;\n            alert(\"Cambio: $\" + change);\n        }\n    </script>\n</body>\n</html>\n",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 272484,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 77,
+						"y": 647,
+						"width": 3607,
+						"height": 1450,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "FolioTicket",
+					"properties": {
+						"text": "Folio Ticket:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 483942,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1893,
+						"y": 284,
+						"width": 506.7957687466542,
+						"height": 72.65254027487,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mesero",
+					"properties": {
+						"text": "Mesero:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 185081,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1832,
+						"y": 399,
+						"width": 506.7957687466542,
+						"height": 72.65254027487,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mesa",
+					"properties": {
+						"text": "Mesa:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 105274,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1832,
+						"y": 458,
+						"width": 251,
+						"height": 72,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HoraApertura",
+					"properties": {
+						"text": "Hora de apertura:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 873793,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1832,
+						"y": 344,
+						"width": 381,
+						"height": 54,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Comensales",
+					"properties": {
+						"text": "Comensales: ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 241686,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1832,
+						"y": 513,
+						"width": 271,
+						"height": 72,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "mesa1",
+					"properties": {
+						"text": "Mesa: ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 71,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 445886,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 510,
+						"y": 447,
+						"width": 357,
+						"height": 106,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Comanda",
+					"properties": {
+						"text": "COMANDA ",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 46,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 974911,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 505,
+						"y": 360,
+						"width": 432,
+						"height": 86,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FolioAnterior",
+					"properties": {
+						"text": "Folio anterior: 00729",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.41568627450980394,
+							0.4196078431372549,
+							0.4196078431372549,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 155632,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1145,
+						"y": 84,
+						"width": 450,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "VentasDias",
+					"properties": {
+						"text": "Ventas al día: 5",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.41568627450980394,
+							0.4196078431372549,
+							0.4196078431372549,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 211057,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1801,
+						"y": 84,
+						"width": 368,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 795627717707749,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 457384716555525,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 7680,
+	"height": 4320,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "Cobrar2EventSheet"
+}

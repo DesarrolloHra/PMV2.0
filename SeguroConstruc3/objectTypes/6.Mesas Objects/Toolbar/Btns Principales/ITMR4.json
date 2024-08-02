@@ -1,0 +1,58 @@
+{
+	"name": "ITMR4",
+	"plugin-id": "Sprite",
+	"sid": 718639240582990,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 504,
+						"height": 504,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8326413,
+						"collisionPoly": {
+							"points": [
+								0.1388888888888889,
+								0,
+								0.9623015873015873,
+								0.05357142857142857,
+								0.998015873015873,
+								0.13293650793650794,
+								0.9761904761904762,
+								0.9265873015873016,
+								0.9384920634920635,
+								0.9682539682539683,
+								0.8690476190476191,
+								0.998015873015873,
+								0.01984126984126984,
+								0.9226190476190477,
+								0,
+								0.8630952380952381
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 195231639657907,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

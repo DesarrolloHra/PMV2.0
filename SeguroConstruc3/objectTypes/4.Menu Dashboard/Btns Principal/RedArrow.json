@@ -1,0 +1,60 @@
+{
+	"name": "RedArrow",
+	"plugin-id": "Sprite",
+	"sid": 293951357292082,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BtnArrow",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 108181179593366
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 86,
+						"height": 142,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1093005,
+						"collisionPoly": {
+							"points": [
+								0.12790697674418605,
+								0.014084507042253521,
+								0.3023255813953488,
+								0.035211267605633804,
+								0.9418604651162791,
+								0.5774647887323944,
+								0.2441860465116279,
+								0.9859154929577465,
+								0.011627906976744186,
+								0.8943661971830986
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 539929390922174,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

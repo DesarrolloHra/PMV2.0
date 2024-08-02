@@ -1,0 +1,14 @@
+{
+	"name": "iconoPropinapdv",
+	"plugin-id": "SVGPicture",
+	"sid": 204328701918183,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

@@ -1,0 +1,1687 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 39700,
+	"name": "HraRedisenoPMVMerge",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "HTMLElement",
+			"name": "HTML Element",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "List",
+			"name": "List",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "SVGPicture",
+			"name": "SVG Picture",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "hsladjust",
+			"name": "Adjust HSL",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "hsladjustmask",
+			"name": "Adjust HSL mask",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "a3a3gf4xg6f",
+	"objectTypes": {
+		"items": [
+			"Touch",
+			"Mouse",
+			"JSON",
+			"AJAX",
+			"Keyboard",
+			"Browser",
+			"BotonTemporalComandas",
+			"Menu",
+			"BarraLateral",
+			"PanelRojo1",
+			"iconoshra5",
+			"Iconotienda",
+			"Texto",
+			"Sprite3",
+			"Sprite2",
+			"ResultadoPPM",
+			"PanelRojoHorizontal",
+			"iconoshra4",
+			"BoxModalBlancoGrande",
+			"iconospdv",
+			"FiltroFechaPPM",
+			"FiltrosRecetasHtml",
+			"BuscarRecetasHTML",
+			"EditRecetaHTML",
+			"EditPrecioHTML",
+			"Sprite4",
+			"Sprite5",
+			"Botón",
+			"IngredientesRecetaHTML",
+			"NombreRecetaHTML",
+			"PrecioCartaHTML",
+			"PrecioHTML",
+			"ElementoHTML",
+			"CloseActualizaReceta",
+			"ElementoHTML2",
+			"Botón2",
+			"BtnComandasLis",
+			"BtnComandasMes",
+			"FiltrosComandas",
+			"BuscarProduccion",
+			"BuscarBtnProduccion",
+			"MovimientosProduccion",
+			"ProduccionPendiente",
+			"ProduccionPendienteModal",
+			"CloseModalProduccion",
+			"HTMLElement",
+			"Sprite6",
+			"Text",
+			"Text3",
+			"InventarioAjusteText",
+			"AlmacenamientoAjusteText",
+			"ComprasAjustesText",
+			"PuntoVentaajustesText",
+			"ComandasAjustesText",
+			"Text9",
+			"GoVentaTemporal",
+			"enviarComandaContenedor",
+			"menuLateralMa",
+			"TICKETPRINCIPAL",
+			"modalMaestroContenedor",
+			"Sprite7",
+			"ClsoeModalMaestroMA",
+			"Sprite8",
+			"BtnSelectAjustes",
+			"Text4",
+			"Text5",
+			"HTMLElement2",
+			"AjustesPuntoVentaHTML",
+			"PVText",
+			"AjustesComandas",
+			"AjustesComandasHTML",
+			"PromocionesAjustes",
+			"AjustesComprasText",
+			"PromocionesTitleAjustes",
+			"AjustesPromocionesHTML",
+			"CreaRecetaHTML"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"LogoStart",
+					"Fade"
+				],
+				"subfolders": [],
+				"name": "2.Start Objects"
+			},
+			{
+				"items": [
+					"PinInput1",
+					"PinInput2",
+					"PinInput3",
+					"PinInput4",
+					"BlackLogoHra",
+					"BtnRed",
+					"TitlePin"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"TextPinIncorrecto",
+							"CloseModal"
+						],
+						"subfolders": [],
+						"name": "Modal Pin Incorrecto"
+					}
+				],
+				"name": "5.Pin Objects"
+			},
+			{
+				"items": [
+					"REGRESAR",
+					"RegresarBtn",
+					"AllMesas",
+					"ArrowUpMesas"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"ToolbarRedText",
+							"PanelAmarilloToolbar",
+							"PanelBlancoToolbar"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"Barra",
+									"Booth",
+									"Mesa10R",
+									"Mesa2C",
+									"Mesa2R",
+									"Mesa4C",
+									"Mesa4R",
+									"Mesa5R",
+									"Mesa6C",
+									"Mesa6R",
+									"Mesa8C",
+									"Mesa8R",
+									"MuroH",
+									"MuroV",
+									"Planta",
+									"Mesa6C2",
+									"Mesa8C2",
+									"Barra2"
+								],
+								"subfolders": [],
+								"name": "Objetos ToolBar"
+							},
+							{
+								"items": [
+									"AumentarTamanao",
+									"DisminuirTamano",
+									"GirarDerecha",
+									"GirarIzquierda",
+									"BorrarToolbar"
+								],
+								"subfolders": [],
+								"name": "Manejadores"
+							},
+							{
+								"items": [
+									"ITBth",
+									"ITM2",
+									"ITM8",
+									"ITMOV",
+									"ITMOH",
+									"ITB",
+									"ITM4",
+									"ITM6",
+									"ITM62",
+									"ITM82",
+									"ITMR10",
+									"ITMR2",
+									"ITMR4",
+									"ITMR5",
+									"ITMR6",
+									"ITMR8",
+									"ITP",
+									"ITB2"
+								],
+								"subfolders": [],
+								"name": "Btns Principales"
+							},
+							{
+								"items": [
+									"CerrarIcon",
+									"CerrarToolbar",
+									"GuardarIcon",
+									"PanelGuardarToolbar",
+									"CerrarGuardarTxt"
+								],
+								"subfolders": [],
+								"name": "Cerrar y Guardar"
+							}
+						],
+						"name": "Toolbar"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"AbrirMesaTitulo",
+									"CloseAbrirMesa",
+									"ConfirmarAbrirMesa",
+									"ComensalesNum",
+									"InputAbrirMesa"
+								],
+								"subfolders": [],
+								"name": "Modal Abrir Mesa"
+							},
+							{
+								"items": [
+									"MesaPrincipalTextModal",
+									"JuntarMesasTitulo"
+								],
+								"subfolders": [
+									{
+										"items": [
+											"BackJuntarMesas",
+											"CloseSubJuntarMesas",
+											"ConfirmarNombreMesas",
+											"TextInput"
+										],
+										"subfolders": [],
+										"name": "Sub Modal Juntar Mesas"
+									},
+									{
+										"items": [
+											"CloseJuntarMesas1",
+											"JuntarMBtnConf",
+											"MesaJuntarModal",
+											"MesaPrincipalModal"
+										],
+										"subfolders": [],
+										"name": "Modal Principal Juntar Mesas"
+									}
+								],
+								"name": "Modal Juntar Mesas"
+							},
+							{
+								"items": [
+									"CambiarMesaTitle",
+									"CloseCambiarMesas",
+									"ConfirmarCambiarMesas",
+									"SelctAreaActual",
+									"SelectMesaActual",
+									"SelectNuevaArea",
+									"SelectNuevaMesa",
+									"SubtitleCambiarMesas"
+								],
+								"subfolders": [],
+								"name": "Modal Cambiar Mesas"
+							},
+							{
+								"items": [
+									"CloseReimprimir",
+									"FolioReimprimirT",
+									"ReimprimirConfirmar",
+									"ReimprimirTicketSubT",
+									"ReimprimirTicketTitle",
+									"TipoImpreReimprimir"
+								],
+								"subfolders": [],
+								"name": "Modal Reimprimir Ticket"
+							}
+						],
+						"name": "Modales"
+					},
+					{
+						"items": [
+							"CambiarMesasBtn",
+							"EditMesas",
+							"JuntarMesasBtn",
+							"ListAreas",
+							"MesasTitle",
+							"PanelMesas",
+							"ReimprimirTicketBtn"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"AreaBg",
+									"AreaTxt"
+								],
+								"subfolders": [],
+								"name": "Btn Area Lateral"
+							}
+						],
+						"name": "Vista Principal"
+					},
+					{
+						"items": [
+							"btnMesasZonas",
+							"TextoMesasZona"
+						],
+						"subfolders": [],
+						"name": "Areas Nav"
+					}
+				],
+				"name": "6.Mesas Objects"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"ActualizarCIcon",
+							"CuentasResumIcon",
+							"DescuentoIcon",
+							"DividirCuentaIcon",
+							"EnviarTicketIcon",
+							"ImprimirIcon",
+							"ImprimirText"
+						],
+						"subfolders": [],
+						"name": "Btns Side Bar"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"DivCuentaSubT",
+									"DividirCuentaTitle"
+								],
+								"subfolders": [
+									{
+										"items": [
+											"BackDivCuenta",
+											"CloseDivComensal",
+											"ListDividirComensal"
+										],
+										"subfolders": [],
+										"name": "Sub Modal Por Comensal"
+									},
+									{
+										"items": [
+											"BtnDividirComensal",
+											"BtnDividirGlobal",
+											"CloseDivCuenta"
+										],
+										"subfolders": [],
+										"name": "Modal Principal"
+									}
+								],
+								"name": "Modal Dividir Cuenta"
+							}
+						],
+						"name": "Modales Mesa Abierta"
+					},
+					{
+						"items": [
+							"ComandaTitulo",
+							"MesaNumeroHead",
+							"PanelAmarillo2"
+						],
+						"subfolders": [],
+						"name": "Header Amarillo"
+					},
+					{
+						"items": [
+							"EnviarComandaIcon",
+							"EnviarComdaBtn",
+							"PanelVerde"
+						],
+						"subfolders": [],
+						"name": "Btn Verde Enviar Comanda"
+					},
+					{
+						"items": [
+							"FamiliasTitulo"
+						],
+						"subfolders": [],
+						"name": "Menu"
+					},
+					{
+						"items": [
+							"FolioAnterior",
+							"Text2",
+							"VentasDias"
+						],
+						"subfolders": [],
+						"name": "Info Superior"
+					},
+					{
+						"items": [
+							"PanelRojoH",
+							"InfoMesaAbierta"
+						],
+						"subfolders": [],
+						"name": "Panel Info Rojo"
+					},
+					{
+						"items": [
+							"TicketBackG"
+						],
+						"subfolders": [],
+						"name": "Ticket"
+					}
+				],
+				"name": "7.Mesa Abierta Objects"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"BackGBlack",
+							"BackGModales2",
+							"BackGroungPin",
+							"BoxModal",
+							"PinBox",
+							"BoxModalVertical",
+							"PanelAmarillo",
+							"PanelBlancoH",
+							"PaneBlancoV"
+						],
+						"subfolders": [],
+						"name": "BackG y Box"
+					},
+					{
+						"items": [
+							"LogoBlanco"
+						],
+						"subfolders": [],
+						"name": "Logos"
+					},
+					{
+						"items": [
+							"Btn1",
+							"BtnAC",
+							"Btn0",
+							"BtnDel",
+							"Btn2",
+							"Btn3",
+							"Btn4",
+							"Btn5",
+							"Btn6",
+							"Btn7",
+							"Btn8",
+							"Btn9"
+						],
+						"subfolders": [],
+						"name": "Keypad"
+					},
+					{
+						"items": [
+							"IconoCerrarSesion",
+							"TextoCerrarSesion"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"PanelRojo",
+									"Sprite14"
+								],
+								"subfolders": [],
+								"name": "Btn Rojo Regresar"
+							},
+							{
+								"items": [
+									"MenuSupContainer",
+									"MenuSupText",
+									"Ajustes",
+									"MenuSVG",
+									"PuntoVentaSVG",
+									"MenuSupBtn",
+									"AjustesPV",
+									"AjustesIcon",
+									"AjustesIcon2",
+									"AjustesPV2"
+								],
+								"subfolders": [],
+								"name": "Btns Menu Superior"
+							}
+						],
+						"name": "Btns"
+					}
+				],
+				"name": "1.Layouts General"
+			},
+			{
+				"items": [
+					"IngresarInicioSesion",
+					"MailInputInicio",
+					"PasswordInicio"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"ContraIncorrecta",
+							"InicioSesionTitle",
+							"InicioSubTitle"
+						],
+						"subfolders": [],
+						"name": "Textos Inicio Sesion"
+					},
+					{
+						"items": [
+							"line",
+							"RecuperarContrasena"
+						],
+						"subfolders": [],
+						"name": "Recuperar ContraBtn"
+					}
+				],
+				"name": "3.Inicio Sesion Objects"
+			},
+			{
+				"items": [
+					"MenuSubtitle"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"FondoBtnPrincipal",
+							"RecetasIcon",
+							"FacturaIcon",
+							"ReportesIcon",
+							"ProduccionIcon",
+							"ProveedoresIcon",
+							"RequisicionesIcon",
+							"OrdenCompraIcon",
+							"ComprasIcon",
+							"InventarioIcon",
+							"InventarioFisicoIcon",
+							"AlmacenesIcon",
+							"AjustesAlmacenIcon",
+							"RedArrow",
+							"TextBtn",
+							"AjustesInventario",
+							"ajustesAlmacenes",
+							"AjustesCompra"
+						],
+						"subfolders": [],
+						"name": "Btns Principal"
+					}
+				],
+				"name": "4.Menu Dashboard"
+			},
+			{
+				"items": [
+					"ListRecetasCategoria",
+					"ListRecetasFamilia",
+					"ListRecetasTipo",
+					"RECETASTitle",
+					"SideMenuRecetas",
+					"TableRecetas",
+					"RecetasTXTFiltros"
+				],
+				"subfolders": [],
+				"name": "8.Recetas"
+			},
+			{
+				"items": [
+					"RegresarBtnLateral",
+					"TablaProduccion"
+				],
+				"subfolders": [],
+				"name": "9.Produccion"
+			},
+			{
+				"items": [
+					"COMANDAS",
+					"ComandasTablaPrincipal",
+					"TituloRojoComandas",
+					"BtnListaComandas",
+					"BtnMesasComandas",
+					"TextoBtnsComandas",
+					"LugarComandas",
+					"MesaComandas",
+					"TipoComandas",
+					"ComandasMesas"
+				],
+				"subfolders": [],
+				"name": "10.Comandas"
+			},
+			{
+				"items": [
+					"EnSaDiTitle",
+					"EnSaDiHTML",
+					"iconosVM2"
+				],
+				"subfolders": [],
+				"name": "14.Entrada y salida de dinero"
+			},
+			{
+				"items": [
+					"CorteZHTML",
+					"iconosVM3",
+					"CorteXTitle",
+					"CorteXHtml"
+				],
+				"subfolders": [],
+				"name": "14.CorteX"
+			},
+			{
+				"items": [
+					"CodigoBarrasIcono",
+					"VentaMostrador",
+					"VistaTicket",
+					"CodigoBarras",
+					"VentaMostradorFondo"
+				],
+				"subfolders": [],
+				"name": "13.Venta mostrador"
+			},
+			{
+				"items": [
+					"Sprite",
+					"PanelGris",
+					"MenuLatCobro",
+					"menu2",
+					"Cobrar",
+					"PanelAmarillo1",
+					"CobrarLayout2",
+					"PanelContornoVerde",
+					"EnviarComanda"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"FolioTicket",
+							"Mesero",
+							"UltimaActualizacion",
+							"Mesa",
+							"HoraApertura",
+							"Comensales"
+						],
+						"subfolders": [],
+						"name": "InfoPanelRojo"
+					},
+					{
+						"items": [
+							"mesa1",
+							"Comanda"
+						],
+						"subfolders": [],
+						"name": "InfoPanelAmarillo"
+					}
+				],
+				"name": "12. Cobrar"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"iconoAbrirCajpdv",
+							"iconoComandaspdv",
+							"iconoCorteXpdv",
+							"iconoCorteYpdv",
+							"iconoDeliverypdv",
+							"iconoEnSaDipdv",
+							"iconoMesapdv",
+							"iconoPropinapdv",
+							"iconoReimprimirTpdv",
+							"iconoVentaMospdv",
+							"iconoVentaMosRojo",
+							"Iconotienda2",
+							"IconoVentaApp",
+							"iconoAjuste",
+							"iconoInicioTur",
+							"iconoPropinapdv2",
+							"AjustesComanda",
+							"AjustesComanda2"
+						],
+						"subfolders": [],
+						"name": "IconosPDV"
+					},
+					{
+						"items": [
+							"iconosVM"
+						],
+						"subfolders": [],
+						"name": "IconosVentaMos"
+					}
+				],
+				"name": "11.Punto de Venta"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [
+		{
+			"members": [
+				"PanelRojo",
+				"Sprite14"
+			]
+		}
+	],
+	"families": {
+		"items": [
+			"ObjetosMesas",
+			"IconosMenuPrincipal",
+			"Decoracion",
+			"btnsToolbar",
+			"BtnsPIN",
+			"IconosPuntoVenta",
+			"IconosAjustes"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"StartLayout",
+			"InicioSesionLayout",
+			"MenuDashBoardLayout",
+			"PinLayout",
+			"MesasLayout",
+			"MesaAbiertaLayout",
+			"ProduccionLayout",
+			"RecetasLayout",
+			"ComandasLayout",
+			"PuntoVentaLayout",
+			"VentaMostradorLayout",
+			"CorteXLayout",
+			"EntradaSaLayout",
+			"CobrarLayout",
+			"Cobrar2Layout",
+			"CorteZLayout",
+			"VentaTiendaLayout",
+			"PropinasPorMesero",
+			"ProduccionMovimientosLayout",
+			"AjustesLayout"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"MesaAbiertaEventSheet",
+			"StartEventSheet",
+			"InicioSesionEventSheet",
+			"MenuDashEventSheet",
+			"PinEventSheet",
+			"RecetasEventSheet",
+			"MesasEventSheet",
+			"ProduccionEventSheet",
+			"PuntoVentaEventSheet",
+			"VentaMostradorEventSheet",
+			"CorteXEventSheet",
+			"EntradaSaEventSheet",
+			"CobrarEventSheet",
+			"Cobrar2EventSheet",
+			"ComandasEventSheet",
+			"PropinasPorMeseroEventSheets",
+			"VentaTiendaEventSheet",
+			"Event sheet 1",
+			"AjustesEventSheet"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [
+				{
+					"name": "main.js",
+					"type": "application/javascript",
+					"sid": 369150164538938,
+					"script-info": {
+						"purpose": "main"
+					}
+				},
+				{
+					"name": "script.js",
+					"type": "application/javascript",
+					"sid": 738239170928430,
+					"script-info": {
+						"purpose": "imports-for-events"
+					}
+				},
+				{
+					"name": "MainMesas.js",
+					"type": "application/javascript",
+					"sid": 159440515101490,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "MesaAbierta.js",
+					"type": "application/javascript",
+					"sid": 478664883282061,
+					"script-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "Poppins-Black.ttf",
+					"type": "application/font-sfnt",
+					"sid": 402124975971222,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-BlackItalic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 807923061556029,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-Bold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 281142670716858,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-BoldItalic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 883941094017510,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-ExtraBold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 409164676063409,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-ExtraLight.ttf",
+					"type": "application/font-sfnt",
+					"sid": 803819668129055,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-ExtraBoldItalic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 659710185418786,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-Light.ttf",
+					"type": "application/font-sfnt",
+					"sid": 584071441068602,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-Medium.ttf",
+					"type": "application/font-sfnt",
+					"sid": 473493130456026,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-LightItalic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 290700969303036,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-ExtraLightItalic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 654938296890847,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-Italic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 454652007770781,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-MediumItalic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 492343087100406,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-SemiBold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 903233992051805,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-SemiBoldItalic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 252657895990122,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-Thin.ttf",
+					"type": "application/font-sfnt",
+					"sid": 887720391760628,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 827178854449890,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Poppins-ThinItalic.ttf",
+					"type": "application/font-sfnt",
+					"sid": 543577883073661,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 969881846106072,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 847925514397982,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 252605803675205,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 626135152760786,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 870847039862945,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 889155168825206,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 596217570874368,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "AreasyMesas.json",
+					"type": "application/json",
+					"sid": 194248825175949,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Icono-tienda.svg",
+					"type": "image/svg+xml",
+					"sid": 351335851395871,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Icono-tienda2.svg",
+					"type": "image/svg+xml",
+					"sid": 224745472811052,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "iconos-hra-01.svg",
+					"type": "image/svg+xml",
+					"sid": 373589207512217,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "iconos-hra-02.svg",
+					"type": "image/svg+xml",
+					"sid": 383239592358468,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "iconos-hra-03.svg",
+					"type": "image/svg+xml",
+					"sid": 614457682575914,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "iconos-hra-04.svg",
+					"type": "image/svg+xml",
+					"sid": 452051704123278,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "iconos-hra-06 (1).svg",
+					"type": "image/svg+xml",
+					"sid": 961189363615927,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "iconos-01.svg",
+							"type": "image/svg+xml",
+							"sid": 769270452405849,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-02.svg",
+							"type": "image/svg+xml",
+							"sid": 859743254120449,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-03.svg",
+							"type": "image/svg+xml",
+							"sid": 320843016939425,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-04.svg",
+							"type": "image/svg+xml",
+							"sid": 112736444291380,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-05.svg",
+							"type": "image/svg+xml",
+							"sid": 588538936622845,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-06.svg",
+							"type": "image/svg+xml",
+							"sid": 105374680459458,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-07.svg",
+							"type": "image/svg+xml",
+							"sid": 795676839279079,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-08.svg",
+							"type": "image/svg+xml",
+							"sid": 774175290470034,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-09.svg",
+							"type": "image/svg+xml",
+							"sid": 402997244375667,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-10.svg",
+							"type": "image/svg+xml",
+							"sid": 237530788032847,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-11.svg",
+							"type": "image/svg+xml",
+							"sid": 489949153004656,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-12.svg",
+							"type": "image/svg+xml",
+							"sid": 854202728303781,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-13.svg",
+							"type": "image/svg+xml",
+							"sid": 434840618526457,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-14.svg",
+							"type": "image/svg+xml",
+							"sid": 181349631504512,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-15.svg",
+							"type": "image/svg+xml",
+							"sid": 145832035315552,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-16.svg",
+							"type": "image/svg+xml",
+							"sid": 654647583286483,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-hra-14.svg",
+							"type": "image/svg+xml",
+							"sid": 828196418234881,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-29.svg",
+							"type": "image/svg+xml",
+							"sid": 737986312770375,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-30.svg",
+							"type": "image/svg+xml",
+							"sid": 404317136219472,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-31.svg",
+							"type": "image/svg+xml",
+							"sid": 540489269739125,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-32.svg",
+							"type": "image/svg+xml",
+							"sid": 366758118201404,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-33.svg",
+							"type": "image/svg+xml",
+							"sid": 542742703720276,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-34.svg",
+							"type": "image/svg+xml",
+							"sid": 509558385586348,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-35.svg",
+							"type": "image/svg+xml",
+							"sid": 218467994703885,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-36.svg",
+							"type": "image/svg+xml",
+							"sid": 565674395713621,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-37.svg",
+							"type": "image/svg+xml",
+							"sid": 617035446664588,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-38.svg",
+							"type": "image/svg+xml",
+							"sid": 236003361367056,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-39.svg",
+							"type": "image/svg+xml",
+							"sid": 458950874601184,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-VM-2.svg",
+							"type": "image/svg+xml",
+							"sid": 733258659624035,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-VM-3.svg",
+							"type": "image/svg+xml",
+							"sid": 208413108220113,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-VM.svg",
+							"type": "image/svg+xml",
+							"sid": 977206411702662,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-4.svg",
+							"type": "image/svg+xml",
+							"sid": 281681741877969,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-3-Red.svg",
+							"type": "image/svg+xml",
+							"sid": 532794256612300,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "iconos-pdv-40.svg",
+							"type": "image/svg+xml",
+							"sid": 275834257578700,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "svgIcons"
+				},
+				{
+					"items": [
+						{
+							"name": "btnsPricipales.css",
+							"type": "text/css",
+							"sid": 249633802393633,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "menuAreas.css",
+							"type": "text/css",
+							"sid": 898610507826155,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "stylePin.css",
+							"type": "text/css",
+							"sid": 761350940356205,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "styleTable.css.css",
+							"type": "text/css",
+							"sid": 403827471300964,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "comandasTabla.css",
+							"type": "text/css",
+							"sid": 850776633118113,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "comandasMesas.css",
+							"type": "text/css",
+							"sid": 735365655386467,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "mesaAbierta.css",
+							"type": "text/css",
+							"sid": 239147238741602,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "menuLat.css",
+							"type": "text/css",
+							"sid": 817404432822678,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "PuntoVenta.css",
+							"type": "text/css",
+							"sid": 867495573620820,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "produccion.css",
+							"type": "text/css",
+							"sid": 177328413465437,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "detalleReceta.css",
+							"type": "text/css",
+							"sid": 167053861185586,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "ajustes.css",
+							"type": "text/css",
+							"sid": 191599745382032,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "CSS"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "random"
+	},
+	"viewportWidth": 3840,
+	"viewportHeight": 2160,
+	"firstLayout": "StartLayout"
+}

@@ -1,0 +1,243 @@
+{
+	"name": "CobrarEventSheet",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Modal Dividir Cuenta2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 786117471322270,
+							"parameters": {
+								"object": "Sprite14"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 894516777516039
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 791521702306099,
+							"parameters": {
+								"object": "DividirCuentaIcon"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 711387960887922,
+							"parameters": {
+								"layer": "0",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 358598807633561,
+							"parameters": {
+								"layer": "2",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 996613922219413,
+							"parameters": {
+								"layer": "1",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 537355029196758,
+							"parameters": {
+								"layer": "4",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 497735368277617,
+							"parameters": {
+								"layer": "3",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 450136951893628
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 446383510883387,
+							"parameters": {
+								"object": "CloseDivCuenta"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 136507569257102,
+							"parameters": {
+								"layer": "0",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 417848501702516,
+							"parameters": {
+								"layer": "1",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 201379497925751,
+							"parameters": {
+								"layer": "4",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 687056543474851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "BtnDividirComensal",
+							"sid": 841277469558701
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 582373663444642,
+							"parameters": {
+								"layer": "3",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 275892735876908,
+							"parameters": {
+								"layer": "2",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 394555430473144
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 147130755117083,
+							"parameters": {
+								"object": "CloseDivComensal"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 262992330314253,
+							"parameters": {
+								"layer": "0",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 134747459747180,
+							"parameters": {
+								"layer": "1",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 313285330090477,
+							"parameters": {
+								"layer": "4",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 434772493692162
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 200157338812259,
+							"parameters": {
+								"object": "BackDivCuenta"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 427380056368119,
+							"parameters": {
+								"layer": "2",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 745600676960800,
+							"parameters": {
+								"layer": "3",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 745032816108985
+				}
+			],
+			"sid": 946687608160313
+		}
+	],
+	"sid": 928019161372255
+}

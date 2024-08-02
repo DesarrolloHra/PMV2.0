@@ -1,0 +1,107 @@
+{
+	"name": "Mesa4C",
+	"plugin-id": "Sprite",
+	"sid": 599718862915847,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 160,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8643778,
+						"collisionPoly": {
+							"points": [
+								0.3375,
+								0.06875,
+								0.6625,
+								0.06875,
+								0.825,
+								0.18125,
+								0.93125,
+								0.3375,
+								0.93125,
+								0.6625,
+								0.81875,
+								0.825,
+								0.6625,
+								0.93125,
+								0.3375,
+								0.93125,
+								0.175,
+								0.81875,
+								0.06875,
+								0.6625,
+								0.06875,
+								0.3375,
+								0.18125,
+								0.175
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 160,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7488407,
+						"collisionPoly": {
+							"points": [
+								0.3375,
+								0.06875,
+								0.6625,
+								0.06875,
+								0.825,
+								0.18125,
+								0.93125,
+								0.3375,
+								0.93125,
+								0.6625,
+								0.81875,
+								0.825,
+								0.6625,
+								0.93125,
+								0.3375,
+								0.93125,
+								0.175,
+								0.81875,
+								0.06875,
+								0.6625,
+								0.06875,
+								0.3375,
+								0.18125,
+								0.175
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 927935255384804,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

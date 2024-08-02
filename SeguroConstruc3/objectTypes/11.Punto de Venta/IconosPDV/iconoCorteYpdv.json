@@ -1,0 +1,14 @@
+{
+	"name": "iconoCorteYpdv",
+	"plugin-id": "SVGPicture",
+	"sid": 566763357093075,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

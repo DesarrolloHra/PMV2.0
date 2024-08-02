@@ -1,0 +1,66 @@
+{
+	"name": "AreaBg",
+	"plugin-id": "Sprite",
+	"sid": 954973266649090,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Zona",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 741832110255355
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 617,
+						"height": 239,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8141383,
+						"collisionPoly": {
+							"points": [
+								0.07455429497568881,
+								0,
+								0.9643435980551054,
+								0.04184100418410042,
+								0.9837925445705025,
+								0.09205020920502092,
+								0.9837925445705025,
+								0.9079497907949791,
+								0.9254457050243112,
+								1,
+								0.03565640194489465,
+								0.9581589958158996,
+								0.01620745542949757,
+								0.9079497907949791,
+								0.01620745542949757,
+								0.09205020920502092
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 827850945423055,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

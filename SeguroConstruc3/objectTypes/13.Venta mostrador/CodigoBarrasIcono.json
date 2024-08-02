@@ -1,0 +1,54 @@
+{
+	"name": "CodigoBarrasIcono",
+	"plugin-id": "Sprite",
+	"sid": 482770965677227,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 467,
+						"height": 461,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6182303,
+						"collisionPoly": {
+							"points": [
+								0.46466809421841543,
+								0,
+								0.880085653104925,
+								0.8264642082429501,
+								0.8308351177730193,
+								0.8763557483731019,
+								0.4753747323340471,
+								1,
+								0,
+								0.5379609544468547,
+								0,
+								0.46203904555314534
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 376894750130973,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

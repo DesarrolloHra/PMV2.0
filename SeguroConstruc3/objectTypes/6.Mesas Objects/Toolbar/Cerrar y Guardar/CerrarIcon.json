@@ -1,0 +1,54 @@
+{
+	"name": "CerrarIcon",
+	"plugin-id": "Sprite",
+	"sid": 422710498056789,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 150,
+						"height": 150,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 145488,
+						"collisionPoly": {
+							"points": [
+								0.1,
+								0.04,
+								0.96,
+								0.1,
+								0.9533333333333334,
+								0.9133333333333333,
+								0.9,
+								0.96,
+								0.04,
+								0.9,
+								0.04666666666666667,
+								0.08666666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 592919254131445,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

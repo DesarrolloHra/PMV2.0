@@ -1,0 +1,83 @@
+{
+	"name": "BtnMesasComandas",
+	"plugin-id": "Sprite",
+	"sid": 292213737488439,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 385,
+						"height": 106,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7607623,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.009433962264150943,
+								0.9272727272727272,
+								0.05660377358490566,
+								0.9506493506493506,
+								0.8962264150943396,
+								0.935064935064935,
+								0.9339622641509434,
+								0.8831168831168831,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 385,
+						"height": 106,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9088597,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.009433962264150943,
+								0.9272727272727272,
+								0.05660377358490566,
+								0.9506493506493506,
+								0.8962264150943396,
+								0.935064935064935,
+								0.9339622641509434,
+								0.8831168831168831,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 514732069560249,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

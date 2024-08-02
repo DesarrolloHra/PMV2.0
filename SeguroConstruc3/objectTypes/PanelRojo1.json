@@ -1,0 +1,58 @@
+{
+	"name": "PanelRojo1",
+	"plugin-id": "Sprite",
+	"sid": 146241802092410,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "btnRegresar",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 613968361617937
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 335,
+						"height": 335,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9932986,
+						"collisionPoly": {
+							"points": [
+								0.12686567164179105,
+								0.12686567164179105,
+								0.8731343283582089,
+								0.12686567164179105,
+								0.8731343283582089,
+								0.8731343283582089,
+								0.12686567164179105,
+								0.8731343283582089
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 487619115452133,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

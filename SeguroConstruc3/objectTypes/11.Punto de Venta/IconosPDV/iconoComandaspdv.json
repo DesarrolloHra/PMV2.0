@@ -1,0 +1,14 @@
+{
+	"name": "iconoComandaspdv",
+	"plugin-id": "SVGPicture",
+	"sid": 641398788917109,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	]
+}

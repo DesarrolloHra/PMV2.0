@@ -1,0 +1,60 @@
+{
+	"name": "PanelGuardarToolbar",
+	"plugin-id": "Sprite",
+	"sid": 365367888042809,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 152,
+						"height": 210,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5595325,
+						"collisionPoly": {
+							"points": [
+								0.09868421052631579,
+								0.004761904761904762,
+								0.9013157894736842,
+								0.004761904761904762,
+								0.9407894736842105,
+								0.01904761904761905,
+								1,
+								0.09047619047619047,
+								0.9736842105263158,
+								0.9619047619047619,
+								0.8947368421052632,
+								1,
+								0.09868421052631579,
+								1,
+								0.05921052631578947,
+								0.9857142857142858,
+								0,
+								0.9238095238095239
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 492768974895425,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"name": "BtnListaComandas",
+	"plugin-id": "Sprite",
+	"sid": 950684812845362,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 385,
+						"height": 106,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9714273,
+						"collisionPoly": {
+							"points": [
+								0.11428571428571428,
+								0.009433962264150943,
+								1,
+								0.009433962264150943,
+								1,
+								1,
+								0.08571428571428572,
+								0.9716981132075472,
+								0.06493506493506493,
+								0.9339622641509434,
+								0.04935064935064935,
+								0.8962264150943396
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 385,
+						"height": 106,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9456799,
+						"collisionPoly": {
+							"points": [
+								0.11428571428571428,
+								0.009433962264150943,
+								1,
+								0.009433962264150943,
+								1,
+								1,
+								0.08571428571428572,
+								0.9716981132075472,
+								0.06493506493506493,
+								0.9339622641509434,
+								0.04935064935064935,
+								0.8962264150943396
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 864785566987726,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
