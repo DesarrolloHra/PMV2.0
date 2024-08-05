@@ -7,10 +7,12 @@ body {
 
 .sidebar {
     background-color: transparent;
-    color: #000;  
+    color: #000;
+    display: grid; /* Usar CSS Grid */
+    grid-template-rows: repeat(auto-fill, 1fr); /* Dividir en filas iguales */
     align-items: center;
-    width: 100%; /* Ancho reducido */
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     overflow-y: hidden;
     margin-top: 0.5rem;
 }
@@ -19,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
+    justify-content: center; /* Alineación vertical del contenido */
     margin-bottom: 10%; /* Espacio entre secciones */
     padding-top: 0.3rem; /* Padding para separar contenido del borde */
 }
@@ -37,11 +39,11 @@ svg.Icono-menu-lateral:not(:root) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Corrección del typo */
+    text-align: center;
     padding: 0.3rem; /* Padding reducido */
     font-size: 10px; /* Tamaño de fuente reducido */
 }
 
 .section a.ajuste {
-    color: red; 
+    color: red;
 }

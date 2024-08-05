@@ -1179,3 +1179,78 @@ function actualizaAjustesTicket() {
 }
 
 }
+
+export function mainFuntionCreaReceta(token, apiURL){
+
+
+
+    var Token = token;
+    var apiUrl = apiURL;
+	
+document.getElementById('crear-receta-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    crearReceta();
+});
+
+function crearReceta() {
+    const token =Token;
+    if (!token) {
+        console.error("No se encontró el token en localStorage");
+        return;
+    }
+
+    const codigo = document.getElementById('input-codigo').value;
+    const nombre = document.getElementById('input-nombre').value;
+    const porciones = document.getElementById('input-porciones').value;
+    const unidad = document.getElementById('input-unidad').value;
+    const calculo = document.getElementById('input-calculo').value;
+    const tipo = document.getElementById('input-tipo').value;
+    const categoria = document.getElementById('input-categoria').value;
+    const id_familia = document.getElementById('input-familia').value;
+    const id_subfamilia = document.getElementById('input-subfamilia').value;
+    const imagen = document.getElementById('input-imagen').value;
+
+    console.log('Token:', token);
+    console.log('Código:', codigo);
+    console.log('Nombre:', nombre);
+    console.log('Porciones:', porciones);
+    console.log('Unidad:', unidad);
+    console.log('Cálculo:', calculo);
+    console.log('Tipo:', tipo);
+    console.log('Categoría:', categoria);
+    console.log('ID Familia:', id_familia);
+    console.log('ID Subfamilia:', id_subfamilia);
+    console.log('Imagen:', imagen );
+
+    fetch(apiUrl + '/web/recetas/crea', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            token: token, 
+			id_familia: id_familia,
+            id_subfamilia: id_subfamilia,
+			categoria: categoria,
+            codigo: codigo,
+            nombre: nombre,
+            porciones: porciones,
+            unidad: unidad,
+            calculo: calculo,
+            tipo: tipo,
+            imagen: imagen 
+        })
+    })
+    .then(response => response.ok ? response.json() : Promise.reject('Network response was not ok'))
+    .then(data => {
+        if (data.response) {
+            console.log("Receta creada exitosamente:", data.data);
+            // Aquí puedes actualizar la interfaz o redirigir al usuario según sea necesario
+        } else {
+            console.error("Error al crear receta: ", data.message);
+        }
+    })
+    .catch(error => console.error('Error en la creación de la receta: ', error));
+}
+
+}
