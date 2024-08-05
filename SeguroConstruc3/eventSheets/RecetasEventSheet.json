@@ -542,357 +542,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-clicked-class",
-					"objectClass": "TableRecetas",
-					"sid": 144095325897345,
-					"parameters": {
-						"class": "\"EditarReceta\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 554896006045697,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 520681608276861,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 415430480290197,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"interactive": false
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 655965518798017,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"interactive": true
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 992974465193862,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"interactive": false
-					}
-				}
-			],
-			"sid": 628469854130258
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked-class",
-					"objectClass": "TableRecetas",
-					"sid": 258195108201445,
-					"parameters": {
-						"class": "\"EditarPrecio\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 644585582247258,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 759229938603546,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 502951961878967,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"interactive": false
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 272221526749361,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"interactive": true
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 493869178282541,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"interactive": false
-					}
-				}
-			],
-			"sid": 467460339652155
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked-class",
-					"objectClass": "TableRecetas",
-					"sid": 624226631322076,
-					"parameters": {
-						"class": "\"detalleReceta\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 419034949312877,
-					"parameters": {
-						"layer": "\"detalleReceta\"",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 401123239190640,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 567818029974086,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"interactive": false
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 620367548762250,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"interactive": true
-					}
-				}
-			],
-			"sid": 205676192164100
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-touched-object",
-					"objectClass": "Touch",
-					"sid": 282636708263966,
-					"parameters": {
-						"object": "CloseActualizaReceta",
-						"type": "start"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 248464429873081,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 949960365767805,
-					"parameters": {
-						"layer": "\"detalleReceta\"",
-						"interactive": false
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 727958285001550,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"interactive": false
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 571357042426681,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 929233917224881,
-					"parameters": {
-						"layer": "\"detalleReceta\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 968780104443125,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"interactive": true
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 882823210762353,
-					"parameters": {
-						"layer": "\"CreaReceta\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 393486163860655,
-					"parameters": {
-						"layer": "\"CreaReceta\"",
-						"interactive": false
-					}
-				}
-			],
-			"sid": 618688607970568
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked-id",
-					"objectClass": "SideMenuRecetas",
-					"sid": 321696218234911,
-					"parameters": {
-						"id": "\"CreaReceta\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 671777389181174,
-					"parameters": {
-						"layer": "\"CreaReceta\"",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 456155671307310,
-					"parameters": {
-						"layer": "\"detalleReceta\"",
-						"interactive": false
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 796822476246837,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"interactive": false
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 273416416412127,
-					"parameters": {
-						"layer": "\"EditReceta\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 781988190445241,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 627790394612723,
-					"parameters": {
-						"layer": "\"detalleReceta\"",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 284628758201291,
-					"parameters": {
-						"layer": "\"Recetas\"",
-						"interactive": false
-					}
-				},
-				{
-					"id": "set-layer-interactive",
-					"objectClass": "System",
-					"sid": 566127720230712,
-					"parameters": {
-						"layer": "\"CreaReceta\"",
-						"interactive": true
-					}
-				}
-			],
-			"sid": 983318406961676
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-clicked-id",
 					"objectClass": "CreaRecetaHTML",
 					"sid": 206266480844765,
@@ -908,6 +557,367 @@
 				}
 			],
 			"sid": 473098958529374
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "EnlacesHTML",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked-class",
+							"objectClass": "TableRecetas",
+							"sid": 658097345401057,
+							"parameters": {
+								"class": "\"EditarReceta\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 449824698058797,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 518003690510249,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 709652643281185,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 861468315435195,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 739116534634513,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 573675132873214
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked-class",
+							"objectClass": "TableRecetas",
+							"sid": 623730022873973,
+							"parameters": {
+								"class": "\"EditarPrecio\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 430364832843663,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 590267466536823,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 882498422632354,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 118311448439315,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 777514607814136,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 955910562263350
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked-class",
+							"objectClass": "TableRecetas",
+							"sid": 424578378501996,
+							"parameters": {
+								"class": "\"detalleReceta\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 622318502454305,
+							"parameters": {
+								"layer": "\"detalleReceta\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 838176975973317,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 496874441446359,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 574732431119793,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"interactive": true
+							}
+						}
+					],
+					"sid": 627053140995070
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 139715334562325,
+							"parameters": {
+								"object": "CloseActualizaReceta",
+								"type": "start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 318304258972568,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 969565495174962,
+							"parameters": {
+								"layer": "\"detalleReceta\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 296971412424081,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 998764066515871,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 231225631787867,
+							"parameters": {
+								"layer": "\"detalleReceta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 277132460585532,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 866840522228550,
+							"parameters": {
+								"layer": "\"CreaReceta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 595730503739770,
+							"parameters": {
+								"layer": "\"CreaReceta\"",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 131732943555136
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked-id",
+							"objectClass": "SideMenuRecetas",
+							"sid": 377728122684552,
+							"parameters": {
+								"id": "\"CreaReceta\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 805742021103180,
+							"parameters": {
+								"layer": "\"CreaReceta\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 107474979267514,
+							"parameters": {
+								"layer": "\"detalleReceta\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 327230895648766,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 103047152138136,
+							"parameters": {
+								"layer": "\"EditReceta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 502617250346397,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 516819578156028,
+							"parameters": {
+								"layer": "\"detalleReceta\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 918528815455557,
+							"parameters": {
+								"layer": "\"Recetas\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 500270552842465,
+							"parameters": {
+								"layer": "\"CreaReceta\"",
+								"interactive": true
+							}
+						}
+					],
+					"sid": 688570899499817
+				}
+			],
+			"sid": 256069922102205
 		}
 	],
 	"sid": 815516096939219
