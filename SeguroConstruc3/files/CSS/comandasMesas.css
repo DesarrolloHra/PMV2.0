@@ -99,3 +99,60 @@ body {
 .tr-mesas {
     height: 7rem;
 }
+.detalles-container {
+    display: none; /* Asegúrate de que este estilo se aplique cuando el modal esté cerrado */
+}
+
+
+
+.circle-button {
+        background-color: #28a745; /* Verde */
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50%; /* Hace que el botón sea circular */
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle-button svg {
+        fill: white;
+    }
+
+#tabla-comandas-container {
+    max-height: 600px; /* Limita la altura máxima del contenedor */
+    overflow-y: auto;  /* Añade scroll vertical si el contenido supera la altura */
+    margin-bottom: 20px; /* Espacio inferior para separación visual */
+}
+
+#tabla-comandas {
+    width: 100%; /* Asegúrate de que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse; /* Estilo opcional para colapsar bordes */
+}
+
+#mesas-view {
+    max-height: 600px; /* Limita la altura máxima del contenedor */
+    overflow-y: auto;  /* Añade scroll vertical si el contenido supera la altura */
+    padding: 10px; /* Espacio alrededor para mejor visualización */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.mesa-card {
+    width: 300px; /* Tamaño fijo o relativo según tu diseño */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}

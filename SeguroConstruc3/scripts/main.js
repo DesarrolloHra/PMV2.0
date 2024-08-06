@@ -11,7 +11,8 @@
 
        
  
-    obtenerComandas();
+            obtenerComandas();
+	iniciarActualizacionAutomatica();
 
     // Agregar eventos a los botones
     document.getElementById('vistaLista').addEventListener('click', function() {
@@ -28,6 +29,7 @@
 
     document.getElementById('obtenerComandas').addEventListener('click', obtenerComandas);
     document.getElementById('historicoComandas').addEventListener('click', comandaHistorico);
+	document.getElementById('cerrar-modal').addEventListener('click', cerrarModal);
 
 
 function cambiarVista(vista) {
@@ -90,7 +92,7 @@ function filtrarComandas() {
 
 
 function obtenerComandas() {
-    let token =Token;
+    let token = Token;
     console.log('Token recuperado de localStorage:', token);
     fetch(apiUrl + '/web/ventas/comanda', {
         method: 'POST',
@@ -106,7 +108,7 @@ function obtenerComandas() {
     .then(response => response.json())
     .then(data => {
         if (data.response) {
-            dataComandas = data.data; // Save the data globally for switching views
+            dataComandas = data.data; // Guardar los datos globalmente para cambiar de vista
             console.log("Datos comandas:", dataComandas);
             renderizarComandas(dataComandas.partidas);
             actualizarFiltroMesas(dataComandas.partidas); // Actualizar el filtro de mesas
@@ -118,6 +120,17 @@ function obtenerComandas() {
         console.error('Error en la obtención de datos de comandas:', error);
     });
 }
+
+// Función para actualizar la vista de comandas cada 15 segundos
+function iniciarActualizacionAutomatica() {
+    setInterval(() => {
+        obtenerComandas();
+    }, 15000); // 15000 milisegundos = 15 segundos
+}
+
+// Llamar a la función para iniciar la actualización automática
+iniciarActualizacionAutomatica();
+
 
 function actualizarFiltroMesas(data) {
     let mesaSelect = document.getElementById("mesa");
@@ -228,18 +241,29 @@ function renderizarComandas(data, esHistorico = false) {
     data.forEach((item) => {
         let fila = document.createElement("tr");
         fila.innerHTML = `
-            <td style="width: 50px;"><button class="info-btn" data-id="${item.id_partida}">i</button></td>
-            <td>${item.transcurrido} min.</td>
-            <td>${item.cantidad}</td>
-            <td>
+            <td data-label="Acciones" style="width: 50px;"><button class="info-btn" data-id="${item.id_partida}">i</button></td>
+            <td data-label="Transcurrido">${item.transcurrido} min.</td>
+            <td data-label="Cantidad">${item.cantidad}</td>
+            <td data-label="Nombre">
                 ${item.nombre}
                 ${item.partidas && item.partidas.length > 0 ? '<br><strong style="font-size: smaller;">Ingredientes:</strong> <ul style="font-size: x-small; list-style-type: none; padding-left: 0;">' + item.partidas.map(subItem => `<li>${subItem.nombre} (${subItem.cantidad})</li>`).join('') + '</ul>' : ''}
             </td>
-            <td>${item.observaciones || 'N/A'}</td>
-            <td>${item.tiempo || '-'}</td>
-            <td>${item.mesa}</td>
-            <td>
-                ${esHistorico ? `<button class="recuperarComanda" data-id="${item.id_partida}">Recuperar</button>` : `<button class="actualizarComanda" data-id="${item.id_partida}">Actualizar</button>`}
+            <td data-label="Observaciones">${item.observaciones || 'N/A'}</td>
+            <td data-label="Tiempo">${item.tiempo || '-'}</td>
+            <td data-label="Mesa">${item.mesa}</td>
+            <td data-label="Acciones">
+                ${esHistorico ? `<button class="circle-button recuperarComanda" data-id="${item.id_partida}">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 16.2l-4.2-4.2 1.4-1.4L9 13.4l7.8-7.8 1.4 1.4L9 16.2z"/>
+                    </svg>
+                </button>` :
+                `<button class="circle-button actualizarComanda" data-id="${item.id_partida}">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 16.2l-4.2-4.2 1.4-1.4L9 13.4l7.8-7.8 1.4 1.4L9 16.2z"/>
+                    </svg>
+                </button>`}
             </td>
         `;
         cuerpoTabla.appendChild(fila);
@@ -265,6 +289,8 @@ function renderizarComandas(data, esHistorico = false) {
     });
 }
 
+
+
 function mostrarDetallesComanda(idPartida) {
     let comanda = dataComandas.partidas.find(item => item.id_partida == idPartida);
     if (comanda) {
@@ -282,8 +308,15 @@ function mostrarDetallesComanda(idPartida) {
 }
 
 function cerrarModal() {
-    document.getElementById('modal-detalles-comanda').style.display = 'none';
+    const modal = document.getElementById('modal-detalles-comanda');
+    if (modal) {
+        modal.style.display = 'none';
+    } else {
+        console.error('El modal no fue encontrado en el DOM.');
+    }
 }
+
+
 
 function renderizarMesas(data) {
     const mesasContainer = document.getElementById('mesas-view');

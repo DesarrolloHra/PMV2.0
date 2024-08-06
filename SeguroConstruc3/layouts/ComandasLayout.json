@@ -78,9 +78,9 @@
 					"behaviors": {},
 					"world": {
 						"x": 2023.5,
-						"y": 334,
+						"y": 318,
 						"width": 3369,
-						"height": 322,
+						"height": 248,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -201,8 +201,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 364,
-						"y": 366,
+						"x": 360.06449939656477,
+						"y": 336.48374547423606,
 						"width": 305.9281837107404,
 						"height": 83.66021567581083,
 						"originX": 0,
@@ -249,8 +249,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 675,
-						"y": 367,
+						"x": 669.0967490948473,
+						"y": 335.51599517251844,
 						"width": 314,
 						"height": 86.19612382044062,
 						"originX": 0,
@@ -327,8 +327,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 360,
-						"y": 261,
+						"x": 358.0322496982824,
+						"y": 252.14512364227085,
 						"width": 296,
 						"height": 72,
 						"originX": 0,
@@ -491,9 +491,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 517,
-						"y": 409,
-						"width": 316.61535499540753,
+						"x": 511,
+						"y": 370,
+						"width": 315.61535499540753,
 						"height": 87.1720198169174,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -520,8 +520,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 833,
-						"y": 409,
+						"x": 825,
+						"y": 371,
 						"width": 316.61535499540753,
 						"height": 87.1720198169174,
 						"originX": 0.5,
@@ -565,8 +565,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 478,
-						"y": 367,
+						"x": 439,
+						"y": 332,
 						"width": 152.18905812444473,
 						"height": 86.35399822786019,
 						"originX": 0,
@@ -610,8 +610,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 783,
-						"y": 367,
+						"x": 757,
+						"y": 332,
 						"width": 179.18905812444473,
 						"height": 86.35399822786019,
 						"originX": 0,
@@ -660,7 +660,104 @@
 			"name": "BtnHistoricoCancelaciones",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "BtnComandasMes",
+					"properties": {
+						"tag": "div",
+						"content": "<button id=\"obtenerComandas\">Obtener Comandas</button>",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 138899,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1160,
+						"y": 299,
+						"width": 314,
+						"height": 60.19612382044062,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "BtnComandasMes",
+					"properties": {
+						"tag": "div",
+						"content": "<button id=\"comandaHistorico\">Histórico de Comandas</button>",
+						"content-type": "html",
+						"initially-visible": true,
+						"id": "",
+						"class": "",
+						"allow-context-menu": false,
+						"stop-input-events": "no",
+						"origin": "top-left",
+						"set-color": true,
+						"default-color": [
+							0,
+							0,
+							0,
+							0
+						],
+						"set-background-color": false,
+						"default-background-color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"auto-font-size": true,
+						"allow-text-selection": false,
+						"style-attribute": ""
+					},
+					"uid": 113762,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1581,
+						"y": 300,
+						"width": 314,
+						"height": 61.19612382044062,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				}
+			],
 			"sid": 998561443582523,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -699,7 +796,7 @@
 					"type": "ComandasMesas",
 					"properties": {
 						"tag": "div",
-						"content": "       <h2>Comandas</h2>\n        <div class=\"buttons\">\n            <button id=\"obtenerComandas\">Obtener Comandas</button>\n            <button id=\"comandaHistorico\">Histórico de Comandas</button>\n        </div>\n        <table class=\"table\" id=\"tabla-comandas\">\n            <thead>\n                <tr>\n                    <th class=\"thTableHead\">Transcurrido</th>\n                    <th class=\"thTableHead\">Cantidad</th>\n                    <th class=\"thTableHead\">Nombre</th>\n                    <th class=\"thTableHead\">Observaciones</th>\n                    <th class=\"thTableHead\">Tiempo</th>\n                    <th class=\"thTableHead\">Mesa</th>\n                    <th class=\"thTableHead\">Acciones</th>\n                </tr>\n            </thead>\n            <tbody id=\"cuerpo-tabla-comandas\"></tbody>\n        </table>\n        <div id=\"mesas-view\" class=\"mesas-container\"></div>\n    </div>\n   \n    <script>\n       \n            document.getElementById('vistaLista').addEventListener('click', () => cambiarVista('lista'));\n            document.getElementById('vistaMesas').addEventListener('click', () => cambiarVista('mesas'));\n            document.getElementById('tipo').addEventListener('change', filtrarComandas);\n            document.getElementById('lugarPreparacion').addEventListener('change', filtrarComandas);\n            document.getElementById('mesa').addEventListener('change', filtrarComandas);\n            document.getElementById('obtenerComandas').addEventListener('click', obtenerComandas);\n            document.getElementById('comandaHistorico').addEventListener('click', comandaHistorico);\n   <script>\n",
+						"content": "<div class=\"buttons\">\n    <!-- Aquí puedes agregar los botones si es necesario -->\n</div>\n\n<div id=\"tabla-comandas-container\">\n    <table class=\"table\" id=\"tabla-comandas\">\n        <thead>\n            <tr>\n                <th class=\"thTableHead\"></th>\n                <th class=\"thTableHead\">Transcurrido</th>\n                <th class=\"thTableHead\">Cantidad</th>\n                <th class=\"thTableHead\">Nombre</th>\n                <th class=\"thTableHead\">Observaciones</th>\n                <th class=\"thTableHead\">Tiempo</th>\n                <th class=\"thTableHead\">Mesa</th>\n                <th class=\"thTableHead\">Acciones</th>\n            </tr>\n        </thead>\n        <tbody id=\"cuerpo-tabla-comandas\"></tbody>\n    </table>\n</div>\n\n<div id=\"mesas-view\" class=\"mesas-container\"></div>\n\n<div id=\"modal-detalles-comanda\" class=\"detalles-container\">\n    <h2>Detalles de la Comanda</h2>\n    <div id=\"detalles-comanda-content\"></div>\n    <button id=\"cerrar-modal\">Cerrar</button>\n</div>\n\n<script>\n    document.getElementById('vistaLista').addEventListener('click', () => cambiarVista('lista'));\n    document.getElementById('vistaMesas').addEventListener('click', () => cambiarVista('mesas'));\n    document.getElementById('tipo').addEventListener('change', filtrarComandas);\n    document.getElementById('lugarPreparacion').addEventListener('change', filtrarComandas);\n    document.getElementById('mesa').addEventListener('change', filtrarComandas);\n    document.getElementById('obtenerComandas').addEventListener('click', obtenerComandas);\n    document.getElementById('historicoComandas').addEventListener('click', comandaHistorico);\n    document.getElementById('cerrar-modal').addEventListener('click', cerrarModal);\n</script>\n",
 						"content-type": "html",
 						"initially-visible": true,
 						"id": "",
@@ -729,10 +826,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 50,
-						"y": 455,
-						"width": 3678,
-						"height": 1552,
+						"x": 70,
+						"y": 465,
+						"width": 3587,
+						"height": 1519,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -777,8 +874,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1888,
-						"y": 334,
+						"x": 1985,
+						"y": 338,
 						"width": 1673,
 						"height": 245,
 						"originX": 0,
@@ -842,9 +939,9 @@
 					"behaviors": {},
 					"world": {
 						"x": 180,
-						"y": 322,
+						"y": 317.3416479329893,
 						"width": 266.434937,
-						"height": 237,
+						"height": 258.31670413402145,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
