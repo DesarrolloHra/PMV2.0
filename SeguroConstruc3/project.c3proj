@@ -225,7 +225,8 @@
 			"AjustesComprasText",
 			"PromocionesTitleAjustes",
 			"AjustesPromocionesHTML",
-			"CreaRecetaHTML"
+			"CreaRecetaHTML",
+			"ClonaHTML"
 		],
 		"subfolders": [
 			{

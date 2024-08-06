@@ -1192,10 +1192,12 @@ document.getElementById('crear-receta-button').addEventListener('click', functio
     crearReceta();
 });
 
+
 function crearReceta() {
-    const token =Token;
+    const token = Token;
     if (!token) {
         console.error("No se encontró el token en localStorage");
+        showModal("No se encontró el token en localStorage");
         return;
     }
 
@@ -1222,35 +1224,73 @@ function crearReceta() {
     console.log('ID Subfamilia:', id_subfamilia);
     console.log('Imagen:', imagen );
 
-    fetch(apiUrl + '/web/recetas/crea', {
+    const requestBody = {
+        token: token, 
+        codigo: codigo,
+        nombre: nombre,
+        porciones: porciones,
+        unidad: unidad,
+        calculo: calculo,
+        tipo: tipo,
+        imagen: imagen
+    };
+
+    if (id_familia && id_familia !== "0") {
+        requestBody.id_familia = id_familia;
+    }
+
+    if (id_subfamilia && id_subfamilia !== "0") {
+        requestBody.id_subfamilia = id_subfamilia;
+    }
+
+    if (categoria && categoria !== "0") {
+        requestBody.categoria = categoria;
+    }
+
+    fetch(apiUrl+'/web/recetas/crea', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            token: token, 
-			id_familia: id_familia,
-            id_subfamilia: id_subfamilia,
-			categoria: categoria,
-            codigo: codigo,
-            nombre: nombre,
-            porciones: porciones,
-            unidad: unidad,
-            calculo: calculo,
-            tipo: tipo,
-            imagen: imagen 
-        })
+        body: JSON.stringify(requestBody)
     })
-    .then(response => response.ok ? response.json() : Promise.reject('Network response was not ok'))
-    .then(data => {
-        if (data.response) {
-            console.log("Receta creada exitosamente:", data.data);
-            // Aquí puedes actualizar la interfaz o redirigir al usuario según sea necesario
+    .then(response => response.json().then(data => ({status: response.status, body: data})))
+    .then(({status, body}) => {
+        if (status === 200 && body.response) {
+            console.log("Receta creada exitosamente:", body.data);
+            showModal("Receta creada exitosamente");
         } else {
-            console.error("Error al crear receta: ", data.message);
+            console.error("Error al crear receta: ", body.message);
+            showModal(body.message || "Ocurrió un error al crear la receta");
         }
     })
-    .catch(error => console.error('Error en la creación de la receta: ', error));
+    .catch(error => {
+        console.error('Error en la creación de la receta: ', error);
+        showModal('Error en la creación de la receta');
+    });
 }
+
+function showModal(message) {
+    const modal = document.getElementById("success-modal");
+    const modalMessage = document.getElementById("modal-message");
+    const span = document.getElementsByClassName("close")[0];
+
+    // Solo mostramos el modal si no está ya visible
+    if (modal.style.display !== "block") {
+        modalMessage.textContent = message;
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
 
 }
