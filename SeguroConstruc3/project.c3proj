@@ -16,21 +16,21 @@
 		{
 			"type": "plugin",
 			"id": "Browser",
-			"name": "Browser",
+			"name": "Navegador",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Button",
-			"name": "Button",
+			"name": "Botón",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "HTMLElement",
-			"name": "HTML Element",
+			"name": "Elemento HTML",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -44,14 +44,14 @@
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Keyboard",
+			"name": "Teclado",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "List",
-			"name": "List",
+			"name": "Lista",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -65,7 +65,7 @@
 		{
 			"type": "plugin",
 			"id": "SVGPicture",
-			"name": "SVG Picture",
+			"name": "Imagen SVG",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -79,70 +79,70 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Text",
+			"name": "Texto",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TextBox",
-			"name": "Text input",
+			"name": "Entrada de texto",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Tiled Background",
+			"name": "Fondo en mosaico",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "Touch",
+			"name": "Control táctil",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"name": "Arrastrar y soltar",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Fade",
-			"name": "Fade",
+			"name": "Desvanecer",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Timer",
-			"name": "Timer",
+			"name": "Temporizador",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Tween",
-			"name": "Tween",
+			"name": "Tween (interpolación)",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "hsladjust",
-			"name": "Adjust HSL",
+			"name": "Ajustar MSL",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "effect",
 			"id": "hsladjustmask",
-			"name": "Adjust HSL mask",
+			"name": "Ajustar máscara MSL",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -1602,6 +1602,14 @@
 							"name": "ajustes.css",
 							"type": "text/css",
 							"sid": 191599745382032,
+							"file-info": {
+								"purpose": "stylesheet"
+							}
+						},
+						{
+							"name": "EntradaSa.css",
+							"type": "text/css",
+							"sid": 479101694767900,
 							"file-info": {
 								"purpose": "stylesheet"
 							}

@@ -1,0 +1,135 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.EnSaDi-menu {
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho máximo del menú */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left; /* Alinea el contenido a la izquierda */
+}
+
+.EnSaDi-section {
+  margin-bottom: 15px;
+}
+
+.EnSaDi-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.EnSaDi-radio-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.EnSaDi-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.EnSaDi-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.EnSaDi-input-container button {
+  width: 40px; /* Ajusta el ancho del botón */
+  height: 40px; /* Ajusta el alto del botón */
+  padding: 0;
+  font-size: 18px;
+  margin: 0 5px; /* Añade espacio entre los botones y el campo de entrada */
+}
+
+.EnSaDi-warning {
+  color: red;
+  font-size: 12px;
+}
+
+.EnSaDi-submit-button-container {
+  text-align: center;
+}
+
+.EnSaDi-submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none;
+  border-radius: 50px; /* Bordes redondeados del botón */
+  cursor: pointer;
+}
+
+.EnSaDi-submit-button:hover {
+  background-color: #0056b3; /* Color de fondo del botón en hover */
+}
+
+.EnSaDi-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px; /* Añade padding para mejorar el espaciado en pantallas pequeñas */
+}
+
+.EnSaDi-modal-content {
+  background-color: white;
+  margin: 0 auto; /* Centra el modal horizontalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  font-size: 20px;
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.EnSaDi-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.EnSaDi-close:hover,
+.EnSaDi-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .EnSaDi-menu {
+    padding: 10px;
+  }
+
+  .EnSaDi-input-container {
+    flex-direction: column; /* Apila los botones y el campo de entrada verticalmente en pantallas pequeñas */
+    align-items: stretch;
+  }
+
+  .EnSaDi-input-container button {
+    width: 100%;
+    margin-bottom: 5px; /* Añade margen inferior para separar los botones en pantallas pequeñas */
+  }
+
+  .EnSaDi-submit-button {
+    width: 100%; /* Ajusta el ancho del botón de envío en pantallas pequeñas */
+  }
+
+  .EnSaDi-modal-content {
+    width: 90%;
+  }
+}

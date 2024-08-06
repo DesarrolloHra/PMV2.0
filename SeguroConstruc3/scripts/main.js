@@ -638,23 +638,30 @@ document.getElementById('minus').addEventListener('click', decrement);
 document.getElementById('plus').addEventListener('click', increment);
 document.getElementById('cantidad').addEventListener('input', validateInput);
 
-function mostrarModalError() {
-  var modal = document.getElementById("errorModal");
-  var span = document.getElementsByClassName("EnSaDi-close")[0];
+  function mostrarModalError(mensaje) {
+    var modal = document.getElementById("errorModal");
+    var span = document.getElementsByClassName("EnSaDi-close")[0];
+    var errorMessage = document.getElementById("error-message");
 
-  modal.style.display = "block";
+    // Configura el mensaje de error
+    errorMessage.textContent = mensaje;
+    
+    // Muestra el modal
+    modal.style.display = "block";
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
+    // Configura el comportamiento del botón de cerrar
+    span.onclick = function() {
       modal.style.display = "none";
     }
-  }
-}
 
+    // Configura el comportamiento para hacer clic fuera del modal
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+  
 function crearFlujo() {
   let token = Token;
   if (!token) {
@@ -683,7 +690,7 @@ function crearFlujo() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      Token: token,
+      token: token,
       tipo: tipo,
       concepto: concepto,
       cantidad: cantidad,

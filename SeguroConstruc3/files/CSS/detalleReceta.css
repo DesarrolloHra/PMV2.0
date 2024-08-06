@@ -1,14 +1,15 @@
         .detalleReceta-header {
             background-color: #FFC107;
-            color: #000;
-            padding: 15px 20px;
-            font-size: 1.5em;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        	color: #000;
+        	padding: 15px 20px;
+        	font-size: 2em; /* Ajusta el tamaño del título aquí */
+        	display: flex;
+        	justify-content: space-between;
+        	align-items: center;
         }
         .detalleReceta-header span {
             font-weight: bold;
+			font-size: 2em; 
         }
         .detalleReceta-container {
             padding: 20px;
