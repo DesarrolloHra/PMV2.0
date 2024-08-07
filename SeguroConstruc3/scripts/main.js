@@ -11,31 +11,63 @@
 
        
  
-            obtenerComandas();
+	// Cerrar el modal de detalles al hacer clic en el botón de cerrar
+	const closeModalButtonDetalles = document.querySelector('#modal-detalles-comanda .detalleReceta-close');
+	if (closeModalButtonDetalles) {
+		closeModalButtonDetalles.addEventListener('click', function() {
+			document.getElementById('modal-detalles-comanda').style.display = 'none';
+			console.log('Modal cerrado mediante botón de cerrar');
+		});
+	}
+
+	// Cerrar el modal de detalles al hacer clic fuera del modal
+	window.addEventListener('click', function(event) {
+		const detallesModal = document.getElementById('modal-detalles-comanda');
+		if (event.target === detallesModal) {
+			detallesModal.style.display = "none";
+			console.log('Modal cerrado haciendo clic fuera del modal');
+		}
+	});
+
+	// Función para cerrar el modal manualmente, por ejemplo, desde un botón
+	function cerrarModal() {
+		const modal = document.getElementById('modal-detalles-comanda');
+		if (modal) {
+			modal.style.display = 'none';
+			console.log('Modal cerrado manualmente');
+		} else {
+			console.error('El modal no fue encontrado en el DOM.');
+		}
+	}
+
+	// Asignación de eventos a los botones y otros elementos de la interfaz
+	obtenerComandas();
 	iniciarActualizacionAutomatica();
 
-    // Agregar eventos a los botones
-    document.getElementById('vistaLista').addEventListener('click', function() {
-        cambiarVista('lista');
-    });
+	document.getElementById('vistaLista').addEventListener('click', function() {
+		cambiarVista('lista');
+	});
 
-    document.getElementById('vistaMesas').addEventListener('click', function() {
-        cambiarVista('mesas');
-    });
+	document.getElementById('vistaMesas').addEventListener('click', function() {
+		cambiarVista('mesas');
+	});
 
-    document.getElementById('tipo').addEventListener('change', filtrarComandas);
-    document.getElementById('lugarPreparacion').addEventListener('change', filtrarComandas);
-    document.getElementById('mesa').addEventListener('change', filtrarComandas);
+	document.getElementById('tipo').addEventListener('change', filtrarComandas);
+	document.getElementById('lugarPreparacion').addEventListener('change', filtrarComandas);
+	document.getElementById('mesa').addEventListener('change', filtrarComandas);
 
-    document.getElementById('obtenerComandas').addEventListener('click', obtenerComandas);
-    document.getElementById('historicoComandas').addEventListener('click', comandaHistorico);
+	document.getElementById('obtenerComandas').addEventListener('click', obtenerComandas);
+	document.getElementById('historicoComandas').addEventListener('click', comandaHistorico);
 	document.getElementById('cerrar-modal').addEventListener('click', cerrarModal);
+
+
 
 
 function cambiarVista(vista) {
     console.log("Cambiando vista a:", vista);
-    const tablaComandas = document.getElementById('tabla-comandas');
+    const tablaComandas = document.getElementById('tabla-comandas-container');
     const mesasContainer = document.getElementById('mesas-view');
+
     let tipo = document.getElementById("tipo").value;
     let lugarPreparacion = document.getElementById("lugarPreparacion").value;
     let mesa = document.getElementById("mesa").value;
@@ -48,15 +80,17 @@ function cambiarVista(vista) {
     });
 
     if (vista === 'lista') {
-        tablaComandas.style.display = 'block';
-        mesasContainer.style.display = 'none';
+        tablaComandas.classList.remove('hidden');
+        mesasContainer.classList.add('hidden');
         renderizarComandas(filteredData);
     } else if (vista === 'mesas') {
-        tablaComandas.style.display = 'none';
-        mesasContainer.style.display = 'flex';
+        tablaComandas.classList.add('hidden');
+        mesasContainer.classList.remove('hidden');
         renderizarMesas(filteredData);
     }
 }
+
+
 
 function filtrarComandas() {
     const tipoElement = document.getElementById("tipo");
@@ -83,12 +117,13 @@ function filtrarComandas() {
 
     // Verificar si estamos en vista de mesas
     const mesasContainer = document.getElementById('mesas-view');
-    if (mesasContainer && mesasContainer.style.display === 'flex') {
+    if (mesasContainer && !mesasContainer.classList.contains('hidden')) {
         renderizarMesas(filteredData);
     } else {
         renderizarComandas(filteredData);
     }
 }
+
 
 
 function obtenerComandas() {
@@ -365,7 +400,12 @@ function renderizarMesas(data) {
                 </td>
                 <td>${item.transcurrido} min.</td>
                 <td>
-                    <button class="actualizarComanda" data-id="${item.id_partida}">Actualizar</button>
+                    <button class="circle-button actualizarComanda" data-id="${item.id_partida}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 16.2l-4.2-4.2 1.4-1.4L9 13.4l7.8-7.8 1.4 1.4L9 16.2z"/>
+                        </svg>
+                    </button>
                 </td>
             `;
             mesaTable.appendChild(mesaRow);
@@ -392,6 +432,7 @@ function renderizarMesas(data) {
         });
     });
 }
+
 
     }
 
