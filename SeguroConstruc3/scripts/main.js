@@ -9,7 +9,12 @@
         var id_cancelada = '';
         var dataComandas = '';
 
-       
+    document.addEventListener('DOMContentLoaded', function() {
+    const initialView = 'lista'; // Define la vista inicial aquí
+    cambiarVista(initialView);
+    filtrarComandas();
+});
+
  
 	// Cerrar el modal de detalles al hacer clic en el botón de cerrar
 	const closeModalButtonDetalles = document.querySelector('#modal-detalles-comanda .detalleReceta-close');
@@ -81,14 +86,15 @@ function cambiarVista(vista) {
 
     if (vista === 'lista') {
         tablaComandas.classList.remove('hidden');
-        mesasContainer.classList.add('hidden');
+        mesasContainer.classList.add('hidden'); // Ocultar mesas
         renderizarComandas(filteredData);
     } else if (vista === 'mesas') {
         tablaComandas.classList.add('hidden');
-        mesasContainer.classList.remove('hidden');
+        mesasContainer.classList.remove('hidden'); // Mostrar mesas
         renderizarMesas(filteredData);
     }
 }
+
 
 
 
@@ -115,11 +121,12 @@ function filtrarComandas() {
         return matchTipo && matchLugar && matchMesa;
     });
 
-    // Verificar si estamos en vista de mesas
     const mesasContainer = document.getElementById('mesas-view');
     if (mesasContainer && !mesasContainer.classList.contains('hidden')) {
         renderizarMesas(filteredData);
     } else {
+        // Ocultar mesas por seguridad
+        mesasContainer.classList.add('hidden');
         renderizarComandas(filteredData);
     }
 }
@@ -384,6 +391,7 @@ function renderizarMesas(data) {
             <tr>
                 <th>CANTIDAD</th>
                 <th>NOMBRE</th>
+                <th>TRANSCURRIDO</th>
                 <th>TIEMPO</th>
                 <th></th>
             </tr>
@@ -394,12 +402,13 @@ function renderizarMesas(data) {
             let mesaRow = document.createElement('tr');
             mesaRow.innerHTML = `
                 <td>${item.cantidad}</td>
-                <td>
+                <td data-label="Nombre">
                     ${item.nombre}
-                    ${item.partidas && item.partidas.length > 0 ? '<ul class="ingredientes">' + item.partidas.map(subItem => `<li>${subItem.nombre} (${subItem.cantidad})</li>`).join('') + '</ul>' : ''}
+                    ${item.partidas && item.partidas.length > 0 ? '<br><strong style="font-size: smaller;">Ingredientes:</strong> <ul style="font-size: x-small; list-style-type: none; padding-left: 0;">' + item.partidas.map(subItem => `<li>${subItem.nombre} (${subItem.cantidad})</li>`).join('') + '</ul>' : ''}
                 </td>
-                <td>${item.transcurrido} min.</td>
-                <td>
+                <td data-label="Transcurrido">${item.transcurrido} min.</td>
+                <td data-label="Tiempo">${item.tiempo || '-'}</td>
+                <td data-label="Acciones">
                     <button class="circle-button actualizarComanda" data-id="${item.id_partida}">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
                             <path d="M0 0h24v24H0z" fill="none"/>
@@ -414,7 +423,7 @@ function renderizarMesas(data) {
             if (index < mesas[mesa].length - 1) {
                 let separatorRow = document.createElement('tr');
                 let separatorCell = document.createElement('td');
-                separatorCell.colSpan = 4;
+                separatorCell.colSpan = 5; // Actualizar colSpan para incluir la nueva columna "Tiempo"
                 separatorCell.className = 'separator';
                 separatorRow.appendChild(separatorCell);
                 mesaTable.appendChild(separatorRow);
@@ -432,6 +441,8 @@ function renderizarMesas(data) {
         });
     });
 }
+
+
 
 
     }
