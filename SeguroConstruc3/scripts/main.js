@@ -361,9 +361,8 @@ function renderizarMesas(data) {
 }
 
     }
-
-
-
+	
+	
 //CorteZ
 export function mainFuntionCorteZ(token, apiURL){
 
@@ -393,148 +392,176 @@ export function mainFuntionCorteZ(token, apiURL){
     document.getElementById('modalPrintButton').addEventListener('click', printCorteZ);
 
 
-// Función para actualizar el conteo
+    // Función para actualizar el conteo
 function updateCount(denomination, amount) {
     console.log(`Actualizando ${denomination} por ${amount}`);
     const input = document.getElementById(denomination.split('-')[1]);
-    const currentValue = parseInt(input.value);
+    const currentValue = parseInt(input.value, 10);
     const newValue = currentValue + amount;
-    if (newValue >= 0) {
-        input.value = newValue;
-    }
+    // Permitir valores negativos
+    input.value = newValue;
     console.log(`Nuevo valor para ${denomination}: ${input.value}`);
 }
 
-// Función para abrir el modal
-function openModal(title, message, cierre, showPrintButton) {
-    console.log('Abriendo modal...');
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalMessage').innerText = message;
-    document.getElementById('modalCierre').innerText = cierre ? 'Cierre: ' + cierre : '';
-    document.getElementById('modalPrintButton').style.display = showPrintButton ? 'block' : 'none';
-    document.getElementById('modalCorteZ').style.display = 'block';
-    console.log('Modal abierto con título:', title, 'mensaje:', message, 'cierre:', cierre, 'mostrar botón de imprimir:', showPrintButton);
-}
 
-// Función para cerrar el modal
-function closeModal() {
-    console.log('Cerrando modal...');
-    document.getElementById('modalCorteZ').style.display = 'none';
-}
-
-// Función para imprimir el corte Z
-function printCorteZ() {
-    console.log('Imprimiendo corte Z...');
-    window.print();
-}
-
-function submitCorteZ() {
-console.log('Enviando Corte Z...');
-// Obtener el token de localStorage
-let token =Token;
-
-// Verificar si el token existe
-if (!token) {
-    console.error('No hay token disponible, por favor inicia sesión primero.');
-    return;
-}
-
-// Recolectar los datos de billetes y monedas
-const denomination_1000 = document.getElementById('1000').value;
-const denomination_500 = document.getElementById('500').value;
-const denomination_200 = document.getElementById('200').value;
-const denomination_100 = document.getElementById('100').value;
-const denomination_50 = document.getElementById('50').value;
-const denomination_20 = document.getElementById('20').value;
-const denomination_10 = document.getElementById('10').value;
-const denomination_5 = document.getElementById('5').value;
-const denomination_2 = document.getElementById('2').value;
-const denomination_1 = document.getElementById('1').value;
-const denomination_0_5 = document.getElementById('05').value;
-
-console.log('Datos recolectados:', {
-    "1000": denomination_1000,
-    "500": denomination_500,
-    "200": denomination_200,
-    "100": denomination_100,
-    "50": denomination_50,
-    "20": denomination_20,
-    "10": denomination_10,
-    "5": denomination_5,
-    "2": denomination_2,
-    "1": denomination_1,
-    "05": denomination_0_5
-});
-
-// Enviar los datos a la API de Corte Z
-fetch(apiUrl + '/web/ventas/creaCorte', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        token: token,
-        "1000": denomination_1000,
-        "500": denomination_500,
-        "200": denomination_200,
-        "100": denomination_100,
-        "50": denomination_50,
-        "20": denomination_20,
-        "10": denomination_10,
-        "5": denomination_5,
-        "2": denomination_2,
-        "1": denomination_1,
-        "05": denomination_0_5
-    })
-})
-.then(response => response.json())
-.then(data => {
-    console.log('Respuesta de creaCorte:', data);
-    if (data.response) {
-        const id_corte = data.data.id_corte;
-        fetchCorteData(token, id_corte);
-    } else {
-        console.log('Error al procesar solicitud:', data.message);
-        openModal('Error al procesar solicitud', data.message, '', false);
+    // Función para formatear números como precios
+    function formatCurrency(value) {
+        return new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(value);
     }
-})
-.catch((error) => {
-    console.error('Error:', error);
-    alert('Error al enviar el Corte Z');
-});
-}
 
-// Función para obtener los datos del Corte Z
-function fetchCorteData(token, id_corte) {
-console.log('Obteniendo datos del Corte Z:', id_corte);
-fetch(apiUrl + '/web/ventas/corte', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        token: token,
-        id_corte: id_corte
-    })
-})
-.then(response => response.json())
-.then(data => {
-    console.log('Respuesta de corte:', data);
-    if (data.response) {
-        const cierre = data.data[0].cierre;
-        openModal('Solicitud completada', 'Corte creado correctamente', cierre, true);
-    } else {
-        alert('Error al obtener los datos del Corte Z');
+    // Función para abrir el modal
+    function openModal(title, message, cierre, showPrintButton) {
+        console.log('Abriendo modal...');
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalMessage').innerText = message;
+        document.getElementById('modalCierre').innerText = cierre || '';  // Mostrará el mensaje de cierre correctamente
+        document.getElementById('modalPrintButton').style.display = showPrintButton ? 'block' : 'none';
+        document.getElementById('modalCorteZ').style.display = 'block';
+        console.log('Modal abierto con título:', title, 'mensaje:', message, 'cierre:', cierre, 'mostrar botón de imprimir:', showPrintButton);
     }
-})
-.catch((error) => {
-    console.error('Error:', error);
-    alert('Error al obtener los datos del Corte Z');
-});
+
+    // Función para cerrar el modal
+    function closeModal() {
+        console.log('Cerrando modal...');
+        document.getElementById('modalCorteZ').style.display = 'none';
+    }
+
+    // Función para imprimir el corte Z
+    function printCorteZ() {
+        console.log('Imprimiendo corte Z...');
+        window.print();
+    }
+
+    // Función para enviar el Corte Z
+    function submitCorteZ() {
+        console.log('Enviando Corte Z...');
+        // Obtener el token de localStorage
+        let token = Token;
+
+        // Verificar si el token existe
+        if (!token) {
+            console.error('No hay token disponible, por favor inicia sesión primero.');
+            return;
+        }
+
+        // Recolectar los datos de billetes y monedas
+        const denomination_1000 = document.getElementById('1000').value;
+        const denomination_500 = document.getElementById('500').value;
+        const denomination_200 = document.getElementById('200').value;
+        const denomination_100 = document.getElementById('100').value;
+        const denomination_50 = document.getElementById('50').value;
+        const denomination_20 = document.getElementById('20').value;
+        const denomination_10 = document.getElementById('10').value;
+        const denomination_5 = document.getElementById('5').value;
+        const denomination_2 = document.getElementById('2').value;
+        const denomination_1 = document.getElementById('1').value;
+        const denomination_0_5 = document.getElementById('05').value;
+
+        console.log('Datos recolectados:', {
+            "1000": denomination_1000,
+            "500": denomination_500,
+            "200": denomination_200,
+            "100": denomination_100,
+            "50": denomination_50,
+            "20": denomination_20,
+            "10": denomination_10,
+            "5": denomination_5,
+            "2": denomination_2,
+            "1": denomination_1,
+            "05": denomination_0_5
+        });
+
+        // Enviar los datos a la API de Corte Z
+        fetch(apiUrl + '/web/ventas/creaCorte', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                token: token,
+                "1000": denomination_1000,
+                "500": denomination_500,
+                "200": denomination_200,
+                "100": denomination_100,
+                "50": denomination_50,
+                "20": denomination_20,
+                "10": denomination_10,
+                "5": denomination_5,
+                "2": denomination_2,
+                "1": denomination_1,
+                "05": denomination_0_5
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Respuesta de creaCorte:', data);
+            if (data.response) {
+                const id_corte = data.data.id_corte;
+                const cierre = data.data.cierrre;  // Asegúrate de extraer el valor de cierrre
+                let mensajeCierre = '';
+
+                if (cierre < 0) {
+                    mensajeCierre = `Faltante: ${formatCurrency(Math.abs(cierre))}`;
+                } else if (cierre > 0) {
+                    mensajeCierre = `Sobrante: ${formatCurrency(cierre)}`;
+                } else {
+                    mensajeCierre = 'El cierre es exacto';
+                }
+
+                openModal('Solicitud completada', 'Corte creado correctamente', mensajeCierre, true);
+            } else {
+                console.log('Error al procesar solicitud:', data.message);
+                openModal('Error al procesar solicitud', data.message, '', false);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Error al enviar el Corte Z');
+        });
+    }
+
+    // Función para obtener los datos del Corte Z
+    function fetchCorteData(token, id_corte) {
+        console.log('Obteniendo datos del Corte Z:', id_corte);
+        fetch(apiUrl + '/web/ventas/corte', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                token: token,
+                id_corte: id_corte
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Respuesta de corte:', data);
+            if (data.response) {
+                const cierre = data.data[0].cierre;
+                let mensajeCierre = '';
+
+                if (cierre < 0) {
+                    mensajeCierre = `Faltante: ${formatCurrency(Math.abs(cierre))}`;
+                } else if (cierre > 0) {
+                    mensajeCierre = `Sobrante: ${formatCurrency(cierre)}`;
+                } else {
+                    mensajeCierre = 'El cierre es exacto';
+                }
+
+                openModal('Solicitud completada', 'Corte creado correctamente', mensajeCierre, true);
+            } else {
+                alert('Error al obtener los datos del Corte Z');
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Error al obtener los datos del Corte Z');
+        });
+
+    }
 
 }
 
-}
 
 export function mainFuntionCorteX(token, apiURL){
   	var Token = token;

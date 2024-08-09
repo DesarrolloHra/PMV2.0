@@ -1058,10 +1058,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1829,
-						"y": 1035,
-						"width": 4003,
-						"height": 2160,
+						"x": 1872.5,
+						"y": 1090,
+						"width": 4090,
+						"height": 2270,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1136,7 +1136,7 @@
 					"type": "IngredientesRecetaHTML",
 					"properties": {
 						"tag": "div",
-						"content": "<div class=\"detalleReceta-table-container\">\n                <table class=\"detalleReceta-table\">\n                    <thead>\n                        <tr>\n                            <th>CÓDIGO</th>\n                            <th>INGREDIENTES</th>\n                            <th>CANTIDAD</th>\n                            <th>UNIDAD</th>\n                            <th>PRECIO UNITARIO</th>\n                            <th>IMPORTE</th>\n                        </tr>\n                    </thead>\n                    <tbody id=\"detalleRecetas_recetaResponse\">\n                        <!-- Data will be inserted here -->\n                    </tbody>\n                </table>\n            </div>\n <div id=\"detalleRecetas_updateModal\" class=\"detalleReceta-modal\" style=\"display: none;\">\n            <div class=\"detalleReceta-modal-content\">\n                <span class=\"detalleReceta-close\" onclick=\"cerrarModal()\">&times;</span>\n                <h2>Actualizar Componente</h2>\n                <form id=\"detalleRecetas_update-component-form\" onsubmit=\"actualizarComponente(); return false;\">\n                    <input type=\"hidden\" id=\"detalleRecetas_updateIdComponente\">\n                    \n                    <label for=\"detalleRecetas_updateCodigoComponente\">Código:</label>\n                    <input type=\"text\" id=\"detalleRecetas_updateCodigoComponente\" placeholder=\"Código\" disabled>\n                    \n                    <label for=\"detalleRecetas_updateNombreComponente\">Nombre:</label>\n                    <input type=\"text\" id=\"detalleRecetas_updateNombreComponente\" placeholder=\"Nombre\" disabled>\n                    \n                    <label for=\"detalleRecetas_updateCantidadComponente\">Cantidad:</label>\n                    <input type=\"number\" id=\"detalleRecetas_updateCantidadComponente\" placeholder=\"Cantidad\">\n                    \n                    <label for=\"detalleRecetas_updateUnidadComponente\">Unidad:</label>\n                    <input type=\"text\" id=\"detalleRecetas_updateUnidadComponente\" placeholder=\"Unidad\" disabled>\n                    \n                    <label for=\"detalleRecetas_updatePrecioComponente\">Precio:</label>\n                    <input type=\"number\" id=\"detalleRecetas_updatePrecioComponente\" placeholder=\"Precio\" disabled>\n                    \n                    <button type=\"submit\">Actualizar</button>\n                </form>\n            </div>\n        </div>        \n        <div id=\"detalleRecetas_buscarModal\" class=\"detalleReceta-modal\">\n            <div class=\"detalleReceta-modal-content\">\n                <span class=\"detalleReceta-close\">&times;</span>\n                <h2>Buscar Componente</h2>\n                <form id=\"detalleRecetas_buscar-componente-form\">\n                    <input type=\"text\" id=\"detalleRecetas_buscarComponenteInput\" placeholder=\"Buscar por...\">\n                    <button type=\"submit\">Buscar</button>\n                </form>\n                <div id=\"detalleRecetas_resultadosBusqueda\">\n                    <!-- Aquí se mostrarán los resultados de la búsqueda -->\n                </div>\n            </div>\n        </div>\n        <div id=\"detalleRecetas_componenteModal\" class=\"detalleReceta-modal\">\n            <div class=\"detalleReceta-modal-content\">\n                <span class=\"detalleReceta-close\">&times;</span>\n                <h2>Seleccionar Componente</h2>\n                <div id=\"detalleRecetas_componentesSeleccion\"></div>\n            </div>\n        </div>\n        <div id=\"detalleRecetas_nuevoModal\" class=\"detalleReceta-modal\">\n            <div class=\"detalleReceta-modal-content\">\n                <span class=\"detalleReceta-close\">&times;</span>\n                <h2>Agregar componente</h2>\n                <p id=\"detalleRecetas_nuevoComponenteInfo\"></p>\n                <form id=\"detalleRecetas_modalForm\">\n                    <label for=\"detalleRecetas_cantidad\">Cantidad:</label>\n                    <input type=\"number\" id=\"detalleRecetas_cantidad\" placeholder=\"Cantidad\">\n                    <label for=\"detalleRecetas_unidadComponente\">Unidad:</label>\n                    <select id=\"detalleRecetas_unidadComponente\" name=\"unidad\">\n                        <option value=\"Litros\">Litros</option>\n                        <option value=\"Mililitros\">Mililitros</option>\n                        <option value=\"Gramos\">Gramos</option>\n                        <option value=\"Kilogramos\">Kilogramos</option>\n                    </select>\n                    <button type=\"submit\" id=\"detalleRecetas_nuevoConfirmar\">Confirmar</button>\n                </form>\n            </div>\n        </div>",
+						"content": "<div class=\"detalleReceta-table-container\">\n                <table class=\"detalleReceta-table\">\n                    <thead>\n                        <tr>\n                            <th>CÓDIGO</th>\n                            <th>INGREDIENTES</th>\n                            <th>CANTIDAD</th>\n                            <th>UNIDAD</th>\n                            <th>PRECIO UNITARIO</th>\n                            <th>IMPORTE</th>\n                        </tr>\n                    </thead>\n                    <tbody id=\"detalleRecetas_recetaResponse\">\n                    </tbody>\n                </table>\n            </div>\n <div id=\"detalleRecetas_updateModal\" class=\"detalleReceta-modal\" style=\"display: none;\">\n            <div class=\"detalleReceta-modal-content\">\n                <span class=\"detalleReceta-close\" onclick=\"cerrarModal()\">&times;</span>\n                <h2>Actualizar Componente</h2>\n                <form id=\"detalleRecetas_update-component-form\" onsubmit=\"actualizarComponente(); return false;\">\n                    <input type=\"hidden\" id=\"detalleRecetas_updateIdComponente\">\n                    \n                    <label for=\"detalleRecetas_updateCodigoComponente\">Código:</label>\n                    <input type=\"text\" id=\"detalleRecetas_updateCodigoComponente\" placeholder=\"Código\" disabled>\n                    \n                    <label for=\"detalleRecetas_updateNombreComponente\">Nombre:</label>\n                    <input type=\"text\" id=\"detalleRecetas_updateNombreComponente\" placeholder=\"Nombre\" disabled>\n                    \n                    <label for=\"detalleRecetas_updateCantidadComponente\">Cantidad:</label>\n                    <input type=\"number\" id=\"detalleRecetas_updateCantidadComponente\" placeholder=\"Cantidad\">\n                    \n                    <label for=\"detalleRecetas_updateUnidadComponente\">Unidad:</label>\n                    <input type=\"text\" id=\"detalleRecetas_updateUnidadComponente\" placeholder=\"Unidad\" disabled>\n                    \n                    <label for=\"detalleRecetas_updatePrecioComponente\">Precio:</label>\n                    <input type=\"number\" id=\"detalleRecetas_updatePrecioComponente\" placeholder=\"Precio\" disabled>\n                    \n                    <button type=\"submit\">Actualizar</button>\n                </form>\n            </div>\n        </div>        \n        <div id=\"detalleRecetas_buscarModal\" class=\"detalleReceta-modal\">\n            <div class=\"detalleReceta-modal-content\">\n                <span class=\"detalleReceta-close\">&times;</span>\n                <h2>Buscar Componente</h2>\n                <form id=\"detalleRecetas_buscar-componente-form\">\n                    <input type=\"text\" id=\"detalleRecetas_buscarComponenteInput\" placeholder=\"Buscar por...\">\n                    <button type=\"submit\">Buscar</button>\n                </form>\n                <div id=\"detalleRecetas_resultadosBusqueda\">\n                    <!-- Aquí se mostrarán los resultados de la búsqueda -->\n                </div>\n            </div>\n        </div>\n        <div id=\"detalleRecetas_componenteModal\" class=\"detalleReceta-modal\">\n            <div class=\"detalleReceta-modal-content\">\n                <span class=\"detalleReceta-close\">&times;</span>\n                <h2>Seleccionar Componente</h2>\n                <div id=\"detalleRecetas_componentesSeleccion\"></div>\n            </div>\n        </div>\n        <div id=\"detalleRecetas_nuevoModal\" class=\"detalleReceta-modal\">\n            <div class=\"detalleReceta-modal-content\">\n                <span class=\"detalleReceta-close\">&times;</span>\n                <h2>Agregar componente</h2>\n                <p id=\"detalleRecetas_nuevoComponenteInfo\"></p>\n                <form id=\"detalleRecetas_modalForm\">\n                    <label for=\"detalleRecetas_cantidad\">Cantidad:</label>\n                    <input type=\"number\" id=\"detalleRecetas_cantidad\" placeholder=\"Cantidad\">\n                    <label for=\"detalleRecetas_unidadComponente\">Unidad:</label>\n                    <select id=\"detalleRecetas_unidadComponente\" name=\"unidad\">\n                        <option value=\"Litros\">Litros</option>\n                        <option value=\"Mililitros\">Mililitros</option>\n                        <option value=\"Gramos\">Gramos</option>\n                        <option value=\"Kilogramos\">Kilogramos</option>\n                    </select>\n                    <button type=\"submit\" id=\"detalleRecetas_nuevoConfirmar\">Confirmar</button>\n                </form>\n            </div>\n        </div>",
 						"content-type": "html",
 						"initially-visible": true,
 						"id": "",
@@ -1166,9 +1166,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 474,
-						"y": 628,
-						"width": 3259,
+						"x": 494,
+						"y": 614,
+						"width": 3083,
 						"height": 856,
 						"originX": 0,
 						"originY": 0,
@@ -1214,10 +1214,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 485,
-						"y": 300,
-						"width": 2390,
-						"height": 244,
+						"x": 528,
+						"y": 382,
+						"width": 2353,
+						"height": 159,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -1262,10 +1262,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 510,
-						"y": 1542,
-						"width": 1306,
-						"height": 544,
+						"x": 486,
+						"y": 1533,
+						"width": 1485,
+						"height": 652,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -1310,10 +1310,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 2150,
-						"y": 1529,
-						"width": 1560,
-						"height": 576,
+						"x": 2089,
+						"y": 1542,
+						"width": 1485,
+						"height": 644,
 						"originX": 0,
 						"originY": 0,
 						"color": [
